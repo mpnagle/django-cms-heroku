@@ -102,6 +102,10 @@ TEMPLATE_DIRS = (
     os.path.join(PROJECT_DIR, 'templates'),
 )
 
+SOUTH_DATABASE_ADAPTERS = {
+    'default': "south.db.mysql"
+}
+
 INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
