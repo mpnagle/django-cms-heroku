@@ -1,6 +1,23 @@
 {% extends "base.html" %}
 {% load cms_tags %}
 
+<div id="menu" style="background-color:#FFD700;height:200px;width:100px;float:left;">
+<b>Menu</b><br />
+HTML<br />
+CSS<br />
+JavaScript
+
+{% placeholder left_column_content %}
+</div>
+
+<div id="content" style="background-color:#EEEEEE;height:200px;width:400px;float:left;">
+Content goes here
+
+
+{% placeholder right_column_content %}
+</div>
+
+
 {% block base_content %}
   {% placeholder template_1_content %}
 {% endblock %}
