@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% load cms_tags %}
 
+{% block base_content %}
+
 <div id="menu" style="background-color:#FFD700;height:200px;width:100px;float:left;">
 <b>Menu</b><br />
 HTML<br />
@@ -18,6 +20,6 @@ Content goes here
 </div>
 
 
-{% block base_content %}
+
   {% placeholder template_1_content %}
 {% endblock %}
