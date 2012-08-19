@@ -3,7 +3,7 @@
 
 {% block base_content %}
 
-<link type="text/css" href="/mycms/templates/jquery-ui/css/custom-theme/jquery-ui-1.8.23.custom.css" rel="Stylesheet" />
+<link type="text/css" href="/templates/jquery-ui/css/custom-theme/jquery-ui-1.8.23.custom.css" rel="Stylesheet" />
 <script type="text/javascript" src="/jquery-ui/js/jquery-1.4.4.min.js"></script>
 <script type="text/javascript" src="js/jquery-ui-1.8.23.custom.min.js"></script>
 
