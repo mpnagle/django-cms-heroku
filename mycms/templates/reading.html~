@@ -1,16 +1,19 @@
-
 {% extends "base.html" %}
 {% load cms_tags %}
 
 {% block base_content %}
 
-<div id="left" style="background-color:#FFFFFF;width:500px;height:10000px;float:left;border-right:1px;border-right-color:#000000;overflow:scroll;">
+<link type="text/css" href="css/themename/jquery-ui-1.8.23.custom.css" rel="Stylesheet" />
+<script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.8.23.custom.min.js"></script>
+
+<div id="left" style="background-color:#FFFFFF;width:500px;height:10000px;float:left;border-right:1px;border-right-color:#000000;">
 
 
 {% placeholder left_column_content %}
 </div>
 
-<div id="right" style="background-color:#CCCCCC;width:220px;height:10000px;float:left;overflow:scroll;">
+<div id="right" style="background-color:#CCCCCC;width:220px;height:10000px;float:left;">
 
 
 
