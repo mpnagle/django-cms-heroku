@@ -7,19 +7,21 @@
 
 #beige-box{
 	position:absolute;
-	height:900px;
-	width:1300p8x;
+	height:2000px;
+	width:2000px;
 }
 
+#article-title{
+}
 
 .left-text{
 	overflow:scroll;
 	z-index:1000o;
 	height:700px;
-	padding-top:60px;
 	padding-bottom:60px;
 	position: relative;
 	left: 40px;
+	top: 20px
 }
 
 .right-text{
