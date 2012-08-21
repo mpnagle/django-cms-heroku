@@ -5,16 +5,23 @@
 
 <link type="text/css" href="{{ MEDIA_URL }}jquery-ui/css/custom-theme/jquery-ui.css" />
 
-<script type="text/javascript" src="{{ STATIC_URL }}cms/jquery-ui/js/jquery.js"></script>
-<script type="text/javascript" src="{{ STATIC_URL }}cms/js/jquery-ui.js"></script>
+<<<<<<< HEAD
+<script type="text/javascript" src="{{ MEDIA_URL }}jquery-ui/js/jquery.js"></script>
+<script type="text/javascript" src="{{ MEDIA_URL }}jquery-ui/js/jquery-ui.js"></script>
+=======
 
-<div id="left" style="background-color:#FFFFFF;width:600px;height:10000px;float:left;border-right:1px;border-right-color:#000000;">
+<script type="text/javascript" src="/static/jquery-ui/js/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="/static/js/jquery-ui-1.8.23.custom.min.js"></script>
+>>>>>>> 251d7db57698d06a19895bfdeb89cce56081433b
+
+
+<div id="left" style="background-color:#FFFFFF;width:600px;height:10000px;float:left;border-right:1px;border-right-color:#000000;padding-left:39;padding-right:50px;">
 
 
 {% placeholder left_column_content %}
 </div>
 
-<div id="right" style="background-color:#CCCCCC;width:220px;height:10000px;float:left;">
+<div id="right" style="background-color:#CCCCCC;width:220px;float:left;">
 
 
 
