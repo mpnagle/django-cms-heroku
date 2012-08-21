@@ -1,19 +1,34 @@
-.left-text{
-	overflow:scroll;
-	z-index:1000o;
-	height:700px;
-	padding-top:60px;
-	padding-bottom:60px;
+#nav-bar{
+    padding-left: 80px;
+    padding-top: 20px;
+    padding-bottom: 40px;
 }
 
-.right-text{
-	padding-top:60px;
-	padding-bottom:60px;
-
-}
 
 #beige-box{
 	position:absolute;
-	height:900px;
-	width:1300px;
+	height:2000px;
+	width:2000px;
+}
+
+#article-title{
+    background-color:#FFFFFF
+}
+
+.left-text{
+        background-color:#FFFFFF
+	overflow:scroll;
+	z-index:1000o;
+	height:700px;
+	padding-bottom:60px;
+	position: relative;
+	left: 40px;
+	top: 20px
+}
+
+.right-text{
+        background-color:#FFFFFF
+	padding-top:60px;
+	padding-bottom:60px;
+
 }
