@@ -1,3 +1,9 @@
+#nav-bar{
+    padding-left: 80px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
 .left-text{
 	overflow:scroll;
 	z-index:1000o;
