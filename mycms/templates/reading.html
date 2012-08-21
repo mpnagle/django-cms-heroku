@@ -1,20 +1,25 @@
 {% extends "base.html" %}
-{% load cms_tags %}
+{% load cms_tags sekizai_tags %}
 
 {% block base_content %}
 
 <link type="text/css" href="{{ MEDIA_URL }}jquery-ui/css/custom-theme/jquery-ui.css" />
+<link ref="stylesheet" type="text/css" href="{{ MEDIA_URL }}reading.css" />
 
+
+
+{% addtoblock "js" %}
 <script type="text/javascript" src="{{ MEDIA_URL }}jquery-ui/js/jquery.js"></script>
 <script type="text/javascript" src="{{ MEDIA_URL }}jquery-ui/js/jquery-ui.js"></script>
-
+{% endaddtoblock "js" %}
 
 <!-- beige box -->
-<div style="background-color:#eae7d3;width:1100px;height:10000px;z-index:-1;padding-top:20px;padding-left:20px;">
+<div id="beige-box" style="background-color:#eae7d3;z-index:-1;padding-top:20px;padding-left:20px;">
 
+</div>
 
 <!-- article column -->
-  <div id="article" class="left-text" style="background-color:#FFFFFF;width:500px;height:10000px;float:left;padding-left:39px;padding-right:80px;z-index:1000;overflow:scroll">
+  <div id="article" class="left-text" style="background-color:#FFFFFF;width:500px;float:left;padding-left:39px;padding-right:80px;">
 
 
     {% placeholder article_content %}
@@ -22,7 +27,7 @@
 
 
 <!-- reference column -->
-  <div id="reference" class="left-text" style="background-color:#FFFFFF;width:220px;height:10000px;float:left;z-index:1000;padding-left:30px;padding-right:30px;">
+  <div id="reference" class="left-text" style="background-color:#FFFFFF;width:220px;float:left;padding-left:30px;padding-right:30px;">
 
     {% placeholder reference_content %}
 
@@ -36,18 +41,41 @@
 
  
 <!-- outline column -->
-  <div id="outline" class="right-text" style="background-color:black;width:400px;height:10000px;float:left;z-index:1000;">
+  <div id="outline" class="right-text" style="background-color:black;width:400px;height:700px;float:left;z-index:1000;">
     
   
- 
+ {% addtoblock "js" %}
+<script>
+    $(function() {
+	$( "#accordion" ).accordion(collapsible: false);
+	});
+</script>
+ {% endaddtoblock "js" %}
   
   
-
-  {% placeholder outline_content %}
-
+<div id = "accordion">
+  <h3><a href="#">Section 1</a></h3>
+	<div>
+	  <p>
+	    Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+	    ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+	    amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+	    odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+	  </p>
+	</div>
+	<h3><a href="#">Section 2</a></h3>
+	<div>
+	  <p>
+	    Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+	    purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+	    velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
+	    suscipit faucibus urna.
+	  </p>
+	</div>
+	
 
   </div>
 
-</div>
+
 
 {% endblock %}

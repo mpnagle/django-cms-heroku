@@ -4,6 +4,8 @@
 {% block base_content %}
 
 <link type="text/css" href="{{ MEDIA_URL }}jquery-ui/css/custom-theme/jquery-ui.css" />
+<link ref="stylesheet" type="text/css" href="{{ MEDIA_URL }}reading.css" />
+
 
 <script type="text/javascript" src="{{ MEDIA_URL }}jquery-ui/js/jquery.js"></script>
 <script type="text/javascript" src="{{ MEDIA_URL }}jquery-ui/js/jquery-ui.js"></script>
@@ -14,7 +16,7 @@
 
 
 <!-- article column -->
-  <div id="article" class="left-text" style="background-color:#FFFFFF;width:500px;height:10000px;float:left;padding-left:39px;padding-right:80px;z-index:1000;overflow:scroll">
+  <div id="article" class="left-text" style="background-color:#FFFFFF;width:500px;height:10000px;float:left;padding-left:39px;padding-right:80px;">
 
 
     {% placeholder article_content %}
@@ -22,7 +24,9 @@
 
 
 <!-- reference column -->
-  <div id="reference" class="left-text" style="background-color:#FFFFFF;width:220px;height:10000px;float:left;z-index:1000;padding-left:30px;padding-right:30px;">
+  <div id="reference" class="left-text" style="background-color:#FFFFFF;width:220px;height:10000px;float:left;padding-left:30px;padding-right:30px;">
+
+    {% placeholder reference_content %}
 
 </div>
     
@@ -31,9 +35,9 @@
 
     
     
-    {% placeholder reference_content %}
- 
 
+ 
+<!-- outline column -->
   <div id="outline" class="right-text" style="background-color:black;width:400px;height:10000px;float:left;z-index:1000;">
     
   

@@ -4,13 +4,32 @@
 <html>
   <head>
       <title>{{ request.current_page.get_title }}</title>
-      {% render_block "css" %}
+ 
+
+
+     {% render_block "css" %}
       
 <link type="text/css" href="{{ MEDIA_URL }}jquery-ui/css/custom-theme/jquery-ui.css" />
 
 
   </head>
   <body>
+
+
+
+
+     {% render_block "css" %}
+      
+<link type="text/css" href="{{ MEDIA_URL }}jquery-ui/css/custom-theme/jquery-ui.css" />
+
+
+  </head>
+  <body>
+
+
+    {% addtoblock "css" %}
+    <link rel="stylesheet" type="text/css" href="/media/reading.css">
+    {% endaddtoblock %}
 
 <script type="text/javascript" src="{{ MEDIA_URL }}jquery-ui/js/jquery.js"></script>
 <script type="text/javascript" src="{{ MEDIA_URL }}jquery-ui/js/jquery-ui.js"></script>
