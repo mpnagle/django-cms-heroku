@@ -1,10 +1,21 @@
 {% load cms_tags sekizai_tags %}
+
+
 <html>
   <head>
       <title>{{ request.current_page.get_title }}</title>
       {% render_block "css" %}
+      
+<link type="text/css" href="{{ MEDIA_URL }}jquery-ui/css/custom-theme/jquery-ui.css" />
+
+
   </head>
   <body>
+
+<script type="text/javascript" src="{{ MEDIA_URL }}jquery-ui/js/jquery.js"></script>
+<script type="text/javascript" src="{{ MEDIA_URL }}jquery-ui/js/jquery-ui.js"></script>
+
+
       {% cms_toolbar %}
       {% placeholder base_content %}
       {% block base_content%}{% endblock %}

@@ -1,9 +1,11 @@
 # -*- coding: utf-8 -*-
 import os
+import os.path
 
 gettext = lambda s: s
 
 PROJECT_DIR = os.path.abspath(os.path.dirname(__file__))
+
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -18,8 +20,9 @@ LANGUAGES = [('en', 'en')]
 DEFAULT_LANGUAGE = 0
 
 # Heroku will take care of this for us later dynamicly.
-import dj_database_url
-DATABASES = {'default': dj_database_url.config(default='postgres://localhost')}
+
+
+# DATABASES = {'default': dj_database_url.config(default='postgres://localhost')}
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -46,16 +49,35 @@ USE_L10N = True
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/home/media/media.lawrence.com/"
-MEDIA_ROOT = os.path.join(PROJECT_DIR, 'media')
+MEDIA_ROOT = os.path.join(PROJECT_DIR, "media")
 
-STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
+STATIC_ROOT = os.path.join(PROJECT_DIR, "static")
+
+
+import dj_database_url
+
+
+DATABASES = {
+    'default': {
+        'NAME': os.path.join(MEDIA_ROOT, 'site.db'),
+        'ENGINE': 'django.db.backends.sqlite3',
+        'CHARSET': 'utf8',
+    },
+}
+
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {'default': dj_database_url.config()}
+
+
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash if there is a path component (optional in other cases).
 # Examples: "http://media.lawrence.com", "http://example.com/media/"
-MEDIA_URL = '/media/'
+MEDIA_URL = "/media/"
 
-STATIC_URL = '/static/'
+STATIC_URL = "/static/"
+
+STATICFILES_DIRS = ('/static/',)
 
 # URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
 # trailing slash.
@@ -101,7 +123,7 @@ CMS_TEMPLATES = (
 ROOT_URLCONF = 'mycms.urls'
 
 TEMPLATE_DIRS = (
-    os.path.join(PROJECT_DIR, 'templates'),
+    os.path.join(PROJECT_DIR, "templates"),
 )
 
 SOUTH_DATABASE_ADAPTERS = {
@@ -119,7 +141,7 @@ INSTALLED_APPS = (
     'cms',
     'menus',
     'mptt',
-    'south',
+#   'south',
     'cms.plugins.text',
     'cms.plugins.picture',
     'cms.plugins.link',
@@ -127,5 +149,5 @@ INSTALLED_APPS = (
     'cms.plugins.snippet',
     'cms.plugins.googlemap',
     'sekizai',
-    'gunicorn',
+    'gunicorn'
 )
