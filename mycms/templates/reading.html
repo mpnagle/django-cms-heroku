@@ -9,24 +9,43 @@
 <script type="text/javascript" src="{{ MEDIA_URL }}jquery-ui/js/jquery-ui.js"></script>
 
 
+<!-- beige box -->
+<div style="background-color:#eae7d3;width:1100px;height:10000px;z-index:-1;padding-top:20px;padding-left:20px;">
 
-<div id="left" style="background-color:#FFFFFF;width:600px;height:10000px;float:left;border-right:1px;border-right-color:#000000;padding-left:39;padding-right:50px;">
+
+<!-- article column -->
+  <div id="article" class="left-text" style="background-color:#FFFFFF;width:500px;height:10000px;float:left;padding-left:39px;padding-right:80px;z-index:1000;overflow:scroll">
 
 
-{% placeholder left_column_content %}
+    {% placeholder article_content %}
+  </div>
+
+
+<!-- reference column -->
+  <div id="reference" class="left-text" style="background-color:#FFFFFF;width:220px;height:10000px;float:left;z-index:1000;padding-left:30px;padding-right:30px;">
+
 </div>
+    
+    
+    
 
-<div id="right" style="background-color:#CCCCCC;width:220px;float:left;">
-
-
-
-{% placeholder right_column_content %}
-</div>
-
-
-
-  {% placeholder template_1_content %}
-
-
+    
+    
+    {% placeholder reference_content %}
  
+
+  <div id="outline" class="right-text" style="background-color:black;width:400px;height:10000px;float:left;z-index:1000;">
+    
+  
+ 
+  
+  
+
+  {% placeholder outline_content %}
+
+
+  </div>
+
+</div>
+
 {% endblock %}

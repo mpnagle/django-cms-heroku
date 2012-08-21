@@ -5,14 +5,12 @@
 
 <link type="text/css" href="{{ MEDIA_URL }}jquery-ui/css/custom-theme/jquery-ui.css" />
 
-<<<<<<< HEAD
 <script type="text/javascript" src="{{ MEDIA_URL }}jquery-ui/js/jquery.js"></script>
 <script type="text/javascript" src="{{ MEDIA_URL }}jquery-ui/js/jquery-ui.js"></script>
-=======
 
-<script type="text/javascript" src="/static/jquery-ui/js/jquery-1.4.4.min.js"></script>
-<script type="text/javascript" src="/static/js/jquery-ui-1.8.23.custom.min.js"></script>
->>>>>>> 251d7db57698d06a19895bfdeb89cce56081433b
+
+
+<div style="background-color:beige;width:750px;height:10000px;z-index:-1;}
 
 
 <div id="left" style="background-color:#FFFFFF;width:600px;height:10000px;float:left;border-right:1px;border-right-color:#000000;padding-left:39;padding-right:50px;">
