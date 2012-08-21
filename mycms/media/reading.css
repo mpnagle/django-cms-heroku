@@ -1,0 +1,19 @@
+.left-text{
+	overflow:scroll;
+	z-index:1000o;
+	height:700px;
+	padding-top:60px;
+	padding-bottom:60px;
+}
+
+.right-text{
+	padding-top:60px;
+	padding-bottom:60px;
+
+}
+
+#beige-box{
+	position:absolute;
+	height:900px;
+	width:1300px;
+}

@@ -18,22 +18,18 @@
 
 
 
-     {% render_block "css" %}
-      
-<link type="text/css" href="{{ MEDIA_URL }}jquery-ui/css/custom-theme/jquery-ui.css" />
-
-
-  </head>
-  <body>
 
 
     {% addtoblock "css" %}
     <link rel="stylesheet" type="text/css" href="/media/reading.css">
     {% endaddtoblock %}
 
+
+    {% addtoblock "js" %}
+
 <script type="text/javascript" src="{{ MEDIA_URL }}jquery-ui/js/jquery.js"></script>
 <script type="text/javascript" src="{{ MEDIA_URL }}jquery-ui/js/jquery-ui.js"></script>
-
+     {% endaddtoblock "js" %}
 
       {% cms_toolbar %}
       {% placeholder base_content %}

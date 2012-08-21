@@ -3,7 +3,12 @@
 
 {% block base_content %}
 
-<link type="text/css" href="{{ MEDIA_URL }}jquery-ui/css/custom-theme/jquery-ui.css" />
+
+{% addtoblock "css" %}
+<link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}jquery-ui/css/custom-theme/jquery-ui.css" />
+{% endaddtoblock "css" %}
+
+
 <link ref="stylesheet" type="text/css" href="{{ MEDIA_URL }}reading.css" />
 
 
@@ -33,21 +38,15 @@
 
 </div>
     
-    
-    
-
-    
-    
-
- 
+     
 <!-- outline column -->
-  <div id="outline" class="right-text" style="background-color:black;width:400px;height:700px;float:left;z-index:1000;">
+  <div id="outline" class="right-text" style="background-color:grey;width:400px;height:700px;float:left;z-index:1000;">
     
   
  {% addtoblock "js" %}
 <script>
     $(function() {
-	$( "#accordion" ).accordion(collapsible: false);
+	$( "#accordion" ).accordion();
 	});
 </script>
  {% endaddtoblock "js" %}
@@ -77,5 +76,5 @@
   </div>
 
 
-
 {% endblock %}
+
