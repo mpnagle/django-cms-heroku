@@ -12,10 +12,6 @@
 <!-- beige box -->
 <div style="background-color:#eae7d3;width:1100px;height:10000px;z-index:-1;padding-top:20px;padding-left:20px;">
 
-<<<<<<< HEAD
-=======
-<div id="left" style="background-color:#FFFFFF;width:500px;height:10000px;float:left;border-right:1px;border-right-color:#000000;padding-left:39;padding-right:50px;">
->>>>>>> 04d6f75ffefa985c68b161b00c59e8c733dec3ac
 
 <!-- article column -->
   <div id="article" class="left-text" style="background-color:#FFFFFF;width:500px;height:10000px;float:left;padding-left:39px;padding-right:80px;z-index:1000;overflow:scroll">
