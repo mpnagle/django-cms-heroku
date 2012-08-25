@@ -1,6 +1,31 @@
-.left-text{
-	overflow:scroll;
-	z-index:-2;
-	height:700px;
+#nav-bar{
+    padding-left: 80px;
+    padding-top: 20px;
+    padding-bottom: 40px;
 }
 
+
+#beige-box{
+	position:absolute;
+	height:2000px;
+	width:2000px;
+}
+
+#article-title{
+}
+
+.left-text{
+	overflow:scroll;
+	z-index:1000o;
+	height:700px;
+	padding-bottom:60px;
+	position: relative;
+	left: 40px;
+	top: 20px
+}
+
+.right-text{
+	padding-top:60px;
+	padding-bottom:60px;
+
+}
