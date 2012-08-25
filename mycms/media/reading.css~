@@ -1,6 +1,6 @@
 #nav-bar{
     padding-left: 80px;
-    padding-top: 20px;
+    padding-top: 500px;
     padding-bottom: 40px;
 }
 
@@ -9,23 +9,26 @@
 	position:absolute;
 	height:2000px;
 	width:2000px;
-}
-
-#article-title{
+	background-color:#ea7d32;
 }
 
 .left-text{
+        background-color:#FFFFFF;
 	overflow:scroll;
-	z-index:1000o;
+	z-index:1000;
 	height:700px;
 	padding-bottom:60px;
 	position: relative;
 	left: 40px;
 	top: 20px
+	position:relative;
 }
 
 .right-text{
-	padding-top:60px;
-	padding-bottom:60px;
+    position: relative;
+    background-color:#FFFFFF;
+    padding-top:60px;
+    padding-bottom:60px;
+    z-index:1000;
 
 }
