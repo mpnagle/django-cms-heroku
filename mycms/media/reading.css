@@ -13,8 +13,7 @@
 }
 
 .left-text{
-        background-color:#beige;
-	overflow:scroll;
+        background-color:#FFFFFF;
 	z-index:1000;
 	height:700px;
 	padding-bottom:60px;
@@ -30,5 +29,6 @@
     padding-top:60px;
     padding-bottom:60px;
     z-index:1000;
+    overflow: scroll;
 
 }

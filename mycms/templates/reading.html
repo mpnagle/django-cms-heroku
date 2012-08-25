@@ -16,27 +16,30 @@
 {% addtoblock "js" %}
 <script type="text/javascript" src="{{ MEDIA_URL }}jquery-ui/js/jquery.js"></script>
 <script type="text/javascript" src="{{ MEDIA_URL }}jquery-ui/js/jquery-ui.js"></script>
+<script type="text/javascript" src="{{ MEDIA_URL }}reading.js"></script>
 {% endaddtoblock "js" %}
 
 <!-- beige box -->
 <div id="beige-box" style="z-index:-1;padding-top:20px;padding-left:20px;">
-
 </div>
 
 
+
+
 <!-- article column -->
-  <div id="article" class="left-text" style="width:500px;float:left;padding-left:39px;padding-right:80px;">
+  <div id="article" class="left-text" style="width:500px;float:left;padding-left:39px;padding-right:80px;overflow:scroll">
     {% placeholder article_content %}
+
   </div>
 
 
 <!-- reference column -->
-  <div id="reference" class="left-text" style="width:220px;float:left;padding-left:30px;padding-right:30px;">
-
+  <div id="reference" class="left-text" style="width:220px;float:left;padding-left:30px;padding-right:30px;overflow:hidden">
     {% placeholder reference_content %}
 
+
 </div>
-    
+    </div>
      
 <!-- outline column -->
   <div id="outline" class="right-text" style="background-color:grey;width:400px;height:700px;float:left;">
@@ -78,7 +81,7 @@ The digital age makes it possible to bypass traditional gatekeepers to informati
 
       </div>
 
-<h3><a href ="#">A Bit of History</a></h3>
+<h3><a href ="a_bit_of_history">A Bit of History</a></h3>
 
 <div>
   <a href = "http://www.openstreetmap.org">OpenStreetMap</a>
