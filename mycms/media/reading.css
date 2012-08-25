@@ -9,11 +9,11 @@
 	position:absolute;
 	height:2000px;
 	width:2000px;
-	background-color:#ea7d3;
+	background-color:#ea7d32;
 }
 
 .left-text{
-        background-color:#FFFFFF
+        background-color:#FFFFFF;
 	overflow:scroll;
 	z-index:1000;
 	height:700px;
@@ -21,12 +21,14 @@
 	position: relative;
 	left: 40px;
 	top: 20px
+	position:relative;
 }
 
 .right-text{
-        background-color:#FFFFFF
-	padding-top:60px;
-	padding-bottom:60px;
-	z-index:1000;
+    position: relative;
+    background-color:#FFFFFF;
+    padding-top:60px;
+    padding-bottom:60px;
+    z-index:1000;
 
 }
