@@ -12,11 +12,9 @@
 }
 
 #article-title{
-    background-color:#FFFFFF
 }
 
 .left-text{
-        background-color:#FFFFFF
 	overflow:scroll;
 	z-index:1000o;
 	height:700px;
@@ -27,7 +25,6 @@
 }
 
 .right-text{
-        background-color:#FFFFFF
 	padding-top:60px;
 	padding-bottom:60px;
 
