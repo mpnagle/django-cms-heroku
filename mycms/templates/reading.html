@@ -40,34 +40,29 @@
 </div>
 
 
+
 {% addtoblock "js" %}
 <script type="text/javascript">
-    var offset = $("#foot_1").offset();
-    console.log(offset);
-    console.log($("#ref_1"));
-    var ref = document.getElementById("ref_1");
-    ref.style.color = "blue";
-    ref.style.verticalAlign = "1000px";
-    console.log(ref.style.verticalAlign);
+$('sup').each(
+    function(index) {
+	number = $(this).attr('id') // the number of the paragraph (I set the id to this)
+//	sidenote = $('li#s'+ number); // a jQuery object connected to the sidenote with the appropriate partner id
 
+	partner_top_offset = $(this).offset().top; // the top of the paragraph I want to position my sidenote next to
+	my_left_offset = $("#ref_1").offset().left; // the current left position of the sidenote, which I want to leave unchanged
+
+	$("#ref_1").offset({ top: partner_top_offset, left: my_left_offset }); // do the offset
+    }
+)
+ 
 </script>
 {% endaddtoblock "js" %}
-
-
 
 
      
 <!-- outline column -->
   <div id="outline" class="right-text" style="background-color:grey;width:400px;height:700px;float:left;">
     
-  
- {% addtoblock "js" %}
-<script>
-    $(function() {
-	$( "#accordion" ).accordion();
-	});
-</script>
-{% endaddtoblock "js" %}
 
 
 <div id = "accordion">
