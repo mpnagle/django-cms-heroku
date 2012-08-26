@@ -1,3 +1,8 @@
+#ref_1{
+    color:red;
+    vertical-align:10;
+}
+
 #nav-bar{
     padding-left: 80px;
     padding-top: 500px;
@@ -31,4 +36,11 @@
     z-index:1000;
     overflow: scroll;
 
+}
+
+.footnote_art{
+    color: red;
+}
+
+.references{
 }

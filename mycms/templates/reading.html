@@ -16,13 +16,13 @@
 {% addtoblock "js" %}
 <script type="text/javascript" src="{{ MEDIA_URL }}jquery-ui/js/jquery.js"></script>
 <script type="text/javascript" src="{{ MEDIA_URL }}jquery-ui/js/jquery-ui.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
 <script type="text/javascript" src="{{ MEDIA_URL }}reading.js"></script>
 {% endaddtoblock "js" %}
 
 <!-- beige box -->
 <div id="beige-box" style="z-index:-1;padding-top:20px;padding-left:20px;">
 </div>
-
 
 
 
@@ -36,10 +36,26 @@
 <!-- reference column -->
   <div id="reference" class="left-text" style="width:220px;float:left;padding-left:30px;padding-right:30px;overflow:hidden">
     {% placeholder reference_content %}
-
-
+  </div>
 </div>
-    </div>
+
+
+{% addtoblock "js" %}
+<script type="text/javascript">
+    var offset = $("#foot_1").offset();
+    console.log(offset);
+    console.log($("#ref_1"));
+    var ref = document.getElementById("ref_1");
+    ref.style.color = "blue";
+    ref.style.verticalAlign = "1000px";
+    console.log(ref.style.verticalAlign);
+
+</script>
+{% endaddtoblock "js" %}
+
+
+
+
      
 <!-- outline column -->
   <div id="outline" class="right-text" style="background-color:grey;width:400px;height:700px;float:left;">
