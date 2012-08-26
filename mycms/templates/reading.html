@@ -41,23 +41,6 @@
 
 
 
-{% addtoblock "js" %}
-<script type="text/javascript">
-$('sup').each(
-    function(index) {
-	number = $(this).attr('id') // the number of the paragraph (I set the id to this)
-//	sidenote = $('li#s'+ number); // a jQuery object connected to the sidenote with the appropriate partner id
-
-	partner_top_offset = $(this).offset().top; // the top of the paragraph I want to position my sidenote next to
-	my_left_offset = $("#ref_1").offset().left; // the current left position of the sidenote, which I want to leave unchanged
-
-	$("#ref_1").offset({ top: partner_top_offset, left: my_left_offset }); // do the offset
-    }
-)
- 
-</script>
-{% endaddtoblock "js" %}
-
 
      
 <!-- outline column -->
