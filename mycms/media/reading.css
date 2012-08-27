@@ -10,6 +10,51 @@
 	height:2000px;
 	width:2000px;
 	background-color:#ea7d32;
+	padding-top: 20px;
+	padding-left: 20px;
+	z-index:-1;
+}
+
+#title{
+    background-color: blue;
+    font-size: 24pt;
+    left: 40px;
+    padding-left: 40px;
+    position: relative;
+    width: 719px;
+    padding-bottom: 10px;
+}
+
+#article{
+    width: 400px; 
+    float: left;
+    padding-left: 39px;
+    padding-right: 80px;
+    overflow: scroll;
+}
+
+#reference{
+    width: 220px;
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+    overflow: hidden;
+}
+
+#outline{
+    background-color: grey;
+    width: 400px;
+    height: 700px;
+    float: left;
+    padding-bottom:60px;
+    overflow: hidden;
+}
+
+.outlineBox{
+    background-color: #FFFFFF;
+    position: relative;
+    left: 70px;
+
 }
 
 .footNumber{
@@ -28,14 +73,5 @@
 	position: relative;
 	left: 40px;
 	top: 20px
-	position:relative;
 }
 
-.right-text{
-    position: relative;
-    background-color:#FFFFFF;
-    padding-top:60px;
-    padding-bottom:60px;
-    overflow: scroll;
-
-}
