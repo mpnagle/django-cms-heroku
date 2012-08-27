@@ -1,0 +1,3 @@
+{%for string in outline.title %}
+    <span id = "outline-{{outline.id}}"> {{outline.title}} </span>
+{%endfor %}

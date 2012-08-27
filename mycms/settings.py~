@@ -141,7 +141,7 @@ INSTALLED_APPS = (
     'cms',
     'menus',
     'mptt',
-#   'south',
+    'south',
     'cms.plugins.text',
     'cms.plugins.picture',
     'cms.plugins.link',
@@ -149,5 +149,6 @@ INSTALLED_APPS = (
     'cms.plugins.snippet',
     'cms.plugins.googlemap',
     'sekizai',
-    'gunicorn'
+    'gunicorn',
+    'outline'
 )
