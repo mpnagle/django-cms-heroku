@@ -12,9 +12,16 @@
 	background-color:#ea7d32;
 }
 
+.footNumber{
+    color:red;
+}
+
+.references{
+    font-size:8pt;
+}
+
 .left-text{
-        background-color:#beige;
-	overflow:scroll;
+        background-color:#FFFFFF;
 	z-index:1000;
 	height:700px;
 	padding-bottom:60px;
@@ -29,6 +36,6 @@
     background-color:#FFFFFF;
     padding-top:60px;
     padding-bottom:60px;
-    z-index:1000;
+    overflow: scroll;
 
 }
