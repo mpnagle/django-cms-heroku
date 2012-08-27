@@ -4,6 +4,7 @@ from cms.models import CMSPlugin
 # Create your models here.
 
 class Outline(models.Model):
+    parent = models.ForeignKey('self', blank=True, null=True)
     name = models.TextField(max_length=100)
 
     def __unicode__(self):
