@@ -4,7 +4,6 @@ from cms.models import CMSPlugin
 # Create your models here.
 
 class Outline(models.Model):
-    parent = models.ForeignKey('self', blank=True, null=True)
     name = models.TextField(max_length=100)
 
     def __unicode__(self):
@@ -18,7 +17,8 @@ class OutlineBlock(models.Model):
     id_number = models.IntegerField() #necesarry? objects have an auto-id...
 
 class OutlinePlugin(CMSPlugin):
-    outline = models.ForeignKey(Outline)
+    outline = models.ForeignKey('Outline', related_name='plugins')
     
     def __unicode__(self):
         return self.title
+
