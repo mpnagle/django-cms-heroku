@@ -17,48 +17,75 @@
 
 #title{
     background-color: blue;
-    font-size: 24pt;
+    font-size: 22pt;
     left: 40px;
-    padding-left: 40px;
-    position: relative;
-    width: 719px;
+    padding-left: 10px;
     padding-bottom: 10px;
+    padding-top: 10px;
+    position: relative;
+    width: 1159px;
+    text-align: center;
+}
+
+
+#outline{
+    position: relative;
+    background-color: grey;
+    width: 450px;
+    height: 600px;
+    padding-bottom:60px;
+    float: left;
+    position: relative;
+    left: 40px;
+    overflow: scroll;
+}
+
+.outlineTitle{
+    background-color:#FFFFFF;
+    font-size: 18pt;
+}
+
+.outlineRest{
+    background-color: black;
+    color: white;
 }
 
 #article{
+    background-color:grey;
+    z-index:1000;
+    position: relative;
     width: 400px; 
-    height: 700px;
+    height: 600px;
+    padding-bottom:60px;
     float: left;
     padding-left: 39px;
     padding-right: 80px;
     overflow: scroll;
+
 }
 
 #reference{
-    whitespace: pre;
+    background-color:#FFFFFF;
+    z-index:1000;
     width: 220px;
-    height: 700px;
-    float: left;
-    padding-left: 10px;
+    height: 600px;
+    padding-bottom:60px;
+    position:relative;
+    padding-left: 30px;
     padding-right: 10px;
     overflow: hidden;
 }
 
-#outline{
-    background-color: grey;
-    width: 400px;
-    height: 700px;
-    float: left;
-    padding-bottom:60px;
-    overflow: hidden;
+.artPar{
 }
 
-.outlineBox{
-    background-color: #FFFFFF;
-    position: relative;
-    left: 70px;
 
+.clearArtPar{
+    height:0;
+    overflow:hidden;
+    display:block;
 }
+
 
 .footNumber{
     color:red;
@@ -68,12 +95,6 @@
     font-size:8pt;
 }
 
-.left-text{
-        background-color:#FFFFFF;
-	z-index:1000;
-	padding-bottom:60px;
-	position: relative;
-	left: 40px;
-	top: 20px
-}
+
+
 
