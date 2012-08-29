@@ -150,6 +150,10 @@ INSTALLED_APPS = (
     'cms.plugins.googlemap',
     'sekizai',
     'gunicorn',
-    # 'mycms.outline',
-    'mycms.snippet'
+<<<<<<< HEAD
+    'mycms.outline',
+#    'mycms.snippet'
+=======
+    'outline'
+>>>>>>> 5dd65673d14b0de7317c59c23d0619335705bda4
 )

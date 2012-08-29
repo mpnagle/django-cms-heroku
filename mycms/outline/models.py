@@ -7,6 +7,7 @@ from cms.utils.helpers import reversion_register
 # Stores the actual data
 class Outline(models.Model):
 
+
     title = models.CharField(_("name"), max_length=255, unique=True)
     body = models.TextField(_("name2"), max_length=1000, unique=True)
     html = models.TextField(_("HTML"), blank=True)
@@ -38,5 +39,24 @@ class OutlinePtr(CMSPlugin):
 
 
 # We don't both with SnippetPtr, since all the data is actually in Snippet
-reversion_register(Outline)
+#reversion_register(Outline)
+
+#    name = models.TextField(max_length=100)
+
+#    def __unicode__(self):
+#        return self.name
+    
+    
+#class OutlineBlock(models.Model):
+#    outline = models.ForeignKey(Outline)
+#    title = models.TextField(max_length=100)
+#    body = models.TextField(max_length=1000)
+#    id_number = models.IntegerField() #necesarry? objects have an auto-id...
+
+#class OutlinePlugin(CMSPlugin):
+#    outline = models.ForeignKey('Outline', related_name='plugins')
+#    
+#    def __unicode__(self):
+#        return self.title
+
 
