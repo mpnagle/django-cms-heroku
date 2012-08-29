@@ -27,6 +27,7 @@
 
 #article{
     width: 400px; 
+    height: 700px;
     float: left;
     padding-left: 39px;
     padding-right: 80px;
@@ -34,7 +35,9 @@
 }
 
 #reference{
+    whitespace: pre;
     width: 220px;
+    height: 700px;
     float: left;
     padding-left: 10px;
     padding-right: 10px;
@@ -68,7 +71,6 @@
 .left-text{
         background-color:#FFFFFF;
 	z-index:1000;
-	height:700px;
 	padding-bottom:60px;
 	position: relative;
 	left: 40px;

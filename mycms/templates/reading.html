@@ -290,6 +290,30 @@ vulnerable and marginalized," <a href="http://www.dfid.gov.uk/r4d/SearchResearch
 
 {% addtoblock "js" %}
 <script type="text/javascript">
+//create white space in smaller div
+console.log("scrollHEight")
+console.log(document.getElementById("article").scrollHeight);
+var totalArtHeight = document.getElementById("article").scrollHeight;
+var totalRefHeight = document.getElementById("reference").scrollHeight;
+if (totalArtHeight > totalRefHeight){
+//    document.getElementById("reference").style.height = totalArtHeight;
+document.getElementById("article").scrollTop = 1000;
+document.getElementById("article").scrollTop = 1000;
+
+
+
+}
+
+
+console.log("number of pixels that the content of an element is scrolled upward");
+console.log(document.getElementById("article").scrollTop);
+document.getElementById("article").scrollTop = 1000;
+console.log("height of article div");
+console.log(document.getElementById("article").offsetHeight);
+console.log("line height");
+console.log(document.getElementById("article").style.lineHeight);
+
+
 //align reference column footnotes with where they appear in article text
 $('[data-foot="article"]').each(
     function(index){
