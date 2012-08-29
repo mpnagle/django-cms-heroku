@@ -183,6 +183,9 @@
 
 <p>  Looking to the future, we see the generation and use of both media and data leading to the greater influence by underrepresented communities worldwide in the processes of development. By shifting the dynamics of who creates and owns information about a place like this slum--of who is able to narrate its stories-- power and political dynamics that have kept residents from being true participants in their own development and governance must eventually shift. If there is one thing I learned in Kibera, it is that decisions that affect an entire community-- including how it is built and rebuilt, and what priorities should be addressed and how--should be determined primarily by those people who must sustain the impact of such monumental decisions. This may be a messy way to govern, but the alternative will be resentment and, ultimately, violence. As one small piece of the puzzle, the promise of new technology is that the cacophany that is our modern world can be heard to the fullest. We hope that it can also turn up the volume on the softest voices, and make the rest of the city, country, and globe listen. </p>
 
+<div id="artWhiteSpace">
+</div>
+
   </div>
 
 
@@ -283,44 +286,27 @@ vulnerable and marginalized," <a href="http://www.dfid.gov.uk/r4d/SearchResearch
 <p class="references" data-foot="ref">25. The Dutch development agency, <a href="http://www.hivos.nl/english">.</a></p><a href="http://www.hivos.nl/english">
 </a>
 
-
+<div id="refWhiteSpace">
+</div>
 
   </div>
-</div>
+
 
 {% addtoblock "js" %}
 <script type="text/javascript">
-//create white space in smaller div
+//create white space in smaller div (art or ref), so that scrollHeight is "equal"
 var totalArtHeight = document.getElementById("article").scrollHeight;
 var totalRefHeight = document.getElementById("reference").scrollHeight;
-console.log("ref height before");
-console.log(totalRefHeight);
 if (totalArtHeight > totalRefHeight){
-    document.getElementById("reference").childNodes.item(0).style.height = 
+    document.getElementById("refWhiteSpace").style.height = 
 	(totalArtHeight - totalRefHeight) + 'px';
-
-
-//    $("article").append('<div id="whiteSpace"></div>')
-  //  document.getElementById("whiteSpace").style.height = 
-//	totalArtHeight - totalRefHeight;
-  //  console.log("ref after");
-    //console.log(document.getElementById("reference").scrollHeight);
-
 }
+
 else if (totalRefHeight < totalARtHeight){
-    document.getElementById("article").childNodes.item(0).style.height = 
+    document.getElementById("artWhiteSpace").style.height = 
 	(totalRefHeight - totalArtHeight) + 'px';
 }
 
-
-
-console.log("number of pixels that the content of an element is scrolled upward");
-console.log(document.getElementById("article").scrollTop);
-document.getElementById("article").scrollTop = 1000;
-console.log("height of article div");
-console.log(document.getElementById("article").offsetHeight);
-console.log("line height");
-console.log(document.getElementById("article").style.lineHeight);
 
 
 //align reference column footnotes with where they appear in article text
@@ -349,9 +335,6 @@ $('[data-foot="article"]').each(
 </div>
 
 
-	
-
-  </div>
 
 {% placeholder "outline" %}
 {% endblock %}
