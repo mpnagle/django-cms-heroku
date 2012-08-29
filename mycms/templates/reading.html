@@ -291,18 +291,23 @@ vulnerable and marginalized," <a href="http://www.dfid.gov.uk/r4d/SearchResearch
 {% addtoblock "js" %}
 <script type="text/javascript">
 //create white space in smaller div
-console.log("scrollHEight")
-console.log(document.getElementById("article").scrollHeight);
 var totalArtHeight = document.getElementById("article").scrollHeight;
 var totalRefHeight = document.getElementById("reference").scrollHeight;
+console.log("ref height before");
+console.log(totalRefHeight);
 if (totalArtHeight > totalRefHeight){
-//    document.getElementById("reference").style.height = totalArtHeight;
-document.getElementById("article").scrollTop = 1000;
-document.getElementById("article").scrollTop = 1000;
-
-
+    $("article").append('<div id="whiteSpace"></div>')
+    document.getElementById("whiteSpace").style.height = 
+	totalArtHeight - totalRefHeight;
+    console.log("ref after");
+    console.log(document.getElementById("reference").scrollHeight);
 
 }
+else if (totalRefHeight < totalARtHeight){
+    document.getElementById("article").childNodes.item(0).style.height = 
+	(totalRefHeight - totalArtHeight) + 'px';
+}
+
 
 
 console.log("number of pixels that the content of an element is scrolled upward");
