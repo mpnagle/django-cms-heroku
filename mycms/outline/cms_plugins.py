@@ -12,7 +12,7 @@ from django.template.loader import get_template
 class OutlinePlugin(CMSPluginBase):
     model = OutlinePtr
     name = _("Outline")
-    render_template = get_template("outline.html")
+    render_template = "outline.html"
     text_enabled = True
     
     def render(self, context, instance, placeholder):
