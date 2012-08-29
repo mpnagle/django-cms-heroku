@@ -127,7 +127,7 @@ TEMPLATE_DIRS = (
 )
 
 SOUTH_DATABASE_ADAPTERS = {
-    'default': "south.db.postgresql_psycopg2"
+    'default': "south.db.sqlite3"
 }
 
 INSTALLED_APPS = (
@@ -150,5 +150,6 @@ INSTALLED_APPS = (
     'cms.plugins.googlemap',
     'sekizai',
     'gunicorn',
-    'mycms.outline'
+    'mycms.outline',
+#    'mycms.snippet'
 )
