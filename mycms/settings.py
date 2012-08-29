@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import os
 import os.path
+import dj_database_url
 
 gettext = lambda s: s
 
@@ -22,7 +23,7 @@ DEFAULT_LANGUAGE = 0
 # Heroku will take care of this for us later dynamicly.
 
 
-# DATABASES = {'default': dj_database_url.config(default='postgres://localhost')}
+
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -54,19 +55,26 @@ MEDIA_ROOT = os.path.join(PROJECT_DIR, "media")
 STATIC_ROOT = os.path.join(PROJECT_DIR, "static")
 
 
-import dj_database_url
+
+if os.path.exists('/Library/'): #if local on a Mac...
+    DATABASES = {
+        'default': {
+            'NAME': 'journal_db',       
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'USER': '',
+            'PASSWORD': '',
+            'HOST': 'localhost',
+            'PORT': '',
+            
+            },
+        }
+else:
+    DATABASES = {'default': dj_database_url.config(default='postgres://localhost')}
 
 
-DATABASES = {
-    'default': {
-        'NAME': os.path.join(MEDIA_ROOT, 'site.db'),
-        'ENGINE': 'django.db.backends.sqlite3',
-        'CHARSET': 'utf8',
-    },
-}
 
-if 'DATABASE_URL' in os.environ:
-    DATABASES = {'default': dj_database_url.config()}
+#if 'DATABASE_URL' in os.environ:
+#    DATABASES = {'default': dj_database_url.config()}
 
 
 
@@ -141,7 +149,7 @@ INSTALLED_APPS = (
     'cms',
     'menus',
     'mptt',
-    'south',
+#   'south',
     'cms.plugins.text',
     'cms.plugins.picture',
     'cms.plugins.link',
