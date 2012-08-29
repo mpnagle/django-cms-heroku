@@ -6,13 +6,13 @@ from django.utils.safestring import mark_safe
 from django.utils.translation import ugettext_lazy as _
 from django.template.context import Context
 from models import OutlinePtr
-
+from django.template.loader import get_template
 
 
 class OutlinePlugin(CMSPluginBase):
     model = OutlinePtr
     name = _("Outline")
-    render_template = "outline.html"
+    render_template = get_template("outline.html")
     text_enabled = True
     
     def render(self, context, instance, placeholder):
