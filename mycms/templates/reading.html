@@ -296,11 +296,15 @@ var totalRefHeight = document.getElementById("reference").scrollHeight;
 console.log("ref height before");
 console.log(totalRefHeight);
 if (totalArtHeight > totalRefHeight){
-    $("article").append('<div id="whiteSpace"></div>')
-    document.getElementById("whiteSpace").style.height = 
-	totalArtHeight - totalRefHeight;
-    console.log("ref after");
-    console.log(document.getElementById("reference").scrollHeight);
+    document.getElementById("reference").childNodes.item(0).style.height = 
+	(totalArtHeight - totalRefHeight) + 'px';
+
+
+//    $("article").append('<div id="whiteSpace"></div>')
+  //  document.getElementById("whiteSpace").style.height = 
+//	totalArtHeight - totalRefHeight;
+  //  console.log("ref after");
+    //console.log(document.getElementById("reference").scrollHeight);
 
 }
 else if (totalRefHeight < totalARtHeight){
