@@ -35,7 +35,7 @@ class OutlinePtr(CMSPlugin):
 
     def __unicode__(self):
         # Return the referenced snippet's name rather than the default (ID #)
-        return self.outline.name
+        return self.snippet.name
 
 
 # We don't both with SnippetPtr, since all the data is actually in Snippet
