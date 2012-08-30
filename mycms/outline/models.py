@@ -8,7 +8,7 @@ from cms.utils.helpers import reversion_register
 class Outline(models.Model):
 
 
-    title = models.CharField(_("Block Title"), max_length=255, unique=True)
+    name = models.CharField(_("Block Title"), max_length=255, unique=True)
     body = models.TextField(_("Block Body"), max_length=1000, unique=True)
 #    html = models.TextField(_("HTML"), blank=True)
 #    template = models.CharField(_("template"), max_length=50, blank=True, \
@@ -20,7 +20,7 @@ class Outline(models.Model):
         return self.name
 
     class Meta:
-        ordering = ['title']
+        ordering = ['name']
         verbose_name = _("Outline")
         verbose_name_plural = _("Outlines")
 
@@ -35,7 +35,7 @@ class OutlinePtr(CMSPlugin):
 
     def __unicode__(self):
         # Return the referenced snippet's name rather than the default (ID #)
-        return self.outline.name
+        return self.snippet.name
 
 
 # We don't both with SnippetPtr, since all the data is actually in Snippet

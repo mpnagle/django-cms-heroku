@@ -8,9 +8,9 @@ from cms.utils.helpers import reversion_register
 class Outline(models.Model):
 
 
-    title = models.CharField(_("name"), max_length=255, unique=True)
-    body = models.TextField(_("name2"), max_length=1000, unique=True)
-    html = models.TextField(_("HTML"), blank=True)
+    name = models.CharField(_("Block Title"), max_length=255, unique=True)
+    body = models.TextField(_("Block Body"), max_length=1000, unique=True)
+#    html = models.TextField(_("HTML"), blank=True)
 #    template = models.CharField(_("template"), max_length=50, blank=True, \
 #        help_text=_('Enter a template (i.e. "snippets/plugin_xy.html") which will be rendered. ' + \
 #        'If "template" is given, the contents of field "HTML" will be passed as template variable {{ html }} to the template. ' + \
@@ -20,7 +20,7 @@ class Outline(models.Model):
         return self.name
 
     class Meta:
-        ordering = ['title']
+        ordering = ['name']
         verbose_name = _("Outline")
         verbose_name_plural = _("Outlines")
 
