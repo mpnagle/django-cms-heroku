@@ -8,8 +8,10 @@ from cms.utils.helpers import reversion_register
 class Outline(models.Model):
 
 
-    name = models.CharField(_("Block Title"), max_length=255, unique=True)
-    body = models.TextField(_("Block Body"), max_length=1000, unique=True)
+    name = models.CharField(_("Block Title"), max_length=255)
+    body = models.TextField(_("Block Body"), max_length=1000)
+    article_ref = models.CharField(_("Article Reference Tag"), max_length=255)
+
 #    html = models.TextField(_("HTML"), blank=True)
 #    template = models.CharField(_("template"), max_length=50, blank=True, \
 #        help_text=_('Enter a template (i.e. "snippets/plugin_xy.html") which will be rendered. ' + \

@@ -1,55 +1,242 @@
 {% extends "base.html" %}
-{% load cms_tags %}
+{% load cms_tags sekizai_tags %}
 
 {% block base_content %}
 
-<link type="text/css" href="{{ MEDIA_URL }}jquery-ui/css/custom-theme/jquery-ui.css" />
+
+{% addtoblock "css" %}
+<link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}jquery-ui/css/custom-theme/jquery-ui.css" />
+{% endaddtoblock "css" %}
+
+
 <link ref="stylesheet" type="text/css" href="{{ MEDIA_URL }}reading.css" />
 
 
+
+{% addtoblock "js" %}
 <script type="text/javascript" src="{{ MEDIA_URL }}jquery-ui/js/jquery.js"></script>
 <script type="text/javascript" src="{{ MEDIA_URL }}jquery-ui/js/jquery-ui.js"></script>
-
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript" src="{{ MEDIA_URL }}reading.js"></script>
+{% endaddtoblock "js" %}
 
 <!-- beige box -->
-<div style="background-color:#eae7d3;width:1100px;height:10000px;z-index:-1;padding-top:20px;padding-left:20px;">
+<div id="beige-box">
+</div>
+
+
+<!--article title -->
+<div id="title">Mexico's Growth Will Come From Entrepreneurship and Small and Medium-Sized Enterprises
+</div>
+
+
+
+<!-- outline column -->
+<div id="outline">
+<!-- outline column -->
+  <div class="outlineBox" id="outline_1">
+    <div class="outlineTitle">
+      Mexico's Growth Problem
+    </div>
+    <div class="outlineRest">
+    Mexico has experienced a mediocre growth rate in comparison to its peer countries in the region, despite the fact that its largest companies have grown significantly.
+    </div>
+  </div>
+
+  <div class="outlineBox" id="outline_2">
+    <div class="outlineTitle">
+    What's the Cause?
+    </div>
+    <div class="outlineRest">
+    The absence of entrepreneurship and the slow growth of small and medium enterprises (SMEs), which increase "the size of the pie," rather than just take a bigger share of the existing one. 
+    </div>
+  </div>
+  
+  <div class="outlineBox" id="outline_3">  
+      <div class="outlineTitle">
+	The Public Policy Solution
+      </div>
+      <div class="outlineRest">If the goal of national policymakers in Mexico is to increase the country's GDP, the most efficient course of action is to help SMEs grow into large companies, as opposed to encouraging microenterprise.
+      </div>
+  </div>
+  
+    <div class="outlineBox" id="outline_4">  
+	<div class="outlineTitle">
+	  Policy Intervention: Access to Capital
+	</div>
+	<div class="outlineRest">Mexico can increase access to the capital that SMEs need to finance growth by strengthening loan guarantees and offering incentives to invest in venture capital funds.
+	</div>
+      </div>
+
+      <div class="outlineBox" id="outline_5">  
+	<div class="outlineTitle">
+	  Many Rules, Uneven Enforcement
+	</div>
+	<div class="outlineRest">While large companies have the lobbying capacity to ensure that an overabundance of rules that regulate Mexico's economy aren't enforced, SMEs and entrepreneurs don't have the resources to ensure a consistent regulatory structure in which to work.
+	</div>
+      </div>
+
+      <div class="outlineBox" id="outline_6">  
+	<div class="outlineTitle">
+    The Case for an SME Protection Agency
+	</div>
+	<div class="outlineRest">
+  The Mexican government could create an entity that advocates for SMEs, and addresses challenges that those companies face, such as acquiring government contracts, resolving abuses of agreements between SMEs and larger companies, and ensuring consistent access to government provided utilities.
+	</div>
+      </div>
+
+      <div class="outlineBox" id="outline_7">  
+	<div class="outlineTitle">
+    Performance Bonds for SMEs
+	</div>
+	<div class="outlineRest">
+	  Improve access to surety bonds for SMEs to protect their interests when doing contract work.
+	</div>
+      </div>
+
+</div>
+
+
+
+
 
 
 <!-- article column -->
-  <div id="article" class="left-text" style="background-color:#FFFFFF;width:500px;height:10000px;float:left;padding-left:39px;padding-right:80px;">
+<div id="article" class="left-text">
+  <p class = "author-heading" data-foot="article">Álvaro Rodríguez Arregui</p>
+<p>For a country to grow, private-sector companies have to grow. Since 1993, revenues of the companies that comprise Mexico’s Stock Market Index (Índice de Precios y Cotizaciones of the Bolsa Mexicana de Valores) have experienced a compounded annual growth rath (CAGR) in dollar terms of 14 percent. Comparatively, the CAGR over the same period in revenues of the companies that make up the Bovespa Index (Brazil’s stock exchange index) has been 2 percent.<sup class="footNumber" data-foot="article">1</sup></p>
+      
+<p>Yet over the same time period, <div class="artPar" id="art_1">Mexico has experienced a mediocre growth in relationship to peer countries. Mexico’s nominal GDP CAGR since 1993 has been 5 percent, versus 9 percent for Brazil.<sup class="footNumber" data-foot="article">2</sup></div> This means Brazil has growth a rate 1.8x faster than Mexico’s.<div> It’s because of this disparity that a recent survey of the top 92 business leaders in Mexico, done in anticipation of the G20 Summit in Los Cabos, Mexico, found that “the topic at the top of the minds of most Mexican executives is economic growth.”<sup class="footNumber" data-foot="article">3</sup></p>
+    
+    <p>Why has Brazil’s GDP grown 1.8x faster than Mexico’s if Mexico’s largest companies have grown 7x faster than Brazil’s? The answer is entrepreneurship and the growth of small and medium enterprises (SMEs).</p>
+      
+    <p><div class="artPar" id="art_2">Large companies in Mexico have in fact shown dynamic growth; however, that has not translated into a higher GDP because these companies have not increased the size of the pie; they have, rather, captured a greater piece of the existing pie. Moreover, the largest companies have achieved their growth primarily through expansion with foreign market operations, which does not contribute to the growth of Mexico’s GDP.</div></p>
+    
+    <p>Given that the growth of Mexico’s largest enterprises does not raise its GDP, the country is left with two main options: to create more microenterprises, or to increase the growth of its SMEs.</p>
+    
+    <p><d class="artPar" id="art_3">Achieving one percentage point growth in the GDP by creating new microenterprises would mean adding 273,000 such companies.<sup class="footNumber" data-foot="article">4</sup> To achieve the same result through the growth of SMEs, 105 midsize companies would have to grow from medium to large.<sup class="footNumber" data-foot="article">5</sup> Therefore, from a public policy perspective, it is most efficient to focus on SMEs to raise the GDP.</div></p>
 
+        <p>I am not arguing that Mexico should abandon its programs to facilitate the creation of microenterprises. However, it is important to recognize that these efforts will primarily address issues of social inclusion, which is very necessary but will not result in the short- or medium-term growth of Mexico’s economy.</p>
+        
+        <p>During the last 20 years, Mexico’s private sector, especially large corporations, has insisted that the way to catalyze Mexico’s growth is through structural reforms.<sup class="footNumber" data-foot="article">6</sup> There is no question that such reforms would result in a higher GDP. However, the country’s full political energy has been focused on achieving these structural reforms, and because of a lack of consensus, policymakers have come out empty handed and politically exhausted. Furthermore, even if Mexico were to achieve the proposed reforms, most would benefit older companies and well-established industrial groups, and few would benefit SMEs. For example, few SMEs would be able to participate in a revamped energy sector because of the size of the required investment. Another example is labor reform; most newer SMEs do not have the industrial-based labor structures that labor reforms are looking to address. Therefore, instead of focusing on structural reforms, which has proven futile, Mexico should move forward and focus its energy on changes that are achievable, including initiatives that require few legal reforms and will spur innovation from the bottom up.</p>
+        
+        <p>Mexico continues to face important socioeconomic challenges, and solving these challenges calls for innovative solutions. Large companies and market leaders are generally not innovators, which is another reason why Mexico needs bottom-up innovation from its entrepreneurs and SMEs. Let me share some ideas for encouraging the development of new entrepreneurs and  creating more SMEs in Mexico, and for catalyzing the growth of existing SMEs.</p>
+        
+        <h2>STRATEGIES TO CATALYZE ENTERPRISE GROWTH IN MEXICO</h2><h3>Provide access to capital</h3><p>In Mexico, loans to the private sector (excepting mortgages and consumer loans) as a percentage of GDP is 9 percent. This compares to 28 percent in Brazil.<sup class="footNumber" data-foot="article">7</sup> More specifically, the total loan portfolio to SMEs in Mexico is US$10 billion, or 1 percent of GDP. Without loans, the private sector simply cannot grow. Financing is the gasoline for the private-sector engine!</p>
+        <p>Moreover, venture capital is very scarce in Mexico, which has only three institutional venture capital firms that have less than US$300 million in assets under management.<sup class="footNumber" data-foot="article">8</sup> Mexico’s private equity (PE)/venture capital (VC) industry accounts for 0.04 percent of GDP, compared to 0.16 percent in Brazil. In short, Mexico’s PE/VC industry is one-fourth the size of Brazil’s.</p>
+        <p><div class="artPar" id="art_4">Governments could do a lot to improve access to capital for entrepreneurs and SMEs, such as offering incentives to invest in venture capital or redesigning loan guarantee programs to eliminate the current perverse incentive to use them for the least risky SMEs. 
+        <p>Furthermore, Mexico must strictly enforce the rules for loan guarantees. When a bank provides a loan to an SME and the development bank guarantees that loan, the bank is not allowed to require hard assets as a guarantee. In reality, despite having loan guarantees from the government, local private banks do require hard assets as an additional guarantee. Therefore, strict enforcement of the rule prohibiting such requirements is urgently needed.</div></p>
+        <p>Because the existing mechanism for auctioning such loan guarantees is based on the interest rate banks will charge, it incentivizes those bidding for the guarantees to use them on the least risky loans. The incentive should be the opposite, thus Mexico needs a new mechanism for auctioning or guaranteeing the assignment of loan guarantees.</p>
+        <p>The development of Mexico’s PE/VC industry could be catapulted forward if the government were to provide incentives for private local investors to invest, following, for example, the Israeli model.</p>
+        <h3>Level the playing field</h3><p>A friend of mine says, “In Mexico, everything is prohibited but everything is possible.” MIT economist Rüdiger Dornbusch used to say, “The U.S. is a country with few rules and strict enforcement, versus Mexico, which has lots of rules and lax enforcement.”</p>
+        <p><div class="artPar" id="art_5">Mexico’s lax enforcement is fairly discretionary, which puts the entrepreneurs and SMEs in an extremely unfavorable competitive position relative to the large companies that have much more influence. This creates significant barriers for entrepreneurs and SMEs attempting to enter the market.</p>
+        <p>Furthermore, it is one thing to lobby and use legal maneuvering to prevent the creation of new rules and regulations that could affect your company, and quite another to use such maneuvers to prevent existing rules and regulations from affecting your company. The latter effort is much more difficult, and in Mexico there is more of it. This creates an unlevel playing field, because entrepreneurs and SMEs do not have the technology or power to play such a high-stakes game. The regulators therefore need to be aware that by failing to strictly enforce the rules, they are seriously affecting the country’s long-term growth.</div></p>
+        <h3>Reduce frictions in the supply chain</h3><p>For SMEs, the process of selling to large firms is long, tortuous, and uncertain.  To help its economy grow, Mexico must forge agreements with large corporations to get them to use SMEs for a percentage of their supplies, and to make their selections within a certain timeframe and efficient decisionmaking process. They also must commit to paying SMEs under the agreed-to terms. Furthermore, serving large companies can become costly because they feel they have an upper hand and thus continually change the terms and circumstances under which an SME can provide a service. Therefore, big companies need to adopt a code of conduct toward SMEs that includes paying on time!</p>
+        <p><div class="artPar" id="art_6">Mexico should create an agency along the lines of the Consumer Protection Agency to protect entrepreneurs and SMEs, because when a large company abuses the terms of an agreement, there is nowhere for an entrepreneur or SME to turn for help. There is always legal recourse, but that is costly and time consuming.</p>
+         <p>Government also can play an important role in integrating entrepreneurs and SMEs into its supply chain. The government could issue a legal mandate that a certain percentage of its supplies must come from SMEs; this would not include any SME that is a subsidiary of a large corporation.</p> 
+         <p>With regards to government procurement, instituting a more efficient approval system, simplifying procurement processes in accordance with government criteria, and making timely payments as mandated by law would go a long way to encourage the growth of Mexico’s SME sector.</p> 
+            <p>An agency that protects entrepreneurs and SMEs should also oversee work done for the government. The Mexican state has a monopoly on providing basic services such as electrical power, and when it refuses to provide service, entrepreneurs and SMEs have nobody to go to for protection.</div></p>
+         <h3>Enable SME access to performance bonds</h3><p>Most of the projects entrepreneurs and SMEs do for large corporations or the government require a performance bond, which is extremely difficult for an entrepreneur or SME to obtain. <div class="artPar" id="art_7">Therefore, the Mexican development bank should establish a guarantee program for performance bonds that is similar to the one it has for loans. The only caveat is that the performance bonds should not be offered only to the more mature SMEs.</p> 
+          <p>The law should also require governments to provide performance bonds when dealing with SMEs. Many projects done for governments suffer significant delays, which translate into higher costs, and these added costs are usually absorbed by the SME. They should instead be covered by the government when the government causes the delay, and a performance bond should guarantee that the extra costs will be paid.</p></div>             
+<h2>FROM “FRICTIONFULL” STASIS TOWARD FRICTIONLESS DEVELOPMENT</h2> 
+<p>The lack of a hospitable environment in which entrepreneurs and SMEs can develop and grow in Mexico has created what I call a “frictionfull” environment, which results in a high mortality rate for entrepreneurs and SMEs. Therefore, SMEs that do manage to become large enterprises are sucked into the “hero mentality” of large corporations. When heroes conquer new territory, they concentrate all their energy on defending it, which has created an extremely defensive private sector. This defensive attitude raises the barriers to market entry even higher for entrepreneurs and SMEs and perpetuates the hero mentality.</p>
+<p>We need drastic change within both the government and the private sector to eliminate the hero mentality and change a “frictionfull” environment into one that will spur the creation and growth of entrepreneurs and SMEs in Mexico, which will ultimately result in a significantly higher GDP. I know that doing this will require a great deal of courage, but as Peter Tufano, dean of the Saïd Business School at Oxford University, said at the 2012 Skoll World Forum, “We require a certain degree of foolishness to achieve the changes that are required.”</p>
+<p><em>Text based on the presentation, “A Unique Approach to Measure How High Impact Entrepreneurs and Venture Capital are Key Drivers for Long-Term Economic Growth.” Fernando Fabre, Endeavor Global.</em></p>
+<div id="artWhiteSpace">
+</div>
 
-    {% placeholder article_content %}
-  </div>
+</div>
 
 
 <!-- reference column -->
-  <div id="reference" class="left-text" style="background-color:#FFFFFF;width:220px;height:10000px;float:left;padding-left:30px;padding-right:30px;">
+<div id="reference" class="left-text">
+<br />
+<p class="references" data-foot="ref">
+Álvaro Rodríguez Arregui is cofounder and managing partner of IGNIA and Chairman of Compartamos Banco, an impact investing fund for Latin America focused on commercial enterprises that serve the base of the pyramid. He has also served as chairman of ACCION International and UNIDOS Lo Lograremos, CFO of Vitro, CEO of Farmacias Benavides and CFO of Grupo Elektra. He is a member of the WEF’s Global Agenda Council and was named Young Global Leader by the World Economic Forum in 2005.
+</p>
 
-    {% placeholder reference_content %}
+<p class="references" data-foot="ref">1. UBS Investment Research</p>
+<p class="references" data-foot="ref">2. UBS Investment Research</p>
+<p class="references" data-foot="ref">3. The B20 Agenda from the Perspective of the Mexican Business Community </p>
+    <p class="references" data-foot="ref">4. INEGI’s definition of microenterprises includes those with zero to 30 employees, depending on the industry. <a href="www.inegi.org.mx">→</a></p>
+<p class="references" data-foot="ref">5. INEGI’s definition of midsize enterprises includes those with 20 to 500 employees, depending on the industry; large enterprises are those with more than 100 or 500 employees, depending on the industry. <a href="www.inegi.org.mx">→</a></p>
+<p class="references" data-foot="ref">6. The most needed types of structural reform are fiscal, energy, labor, and judiciary.</p>
+    <p class="references" data-foot="ref">7. UBS Investment Research</p>
+    <p class="references" data-foot="ref">8. Roberto Charvel, “The Road Map for Private Equity, Venture Capital and Hedge Funds in Mexico.” <a href="http://www.iijournals.com/doi/abs/10.3905/jpe.2012.15.2.053">→</a></p>
+    
 
+<div id="refWhiteSpace">
 </div>
-    
-    
-    
-
-    
-    
-
- 
-<!-- outline column -->
-  <div id="outline" class="right-text" style="background-color:black;width:400px;height:10000px;float:left;z-index:1000;">
-    
-  
- 
-  
-  
-
-  {% placeholder outline_content %}
-
-
-  </div>
-
 </div>
 
+
+{% addtoblock "js" %}
+<script type="text/javascript">
+  //alternate background colors for lines of outline
+  //hide see more outlineRest's
+$('#outline').children().each(
+  function(index){
+      var restText = $($(this).children()[1]);
+      //      restText.addClass("clear");
+      if (index % 2 ==0){
+<<<<<<< HEAD
+          $(this).css('background-color', '#f6f4f0');
+=======
+          $(this).css('background-color', 'red');
+
+>>>>>>> 2e1d2586e4c29b27652e9a5c68758d04fcea81c5
+      }
+      else{
+          $(this).css('background-color', 'white');
+      }
+<<<<<<< HEAD
+      if (index==2){
+	  $(this).css('background-color', '#dedede');//ccebeb'); 
+	  $(this).css('color', '#007A7A');
+	  document.getElementById("art_1").style.color = '009999';
+	  // light teal e6f5f5');
+	  //'#ccebeb');//#f6f4f0');// light grey '#dedede');
+      }
+=======
+      if (index==3){
+          $(this).addClass("      }
+
+>>>>>>> 2e1d2586e4c29b27652e9a5c68758d04fcea81c5
+  }
+)
+
+  
+
+
+
+//create white space in smaller div (art or ref), so that scrollHeight is "equal"
+var totalArtHeight = document.getElementById("article").scrollHeight;
+var totalRefHeight = document.getElementById("reference").scrollHeight;
+if (totalArtHeight > totalRefHeight){
+    document.getElementById("refWhiteSpace").style.height = 
+	(totalArtHeight - totalRefHeight) + 'px';
+}
+
+else if (totalRefHeight < totalArtHeight){
+    console.log("I think the Artical is shorter than the reference column.");
+    document.getElementById("artWhiteSpace").style.height = 
+	(totalRefHeight - totalArtHeight) + 'px';
+}
+
+
+
+//align reference column footnotes with where they appear in article text
+$('[data-foot="article"]').each(
+    function(index){
+	var curr_data_ref = $('[data-foot="ref"]').eq(index);
+	art_offset_top = $(this).offset().top;
+	ref_left_offset = curr_data_ref.offset().left;
+	ref_left_offset = curr_data_ref.offset().left;
+	curr_data_ref.offset({top:art_offset_top, left:ref_left_offset});
+}
+)
+
+</script>
+{% endaddtoblock "js" %}
 {% endblock %}
+
