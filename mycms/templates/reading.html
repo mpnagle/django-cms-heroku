@@ -138,13 +138,12 @@
             <p>An agency that protects entrepreneurs and SMEs should also oversee work done for the government. The Mexican state has a monopoly on providing basic services such as electrical power, and when it refuses to provide service, entrepreneurs and SMEs have nobody to go to for protection.</div></p>
          <h3>Enable SME access to performance bonds</h3><p>Most of the projects entrepreneurs and SMEs do for large corporations or the government require a performance bond, which is extremely difficult for an entrepreneur or SME to obtain. <div class="artPar" id="art_7">Therefore, the Mexican development bank should establish a guarantee program for performance bonds that is similar to the one it has for loans. The only caveat is that the performance bonds should not be offered only to the more mature SMEs.</p> 
           <p>The law should also require governments to provide performance bonds when dealing with SMEs. Many projects done for governments suffer significant delays, which translate into higher costs, and these added costs are usually absorbed by the SME. They should instead be covered by the government when the government causes the delay, and a performance bond should guarantee that the extra costs will be paid.</p></div>             
-        <h2>FROM “FRICTIONFULL” STASIS TOWARD FRICTIONLESS DEVELOPMENT</h2> 
-        <p>The lack of a hospitable environment in which entrepreneurs and SMEs can develop and grow in Mexico has created what I call a “frictionfull” environment, which results in a high mortality rate for entrepreneurs and SMEs. Therefore, SMEs that do manage to become large enterprises are sucked into the “hero mentality” of large corporations. When heroes conquer new territory, they concentrate all their energy on defending it, which has created an extremely defensive private sector. This defensive attitude raises the barriers to market entry even higher for entrepreneurs and SMEs and perpetuates the hero mentality.</p>
-        <p>We need drastic change within both the government and the private sector to eliminate the hero mentality and change a “frictionfull” environment into one that will spur the creation and growth of entrepreneurs and SMEs in Mexico, which will ultimately result in a significantly higher GDP. I know that doing this will require a great deal of courage, but as Peter Tufano, dean of the Saïd Business School at Oxford University, said at the 2012 Skoll World Forum, “We require a certain degree of foolishness to achieve the changes that are required.”</p>
-        <p><em>Text based on the presentation, “A Unique Approach to Measure How High Impact Entrepreneurs and Venture Capital are Key Drivers for Long-Term Economic Growth.” Fernando Fabre, Endeavor Global.</em></p>
-
-	<div id="artWhiteSpace">
-	</div>
+<h2>FROM “FRICTIONFULL” STASIS TOWARD FRICTIONLESS DEVELOPMENT</h2> 
+<p>The lack of a hospitable environment in which entrepreneurs and SMEs can develop and grow in Mexico has created what I call a “frictionfull” environment, which results in a high mortality rate for entrepreneurs and SMEs. Therefore, SMEs that do manage to become large enterprises are sucked into the “hero mentality” of large corporations. When heroes conquer new territory, they concentrate all their energy on defending it, which has created an extremely defensive private sector. This defensive attitude raises the barriers to market entry even higher for entrepreneurs and SMEs and perpetuates the hero mentality.</p>
+<p>We need drastic change within both the government and the private sector to eliminate the hero mentality and change a “frictionfull” environment into one that will spur the creation and growth of entrepreneurs and SMEs in Mexico, which will ultimately result in a significantly higher GDP. I know that doing this will require a great deal of courage, but as Peter Tufano, dean of the Saïd Business School at Oxford University, said at the 2012 Skoll World Forum, “We require a certain degree of foolishness to achieve the changes that are required.”</p>
+<p><em>Text based on the presentation, “A Unique Approach to Measure How High Impact Entrepreneurs and Venture Capital are Key Drivers for Long-Term Economic Growth.” Fernando Fabre, Endeavor Global.</em></p>
+<div id="artWhiteSpace">
+</div>
 
 </div>
 
@@ -168,12 +167,28 @@
 
 <div id="refWhiteSpace">
 </div>
-
 </div>
 
 
 {% addtoblock "js" %}
 <script type="text/javascript">
+  //alternate background colors for lines of outline
+  //hide see more outlineRest's
+$('#outline').children().each(
+  function(index){
+      var restText = $($(this).children()[1]);
+      restText.addClass("clear");
+      if (index % 2 ==0){
+          $(this).css('background-color', 'red');
+      }
+      else{
+          $(this).css('background-color', 'white');
+      }
+  }
+)
+
+  
+
 
 
 //create white space in smaller div (art or ref), so that scrollHeight is "equal"
@@ -205,9 +220,5 @@ $('[data-foot="article"]').each(
 
 </script>
 {% endaddtoblock "js" %}
-     
-
- 
-
 {% endblock %}
 

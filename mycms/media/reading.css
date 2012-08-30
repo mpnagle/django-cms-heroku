@@ -40,14 +40,24 @@
     overflow: scroll;
 }
 
+.clear{
+    height:0px;
+    overflow:hidden;
+}
+
 .outlineTitle{
-    background-color:#FFFFFF;
     font-size: 18pt;
 }
 
 .outlineRest{
-    background-color: black;
-    color: white;
+}
+
+.evenOutlineBlock{
+    background-color: grey;
+}
+
+.oddOutlineBlock{
+    background-color: blue;
 }
 
 #article{
