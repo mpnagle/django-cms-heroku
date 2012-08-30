@@ -9,7 +9,7 @@
 	position:absolute;
 	height:2000px;
 	width:2000px;
-	background-color:#ea7d32;
+	background-color:#EDEAE1;
 	padding-top: 20px;
 	padding-left: 20px;
 	z-index:-1;
@@ -30,7 +30,6 @@
 
 #outline{
     position: relative;
-    background-color: grey;
     width: 450px;
     height: 600px;
     padding-bottom:60px;
@@ -43,25 +42,30 @@
 .clear{
     height:0px;
     overflow:hidden;
+    
+}
+
+.outlineBox{
+    color: #a39c87
+    font-size: 10pt;
+    font-family: helvetica;
 }
 
 .outlineTitle{
-    font-size: 18pt;
+    font-weight: bold;
+    font-size: 10pt;
 }
 
 .outlineRest{
+    font-size: 10pt;
+
 }
 
-.evenOutlineBlock{
-    background-color: grey;
-}
-
-.oddOutlineBlock{
-    background-color: blue;
-}
 
 #article{
-    background-color:grey;
+    font-family: helvetica;
+    font-size: 10pt;
+    background-color: white;
     z-index:1000;
     position: relative;
     width: 400px; 

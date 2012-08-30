@@ -177,12 +177,19 @@
 $('#outline').children().each(
   function(index){
       var restText = $($(this).children()[1]);
-      restText.addClass("clear");
+      //      restText.addClass("clear");
       if (index % 2 ==0){
-          $(this).css('background-color', 'red');
+          $(this).css('background-color', '#f6f4f0');
       }
       else{
           $(this).css('background-color', 'white');
+      }
+      if (index==2){
+	  $(this).css('background-color', '#dedede');//ccebeb'); 
+	  $(this).css('color', '#007A7A');
+	  document.getElementById("art_1").style.color = '009999';
+	  // light teal e6f5f5');
+	  //'#ccebeb');//#f6f4f0');// light grey '#dedede');
       }
   }
 )
