@@ -5,14 +5,21 @@
 }
 
 
-#beige-box{
-	position:absolute;
-	height:2000px;
-	width:2000px;
-	background-color:#EDEAE1;
-	padding-top: 20px;
-	padding-left: 20px;
-	z-index:-1;
+#bg{
+    background-color: #EFEFEF;
+    height: 1500px;
+    position: absolute;
+}
+
+#whiteBorder{
+    background-color: white;
+    height: 661px;
+    width: 1300px;
+    position: relative;
+    left: 0px;
+    top: 200px;
+
+
 }
 
 #title{
@@ -29,31 +36,37 @@
 
 
 #outline{
-    position: relative;
-    width: 450px;
-    height: 600px;
-    padding-bottom:60px;
-    float: left;
-    position: relative;
-    left: 40px;
-    overflow: scroll;
+    background-color: #EFEFEF;
+    width: 400px;
+    position: absolute;
+    left:400px;
+    top:-500px;
+
+}
+
+.abstractTitle{
+    font-size: 24pt;
+    padding-top: 5px;
 }
 
 .clear{
     height:0px;
     overflow:hidden;
-    
 }
 
+
+
 .outlineBox{
-    color: #a39c87
     font-size: 10pt;
     font-family: helvetica;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .outlineTitle{
     font-weight: bold;
-    font-size: 10pt;
+
 }
 
 .outlineRest{
@@ -65,8 +78,8 @@
 #article{
     font-family: helvetica;
     font-size: 10pt;
-    background-color: white;
-    z-index:1000;
+    background-color: #F1EDE1;
+
     position: relative;
     width: 400px; 
     height: 600px;
@@ -79,8 +92,8 @@
 }
 
 #reference{
-    background-color:#FFFFFF;
-    z-index:1000;
+    background-color:#F3F1E5;
+
     width: 220px;
     height: 600px;
     padding-bottom:60px;
