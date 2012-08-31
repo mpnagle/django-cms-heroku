@@ -1,7 +1,7 @@
 from django.conf.urls.defaults import *
 from django.contrib import admin
 from django.conf import settings
-from mycms.views import home_view
+#from mycms.views import home_view
 
 admin.autodiscover()
 
