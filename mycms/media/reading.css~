@@ -5,30 +5,112 @@
 }
 
 
-#beige-box{
-	position:absolute;
-	height:2000px;
-	width:2000px;
-	background-color:#ea7d32;
+#bg{
+    background-color:#EFEFEF;
+    height: 661px;        
+
 }
 
-.left-text{
-        background-color:#FFFFFF;
-	overflow:scroll;
-	z-index:1000;
-	height:700px;
-	padding-bottom:60px;
-	position: relative;
-	left: 40px;
-	top: 20px
-	position:relative;
+#whiteBorder{
+    background-color: blue;
+
+
 }
 
-.right-text{
+#title{
+    background-color: blue;
+    font-size: 22pt;
+    left: 40px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
     position: relative;
-    background-color:#FFFFFF;
-    padding-top:60px;
+    width: 1159px;
+    text-align: center;
+}
+
+
+#outline{
+    position: relative;
+    width: 450px;
+    height: 600px;
     padding-bottom:60px;
-    z-index:1000;
+    float: left;
+    position: relative;
+    left: 40px;
+    overflow: scroll;
+}
+
+.clear{
+    height:0px;
+    overflow:hidden;
+    
+}
+
+.outlineBox{
+    color: #a39c87
+    font-size: 10pt;
+    font-family: helvetica;
+}
+
+.outlineTitle{
+    font-weight: bold;
+    font-size: 10pt;
+}
+
+.outlineRest{
+    font-size: 10pt;
 
 }
+
+
+#article{
+    font-family: helvetica;
+    font-size: 10pt;
+    background-color: #F1EDE1;
+
+    position: relative;
+    width: 400px; 
+    height: 600px;
+    padding-bottom:60px;
+    float: left;
+    padding-left: 39px;
+    padding-right: 80px;
+    overflow: scroll;
+
+}
+
+#reference{
+    background-color:#F3F1E5;
+
+    width: 220px;
+    height: 600px;
+    padding-bottom:60px;
+    position:relative;
+    padding-left: 30px;
+    padding-right: 10px;
+    overflow: hidden;
+}
+
+.artPar{
+}
+
+
+.clearArtPar{
+    height:0;
+    overflow:hidden;
+    display:block;
+}
+
+
+.footNumber{
+    color:red;
+}
+
+.references{
+    font-size:8pt;
+}
+
+
+
+

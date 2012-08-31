@@ -5,14 +5,24 @@
 }
 
 
-#beige-box{
-	position:absolute;
-	height:2000px;
-	width:2000px;
-	background-color:#EDEAE1;
-	padding-top: 20px;
-	padding-left: 20px;
-	z-index:-1;
+#bg{
+    background-color: #EFEFEF;
+    height: 1500px;
+    position: absolute;
+    z-index: -1;
+
+
+}
+
+#whiteBorder{
+    background-color: white;
+    height: 661px;
+    width: 1300px;
+    position: relative;
+    left: 75px;
+    top: 30px;
+    right: 100px;
+    z-index: 2;
 }
 
 #title{
@@ -65,8 +75,8 @@
 #article{
     font-family: helvetica;
     font-size: 10pt;
-    background-color: white;
-    z-index:1000;
+    background-color: #F1EDE1;
+
     position: relative;
     width: 400px; 
     height: 600px;
@@ -79,8 +89,8 @@
 }
 
 #reference{
-    background-color:#FFFFFF;
-    z-index:1000;
+    background-color:#F3F1E5;
+
     width: 220px;
     height: 600px;
     padding-bottom:60px;
