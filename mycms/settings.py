@@ -7,6 +7,7 @@ gettext = lambda s: s
 
 PROJECT_DIR = os.path.abspath(os.path.dirname(__file__))
 
+HOME_CMS_PAGE_SLUG = 'test'
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
