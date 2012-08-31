@@ -4,13 +4,29 @@ $('#article').on('scroll', function () {
 });
 */
 
-//setup bg and border
+//position bg and border
 var border_width = 10;
 var window_width = $(window).width();
-document.getElementById("bg").style.width = window_width;
+$('#bg').css("width", window_width);
 var whiteWidth = $("#whiteBorder").width();
 var white_left = (window_width - whiteWidth) / 2;
 $("#whiteBorder").css("left", white_left);
+
+//position outline (relative to whiteBorder)
+var borderPos = $('#whiteBorder').position();
+$('#outline').css("top", borderPos.top + border_width);
+$('#outline').css("left", borderPos.left + border_width);
+
+//position article 
+$('#article').css("top", borderPos.top + border_width);
+$('#article').css("left", $('#outline').position().left + $('#outline').outerWidth() + border_width);
+$('#article').css("height", $('#whiteBorder').height()-2*(border_width)-27);
+
+//position reference col
+$("#reference").css("top", borderPos.top + border_width);
+$('#reference').css("left", $('#article').position().left + $('#article').outerWidth());
+$('#reference').css("height", $('#article').outerHeight()-75);
+
 
 //setup outline, initialize w/ padding.
 var outlineHeight = 0;
@@ -19,10 +35,12 @@ $('.outlineBox').each(function(i, el) {
 	outlineHeight += size;
 });
 
-if (outlineHeight + 2 * (border_width) < $('#whiteBorder').height()) {
+console.log("outlineHeight");
+console.log(outlineHeight);
+if (outlineHeight + (2 * (border_width)) < $('#whiteBorder').height()) {
 	console.log("setting to outlineHeight");
 	$('#outline').css("height", outlineHeight);
-	collapseOutlineRest();
+	
 //	('#outline').css("overflow", "hidden");
 	
 } else {
@@ -33,9 +51,6 @@ if (outlineHeight + 2 * (border_width) < $('#whiteBorder').height()) {
 //	$('#outline').css("overflow", "scroll");
 }
 
-var borderPos = $('#whiteBorder').position();
-$('#outline').css("top", borderPos.top + border_width);
-$('#outline').css("left", borderPos.left + border_width);
 
 //alternate background colors for lines of outline
 //hide see more outlineRest's
@@ -55,6 +70,10 @@ $('#outline').children().each(
       else{
           $(this).css('background-color', 'white');
       }
+
+		if (index ==2){
+			$(this).css('background-color', '#F3F1E5');
+		}
 });
 
 
@@ -86,7 +105,7 @@ function collapseOutlineRest(){
 
 
 //create white space in smaller div (art or ref), so that scrollHeight is "equal"
-var totalArtHeight = document.getElementById("article").scrollHeight;
+var totalArtHeight = document.getElementById("").scrollHeight;
 var totalRefHeight = document.getElementById("reference").scrollHeight;
 if (totalArtHeight > totalRefHeight){
     document.getElementById("refWhiteSpace").style.height = 
