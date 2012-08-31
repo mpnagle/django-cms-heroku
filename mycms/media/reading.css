@@ -9,7 +9,7 @@
     background-color: #EFEFEF;
     height: 1500px;
     position: absolute;
-    z-index: -1;
+//    z-index: -1;
 
 
 }
@@ -22,7 +22,7 @@
     left: 75px;
     top: 30px;
     right: 100px;
-    z-index: 2;
+  //  z-index: 2;
 }
 
 #title{

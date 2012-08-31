@@ -29,8 +29,12 @@
 <script type="text/javascript">
     var window_width = $(window).width();
     document.getElementById("bg").style.width = window_width;
-    var whiteWidth = $("#whiteBorder").width();
+    var whiteWidth = $("#whiteBorder").width()
+    var white_left = (window_width - whiteWidth)/2;
     $("#whiteBorder").css("left", white_left);
+
+
+
     
 
   //alternate background colors for lines of outline
