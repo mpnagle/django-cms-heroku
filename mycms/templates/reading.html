@@ -29,6 +29,16 @@
 
 <!-- outline column -->
 <div id="outline">
+    <div class="outlineBox">
+      <div class="abstractTitle">
+        Mexico's Growth Problem
+      </div>
+      <div class="abstract">
+        100 words of abstract
+        100 words of abstract
+        100 words of abstract
+      </div>
+    </div>
 <!-- outline column -->
   <div class="outlineBox" id="outline_1">
     <div class="outlineTitle">
@@ -115,7 +125,9 @@ $('.outlineBox').each(function(i, el) {
 
 $('#outline').css("height", outlineHeight);    
 var borderPos =  $('#whiteBorder').position();
-$('#outline').css("top", borderPos.top);
+$('#outline').css("top", borderPos.top+border_width);
+$('#outline').css("left", borderPos.left+border_width);
+
 
   //alternate background colors for lines of outline
   //hide see more outlineRest's

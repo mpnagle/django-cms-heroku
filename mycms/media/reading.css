@@ -44,6 +44,11 @@
 
 }
 
+.abstractTitle{
+    font-size: 24pt;
+    padding-top: 5px;
+}
+
 .clear{
     height:0px;
     overflow:hidden;
@@ -52,14 +57,16 @@
 
 
 .outlineBox{
-    color: #a39c87
     font-size: 10pt;
     font-family: helvetica;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .outlineTitle{
     font-weight: bold;
-    font-size: 10pt;
+
 }
 
 .outlineRest{
