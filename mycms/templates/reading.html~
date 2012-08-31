@@ -25,17 +25,79 @@
 <div id="whiteBorder"></div>
 
 
+<!-- outline column -->
+<div id="outline">
+<!-- outline column -->
+  <div class="outlineBox" id="outline_1">
+    <div class="outlineTitle">
+      Mexico's Growth Problem
+    </div>
+    <div class="outlineRest">
+    Mexico has experienced a mediocre growth rate in comparison to its peer countries in the region, despite the fact that its largest companies have grown significantly.
+    </div>
+  </div>
+
+  <div class="outlineBox" id="outline_2">
+    <div class="outlineTitle">
+    What's the Cause?
+    </div>
+    <div class="outlineRest">
+    The absence of entrepreneurship and the slow growth of small and medium enterprises (SMEs), which increase "the size of the pie," rather than just take a bigger share of the existing one. 
+    </div>
+  </div>
+  
+  <div class="outlineBox" id="outline_3">  
+      <div class="outlineTitle">
+	The Public Policy Solution
+      </div>
+      <div class="outlineRest">If the goal of national policymakers in Mexico is to increase the country's GDP, the most efficient course of action is to help SMEs grow into large companies, as opposed to encouraging microenterprise.
+      </div>
+  </div>
+  
+    <div class="outlineBox" id="outline_4">  
+	<div class="outlineTitle">
+	  Policy Intervention: Access to Capital
+	</div>
+	<div class="outlineRest">Mexico can increase access to the capital that SMEs need to finance growth by strengthening loan guarantees and offering incentives to invest in venture capital funds.
+	</div>
+      </div>
+
+      <div class="outlineBox" id="outline_5">  
+	<div class="outlineTitle">
+	  Many Rules, Uneven Enforcement
+	</div>
+	<div class="outlineRest">While large companies have the lobbying capacity to ensure that an overabundance of rules that regulate Mexico's economy aren't enforced, SMEs and entrepreneurs don't have the resources to ensure a consistent regulatory structure in which to work.
+	</div>
+      </div>
+
+      <div class="outlineBox" id="outline_6">  
+	<div class="outlineTitle">
+    The Case for an SME Protection Agency
+	</div>
+	<div class="outlineRest">
+  The Mexican government could create an entity that advocates for SMEs, and addresses challenges that those companies face, such as acquiring government contracts, resolving abuses of agreements between SMEs and larger companies, and ensuring consistent access to government provided utilities.
+	</div>
+      </div>
+
+      <div class="outlineBox" id="outline_7">  
+	<div class="outlineTitle">
+    Performance Bonds for SMEs
+	</div>
+	<div class="outlineRest">
+	  Improve access to surety bonds for SMEs to protect their interests when doing contract work.
+	</div>
+      </div>
+
+</div>
+
+
 {% addtoblock "js" %}
 <script type="text/javascript">
-    var width = $(window).width();
-    $('bg').css('width', width);
-
-    //make white bg div size to window nicely.
-    //    document.getElementById("whiteBorder").style.width = 
-    //    ($(window).width()-1469)/2;
-
-    
-
+    var window_width = $(window).width();
+    document.getElementById("bg").style.width = window_width;
+    var whiteWidth = $("#whiteBorder").width()
+    var white_left = (window_width - whiteWidth)/2;
+    $("#whiteBorder").css("left", white_left);
   //alternate background colors for lines of outline
   //hide see more outlineRest's
 

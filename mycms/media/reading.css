@@ -9,9 +9,6 @@
     background-color: #EFEFEF;
     height: 1500px;
     position: absolute;
-//    z-index: -1;
-
-
 }
 
 #whiteBorder{
@@ -19,10 +16,10 @@
     height: 661px;
     width: 1300px;
     position: relative;
-    left: 75px;
-    top: 30px;
-    right: 100px;
-  //  z-index: 2;
+    left: 0px;
+    top: 200px;
+
+
 }
 
 #title{
@@ -39,21 +36,20 @@
 
 
 #outline{
-    position: relative;
-    width: 450px;
-    height: 600px;
-    padding-bottom:60px;
-    float: left;
-    position: relative;
-    left: 40px;
-    overflow: scroll;
+    background-color: #EFEFEF;
+    width: 400px;
+    position: absolute;
+    left:400px;
+    top:-500px;
+
 }
 
 .clear{
     height:0px;
     overflow:hidden;
-    
 }
+
+
 
 .outlineBox{
     color: #a39c87
