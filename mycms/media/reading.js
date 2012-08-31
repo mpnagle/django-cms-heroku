@@ -22,10 +22,15 @@ $('.outlineBox').each(function(i, el) {
 if (outlineHeight + 2 * (border_width) < $('#whiteBorder').height()) {
 	console.log("setting to outlineHeight");
 	$('#outline').css("height", outlineHeight);
+	collapseOutlineRest();
+//	('#outline').css("overflow", "hidden");
+	
 } else {
 	console.log("setting to white border height");
-	$('$outline').css("height", $('#whiteBorder').height() - 2 * (border_width));
-	$('$outline').css("overflow", "scroll");
+	$('#outline').css("height", $('#whiteBorder').height() - 2 * (border_width));
+	//collapse all rest texts and only display title.
+	collapseOutlineRest();
+//	$('#outline').css("overflow", "scroll");
 }
 
 var borderPos = $('#whiteBorder').position();
@@ -38,21 +43,33 @@ console.log(outlineHeight);
 console.log($('#outline').height());
 
 
-
-/*
 $('#outline').children().each(
   function(index){
       var restText = $($(this).children()[1]);
       //      restText.addClass("clear");
       if (index % 2 ==0){
 
-          $(this).css('background-color', '#f6f4f0');
+          $(this).css('background-color', '#efefef');
 
       }
       else{
           $(this).css('background-color', 'white');
       }
+});
 
+
+
+function collapseOutlineRest(){
+	$('#outline').children().each(function(index){
+	      var restText = $($(this).children()[1]);
+	            restText.addClass("clear");
+	});
+	
+	
+}
+
+
+/*
       if (index==2){
 	  $(this).css('background-color', '#dedede');//ccebeb'); 
 	  $(this).css('color', '#007A7A');
