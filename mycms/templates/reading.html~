@@ -21,12 +21,24 @@
 {% endaddtoblock "js" %}
 
 <!--bg and white border-->
-<div id="bg"></div>
-<div id="whiteBorder"></div>
+<div id="staticBg">
+    <div id="bg"></div>
+    <div id="whiteBorder"></div>
+</div>
 
 
 <!-- outline column -->
 <div id="outline">
+    <div class="outlineBox">
+      <div class="abstractTitle">
+        Mexico's Growth Problem
+      </div>
+      <div class="abstract">
+        100 words of abstract
+        100 words of abstract
+        100 words of abstract
+      </div>
+    </div>
 <!-- outline column -->
   <div class="outlineBox" id="outline_1">
     <div class="outlineTitle">
@@ -93,13 +105,29 @@
 
 {% addtoblock "js" %}
 <script type="text/javascript">
+    //setup bg and border
+    var border_width = 10;
     var window_width = $(window).width();
     document.getElementById("bg").style.width = window_width;
     var whiteWidth = $("#whiteBorder").width()
     var white_left = (window_width - whiteWidth)/2;
     $("#whiteBorder").css("left", white_left);
-  //alternate background colors for lines of outline
-  //hide see more outlineRest's
+
+//setup outline
+    var outlineHeight = 0;
+$('.outlineBox').each(function(i, el) {
+    var size = $(el).height();
+    outlineHeight += size;
+});
+
+if(outlineHeight + 2(border_width) < $('#whiteBorder').height())){
+$('#outline').css("height", outlineHeight);    
+var borderPos =  $('#whiteBorder').position();
+$('#outline').css("top", borderPos.top+border_width);
+$('#outline').css("left", borderPos.left+border_width);
+  
+//alternate background colors for lines of outline
+//hide see more outlineRest's
 
 
 /*

@@ -18,6 +18,7 @@
 <script type="text/javascript" src="{{ MEDIA_URL }}jquery-ui/js/jquery-ui.js"></script>
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
 <script type="text/javascript" src="{{ MEDIA_URL }}reading.js"></script>
+
 {% endaddtoblock "js" %}
 
 <!--bg and white border-->
@@ -113,24 +114,34 @@
     var white_left = (window_width - whiteWidth)/2;
     $("#whiteBorder").css("left", white_left);
 
-    //setup outline
-    //get total text height
-//then size the outline thing to that
-
-    var outlineHeight = 0;
+//setup outline
+var outlineHeight = 0;
 $('.outlineBox').each(function(i, el) {
-    var size = $(el).height();
+var size = $(el).height();
+console.log($(el));
     outlineHeight += size;
+
 });
 
+if(outlineHeight + 2*(border_width) < $('#whiteBorder').height()){
+console.log("setting to outlineHeight");
 $('#outline').css("height", outlineHeight);    
+}
+else{
+console.log("setting to white border height");
+$('$outline').css("height", $('#whiteBorder').height()-2*(border_width));
+$('$outline').css("overflow", "scroll");
+}
+
 var borderPos =  $('#whiteBorder').position();
 $('#outline').css("top", borderPos.top+border_width);
 $('#outline').css("left", borderPos.left+border_width);
+  
+//alternate background colors for lines of outline
+//hide see more outlineRest's
+console.log(outlineHeight);
+console.log($('#outline').height());
 
-
-  //alternate background colors for lines of outline
-  //hide see more outlineRest's
 
 
 /*
