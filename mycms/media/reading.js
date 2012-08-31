@@ -4,7 +4,6 @@ $('#article').on('scroll', function () {
 });
 */
 
-
 //setup bg and border
 var border_width = 10;
 var window_width = $(window).width();
@@ -16,7 +15,7 @@ $("#whiteBorder").css("left", white_left);
 //setup outline, initialize w/ padding.
 var outlineHeight = 0;
 $('.outlineBox').each(function(i, el) {
-	var size = $(el).height();
+	var size = $(el).outerHeight();
 	outlineHeight += size;
 });
 
