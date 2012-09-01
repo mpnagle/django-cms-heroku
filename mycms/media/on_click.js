@@ -1,3 +1,5 @@
+var lastClicked = null; //outlineBox that was last clicked (currently on view)
+
 $('.outlineBox').hover(
   function () {
     $(this).css("color", "red");
@@ -8,9 +10,22 @@ $('.outlineBox').hover(
 );
 
 $('.outlineBox').click(
+
 	//expand outline if it's not expanded already.
 	//highlight and display pertaining section in article. 
     function() {
+		if (lastClicked != null){
+			var id = $(lastClicked).attr('id');
+			var artIndex = 'art_' + id[id.length-1];
+			($('#' + artIndex)).css("color", 'black');
+			$(lastClicked).children().each(function(i, el){
+				console.log(el);
+				console.log($(el));
+				$(el).css("color", 'black');
+			}
+				);
+		}
+	
 	var restText = $($(this).children()[1]);
 	//determine if outline rest is collapsed
 	if (restText.height()==0){
@@ -30,7 +45,11 @@ $('.outlineBox').click(
 	console.log(document.getElementById(artIndex));
 	document.getElementById(artIndex).scrollIntoView();
 	
+	lastClicked = $(this);
+	
 	});
+	
+	
 // you can use .css("property", "value"); to set things
 
 
