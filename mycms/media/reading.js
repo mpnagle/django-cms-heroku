@@ -88,6 +88,8 @@ function collapseOutlineRest(){
 }
 
 
+
+
 //create white space in smaller div (art or ref), so that scrollHeight is "equal"
 var totalArtHeight = document.getElementById("article").scrollHeight;
 var totalRefHeight = document.getElementById("reference").scrollHeight;

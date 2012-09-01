@@ -18,8 +18,19 @@ $('.outlineBox').click(
 		restText.removeClass("clear");//shit is collapsed
 	}
 	//match with art_x id
-	console.log($(this));
-});
+	var id = $(this).attr('id');
+	var artIndex = 'art_' + id[id.length-1];
+	
+	//change art text and outline text to show match
+	($('#' + artIndex)).css("color", 'blue');
+	$($(this).children()[0]).css("color", "blue");
+	restText.css("color", 'blue');
+	
+	//scroll art text into view
+	console.log(document.getElementById(artIndex));
+	document.getElementById(artIndex).scrollIntoView();
+	
+	});
 // you can use .css("property", "value"); to set things
 
 
