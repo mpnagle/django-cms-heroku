@@ -1,4 +1,4 @@
-$('.OutlineBox').hover(
+$('.outlineBox').hover(
   function () {
     $(this).css("color", "red");
   }, 
@@ -7,9 +7,19 @@ $('.OutlineBox').hover(
   }
 );
 
-$('.OutlineBox').click(
+$('.outlineBox').click(
+	//expand outline if it's not expanded already.
+	//highlight and display pertaining section in article. 
     function() {
-
+	var restText = $($(this).children()[1]);
+	//determine if outline rest is collapsed
+	if (restText.height()==0){
+		console.log("shit is collapsed");
+		restText.removeClass("clear");//shit is collapsed
+	}
+	//match with art_x id
+	console.log($(this));
+});
 // you can use .css("property", "value"); to set things
 
 

@@ -88,24 +88,8 @@ function collapseOutlineRest(){
 }
 
 
-/*
-      if (index==2){
-	  $(this).css('background-color', '#dedede');//ccebeb'); 
-	  $(this).css('color', '#007A7A');
-	  document.getElementById("art_1").style.color = '009999';
-	  // light teal e6f5f5');
-	  //'#ccebeb');//#f6f4f0');// light grey '#dedede');
-      
-
-      }
-
-
-  }
-)
-
-
 //create white space in smaller div (art or ref), so that scrollHeight is "equal"
-var totalArtHeight = document.getElementById("").scrollHeight;
+var totalArtHeight = document.getElementById("article").scrollHeight;
 var totalRefHeight = document.getElementById("reference").scrollHeight;
 if (totalArtHeight > totalRefHeight){
     document.getElementById("refWhiteSpace").style.height = 
@@ -130,5 +114,5 @@ $('[data-foot="article"]').each(
 	curr_data_ref.offset({top:art_offset_top, left:ref_left_offset});
 }
 )
-*/
+
 
