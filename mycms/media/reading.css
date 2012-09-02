@@ -12,9 +12,12 @@
 }
 
 #whiteBorder{
+	
     background-color: #E6E3DC;
+
+	
     height: 900px;  /*hardcoded */
-    width: 1300px;
+    width: 1292px;
     position: relative;
     left: 0px;
     top: 200px;
@@ -66,7 +69,7 @@
 .outlineTitle{
 	padding-bottom: 5px;
 	font-weight: bold;
-	border-bottom: 1px dotted black;
+	border-bottom: 1px solid black;
 }
 
 .outlineRest{

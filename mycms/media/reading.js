@@ -15,7 +15,7 @@ $("#whiteBorder").css("left", white_left);
 //position outline (relative to whiteBorder)
 var borderPos = $('#whiteBorder').position();
 $('#outline').css("top", borderPos.top + border_width);
-$('#outline').css("left", borderPos.left + border_width);
+$('#outline').css("left", borderPos.left);
 
 //position article title
 $('#articleTitle').css("top", borderPos.top + border_width);
@@ -23,13 +23,14 @@ $('#articleTitle').css('left', $('#outline').position().left + $('#outline').out
 
 //position article 
 $('#article').css("top", $('#articleTitle').position().top + $('#articleTitle').outerHeight());
-$('#article').css("left", $('#outline').position().left + $('#outline').outerWidth());
+$('#article').css("left", $('#articleTitle').position().left);
 $('#article').css("height", $('#whiteBorder').height()-2*(border_width)-27);
 
 //position reference col
 $("#reference").css("top", borderPos.top + border_width);
 $('#reference').css("left", $('#article').position().left + $('#article').outerWidth());
 $('#reference').css("height", $('#article').outerHeight()-75);
+$('#reference').css("width", '300px');
 
 
 //setup outline, initialize w/ padding.
@@ -66,9 +67,16 @@ $('#outline').children().each(
   function(index){
 		if (index ==2){
 			$(this).css('background-color', 'white');
+			$($(this).children()[0]).css('border-bottom', 'none');
+		}
+		if (index ==1){
+			$($(this).children()[0]).css('border-bottom', 'none');
 		}
       var restText = $($(this).children()[1]);
-      //      restText.addClass("clear");
+//            restText.addClass("clear");
+	$($(this).children()[0]).css('border-bottom', 'none');
+	$($(this).children()[1]).css('border-bottom', '1px solid black');
+	
    
 
 		
