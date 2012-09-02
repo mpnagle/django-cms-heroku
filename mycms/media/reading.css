@@ -9,7 +9,7 @@
 /*	font-family: 'Headland One', serif;*/
 	font-family: 'Bitter', serif;
 	font-size: 80pt;
-	color: blue;
+	color: #009DAE;
 }
 
 #bg{
@@ -22,7 +22,7 @@
 
 #whiteBorder{
 	
-    background-color: #E6E3DC;
+    background-color: #EDEEE1;
     height: 900px;  /*hardcoded */
     width: 1292px;
     position: relative;
@@ -37,7 +37,7 @@
 	font-family: 'Bitter', serif;
 	font-size: 48pt;
 	text-align: center;
-	color: blue;	
+	color: #009DAE;
 	width: 350px;
 	position: absolute;
 }
@@ -68,7 +68,7 @@
     width: 350px;
     position: absolute;
 	padding-bottom: 10px;
-	background-color: #E6E3DC;
+	background-color: #EDEEE1;
 	
 }
 

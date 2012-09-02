@@ -2,34 +2,43 @@ var lastClicked = null; //outlineBox that was last clicked (currently on view)
 
 $('.outlineBox').hover(
   function () {
-    $(this).css("color", "red");//"99cc00");
+		console.log("hovering over LAST CLICKED");
+		$(this).css('background-color', 'C9EAE6');
+		/*
+	if (lastClicked != null && ($(lastClicked).attr('id') == $(this).attr('id'))){
+		console.log("hovering over LAST CLICKED");
+		$(this).css('background-color', 'C9EAE6');
+	}
+	else{
+    	$(this).css("color", "red");//"99cc00");
+	}
+	*/
   }, 
   function () {
-    $(this).css("color", "black");
+	if (lastClicked != null && ($(lastClicked).attr('id') == $(this).attr('id'))){
+		$(this).css('background-color', '00CCCC');
+	}
+	else{
+		$(this).css("background-color", '#EDEEE1');
+//    	$(this).css("color", "black");
+	}
   }
 );
 
-
-$('.outlineBox').hover(
-  function () {
-    $(this).css("color", "red");//"99cc00");
-  }, 
-  function () {
-    $(this).css("color", "black");
-  }
-);
 
 function highlightPlease(outId, artId){ //if highlight = false, put it back
 	//figure out outBox after current, to update borders
-	outNum = parseInt(outId[outId.length-1]);
+	var outNum = parseInt(outId.substring(outId.indexOf('_')+1, outId.length));
+	console.log('outNum in highlightPlease');
+	console.log(outNum);
 	var outBoxPlus = null;
 	var outBoxMinus = null;
 	if (outNum < $('.outlineBox').size()){
-		var outBoxPlusMost = outId.substring(0, outId.length-1) + (outNum+1);
+		var outBoxPlusMost = 'outline_' + (outNum+1);
 		outBoxPlus = $('#' + outBoxPlusMost);
 	}
 	if (outNum > 1){
-		var outBoxMinusMost = outId.substring(0, outId.length-1) + (outNum-1);
+		var outBoxMinusMost = 'outline_' + (outNum-1);
 		outBoxPlus = $('#' + outBoxMinusMost);
 	}
 
@@ -41,6 +50,7 @@ function highlightPlease(outId, artId){ //if highlight = false, put it back
 	//article, highlight + border bullshit
 	artChunk.css("background-color", '00CCCC');
 	outBox.css('background-color', '00CCCC');
+	outBox.css('color', 'black');
 	outBoxTitle.css('border-bottom', 'none');
 	outBoxRest.css("padding-bottom", '5px');
 
@@ -66,7 +76,7 @@ function highlightNot(outId, artId){
 	//article, highlight + border bullshit
 	//TODO was it white before, make sure it still is. ok?
 	artChunk.css("background-color", 'white');
-	outBox.css('background-color', 'E6E3DC');
+	outBox.css('background-color', 'B1BBBA');
 	outBoxTitle.css('border-bottom', 'none');
 	outBoxRest.css("padding-bottom", '5px');
 	outBoxRest.css('border-bottom', '1px solid #efefef');
@@ -80,10 +90,10 @@ $('.outlineBox').click(
 		//expand outline if it's not expanded already.
 		//highlight and display pertaining section in article.
 		if (lastClicked != null){
-			var id = $(lastClicked).attr('id');
-			var artIndex = 'art_' + id[id.length-1];
+			var idLast = $(lastClicked).attr('id');
+			var artIndexLast = 'art_' + idLast.substring(idLast.indexOf('_')+1, idLast.length);
 			console.log('about to HIGHLIGHT...NOT');
-			highlightNot(id, artIndex);
+			highlightNot(idLast, artIndexLast);
 		}
 	
 	var restText = $($(this).children()[1]);
@@ -94,24 +104,37 @@ $('.outlineBox').click(
 	}
 	//match with art_x id
 	var id = $(this).attr('id');
-	var artIndex = 'art_' + id[id.length-1];
+	var artNum = id.substring(id.indexOf('_')+1, id.length); //number
+	console.log(artNum);
+	var artId = 'art_' + artNum;
 	
-	highlightPlease(id, artIndex);
+	highlightPlease(id, artId);
 	
 	
 	//scroll art text into view
-	console.log(document.getElementById(artIndex));
-	document.getElementById(artIndex).scrollIntoView();
+	console.log(document.getElementById(artId));
+	document.getElementById(artId).scrollIntoView();
 	
 	lastClicked = $(this);
 	
 });
 
-function updateHighlightedOutline(){
-	console.log('art_1 scrollHeight is ');
-	console.log($('#art_1').scrollHeight);
+function updateHighlightedOutlineBox(matchingArtId){
 	
+	var outlineId = '#outline_' + matchingArtId.substring(matchingArtId.indexOf('_')+1, matchingArtId.length);
+	
+}
+
+function detectWhichArticleChunk(){
+	console.log('art_1 scrollHeight is ');
+	console.log(document.getElementById('art_1').scrollTop);
+	var currScroll = document.getElementById('article').scrollTop;
 	$('.artPar').each(function(i, el){
+
+		var chunkHeight = document.getElementById($(el).attr('id'));
+		if (chunkHeight == currScroll) {
+			updateHighlightedOutlineBox($(el).attr('id'));
+		}
 //		console.log("curr ScrollTop");
 //		console.log($(this).scrollTop())
 		if ($(this).scrollTop()==0){
@@ -121,9 +144,9 @@ function updateHighlightedOutline(){
 }
 	
 	
-updateHighlightedOutline();
+detectWhichArticleChunk();
 $('#article').scroll(
 	function() {
-	updateHighlightedOutline();	
+	detectWhichArticleChunk();	
 
 });
