@@ -2,17 +2,8 @@ var lastClicked = null; //outlineBox that was last clicked (currently on view)
 
 $('.outlineBox').hover(
   function () {
-		console.log("hovering over LAST CLICKED");
 		$(this).css('background-color', 'C9EAE6');
-		/*
-	if (lastClicked != null && ($(lastClicked).attr('id') == $(this).attr('id'))){
-		console.log("hovering over LAST CLICKED");
-		$(this).css('background-color', 'C9EAE6');
-	}
-	else{
-    	$(this).css("color", "red");//"99cc00");
-	}
-	*/
+
   }, 
   function () {
 	if (lastClicked != null && ($(lastClicked).attr('id') == $(this).attr('id'))){
@@ -20,7 +11,6 @@ $('.outlineBox').hover(
 	}
 	else{
 		$(this).css("background-color", '#EDEEE1');
-//    	$(this).css("color", "black");
 	}
   }
 );
@@ -29,8 +19,6 @@ $('.outlineBox').hover(
 function highlightPlease(outId, artId){ //if highlight = false, put it back
 	//figure out outBox after current, to update borders
 	var outNum = parseInt(outId.substring(outId.indexOf('_')+1, outId.length));
-	console.log('outNum in highlightPlease');
-	console.log(outNum);
 	var outBoxPlus = null;
 	var outBoxMinus = null;
 	if (outNum < $('.outlineBox').size()){
@@ -92,7 +80,6 @@ $('.outlineBox').click(
 		if (lastClicked != null){
 			var idLast = $(lastClicked).attr('id');
 			var artIndexLast = 'art_' + idLast.substring(idLast.indexOf('_')+1, idLast.length);
-			console.log('about to HIGHLIGHT...NOT');
 			highlightNot(idLast, artIndexLast);
 		}
 	
@@ -119,21 +106,41 @@ $('.outlineBox').click(
 	
 });
 
-function updateHighlightedOutlineBox(matchingArtId){
-	
+var currentlyReading = null; //outlineBox of what is being read
+
+function showCurrentlyReading(matchingArtId){
 	var outlineId = '#outline_' + matchingArtId.substring(matchingArtId.indexOf('_')+1, matchingArtId.length);
+	console.log(outlineId);
+	console.log($(outlineId));
+	$(outlineId).css('background-color', 'FFFFFF');
+	console.log('outline box should be white now');
+//	($(outlineId)).css('background-color', 'white');
+//	$(outlineId).css('border-bottom', 'none'); for outline title not box
+	
+	
+	if (currentlyReading != null){
+		//update what we were reading, to outline bg color
+		$(currentlyReading).css('background-color', 'EDEEE1');
+//		$(currentlyReading).css('border-bottom', '1px solid black'); //really of outlineTitle
+		
+	}
+	currentlyReading = $(outlineId);
 	
 }
 
 function detectWhichArticleChunk(){
-	console.log('art_1 scrollHeight is ');
-	console.log(document.getElementById('art_1').scrollTop);
 	var currScroll = document.getElementById('article').scrollTop;
+	console.log('art_1 scrollHeihg');
+	console.log(document.getElementById('art_1').scrollHeight);
+	console.log('currScroll = article.scrollTop');
+	console.log(currScroll);
 	$('.artPar').each(function(i, el){
-
-		var chunkHeight = document.getElementById($(el).attr('id'));
-		if (chunkHeight == currScroll) {
-			updateHighlightedOutlineBox($(el).attr('id'));
+		var chunkHeight = document.getElementById($(el).attr('id')).scrollHeight;
+//		console.log("chunkHeight");
+//		console.log(chunkHeight);
+		if (Math.abs(chunkHeight-currScroll) <= 70) {
+			console.log('detected an outline we should highlight');
+			showCurrentlyReading($(el).attr('id'));
 		}
 //		console.log("curr ScrollTop");
 //		console.log($(this).scrollTop())

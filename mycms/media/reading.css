@@ -68,7 +68,7 @@
     width: 350px;
     position: absolute;
 	padding-bottom: 10px;
-	background-color: #EDEEE1;
+/*	background-color: #EDEEE1;*/
 	
 }
 
@@ -92,6 +92,7 @@
     padding-top: 10px;
     padding-left: 10px;
     padding-right: 10px;
+
 }
 
 .outlineTitle{

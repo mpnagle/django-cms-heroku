@@ -17,10 +17,6 @@ var borderPos = $('#whiteBorder').position();
 //position abstract
 $('#abstractTitle').css("top", borderPos.top + border_width);
 $('#abstractTitle').css("left", borderPos.left);
-console.log('height of abstractTitle');
-console.log($('#abstractTitle').height());
-console.log('abstractTitle.top + abstractTitle.height');
-console.log($('#abstractTitle').top + $('#abstractTitle').height());
 $('#abstractRest').css("top", $('#abstractTitle').position().top + $('#abstractTitle').height());
 $('#abstractRest').css("left", borderPos.left);
 
@@ -52,16 +48,12 @@ $('.outlineBox').each(function(i, el) {
 	outlineHeight += size;
 });
 
-console.log("outlineHeight");
-console.log(outlineHeight);
 if (outlineHeight + (2 * (border_width)) < $('#whiteBorder').height()) {
-	console.log("setting to outlineHeight");
 	$('#outline').css("height", outlineHeight);
 	
 //	('#outline').css("overflow", "hidden");
 	
 } else {
-	console.log("setting to white border height");
 	$('#outline').css("height", $('#whiteBorder').height() - 2 * (border_width));
 	//collapse all rest texts and only display title.
 	collapseOutlineRest();
@@ -71,16 +63,16 @@ if (outlineHeight + (2 * (border_width)) < $('#whiteBorder').height()) {
 
 //alternate background colors for lines of outline
 //hide see more outlineRest's
-console.log(outlineHeight);
-console.log($('#outline').height());
 
 
 $('#outline').children().each(
   function(index){
+/*
 		if (index ==2){
 			$(this).css('background-color', 'white');
 			$($(this).children()[0]).css('border-bottom', 'none');
 		}
+		*/
 		if (index ==1){
 			$($(this).children()[0]).css('border-bottom', 'none');
 		}
@@ -117,7 +109,7 @@ if (totalArtHeight > totalRefHeight){
 }
 
 else if (totalRefHeight < totalArtHeight){
-    console.log("I think the Artical is shorter than the reference column.");
+    console.log(" ERROR? I think the Artical is shorter than the reference column.");
     document.getElementById("artWhiteSpace").style.height = 
 	(totalRefHeight - totalArtHeight) + 'px';
 }
