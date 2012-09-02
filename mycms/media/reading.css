@@ -4,6 +4,13 @@
     padding-bottom: 40px;
 }
 
+#amplifyHeading{
+/*	font-family: 'Patua One', cursive;*/
+/*	font-family: 'Headland One', serif;*/
+	font-family: 'Bitter', serif;
+	font-size: 80pt;
+	color: blue;
+}
 
 #bg{
     background-color: white;
@@ -11,17 +18,37 @@
     position: absolute;
 }
 
+
+
 #whiteBorder{
 	
     background-color: #E6E3DC;
-
-	
     height: 900px;  /*hardcoded */
     width: 1292px;
     position: relative;
     left: 0px;
     top: 200px;
 	
+}
+
+#abstractTitle{
+/*	font-family: 'Patua One', cursive;*/
+/*	font-family: 'Headland One', serif;*/
+	font-family: 'Bitter', serif;
+	font-size: 48pt;
+	text-align: center;
+	color: blue;	
+	width: 350px;
+	position: absolute;
+}
+
+#abstractRest{
+	width: 350px;
+	font-size: 10pt;
+	font-family: helvetica;
+	position: absolute;
+	padding-left: 10px;
+	padding-right: 10px;
 }
 
 #title{
@@ -48,6 +75,7 @@
 .abstractTitle{
     font-size: 24pt;
     padding-top: 5px;
+	
 }
 
 .clear{
@@ -83,7 +111,7 @@
     background-color: white;
 	width: 500px;
 	position: absolute;
-	padding-top: 20px;
+
 	padding-bottom: 20px;
 	padding-left: 35px;
 	padding-right: 35px;
@@ -93,15 +121,24 @@
 
 #articleTitle{
 	position: absolute;
-	z-index: 1000;
 	padding-left: 35px;
 	padding-right: 35px;
 	padding-top: 20px;
+	padding-bottom: 15px;
+	text-align: center;
+	font-weight: bold;
 	font-size: 24pt;
 	font-family: helvetica;
-	height: 30px;
-	background-color: white;
+
+	background-color: grey;
 	width: 500px; /*match article width */
+	color: white;
+	
+}
+
+.authorHeading{
+	font-weight: bold;
+	font-size: 14pt;
 }
 
 #reference{

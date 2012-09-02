@@ -12,9 +12,20 @@ var whiteWidth = $("#whiteBorder").width();
 var white_left = (window_width - whiteWidth) / 2;
 $("#whiteBorder").css("left", white_left);
 
-//position outline (relative to whiteBorder)
 var borderPos = $('#whiteBorder').position();
-$('#outline').css("top", borderPos.top + border_width);
+
+//position abstract
+$('#abstractTitle').css("top", borderPos.top + border_width);
+$('#abstractTitle').css("left", borderPos.left);
+console.log('height of abstractTitle');
+console.log($('#abstractTitle').height());
+console.log('abstractTitle.top + abstractTitle.height');
+console.log($('#abstractTitle').top + $('#abstractTitle').height());
+$('#abstractRest').css("top", $('#abstractTitle').position().top + $('#abstractTitle').height());
+$('#abstractRest').css("left", borderPos.left);
+
+//position outline (relative to whiteBorder)
+$('#outline').css("top", $('#abstractRest').position().top + $('#abstractRest').outerHeight());
 $('#outline').css("left", borderPos.left);
 
 //position article title
@@ -31,6 +42,7 @@ $("#reference").css("top", borderPos.top + border_width);
 $('#reference').css("left", $('#article').position().left + $('#article').outerWidth());
 $('#reference').css("height", $('#article').outerHeight()-75);
 $('#reference').css("width", '300px');
+
 
 
 //setup outline, initialize w/ padding.
