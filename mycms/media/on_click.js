@@ -105,17 +105,22 @@ $('.outlineBox').click(
 	
 	lastClicked = $(this);
 	
-	});
+});
 
-	function updateHighlightedOutline(){
-		$('.artPar').each(function(i, el){
-			console.log("curr ScrollTop");
-			console.log($(this).scrollTop());
-			if ($(this).scrollTop()==0){
-				console.log($(this).attr('id'));
-			}
-		});
-	}
+function updateHighlightedOutline(){
+	console.log('art_1 scrollHeight is ');
+	console.log($('#art_1').scrollHeight);
+	
+	$('.artPar').each(function(i, el){
+//		console.log("curr ScrollTop");
+//		console.log($(this).scrollTop())
+		if ($(this).scrollTop()==0){
+//			console.log($(this).attr('id'));
+		}
+	});
+}
+	
+	
 updateHighlightedOutline();
 $('#article').scroll(
 	function() {
