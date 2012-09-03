@@ -5,11 +5,12 @@
 
 
 {% addtoblock "css" %}
-<link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}jquery-ui/css/custom-theme/jquery-ui.css" />
+<link rel="stylesheet" type="text/css" href="{{ MEDIA_URL}}jquery-ui/css/custom-theme/jquery-ui.css"/>
+
 {% endaddtoblock "css" %}
 
 
-<link ref="stylesheet" type="text/css" href="{{ MEDIA_URL }}reading.css" />
+<link ref="stylesheet" type="text/css" href="{{ MEDIA_URL }}readingStyle.css" />
 
 <link href='http://fonts.googleapis.com/css?family=Patua+One' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Headland+One' rel='stylesheet' type='text/css'>
@@ -20,16 +21,14 @@
 <script type="text/javascript" src="{{ MEDIA_URL }}jquery-ui/js/jquery.js"></script>
 <script type="text/javascript" src="{{ MEDIA_URL }}jquery-ui/js/jquery-ui.js"></script>
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
-<script type="text/javascript" src="{{ MEDIA_URL }}reading.js"></script>
-<script type="text/javascript" src="{{ MEDIA_URL }}on_click.js"></script>
+<script type="text/javascript" src="{{ MEDIA_URL }}readingSetup.js"></script>
+<script type="text/javascript" src="{{ MEDIA_URL }}readingBehavior.js"></script>
+<script type="text/javascript" src="{{ MEDIA_URL }}navigation.js"></script>
 
 {% endaddtoblock "js" %}
 
-<!-->
-<div id="amplifyHeading">
-	amplify
-</div>
-<!-->
+
+
 
 <!--bg and white border-->
 <div id="staticBg">
@@ -37,9 +36,25 @@
     <div id="whiteBorder"></div>
 </div>
 
+<div id="amplifyHeading">
+	amplify
+</div>
+
+<div id="innovations">
+	<img src="{{ MEDIA_URL }}innovations_layout-13-LOGO.png"/>
+</div>
+
+
+<div id="allIssueLinks">
+	<div id="Issue2" class="issueLinks">
+		vol 7 issue 2 spring 2012 enabling entrepreneurial ecosystems
+		</div>
+	<div id="Issue1" class="issueLinks">
+		vol 7 issue 1 winter 2012 unleashing ideas
+		</div>
+</div>
+
 <!--abstract-->
-
-
 <div id="abstractTitle">
 	/in brief/
 </div>
@@ -113,7 +128,9 @@
 
 
 <!-- article title -->
-<div id = "articleTitle"> Mexico's Growth Problem </div>
+<div id = "articleTitle"> Mexico’s Growth <div id = "articleSubTitle"> Will Come From Entrepreneurship and Small and Medium-Sized Enterprises 
+	</div>
+</div>
 
 <!-- article column -->
 <div id="article" >
@@ -160,6 +177,8 @@
 </div>
 
 </div>
+
+
 
 <!-- reference column -->
 <div id="reference" class="left-text">
