@@ -10,7 +10,7 @@ $('#innovations').hover(
   function () {
     console.log("in hover in navigation2");
       $(this).removeClass('issueLinks');
-      $this).addClass('clear');
+      $(this).addClass('clear');
 }
 );
 

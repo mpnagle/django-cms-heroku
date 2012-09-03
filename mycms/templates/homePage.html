@@ -16,19 +16,24 @@
 
 {% addtoblock "js" %}
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript" src="{{ MEDIA_URL}}processing-1.4.1.js"></script>
 <script type="text/javascript" src="{{ MEDIA_URL}}navigation.js"></script>
 <script type="text/javascript" src="{{ MEDIA_URL}}homeSetup.js"></script>
+
+
 
 {% endaddtoblock "js" %}
 
 
 <div id="amplifyHeading">
 	amplify
+
 </div>
 
-<div id="innovations">
-	<img src="{{ MEDIA_URL }}innovations_layout-13-LOGO.png"/>
+<div id="innovations"> 
+  <img src="{{ MEDIA_URL }}innovations_layout-13-LOGO.png"/>
 </div>
+
 
 
 <div id="allIssueLinks">
@@ -39,5 +44,11 @@
 		vol 7 issue 1 winter 2012 unleashing ideas
 		</div>
 </div>
+
+
+<div id=africa>
+    <canvas data-processing-sources="africaFinal.pde"></canvas>
+</div>
+
 
 {% endblock %}

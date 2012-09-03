@@ -1,26 +1,9 @@
-#nav-bar{
-    padding-left: 80px;
-    padding-top: 500px;
-    padding-bottom: 40px;
-}
-
-
-
-#bg{
-    background-color: white;
-    height: 1500px;
-    position: absolute;
-}
-
-
-
 
 #whiteBorder{
-	
     background-color: #EDEEE1;
     height: 900px;  /*hardcoded */
     width: 1292px;
-    position: relative;
+    position: absolute;
     left: 0px;
     top: 200px;
 	
@@ -34,10 +17,16 @@
 	color: #009DAE;
 	position: absolute;
 	padding-top: 20px;
+
 }
 
 #innovations{
-	position: absolute;
+    position: absolute;
+    width: 718;
+    height: 167;
+    z-index: 1000;
+
+
 }
 
 #allIssueLinks{
