@@ -42,15 +42,11 @@
 
 #allIssueLinks{
 	position: absolute;
-        display: none;
-        left: 0px;
-        top: 0px;
-        
 }
 
 .issueLinks{
 	font-size: 13pt;
-	
+	height: 20px;
 }
 
 #abstractTitle{

@@ -1,8 +1,8 @@
-/*
+
 $('#article').on('scroll', function () {
     $('#reference').scrollTop($(this).scrollTop());
 });
-*/
+
 
 //position bg and border
 var border_width = 50;
@@ -20,8 +20,19 @@ $('#amplifyHeading').css("left", borderPos.left+border_width);
 
 //position innovations
 $('#innovations').css("top", '0px');
+console.log('innovations height');
+console.log($('#innovations').height());
+console.log('innovations top');
+console.log($('#innovations').position().top);
 $('#innovations').css("left", $('#amplifyHeading').position().left + $('#amplifyHeading').outerWidth());
 
+//position issueLinks
+$('#issue1').css('top', $('#innovations').position().top + $('#innovations').height());
+$('#issue1').css('left', $('#innovations').position().left);
+$('#issue2').css('top', $('#innovations').position().top + $('#innovations').height()+$('#issue1').height());
+console.log('issue1 height');
+console.log($('#issue1').height());
+$('#issue2').css('left', $('#innovations').position().left);
 
 //position abstract
 $('#abstractTitle').css("top", borderPos.top + border_width);

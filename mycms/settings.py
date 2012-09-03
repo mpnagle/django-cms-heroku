@@ -128,6 +128,7 @@ CMS_TEMPLATES = (
     ('template_1.html', 'Template 1'),
     ('template_2.html', 'Template 2'),
     ('reading.html', 'Reading Template'),
+    ('homePage.html', 'Home Page Template'),
 )
 
 ROOT_URLCONF = 'mycms.urls'
