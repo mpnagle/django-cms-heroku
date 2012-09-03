@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+{% load cms_tags sekizai_tags %}
+
+{% block base_content %}
+
+
+{% addtoblock "css" %}
+<link rel="stylesheet" type="text/css" href="{{ MEDIA_URL}}jquery-ui/css/custom-theme/jquery-ui.css"/>
+
+{% endaddtoblock "css" %}
+
+
+<link ref="stylesheet" type="text/css" href="{{ MEDIA_URL }}readingStyle.css" />
+
+<link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
+
+
+{% addtoblock "js" %}
+<script type="text/javascript" src="{{ MEDIA_URL }}jquery-ui/js/jquery.js"></script>
+<script type="text/javascript" src="{{ MEDIA_URL }}jquery-ui/js/jquery-ui.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript" src="{{ MEDIA_URL }}readingSetup.js"></script>
+<script type="text/javascript" src="{{ MEDIA_URL }}readingBehavior.js"></script>
+<script type="text/javascript" src="{{ MEDIA_URL }}navigation.js"></script>
+
+{% endaddtoblock "js" %}
+
+
+
+
+<!--bg and white border-->
+<div id="whiteBorder"></div>
+</div>
+
+<div id="amplifyHeading">
+	amplify
+        <div id="innovations">
+	  <img src="{{ MEDIA_URL }}innovations_layout-13-LOGO.png"/>
+        </div>
+
+</div>
+
+
+
+<div id="allIssueLinks">
+	<div id="issue2" class="clear">
+		vol 7 issue 2 spring 2012 enabling entrepreneurial ecosystems
+		</div>
+	<div id="issue1" class="clear">
+		vol 7 issue 1 winter 2012 unleashing ideas
+		</div>
+</div>
+
+
+<!--abstract-->
+
+{% placeholder abstract %}
+
+
+
+<!-- outline column -->
+
+{% placeholder outline %}
+
+
+
+
+<!-- article title -->
+<div id = "articleTitle">
+
+{% placeholder article_title %}
+
+
+
+<div id = "articleSubTitle"> 
+
+{% placeholder article_subtitle %}
+
+
+	</div>
+</div>
+
+<!--article column -->
+{% placeholder article_main %}
+
+
+<!--reference column -->
+{% placeholder reference %}
+
+
+
+<div id="refWhiteSpace">
+</div>
+</div>
+
+
+{% endblock %}
