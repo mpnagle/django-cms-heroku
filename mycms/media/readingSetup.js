@@ -141,7 +141,7 @@ function expandOutlineBox(outlineBox){
 	var restText = $(outlineBox).children()[1];
 	restText.removeClass("clear");
 	restText.css("border-bottom", none);
-	heading.css('border-bottom',  1px solid grey);
+	heading.css('border-bottom',  '1px solid grey');
 }
 
 
