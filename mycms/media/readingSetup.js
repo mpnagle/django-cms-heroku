@@ -86,9 +86,10 @@ if (outlineHeight + (2 * (border_width)) < $('#whiteBorder').height()) {
 } else {
 	$('#outline').css("height", $('#whiteBorder').height() - 2 * (border_width));
 	//collapse all rest texts and only display title.
-	$('#outline').children().each(function(index)){
+	$('#outline').children().each(function(index){
 		collapseOutlineBox($(this));
-	}
+	});
+
 }
 
 
