@@ -17,6 +17,7 @@
 	color: #009DAE;
 	position: absolute;
 	padding-top: 20px;
+        z-index: 999;
 
 }
 
@@ -24,7 +25,7 @@
     position: absolute;
     width: 718;
     height: 167;
-    z-index: 1000;
+
 
 
 }
@@ -113,7 +114,7 @@
 .outlineTitle{
 	padding-bottom: 5px;
 	font-weight: bold;
-	border-bottom: 1px solid #efefef;
+	border-bottom: 1px solid grey;
 }
 
 .outlineRest{
@@ -132,7 +133,7 @@
 	padding-left: 35px;
 	padding-right: 35px;
 	
-	overflow: scroll;
+	overflow: hidden;
 }
 
 #articleTitle{
@@ -172,7 +173,7 @@
     position:absolute;
     padding-left: 50px;
     padding-right: 10px;
-	overflow: hidden;
+	overflow: scroll;
 }
 
 .artPar{

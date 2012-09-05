@@ -1,6 +1,6 @@
 
-$('#article').on('scroll', function () {
-    $('#reference').scrollTop($(this).scrollTop());
+$('#reference').on('scroll', function () {
+    $('#article').scrollTop($(this).scrollTop());
 });
 
 
@@ -41,7 +41,7 @@ $('#abstractRest').css("left", borderPos.left+border_width);
 
 //position outline (relative to whiteBorder)
 $('#outline').css("top", $('#abstractRest').position().top + $('#abstractRest').outerHeight());
-$('#outline').css("left", borderPos.left+border_width);
+$('#outline').css("left", borderPos.left+border_wIDth);
 
 //position article title
 $('#articleTitle').css("top", borderPos.top + border_width);
@@ -86,46 +86,15 @@ if (outlineHeight + (2 * (border_width)) < $('#whiteBorder').height()) {
 } else {
 	$('#outline').css("height", $('#whiteBorder').height() - 2 * (border_width));
 	//collapse all rest texts and only display title.
-	collapseOutlineRest();
-//	$('#outline').css("overflow", "scroll");
+	$('#outline').children().each(function(index)){
+		collapseOutlineBox($(this));
+	}
 }
 
 
-//alternate background colors for lines of outline
-//hide see more outlineRest's
-
-
-$('#outline').children().each(
-  function(index){
-/*
-		if (index ==2){
-			$(this).css('background-color', 'white');
-			$($(this).children()[0]).css('border-bottom', 'none');
-		}
-		*/
-		if (index ==1){
-			$($(this).children()[0]).css('border-bottom', 'none');
-		}
-      var restText = $($(this).children()[1]);
-//            restText.addClass("clear");
-	$($(this).children()[0]).css('border-bottom', 'none');
-	$($(this).children()[1]).css('border-bottom', '2px dashed grey');
-	
-   
-
-		
-});
 
 
 
-function collapseOutlineRest(){
-	$('#outline').children().each(function(index){
-	      var restText = $($(this).children()[1]);
-	            restText.addClass("clear");
-	});
-	
-	
-}
 
 
 
@@ -156,5 +125,22 @@ $('[data-foot="article"]').each(
 	curr_data_ref.offset({top:art_offset_top, left:ref_left_offset});
 }
 )
+
+
+function collapseOutlineBox(outlineBox){
+	var heading = $(outlineBox).children()[0];
+	var restText = $(outlineBox).children()[1];
+	restText.addClass("clear");
+	heading.css('border-bottom', none);
+	restText.css('border-bottom', '2px dotted grey');
+}
+
+function expandOutlineBox(outlineBox){
+	var heading = $(outlineBox).children()[0];
+	var restText = $(outlineBox).children()[1];
+	restText.removeClass("clear");
+	restText.css("border-bottom", none);
+	heading.css('border-bottom',  1px solid grey);
+}
 
 
