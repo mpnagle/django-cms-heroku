@@ -41,7 +41,7 @@ $('#abstractRest').css("left", borderPos.left+border_width);
 
 //position outline (relative to whiteBorder)
 $('#outline').css("top", $('#abstractRest').position().top + $('#abstractRest').outerHeight());
-$('#outline').css("left", borderPos.left+border_wIDth);
+$('#outline').css("left", borderPos.left+border_width);
 
 //position article title
 $('#articleTitle').css("top", borderPos.top + border_width);
