@@ -38,7 +38,7 @@ $('#abstractTitle').css("height", $('#articleTitle').outerHeight());
 $('#articleTitle').css('left', $('#abstractTitle').position().left + $('#abstractTitle').outerWidth() + 35);//35=article padding-left);
 
 //position innovations left based on article title
-$('#innovations').css('left', $('#articleTitle').css('left');
+$('#innovations').css('left', $('#articleTitle').css('left'));
 
 //position abstract and article
 $('#abstractRest').css("top", $('#abstractTitle').position().top + $('#abstractTitle').outerHeight());
