@@ -1,6 +1,6 @@
 
-$('#article').on('scroll', function () {
-    $('#reference').scrollTop($(this).scrollTop());
+$('#reference').on('scroll', function () {
+    $('#article').scrollTop($(this).scrollTop());
 });
 
 
@@ -122,7 +122,7 @@ $('.references').each(function(i){
     }
     var supMatch = $($('sup')[i]);
     var supOffset = $(supMatch).offset();
-    var supTop = supMatch.offset().top;
+    var supTop = supOffset.top
     var refLeft = $(this).offset().left;
     $(this).offset({top:supTop, left:refLeft});
 });
