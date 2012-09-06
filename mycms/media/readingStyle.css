@@ -135,6 +135,7 @@
 	padding-right: 35px;
 	
 	overflow: scroll;
+        position: absolute;
 }
 
 #articleTitle{
