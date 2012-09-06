@@ -107,7 +107,7 @@ $('.outlineBox').click(
         console.log('artheight');
         console.log(artHeight);
         console.log('scrollTop');
-        console.log($('#article').scrollTop();
+        console.log($('#article').scrollTop());
 	$('#article').scrollTop(artHeight);
 
 

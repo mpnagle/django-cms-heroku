@@ -38,11 +38,10 @@ $('#abstractTitle').css("height", $('#articleTitle').outerHeight());
 $('#articleTitle').css('left', $('#abstractTitle').position().left + $('#abstractTitle').outerWidth() + 35);//35=article padding-left);
 $('#articleTitle').width($('#whiteBorder').width()-($('#articleTitle').position().left - $('#whiteBorder').position().left));
 
-$('#abstractTitle').width());
 
 //position innovations left based on article title
 
-//$('#innovations').css('left', $('#articleTitle').offset().left;
+$('#innovations').css('left', $('#articleTitle').offset().left;
 
 
 //position abstract and article
