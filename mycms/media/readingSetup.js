@@ -129,6 +129,7 @@ $('.references').each(function(i){
         var footMatch = $($('.footNumber')[i-1]);
         console.log('footMatch');
         console.log(footMatch);
+        console.log(footMatch.text());
         var footOffset = (footMatch).offset();
         console.log('footOffset');
         console.log(footOffset);
