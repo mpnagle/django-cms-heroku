@@ -115,6 +115,9 @@ else if (totalRefHeight < totalArtHeight){
 
 
 //align reference column footnotes with where they appear in article text
+//this shit is broken right now because the field was not included
+//when the articles were converted to html, use later
+
 $('[data-foot="article"]').each(
     function(index){
     console.log("reference spacing script running");
@@ -124,9 +127,12 @@ $('[data-foot="article"]').each(
 	ref_left_offset = curr_data_ref.offset().left;
 	curr_data_ref.offset({top:art_offset_top, left:ref_left_offset});
 }
-)
+);
 
-
+/*
+$('sup').each(
+);
+*/
 function collapseOutlineBox(outlineBox){
 	var heading = $(outlineBox).children()[0];
 	var restText = $(outlineBox).children()[1];
