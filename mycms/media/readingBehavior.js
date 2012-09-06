@@ -95,6 +95,10 @@ $('.outlineBox').click(
 	console.log(artNum);
 	var artId = 'art_' + artNum;
 	
+
+	var artHeight = $('#'+artId).offset().top;
+	$('#article').scrollTop(artHeight);
+
         
 	highlightPlease(id, artId);
 	
@@ -102,8 +106,6 @@ $('.outlineBox').click(
 	//scroll art text into view
 	console.log(document.getElementById(artId));
         
-	var artHeight = $('#'+artId).offset().top;
-	$('#article').scrollTop(artHeight);
 
 	//	$('#article').scrollTop(10);
 //	document.getElementById(artId).scrollIntoView();
