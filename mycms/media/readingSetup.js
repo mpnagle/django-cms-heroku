@@ -55,7 +55,7 @@ console.log($('#outline').outerWidth());
 $('#article').css("top", $('#abstractTitle').position().top + $('#abstractTitle').outerHeight()); 
 $('#article').css("left", $('#articleTitle').position().left);
 
-$('#article').height($('#whiteBorder').height()-($('#article').position().top - borderPos.top) - border_width- $('#article').css('padding-bottom') - $('#article').css('padding-top'));
+$('#article').height($('#whiteBorder').height()-($('#article').position().top - borderPos.top) - border_width- 20); //20=padding top + bottom for article
 
 //position reference col next to article
 $("#reference").css("top", $('#article').position().top);
@@ -67,7 +67,7 @@ console.log('whiteBorder width()');
 console.log($('#whiteBorder').width());
 console.log('reference css padding thi ng');
 console.log($('#reference').css('padding-left'));
-var refWidth = $('#whiteBorder').width() - ($('#reference').position().left-borderPos.left) - $('#reference').css('padding-left') - $('#reference').css('padding-right') - border_width;
+var refWidth = $('#whiteBorder').width() - ($('#reference').position().left-borderPos.left) - border_width - 60; //60 = padding for left and right
 console.log('refWidth = ');
 console.log(refWidth);
 $('#reference').width(refWidth);
