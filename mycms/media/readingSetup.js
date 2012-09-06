@@ -10,7 +10,7 @@ var window_width = $(window).width();
 var whiteWidth = $("#whiteBorder").width();
 var white_left = (window_width - whiteWidth) / 2;
 $("#whiteBorder").css("left", white_left);
-var borderPos = $('#whiteBorder').offset();
+var borderPos = $('#whiteBorder').position();
 
 //position amplify
 $('#amplifyHeading').css("top", '60px');
@@ -36,7 +36,7 @@ $('#abstractTitle').css("top", borderPos.top + border_width);
 $('#abstractTitle').css("left", borderPos.left+border_width);
 $('#abstractTitle').css("height", $('#articleTitle').outerHeight());
 $('#articleTitle').css('left', $('#abstractTitle').position().left + $('#abstractTitle').outerWidth() + 35);//35=article padding-left);
-$('#articleTitle').width($('#whiteBorder').width()-($('#articleTitle').offset().left - $('#whiteBorder').offset().left));
+$('#articleTitle').width($('#whiteBorder').width()-($('#articleTitle').position().left - $('#whiteBorder').position().left));
 
 $('#abstractTitle').width());
 
