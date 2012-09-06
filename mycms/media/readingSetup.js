@@ -16,8 +16,7 @@ var borderPos = $('#whiteBorder').position();
 $('#amplifyHeading').css("top", '60px');
 var ampInnovWidth = $('#amplifyHeading').outerWidth() + $('#innovations').width();
 $('#amplifyHeading').css("left", white_left);
-console.log('amplify TOP');
-console.log($('#amplifyHeading').position().top);
+
 
 
 
@@ -25,8 +24,6 @@ console.log($('#amplifyHeading').position().top);
 $('#issue1').css('top', $('#innovations').position().top + $('#innovations').height());
 $('#issue1').css('left', $('#innovations').position().left);
 $('#issue2').css('top', $('#innovations').position().top + $('#innovations').height()+$('#issue1').height());
-console.log('issue1 height');
-console.log($('#issue1').height());
 $('#issue2').css('left', $('#innovations').position().left);
 
 //position article and abstract title
@@ -50,8 +47,6 @@ $('#abstractRest').css("left", $('#abstractTitle').position().left);
 
 //position outline  (at setup abstract is expanded)
 positionOutline(true);
-console.log("outline.outerwidth");
-console.log($('#outline').outerWidth());
 
 //position article beneath abstracTitle (so that it doesn't matter
 //whether abstract is expanded or not
@@ -64,15 +59,7 @@ $('#article').height($('#whiteBorder').height()-($('#article').position().top - 
 $("#reference").css("top", $('#article').position().top);
 $('#reference').css("left", $('#article').position().left + $('#article').outerWidth());
 $('#reference').css("height", $('#article').height());
-console.log('refLeft-borderLeft');
-console.log(($('#reference').position().left-borderPos.left));
-console.log('whiteBorder width()');
-console.log($('#whiteBorder').width());
-console.log('reference css padding thi ng');
-console.log($('#reference').css('padding-left'));
 var refWidth = $('#whiteBorder').width() - ($('#reference').position().left-borderPos.left) - border_width - 60; //60 = padding for left and right
-console.log('refWidth = ');
-console.log(refWidth);
 $('#reference').width(refWidth);
 
 //set outline height (with abstract open)
@@ -129,7 +116,8 @@ $('[data-foot="article"]').each(
 });
 */
 
-$('references').each(function(i, $references){
+$(.'references').each(function(i){
+    console.log("IN REFERENCES LOOP");
     var art_top = $('sup')[i].offset().top;
     console.log('ART_TOP');
     console.log(art_top);
