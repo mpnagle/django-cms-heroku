@@ -136,9 +136,9 @@ $('[data-foot="article"]').each(
 function collapseOutlineBox(outlineBox){
 	var heading = $(outlineBox).children()[0];
 	var restText = $(outlineBox).children()[1];
-	restText.css.addClass("clear");
-	heading.css('border-bottom', none);
-	restText.css('border-bottom', '2px dotted grey');
+//	restText.css.addClass("clear");
+//	heading.css('border-bottom', none);
+//	restText.css('border-bottom', '2px dotted grey');
 }
 
 function expandOutlineBox(outlineBox){
