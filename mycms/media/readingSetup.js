@@ -63,7 +63,7 @@ $('#reference').css("left", $('#article').position().left + $('#article').outerW
 $('#reference').css("height", $('#article').height());
 console.log('refLeft-borderLeft');
 console.log(($('#reference').position().left-borderPos.left));
-var refWidth = $('#whiteBorder').width() - ($('#reference').position().left-borderPos.left) - $('#reference').css('padding-left') - $('#reference').css('padding-right') - border_width);
+var refWidth = $('#whiteBorder').width() - ($('#reference').position().left-borderPos.left) - $('#reference').css('padding-left') - $('#reference').css('padding-right') - border_width;
 $('#reference').css('width', refWidth);
 
 //set outline height
