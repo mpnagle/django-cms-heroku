@@ -121,11 +121,9 @@ $('.references').each(function(i){
         return true;
     }
     var footMatch = $($('.footNumber')[i]);
-    console.log('this offset');
-    console.log($(this).offset());
     console.log('footMatch');
-    console.log($(footMatch));
-    var footOffset = $(footMatch).offset();
+    console.log(footMatch);
+    var footOffset = (footMatch).offset();
     console.log('footOffset');
     console.log(footOffset);
 //    var supMatch = $($('sup')[i]);
