@@ -55,7 +55,7 @@ console.log($('#outline').outerWidth());
 $('#article').css("top", $('#abstractTitle').position().top + $('#abstractTitle').outerHeight()); 
 $('#article').css("left", $('#articleTitle').position().left);
 
-$('#article').css("height", $('#whiteBorder').height()-($('#article').position().top - borderPos.top) - border_width- $('#article').css('padding-bottom') - $('#article').css('padding-top'));
+$('#article').height($('#whiteBorder').height()-($('#article').position().top - borderPos.top) - border_width- $('#article').css('padding-bottom') - $('#article').css('padding-top'));
 
 //position reference col next to article
 $("#reference").css("top", $('#article').position().top);
@@ -64,10 +64,12 @@ $('#reference').css("height", $('#article').height());
 console.log('refLeft-borderLeft');
 console.log(($('#reference').position().left-borderPos.left));
 var refWidth = $('#whiteBorder').width() - ($('#reference').position().left-borderPos.left) - $('#reference').css('padding-left') - $('#reference').css('padding-right') - border_width;
-$('#reference').css('width', refWidth);
+console.log('refWidth = ');
+console.log(refWidth);
+$('#reference').width(refWidth);
 
 //set outline height
-$('#outline').css('height', $('#article').height());
+$('#outline').height($('#article').height());
 
 
 
