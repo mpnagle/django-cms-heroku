@@ -43,7 +43,6 @@ function highlightPlease(outId, artId){ //if highlight = false, put it back
 	outBoxRest.css("padding-bottom", '5px');
 
 	if (outBoxPlus != null){		
-		console.log('make the line ok')	;
 		outBoxPlus.css('border-top', '1px solid black');
 	}
 
@@ -86,13 +85,11 @@ $('.outlineBox').click(
 	var restText = $($(this).children()[1]);
 	//determine if outline rest is collapsed
 	if (restText.height()==0){
-		console.log("shit is collapsed");
 		restText.removeClass("clear");//shit is collapsed
 	}
 	//match with art_x id
 	var id = $(this).attr('id');
 	var artNum = id.substring(id.indexOf('_')+1, id.length); //number
-	console.log(artNum);
 	var artId = 'art_' + artNum;
 	
         
@@ -100,14 +97,9 @@ $('.outlineBox').click(
 	
 	
 	//scroll art text into view
-	console.log(document.getElementById(artId));
         
 
 	var artHeight = $('#'+artId).offset().top;
-        console.log('artheight');
-        console.log(artHeight);
-        console.log('scrollTop');
-        console.log($('#article').scrollTop());
 	$('#article').scrollTop(artHeight);
 
 
@@ -121,10 +113,7 @@ var currentlyReading = null; //outlineBox of what is being read
 
 function showCurrentlyReading(matchingArtId){
 	var outlineId = '#outline_' + matchingArtId.substring(matchingArtId.indexOf('_')+1, matchingArtId.length);
-	console.log(outlineId);
-	console.log($(outlineId));
 	$(outlineId).css('background-color', 'FFFFFF');
-	console.log('outline box should be white now');
 //	($(outlineId)).css('background-color', 'white');
 //	$(outlineId).css('border-bottom', 'none'); for outline title not box
 	
@@ -141,22 +130,14 @@ function showCurrentlyReading(matchingArtId){
 
 function detectWhichArticleChunk(){
 	var currScroll = document.getElementById('article').scrollTop;
-	console.log('art_1 scrollHeihg');
-	console.log(document.getElementById('art_1').scrollHeight);
-	console.log('currScroll = article.scrollTop');
-	console.log(currScroll);
+
 	$('.artPar').each(function(i, el){
 		var chunkHeight = document.getElementById($(el).attr('id')).scrollHeight;
-//		console.log("chunkHeight");
-//		console.log(chunkHeight);
 		if (Math.abs(chunkHeight-currScroll) <= 70) {
 			console.log('detected an outline we should highlight');
 			showCurrentlyReading($(el).attr('id'));
 		}
-//		console.log("curr ScrollTop");
-//		console.log($(this).scrollTop())
 		if ($(this).scrollTop()==0){
-//			console.log($(this).attr('id'));
 		}
 	});
 }

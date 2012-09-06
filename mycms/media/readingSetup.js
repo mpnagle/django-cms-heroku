@@ -116,7 +116,7 @@ $('[data-foot="article"]').each(
 });
 */
 
-$(.'references').each(function(i){
+$('.references').each(function(i){
     console.log("IN REFERENCES LOOP");
     var art_top = $('sup')[i].offset().top;
     console.log('ART_TOP');
