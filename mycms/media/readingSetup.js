@@ -35,12 +35,10 @@ $('#issue2').css('left', $('#innovations').position().left);
 
 //position article and abstract title
 $('#articleTitle').css("top", borderPos.top + border_width);
+$('#abstract').css('top', borderPos.top + border_width);
 $('#abstractTitle').css("top", borderPos.top + border_width);
 $('#abstractTitle').css("left", borderPos.left+border_width);
 $('#abstractTitle').css("height", $('#articleTitle').outerHeight());
-console.log('height of article title then subtitle');
-console.log($('#articleTitle').outerHeight());
-console.log($('#articleSubtitle').outerHeight());
 $('#articleTitle').css('left', $('#abstractTitle').position().left + $('#abstractTitle').outerWidth());
 
 //position abstract and article
