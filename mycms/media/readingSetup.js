@@ -41,7 +41,7 @@ $('#articleTitle').width($('#whiteBorder').width()-($('#articleTitle').position(
 
 //position innovations left based on article title
 
-$('#innovations').css('left', $('#articleTitle').offset().left;
+$('#innovations').css('left', $('#articleTitle').offset().left);
 
 
 //position abstract and article
