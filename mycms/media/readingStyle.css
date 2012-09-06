@@ -49,6 +49,8 @@
 	width: 350px;
 	position: absolute;
         padding-bottom: 15px
+        padding-left: 10px;
+        padding-right: 10px;
 }
 
 #abstractRest{
