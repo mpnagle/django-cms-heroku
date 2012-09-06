@@ -131,7 +131,7 @@ $('.references').each(function(i){
     console.log(supTop);
     var refLeft = $(this).offset().left;
     console.log(refLeft);
-    $(this).offset({top:art_top, left:refLeft});
+    $(this).offset({top:supTop, left:refLeft});
 });
 
 function collapseOutlineBox(outlineBox){
