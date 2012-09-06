@@ -56,13 +56,16 @@ $('#article').css("top", $('#abstractTitle').position().top + $('#abstractTitle'
 $('#article').css("left", $('#articleTitle').position().left);
 console.log('article title left');
 console.log($('#articleTitle').position().left);
-$('#article').css("height", $('#whiteBorder').height()-2*(border_width)-$('#articleTitle').outerHeight());  
+$('#article').css("height", $('#whiteBorder').height-($('#article').position().top - borderPos.top) - border_width- $('#article').css('padding-bottom') - $('#article').css.('padding-top'));
 
 //position reference col next to article
 $("#reference").css("top", $('#article').position().top);
 $('#reference').css("left", $('#article').position().left + $('#article').outerWidth());
 $('#reference').css("height", $('#article').height());
 $('#reference').css("width", whiteWidth - $('#outline').outerWidth() - $('#article').outerWidth() - 2*(border_width));
+
+//set outline height
+$('#outline').css('height', $('#article').height());
 
 
 
