@@ -10,7 +10,7 @@ var window_width = $(window).width();
 var whiteWidth = $("#whiteBorder").width();
 var white_left = (window_width - whiteWidth) / 2;
 $("#whiteBorder").css("left", white_left);
-var borderPos = $('#whiteBorder').position();
+var borderPos = $('#whiteBorder').offset();
 
 //position amplify
 $('#amplifyHeading').css("top", '60px');
@@ -36,7 +36,9 @@ $('#abstractTitle').css("top", borderPos.top + border_width);
 $('#abstractTitle').css("left", borderPos.left+border_width);
 $('#abstractTitle').css("height", $('#articleTitle').outerHeight());
 $('#articleTitle').css('left', $('#abstractTitle').position().left + $('#abstractTitle').outerWidth() + 35);//35=article padding-left);
-//$('#articleTitle').width($('#whiteBorder').width()-$('#abstractTitle').width());
+$('#articleTitle').width($('#whiteBorder').width()-($('#articleTitle').offset().left - $('#whiteBorder').offset().left));
+
+$('#abstractTitle').width());
 
 //position innovations left based on article title
 
@@ -96,14 +98,6 @@ if (outlineHeight + (2 * (border_width)) >= $('#whiteBorder').height()) {
 	});
 
 }
-
-
-
-
-
-
-
-
 
 //create white space in smaller div (art or ref), so that scrollHeight is "equal"
 var totalArtHeight = document.getElementById("article").scrollHeight;
