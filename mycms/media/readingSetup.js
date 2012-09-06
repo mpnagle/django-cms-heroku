@@ -145,4 +145,5 @@ function positionOutline(abstractOpen){
     else{
         $('#outline').css("top", $('#abstractTitle').position().top + $('#abstractTitle').outerHeight());
         $('#outline').css('left', $('#abstractTitle').position().left);
+    }
 }
