@@ -33,38 +33,30 @@ console.log('issue1 height');
 console.log($('#issue1').height());
 $('#issue2').css('left', $('#innovations').position().left);
 
-//position abstract
+//position article and abstract title
+$('#articleTitle').css("top", borderPos.top + border_width);
 $('#abstractTitle').css("top", borderPos.top + border_width);
 $('#abstractTitle').css("left", borderPos.left+border_width);
+$('#abstractTitle').css("height", $('#articleTitle').height());
+$('#articleTitle').css('left', $('abstractTitle').position().left + $('abstractTitle').outerWidth());
+
+//position abstract and article
 $('#abstractRest').css("top", $('#abstractTitle').position().top + $('#abstractTitle').outerHeight());
-$('#abstractRest').css("left", borderPos.left+border_width);
+$('#abstractRest').css("left", $('#abstractTitle').position().left);
 
-//position outline (relative to whiteBorder)
-$('#outline').css("top", $('#abstractRest').position().top + $('#abstractRest').outerHeight());
-$('#outline').css("left", borderPos.left+border_width);
+//position outline  (at setup abstract is expanded)
+positionOutline(true);
 
-//position article title
-$('#articleTitle').css("top", borderPos.top + border_width);
-$('#articleTitle').css('left', $('#outline').position().left + $('#outline').outerWidth());
-$('#articleTitle').css('width', whiteWidth - $('#outline').outerWidth() - 2*(border_width)); 
-
-//position article 
-$('#article').css("top", $('#abstractTitle').position().top + $('#abstractTitle').outerHeight()); //same as abstractRest top
+//position article beneath abstracTitle (so that it doesn't matter
+//whether abstract is expanded or not
+$('#article').css("top", $('#abstractTitle').position().top + $('#abstractTitle').outerHeight()); 
 $('#article').css("left", $('#articleTitle').position().left);
-$('#article').css("height", $('#whiteBorder').height()-2*(border_width)-27);  
+$('#article').css("height", $('#whiteBorder').height()-2*(border_width)-$('#articleTitle').outerHeight());  
 
-//position reference col
-$("#reference").css("top", borderPos.top + border_width);
+//position reference col next to article
+$("#reference").css("top", $('#article').position().top);
 $('#reference').css("left", $('#article').position().left + $('#article').outerWidth());
-$('#reference').css("height", $('#article').outerHeight()-75);
-var totalWidth = whiteWidth;
-var notReferenceWidth = $('#outline').outerWidth() + $('#article').outerWidth() + 60;
-
-console.log('totalWidth' + totalWidth);
-console.log('notRefWidth' + notReferenceWidth);
-console.log(whiteWidth);
-console.log($('#outline').outerWidth());
-console.log($('#article').outerWidth());
+$('#reference').css("height", $('#article').height());
 $('#reference').css("width", whiteWidth - ($('#outline').outerWidth()+$('#article').outerWidth()+60+2*(border_width)));
 
 
@@ -144,4 +136,13 @@ function expandOutlineBox(outlineBox){
 	heading.css('border-bottom',  '1px solid grey');
 }
 
-
+function positionOutline(abstractOpen){
+    if (abstractOpen){
+        $('#outline').css("top", $('#abstractRest').position().top + $('#abstractRest').outerHeight());
+        $('#outline').css('left', $('#abstractRest').position().left);
+        return;
+    }
+    else{
+        $('#outline').css("top", $('#abstractTitle').position().top + $('#abstractTitle').outerHeight());
+        $('#outline').css('left', $('#abstractTitle').position().left);
+}
