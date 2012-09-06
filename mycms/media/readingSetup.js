@@ -124,9 +124,11 @@ $('.references').each(function(i){
     console.log($('sup')[0]);
     console.log($($('sup')[0]));
 
-    var art_top = $($('sup')[i]).offset().top;
-    console.log('ART_TOP');
-    console.log(art_top);
+    var supMatch = $($('sup')[i]);
+    console.log(supMatch);
+    var supTop = supMatch.offset().top;
+    console.log('sup_top');
+    console.log(supTop);
     var refLeft = $(this).offset().left;
     console.log(refLeft);
     $(this).offset({top:art_top, left:refLeft});
