@@ -73,10 +73,10 @@ $('.outlineBox').each(function(i, el) {
 	outlineHeight += size;
 });
 
+$('#outline').css("overflow", "hidden");
 if (outlineHeight + (2 * (border_width)) < $('#whiteBorder').height()) {
 	$('#outline').css("height", outlineHeight);
-	
-//	('#outline').css("overflow", "hidden");
+
 	
 } else {
 	$('#outline').css("height", $('#whiteBorder').height() - 2 * (border_width));
