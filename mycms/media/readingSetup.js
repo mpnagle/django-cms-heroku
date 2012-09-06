@@ -120,11 +120,18 @@ $('.references').each(function(i){
     if (i==0){
         return true;
     }
-    var supMatch = $($('sup')[i]);
-    var supOffset = $(supMatch).offset();
-    var supTop = supOffset.top
+    var footMatch = $($('footNumber')[i]);
+    var footOffset = footMatch.offset();
+    console.log('footOffset');
+    console.log(footOffset);
+//    var supMatch = $($('sup')[i]);
+  //  var supOffset = $(supMatch).offset();
+//    console.log('supOffset');
+//    console.log(supOffset);
+//    var supTop = supOffset.top
+    var footTop = footOffset.top;;
     var refLeft = $(this).offset().left;
-    $(this).offset({top:supTop, left:refLeft});
+    $(this).offset({top:footTop, left:refLeft});
 });
 
 function collapseOutlineBox(outlineBox){
