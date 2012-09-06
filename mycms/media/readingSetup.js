@@ -129,7 +129,7 @@ $('[data-foot="article"]').each(
 });
 */
 
-$references.each(function(i, $references){
+$('references').each(function(i, $references){
     var art_top = $('sup')[i].offset().top;
     console.log('ART_TOP');
     console.log(art_top);
