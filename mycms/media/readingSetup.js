@@ -117,7 +117,7 @@ $('[data-foot="article"]').each(
 */
 
 $('.references').each(function(i){
-    if (i==0){ continue; }
+    if (i==0){continue;}
     console.log("IN REFERENCES LOOP");
     console.log('sup');
     console.log($('sup'));
