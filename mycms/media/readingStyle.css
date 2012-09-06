@@ -144,7 +144,8 @@
 	padding-left: 35px;
 	padding-right: 35px;
 	
-	overflow: hidden;
+	//overflow: hidden;
+        overflow: scroll;
         position: absolute;
 }
 
@@ -181,7 +182,8 @@
     position:absolute;
     padding-left: 50px;
     padding-right: 10px;
-    overflow: scroll;
+//    overflow: scroll;
+    overflow: hidden;
 }
 
 .artPar{

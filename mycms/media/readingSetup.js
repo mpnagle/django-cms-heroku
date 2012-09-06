@@ -1,6 +1,6 @@
 
-$('#reference').on('scroll', function () {
-    $('#article').scrollTop($(this).scrollTop());
+$('#article').on('scroll', function () {
+    $('#reference').scrollTop($(this).scrollTop());
 });
 
 
@@ -116,6 +116,7 @@ else if (totalRefHeight < totalArtHeight){
 
 //align reference column footnotes with where they appear in article text
 $('[data-foot="article"]').each(
+    console.log("reference spacing script running").
     function(index){
 	var curr_data_ref = $('[data-foot="ref"]').eq(index);
 	art_offset_top = $(this).offset().top;
