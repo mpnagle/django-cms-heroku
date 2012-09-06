@@ -120,9 +120,9 @@ $('.references').each(function(i){
     if (i==0){
         return true;
     }
-    var footMatch = $($('footNumber')[i]);
+    var footMatch = $('footNumber')[i];
     console.log('footMatch');
-    console.log(footMatch);
+    console.log($(footMatch));
     var footOffset = footMatch.offset();
     console.log('footOffset');
     console.log(footOffset);
