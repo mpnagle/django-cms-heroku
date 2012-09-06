@@ -64,10 +64,10 @@ function highlightNot(outId, artId){
 	//article, highlight + border bullshit
 	//TODO was it white before, make sure it still is. ok?
 	artChunk.css("background-color", 'white');
-	outBox.css('background-color', 'B1BBBA');
+	outBox.css('background-color', 'EDEEE1');
 	outBoxTitle.css('border-bottom', 'none');
 	outBoxRest.css("padding-bottom", '5px');
-	outBoxRest.css('border-bottom', '1px solid #efefef');
+	outBoxRest.css('border-bottom', '1px solid grey');
 
 	
 }
@@ -107,7 +107,7 @@ $('.outlineBox').click(
 	console.log(document.getElementById(artId));
         
 
-	//	$('#article').scrollTop(10);
+
 //	document.getElementById(artId).scrollIntoView();
 	
 	lastClicked = $(this);
