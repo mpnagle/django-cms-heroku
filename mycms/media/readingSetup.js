@@ -117,6 +117,7 @@ $('[data-foot="article"]').each(
 */
 
 $('.references').each(function(i){
+    console.log(i);
     console.log('current ref');
     console.log($(this).text());
     var refLeft = $(this).offset().left;
@@ -142,6 +143,7 @@ $('.references').each(function(i){
     //    console.log(supOffset);
     //    var supTop = supOffset.top
     }
+    console.log('setting offset');
     $(this).offset({top:footTop, left:refLeft});
 });
 
