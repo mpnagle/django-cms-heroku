@@ -38,7 +38,7 @@ $('#articleTitle').css("top", borderPos.top + border_width);
 $('#abstractTitle').css("top", borderPos.top + border_width);
 $('#abstractTitle').css("left", borderPos.left+border_width);
 $('#abstractTitle').css("height", $('#articleTitle').height());
-$('#articleTitle').css('left', $('abstractTitle').position().left + $('abstractTitle').outerWidth());
+$('#articleTitle').css('left', $('#abstractTitle').position().left + $('#abstractTitle').outerWidth());
 
 //position abstract and article
 $('#abstractRest').css("top", $('#abstractTitle').position().top + $('#abstractTitle').outerHeight());
