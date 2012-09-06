@@ -56,7 +56,7 @@ $('#article').css("top", $('#abstractTitle').position().top + $('#abstractTitle'
 $('#article').css("left", $('#articleTitle').position().left);
 console.log('article title left');
 console.log($('#articleTitle').position().left);
-$('#article').css("height", $('#whiteBorder').height-($('#article').position().top - borderPos.top) - border_width- $('#article').css('padding-bottom') - $('#article').css.('padding-top'));
+$('#article').css("height", $('#whiteBorder').height-($('#article').position().top - borderPos.top) - border_width- $('#article').css('padding-bottom') - $('#article').css('padding-top'))
 
 //position reference col next to article
 $("#reference").css("top", $('#article').position().top);
