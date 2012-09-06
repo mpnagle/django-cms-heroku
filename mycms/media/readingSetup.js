@@ -131,9 +131,8 @@ $('.references').each(function(i){
 //    console.log('supOffset');
 //    console.log(supOffset);
 //    var supTop = supOffset.top
-    var footTop = footOffset.top;;
     var refLeft = $(this).offset().left;
-    $(this).offset({top:footTop, left:refLeft});
+    $(this).offset({top:footOffset.top, left:refLeft});
 });
 
 function collapseOutlineBox(outlineBox){
