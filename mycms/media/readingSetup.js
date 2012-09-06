@@ -115,9 +115,9 @@ else if (totalRefHeight < totalArtHeight){
 
 
 //align reference column footnotes with where they appear in article text
-//this shit is broken right now because the field was not included
-//when the articles were converted to html, use later
-
+//this shit is broken right now because django doesn't play nice w/
+//html5 and custom data attributes are an html5 thing
+/*
 $('[data-foot="article"]').each(
     function(index){
     console.log("reference spacing script running");
@@ -126,13 +126,18 @@ $('[data-foot="article"]').each(
 	ref_left_offset = curr_data_ref.offset().left;
 	ref_left_offset = curr_data_ref.offset().left;
 	curr_data_ref.offset({top:art_offset_top, left:ref_left_offset});
-}
-);
-
-/*
-$('sup').each(
-);
+});
 */
+
+$references.each(function(i, $references)){
+    var art_top = $('sup')[i].offset().top;
+    console.log('ART_TOP');
+    console.log(art_top);
+    var refLeft = $(this).offset().left;
+    console.log(refLeft);
+    $(this).offset({top:art_top, left:refLeft});
+});
+
 function collapseOutlineBox(outlineBox){
 	var heading = $(outlineBox).children()[0];
 	var restText = $(outlineBox).children()[1];
