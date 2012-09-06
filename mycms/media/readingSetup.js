@@ -21,8 +21,8 @@ console.log($('#amplifyHeading').position().top);
 
 //position innovations
 
-$('#innovations').css("left", $('#amplifyHeading').width());
-$('#innovations').css('top', $('#amplifyHeading').position().top);
+$('#innovations').css("left", $('#amplifyHeading').width()+$('#amplifyHeading').position().left);
+$('#innovations').css('top', $('#amplifyHeading').position().top-30);
 
 
 //position issueLinks
