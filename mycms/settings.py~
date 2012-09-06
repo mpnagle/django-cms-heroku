@@ -7,6 +7,7 @@ gettext = lambda s: s
 
 PROJECT_DIR = os.path.abspath(os.path.dirname(__file__))
 
+HOME_CMS_PAGE_SLUG = 'test'
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -126,7 +127,8 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 CMS_TEMPLATES = (
     ('template_1.html', 'Template 1'),
     ('template_2.html', 'Template 2'),
-    ('reading.html', 'Reading Template'),
+    ('blank_reading.html', 'Reading Template'),
+    ('homePage.html', 'Home Page Template'),
 )
 
 ROOT_URLCONF = 'mycms.urls'
