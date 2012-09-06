@@ -29,7 +29,8 @@
     width: 718;
     height: 167;
     left: 495+35; /*35= article-padding-left*/
-    top: 50;
+    top: 53;
+    z-index: -1;
                     
 }
 
