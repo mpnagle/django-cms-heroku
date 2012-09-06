@@ -122,7 +122,9 @@ $('.references').each(function(i){
     console.log($('sup'));
     console.log('specific sup');
     console.log($('sup')[0]);
-    var art_top = $('sup')[i].offset().top;
+    console.log($($('sup')[0]));
+
+    var art_top = $($('sup')[i]).offset().top;
     console.log('ART_TOP');
     console.log(art_top);
     var refLeft = $(this).offset().left;
