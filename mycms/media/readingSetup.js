@@ -117,6 +117,7 @@ $('[data-foot="article"]').each(
 */
 
 $('.references').each(function(i){
+    if (i==0){ continue; }
     console.log("IN REFERENCES LOOP");
     console.log('sup');
     console.log($('sup'));
@@ -126,6 +127,9 @@ $('.references').each(function(i){
 
     var supMatch = $($('sup')[i]);
     console.log(supMatch);
+    var supOffset = $(supMatch).offset();
+    console.log('supOffset');
+    console.log(supOffset);
     var supTop = supMatch.offset().top;
     console.log('sup_top');
     console.log(supTop);
