@@ -160,6 +160,7 @@
 	font-family: helvetica;
 
         width: 820px;
+        display: inline;
 }
 
 #articleSubtitle{
