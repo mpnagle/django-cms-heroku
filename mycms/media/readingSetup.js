@@ -128,7 +128,10 @@ $('.references').each(function(i){
     console.log($($('sup')[0]));
 
     var supMatch = $($('sup')[i]);
+
     console.log(supMatch);
+    console.log('sup first fofset');
+    console.log($('sup:first').offset());
     var supOffset = $(supMatch).offset();
     console.log('supOffset');
     console.log(supOffset);
