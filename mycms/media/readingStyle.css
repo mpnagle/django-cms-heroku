@@ -17,7 +17,7 @@
 	color: #009DAE;
 	position: absolute;
 	padding-top: 20px;
-        width: 350px;
+        width: 365px;
         text-align: center;
         z-index: 999;
 
@@ -28,9 +28,6 @@
     position: absolute;
     width: 718;
     height: 167;
-
-
-
 }
 
 #allIssueLinks{
