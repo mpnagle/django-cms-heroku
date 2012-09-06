@@ -13,7 +13,7 @@ $("#whiteBorder").css("left", white_left);
 var borderPos = $('#whiteBorder').position();
 
 //position amplify
-$('#amplifyHeading').css("top", '0px');
+$('#amplifyHeading').css("top", '60px');
 var ampInnovWidth = $('#amplifyHeading').outerWidth() + $('#innovations').width();
 $('#amplifyHeading').css("left", white_left);
 console.log('amplify TOP');
