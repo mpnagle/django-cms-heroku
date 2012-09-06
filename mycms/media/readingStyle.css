@@ -28,6 +28,9 @@
     position: absolute;
     width: 718;
     height: 167;
+    left: 495+35; /*35= article-padding-left*/
+    top: 50;
+                    
 }
 
 #allIssueLinks{

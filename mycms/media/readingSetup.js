@@ -22,7 +22,7 @@ console.log($('#amplifyHeading').position().top);
 //position innovations
 
 $('#innovations').css("left", $('#amplifyHeading').width()+$('#amplifyHeading').position().left);
-$('#innovations').css('top', $('#amplifyHeading').position().top-30);
+$('#innovations').css('top', $('#amplifyHeading').position().top-40);
 
 
 //position issueLinks
@@ -37,7 +37,7 @@ $('#issue2').css('left', $('#innovations').position().left);
 $('#articleTitle').css("top", borderPos.top + border_width);
 $('#abstract').css('top', borderPos.top + border_width);
 $('#abstractTitle').css("top", borderPos.top + border_width);
-$('#abstractTitle').css("left", borderPos.left+border_width);
+$('#abstractTitle').css("left", borderPos.left+border_width + 35);//35=article padding-left
 $('#abstractTitle').css("height", $('#articleTitle').outerHeight());
 $('#articleTitle').css('left', $('#abstractTitle').position().left + $('#abstractTitle').outerWidth());
 
