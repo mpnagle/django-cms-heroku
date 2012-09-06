@@ -87,12 +87,7 @@ $('.outlineBox').each(function(i, el) {
 });
 
 $('#outline').css("overflow", "hidden");
-if (outlineHeight + (2 * (border_width)) < $('#whiteBorder').height()) {
-	$('#outline').css("height", outlineHeight);
-
-	
-} else {
-	$('#outline').css("height", $('#whiteBorder').height() - 2 * (border_width));
+if (outlineHeight + (2 * (border_width)) >= $('#whiteBorder').height()) {
 	//collapse all rest texts and only display title.
 	$('#outline').children().each(function(index){
 		collapseOutlineBox($(this));
