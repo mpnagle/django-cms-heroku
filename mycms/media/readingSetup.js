@@ -117,27 +117,30 @@ $('[data-foot="article"]').each(
 */
 
 $('.references').each(function(i){
-    if (i==0){
-        return true;
-    }
     console.log('current ref');
-    console.log($(this));
-    
-    var footMatch = $($('.footNumber')[i]);
-    console.log('footMatch');
-    console.log(footMatch);
-    var footOffset = (footMatch).offset();
-    console.log('footOffset');
-    console.log(footOffset);
-    console.log('footOFfsetTop');
-    var footTop = (footMatch).offset().top;
-    console.log(footTop);
-//    var supMatch = $($('sup')[i]);
-  //  var supOffset = $(supMatch).offset();
-//    console.log('supOffset');
-//    console.log(supOffset);
-//    var supTop = supOffset.top
+    console.log($(this).text());
     var refLeft = $(this).offset().left;
+    if (i==0){
+        //line up with author heading
+        footTop = $('.author-heading').offset().top //should only be one
+    }
+
+    else{
+        var footMatch = $($('.footNumber')[i]);
+        console.log('footMatch');
+        console.log(footMatch);
+        var footOffset = (footMatch).offset();
+        console.log('footOffset');
+        console.log(footOffset);
+        console.log('footOFfsetTop');
+        var footTop = (footMatch).offset().top;
+        console.log(footTop);
+    //    var supMatch = $($('sup')[i]);
+      //  var supOffset = $(supMatch).offset();
+    //    console.log('supOffset');
+    //    console.log(supOffset);
+    //    var supTop = supOffset.top
+    }
     $(this).offset({top:footTop, left:refLeft});
 });
 
