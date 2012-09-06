@@ -120,26 +120,10 @@ $('.references').each(function(i){
     if (i==0){
         return true;
     }
-    console.log("IN REFERENCES LOOP");
-    console.log('sup');
-    console.log($('sup'));
-    console.log('specific sup');
-    console.log($('sup')[0]);
-    console.log($($('sup')[0]));
-
     var supMatch = $($('sup')[i]);
-
-    console.log(supMatch);
-    console.log('sup first fofset');
-    console.log($('sup:first').offset());
     var supOffset = $(supMatch).offset();
-    console.log('supOffset');
-    console.log(supOffset);
     var supTop = supMatch.offset().top;
-    console.log('sup_top');
-    console.log(supTop);
     var refLeft = $(this).offset().left;
-    console.log(refLeft);
     $(this).offset({top:supTop, left:refLeft});
 });
 
