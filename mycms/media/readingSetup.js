@@ -72,8 +72,8 @@ console.log('refWidth = ');
 console.log(refWidth);
 $('#reference').width(refWidth);
 
-//set outline height
-$('#outline').height($('#article').height());
+//set outline height (with abstract open)
+$('#outline').height($('#article').height()-($('#abstractRest').outerHeight()));
 
 
 
