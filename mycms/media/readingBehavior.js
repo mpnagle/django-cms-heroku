@@ -102,7 +102,12 @@ $('.outlineBox').click(
 	//scroll art text into view
 	console.log(document.getElementById(artId));
         
+
 	var artHeight = $('#'+artId).offset().top;
+        console.log('artheight');
+        console.log(artHeight);
+        console.log('scrollTop');
+        console.log($('#article').scrollTop();
 	$('#article').scrollTop(artHeight);
 
 

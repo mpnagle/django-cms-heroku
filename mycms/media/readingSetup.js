@@ -36,6 +36,7 @@ $('#abstractTitle').css("top", borderPos.top + border_width);
 $('#abstractTitle').css("left", borderPos.left+border_width);
 $('#abstractTitle').css("height", $('#articleTitle').outerHeight());
 $('#articleTitle').css('left', $('#abstractTitle').position().left + $('#abstractTitle').outerWidth() + 35);//35=article padding-left);
+$('#articleTitle').width($('#whiteBorder').width()-$('#abstractTitle').width());
 
 //position innovations left based on article title
 
@@ -135,7 +136,7 @@ $('[data-foot="article"]').each(
 function collapseOutlineBox(outlineBox){
 	var heading = $(outlineBox).children()[0];
 	var restText = $(outlineBox).children()[1];
-	restText.addClass("clear");
+	restText.css.addClass("clear");
 	heading.css('border-bottom', none);
 	restText.css('border-bottom', '2px dotted grey');
 }
