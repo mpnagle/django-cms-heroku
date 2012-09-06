@@ -63,6 +63,10 @@ $('#reference').css("left", $('#article').position().left + $('#article').outerW
 $('#reference').css("height", $('#article').height());
 console.log('refLeft-borderLeft');
 console.log(($('#reference').position().left-borderPos.left));
+console.log('whiteBorder width()');
+console.log($('#whiteBorder').width());
+console.log('reference css padding thi ng');
+console.log($('#reference').css('padding-left'));
 var refWidth = $('#whiteBorder').width() - ($('#reference').position().left-borderPos.left) - $('#reference').css('padding-left') - $('#reference').css('padding-right') - border_width;
 console.log('refWidth = ');
 console.log(refWidth);
