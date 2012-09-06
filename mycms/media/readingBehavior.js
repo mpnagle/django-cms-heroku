@@ -95,12 +95,15 @@ $('.outlineBox').click(
 	console.log(artNum);
 	var artId = 'art_' + artNum;
 	
+        
 	highlightPlease(id, artId);
 	
 	
 	//scroll art text into view
 	console.log(document.getElementById(artId));
-	document.getElementById(artId).scrollIntoView();
+        
+        $('#'+artId).scrollTop(10);
+//	document.getElementById(artId).scrollIntoView();
 	
 	lastClicked = $(this);
 	
