@@ -134,7 +134,7 @@
 	padding-left: 35px;
 	padding-right: 35px;
 	
-	overflow: hidden;
+	overflow: scroll;
 }
 
 #articleTitle{
@@ -142,7 +142,6 @@
 	position: absolute;
 	padding-left: 10px;
 	padding-right: 35px;
-	padding-top: 20px;
 	padding-bottom: 15px;
 	text-align: left;
 
@@ -150,7 +149,7 @@
 	font-family: helvetica;
 
 
-	width: 885px; /*match article + total ref width */
+/*	width: 885px; /*match article + total ref width */
 	z-index: 1000;
 	
 }
@@ -174,7 +173,7 @@
     position:absolute;
     padding-left: 50px;
     padding-right: 10px;
-	overflow: scroll;
+    overflow: hidden;
 }
 
 .artPar{

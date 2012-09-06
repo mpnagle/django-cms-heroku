@@ -1,6 +1,6 @@
 
-$('#reference').on('scroll', function () {
-    $('#article').scrollTop($(this).scrollTop());
+$('#article').on('scroll', function () {
+    $('#reference').scrollTop($(this).scrollTop());
 });
 
 
