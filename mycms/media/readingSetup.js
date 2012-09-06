@@ -19,10 +19,6 @@ $('#amplifyHeading').css("left", white_left);
 console.log('amplify TOP');
 console.log($('#amplifyHeading').position().top);
 
-//position innovations
-
-$('#innovations').css("left", $('#amplifyHeading').width()+$('#amplifyHeading').position().left);
-$('#innovations').css('top', $('#amplifyHeading').position().top-40);
 
 
 //position issueLinks
