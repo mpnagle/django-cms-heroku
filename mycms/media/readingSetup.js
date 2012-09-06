@@ -47,6 +47,8 @@ $('#abstractRest').css("left", $('#abstractTitle').position().left);
 
 //position outline  (at setup abstract is expanded)
 positionOutline(true);
+console.log("outline.outerwidth");
+console.log($('#outline').outerWidth());
 
 //position article beneath abstracTitle (so that it doesn't matter
 //whether abstract is expanded or not
@@ -60,7 +62,7 @@ $('#article').css("height", $('#whiteBorder').height()-2*(border_width)-$('#arti
 $("#reference").css("top", $('#article').position().top);
 $('#reference').css("left", $('#article').position().left + $('#article').outerWidth());
 $('#reference').css("height", $('#article').height());
-$('#reference').css("width", whiteWidth - ($('#outline').outerWidth()+$('#article').outerWidth()+60+2*(border_width)));
+$('#reference').css("width", whiteWidth - $('#outline').outerWidth() - $('#article').outerWidth() - 2*(border_width)));
 
 
 

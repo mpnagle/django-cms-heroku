@@ -50,7 +50,7 @@
 	position: absolute;
         padding-bottom: 15px
         padding-left: 10px;
-        padding-right: 10px;
+        padding-right: 15px;
 }
 
 #abstractRest{
@@ -60,7 +60,7 @@
 	font-family: helvetica;
 	position: absolute;
 	padding-left: 10px;
-	padding-right: 10px;
+	padding-right: 15px;
         padding-bottom: 5px;
 }
 
@@ -100,8 +100,6 @@
     position: absolute;
 	padding-bottom: 10px;
 /*	background-color: #EDEEE1;*/
-	padding-top: 20px;
-	padding-bottom: 15px;
 	border-left: 1px solid grey;
 	
 }
