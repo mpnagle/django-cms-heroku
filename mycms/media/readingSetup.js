@@ -116,8 +116,8 @@ else if (totalRefHeight < totalArtHeight){
 
 //align reference column footnotes with where they appear in article text
 $('[data-foot="article"]').each(
-    console.log("reference spacing script running");
     function(index){
+    console.log("reference spacing script running");
 	var curr_data_ref = $('[data-foot="ref"]').eq(index);
 	art_offset_top = $(this).offset().top;
 	ref_left_offset = curr_data_ref.offset().left;
