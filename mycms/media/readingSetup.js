@@ -52,6 +52,8 @@ positionOutline(true);
 //whether abstract is expanded or not
 $('#article').css("top", $('#abstractTitle').position().top + $('#abstractTitle').outerHeight()); 
 $('#article').css("left", $('#articleTitle').position().left);
+console.log('article title left');
+console.log($('#articleTitle').position().left);
 $('#article').css("height", $('#whiteBorder').height()-2*(border_width)-$('#articleTitle').outerHeight());  
 
 //position reference col next to article
