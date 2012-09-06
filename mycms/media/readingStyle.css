@@ -98,9 +98,12 @@
 #outline{
     width: 350px;
     position: absolute;
-	padding-bottom: 10px;
+    padding-bottom: 10px;
+    border-left: 1px solid grey;
+    overflow: scroll;
 /*	background-color: #EDEEE1;*/
-	border-left: 1px solid grey;
+
+    
 	
 }
 
@@ -133,6 +136,7 @@
 	position: absolute;
 
 	padding-bottom: 20px;
+        padding-top: 20px;
 	padding-left: 35px;
 	padding-right: 35px;
 	
@@ -166,12 +170,11 @@
 
 #reference{
     background-color: white;
-
     padding-bottom:60px;
     position:absolute;
     padding-left: 50px;
     padding-right: 10px;
-    overflow: hidden;
+    overflow: scroll;
 }
 
 .artPar{
