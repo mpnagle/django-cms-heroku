@@ -74,6 +74,98 @@
       {% placeholder article_subtitle %}
     </span>
 </div>
+<div id="articleAndRef" style="display:inline; overflow:scroll;">
+    <!--article column -->
+    <div id = "article">
+      {% placeholder article_main %}
+      <div id="artWhiteSpace">
+        </div>
+    </div>
+    <!--reference column -->
+    <div id="reference">
+      {% placeholder reference %}
+      <div id="refWhiteSpace">
+      </div>
+</div>
+</div>
+</div>
+{% endblock %}
+{% extends "base.html" %}
+{% load cms_tags sekizai_tags %}
+{% block base_content %}
+{% addtoblock "css" %}
+<link rel="stylesheet" type="text/css" href="{{ MEDIA_URL}}jquery-ui/css/custom-theme/jquery-ui.css"/>
+{% endaddtoblock "css" %}
+<link ref="stylesheet" type="text/css" href="{{ MEDIA_URL }}readingStyle.css" />
+<link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
+{% addtoblock "js" %}
+<script type="text/javascript" src="{{ MEDIA_URL }}jquery-ui/js/jquery.js"></script>
+<script type="text/javascript" src="{{ MEDIA_URL }}jquery-ui/js/jquery-ui.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript" src="{{ MEDIA_URL }}readingSetup.js"></script>
+<script type="text/javascript" src="{{ MEDIA_URL }}readingBehavior.js"></script>
+<script type="text/javascript" src="{{ MEDIA_URL }}navigation.js"></script>
+{% endaddtoblock "js" %}
+<!--bg and white border-->
+<div id="whiteBorder"></div>
+</div>
+<div id="amplifyHeading">
+    amplify
+</div>
+<div id="innovationsWholeDiv">
+  <span id="innovationsImageOnly"> 
+    <img src="{{ MEDIA_URL }}innovations_logo_Shaved.png"/>
+  </span>
+</div>
+<div id="allIssueLinks">
+  <div id="issue2" class="issueLinks"> 
+    vol 7 issue 1 winter 2012 unleashing ideas
+    <div id="allCategories">
+      <div class="innovCategories" > Lead Essays </div>
+      <div class="innovCategories" > Case Narratives</div>
+      <div class="innovCategories" > Analysis</div>
+      <div class="innovCategories" > Perspectives on Policy</div>
+      </div>
+      
+    <div class="innovArticleTitles" id="currentArticle"> Mexico's Growth Will Come From Entrepreneurship and Small and Medium-Sized Enterprises </div>
+    <div class="innovArticleTitles"> From Dirt and Scrap to Gold: A Vision for Entrepreneurship in Indonesia 
+  </div>
+</div>
+  <!-- 
+  <div id="issue1" class="issueLinks"> 
+    vol 7 issue 1 winter 2012  unleashing ideas
+    </div>
+   -->
+    
+  <!--  
+  <ul>
+    <li><a id="issue2" class="issueLinks" > vol 7 issue 2 spring 2012 enabling entrepreneurial ecosystems</a></li>
+    <li><a id="issue1" class="issueLinks" > vol 7 issue 1 winter 2012 unleashing ideas</a></li>
+    </ul>
+-->
+</div>
+    <!--abstract-->
+    <div id="abstractTitle">
+            in brief
+    </div>
+<div id="wholeLeftCol">
+    <div id="abstractRest">
+    {% placeholder abstract %}
+    </div>
+    <!-- outline column -->
+    <div id="outline">
+    {% placeholder outline %}
+    </div>
+<div>
+<!-- article title -->
+<div id = "articleTitle">
+  <div id = "articleMainTitle">
+    {% placeholder article_title %}
+    </div>
+    <span id = "articleSubTitle"> 
+      {% placeholder article_subtitle %}
+    </span>
+</div>
 <div id="articalAndRef" style="display:inline; overflow:scroll;">
     <!--article column -->
     <div id = "article">
