@@ -76,7 +76,11 @@ $('.outlineBox').click(
     function() {
 		//expand outline if it's not expanded already.
 		//highlight and display pertaining section in article.
-		if (lastClicked != null && lastClicked != $(this)){
+        if (lastClicked == $(this)){
+            return;
+        }
+		if (lastClicked != null){
+                    console.log("cleaning up lastClicked");
 			var idLast = $(lastClicked).attr('id');
 			var artIndexLast = 'art_' + idLast.substring(idLast.indexOf('_')+1, idLast.length);
 			highlightNot(idLast, artIndexLast);

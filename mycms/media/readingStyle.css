@@ -227,6 +227,9 @@ h2{
     line-height:1.1em;
 }
 
+#li{
+    bottom-margin: 0.5;
+}
 
 .references{
     font-size:8pt;
