@@ -34,13 +34,16 @@
                     
 }
 
+
 #allIssueLinks{
-	position: absolute;
+    background-color: grey;
+
 }
 
 .issueLinks{
 	font-size: 13pt;
-	height: 20px;
+        position: relative;
+        z-index: 1000;
 }
 
 #abstractTitle{

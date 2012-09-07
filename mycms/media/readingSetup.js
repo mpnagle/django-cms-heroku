@@ -20,11 +20,6 @@ $('#amplifyHeading').css("left", white_left);
 
 
 
-//position issueLinks
-$('#issue1').css('top', $('#innovations').position().top + $('#innovations').height());
-$('#issue1').css('left', $('#innovations').position().left);
-$('#issue2').css('top', $('#innovations').position().top + $('#innovations').height()+$('#issue1').height());
-$('#issue2').css('left', $('#innovations').position().left);
 
 //position article and abstract title
 $('#articleTitle').css("top", borderPos.top + border_width);
@@ -37,8 +32,11 @@ $('#articleTitle').width($('#whiteBorder').width()-($('#articleTitle').position(
 
 
 //position innovations left based on article title
-
 $('#innovations').css('left', $('#articleTitle').position().left + 35); //padding-left of article
+
+//position issueLinks
+$('#issue1').css('top', $('#innovations').position().top + $('#innovations').height());
+$('#issue1').css('left', $('#innovations').position().left);
 
 
 //position abstract and article
