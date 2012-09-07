@@ -60,6 +60,12 @@
 
 }
 
+.innovArticleTitles{
+    font-family: helvetica;
+    font-size 8pt;
+    padding-left: 60px;
+}
+
 #abstractTitle{
 /*	font-family: 'Patua One', cursive;*/
 /*	font-family: 'Headland One', serif;*/
