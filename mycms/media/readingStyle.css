@@ -36,14 +36,15 @@
 
 
 #allIssueLinks{
-    background-color: grey;
+    background-color: #DEDEDE;
     position: absolute;
+    z-index: 1000;
+    opacity: 0.5;
 }
 
 .issueLinks{
 	font-size: 13pt;
         position: relative;
-        z-index: 1000;
 }
 /*
 #issue1{

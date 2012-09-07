@@ -37,6 +37,9 @@ $('#innovations').css('left', $('#articleTitle').position().left + 35); //paddin
 //position issueLinks
 $('#allIssueLinks').css('top', $('#innovations').position().top + $('#innovations').height());
 $('#allIssueLinks').css('left', $('#innovations').position().left);
+$('#allIssueLinks').width($('#articleTitle').width());
+$('#allIssueLinks').height($('#articleTitle').height());
+
 //$('#issue1').css('top', $('#innovations').position().top + $('#innovations').height());
 //$('#issue1').css('left', $('#innovations').position().left);
 
