@@ -35,8 +35,9 @@ $('#articleTitle').width($('#whiteBorder').width()-($('#articleTitle').position(
 $('#innovations').css('left', $('#articleTitle').position().left + 35); //padding-left of article
 
 //position issueLinks
-$('#issue1').css('top', $('#innovations').position().top + $('#innovations').height());
-$('#issue1').css('left', $('#innovations').position().left);
+$('#allIssueLinks').css('top', $('#innovations').position().top + $('#innovations').height());
+//$('#issue1').css('top', $('#innovations').position().top + $('#innovations').height());
+//$('#issue1').css('left', $('#innovations').position().left);
 
 
 //position abstract and article
