@@ -12,8 +12,9 @@ var white_left = (window_width - whiteWidth) / 2;
 $("#whiteBorder").css("left", white_left);
 var borderPos = $('#whiteBorder').position();
 
-//position amplify
+//position amplify           and top of innovations
 $('#amplifyHeading').css("top", '60px');
+$('#innovations').css('top', '60px');
 var ampInnovWidth = $('#amplifyHeading').outerWidth() + $('#innovations').width();
 $('#amplifyHeading').css("left", white_left);
 

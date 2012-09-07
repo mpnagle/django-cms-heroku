@@ -28,7 +28,6 @@
     position: absolute;
     width: 718;
     height: 167;
-    top: 53;
     z-index: -1;
     left: 400;
 
@@ -51,19 +50,22 @@
         line-height: 1.4;
         position: relative;
         opacity: 1.0;
+        padding-right: 35px;
 }
 
 .innovCategories{
         font-family: bitter;
         font-size: 10pt;
-        padding-left: 35px;
+        display: inline;
+        margin-left: 0;
 
 }
 
 .innovArticleTitles{
     font-family: helvetica;
-    font-size 8pt;
+    font-size: 10pt;
     padding-left: 60px;
+    font-weight: normal;
 }
 
 #abstractTitle{
