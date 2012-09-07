@@ -170,13 +170,13 @@
     line-height: 1.2em;
     background-color: white;
 	width: 500px;
-	position: absolute;
-
+	position: relative;
 	padding-bottom: 20px;
         padding-top: 20px;
 	padding-left: 35px;
 	padding-right: 35px;
-        position: absolute;
+        position: relative;
+	display: inline;
 }
 
 #articleTitle{
@@ -221,16 +221,17 @@
 #reference{
     background-color: white;
     padding-bottom:60px;
-    position:absolute;
+    position:relative;
     padding-left: 50px;
     padding-right: 10px;
+    display:inline;
 
 }
 
 #wholeRightCol{
+    position: absolute;
     display: inline;
-    z-index: -1;
-
+    overflow: scroll;
 }
 
 .artPar{
@@ -257,8 +258,4 @@ h2{
 
 .references a:hover {
     text-decoration: underline;
-}
-
-#articleAndRef {
-    z-index: -1;
 }

@@ -56,20 +56,24 @@ positionOutline(true);
 //position article beneath abstracTitle (so that it doesn't matter
 //whether abstract is expanded or not
 //**also set ywholeRightCol div
-$('#article').css("top", $('#abstractTitle').position().top + $('#abstractTitle').outerHeight()); 
-$('#article').css("left", $('#articleTitle').position().left);
+// $('#article').css("top", $('#abstractTitle').position().top + $('#abstractTitle').outerHeight()); 
+// $('#article').css("left", $('#articleTitle').position().left);
 $('#wholeRightCol').css("top", $('#abstractTitle').position().top + $('#abstractTitle').outerHeight()); 
 $('#wholeRightCol').css("left", $('#articleTitle').position().left);
 
 
-$('#article').height($('#whiteBorder').height()-($('#article').position().top - borderPos.top) - border_width- 20); //20=padding top + bottom for article
+//$('#article').height($('#whiteBorder').height()-($('#article').position().top - borderPos.top) - border_width- 20); //20=padding top + bottom for article
 
 
 
 //position reference col next to article
-$("#reference").css("top", $('#article').position().top);
-$('#reference').css("left", $('#article').position().left + $('#article').outerWidth());
-$('#reference').css("height", $('#article').height());
+//$("#reference").css("top", $('#article').position().top);
+//$('#reference').css("left", $('#article').position().left + $('#article').outerWidth());
+//$('#reference').css("height", $('#article').height());
+
+$('#wholeRightCol').height($('#whiteBorder').height()-($('#wholeRightCol').position().top - borderPos.top) - border_width- 20); //20=padding top + bottom for article
+
+
 var refWidth = $('#whiteBorder').width() - ($('#reference').position().left-borderPos.left) - border_width - 60; //60 = padding for left and right
 $('#reference').width(refWidth);
 
