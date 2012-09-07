@@ -46,6 +46,10 @@
         z-index: 1000;
 }
 
+#issue1{
+    position:absolute;
+}
+
 #abstractTitle{
 /*	font-family: 'Patua One', cursive;*/
 /*	font-family: 'Headland One', serif;*/
