@@ -39,12 +39,13 @@
     background-color: #DEDEDE;
     position: absolute;
     z-index: 1000;
-    opacity: 0.5;
+    opacity: 0.8;
 }
 
 .issueLinks{
 	font-size: 13pt;
         position: relative;
+        opacity: 1.0;
 }
 /*
 #issue1{
