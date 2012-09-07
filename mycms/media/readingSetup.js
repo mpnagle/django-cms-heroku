@@ -55,7 +55,7 @@ positionOutline(true);
 
 //position article beneath abstracTitle (so that it doesn't matter
 //whether abstract is expanded or not
-//**also set articleAndRef div
+//**also set yarticleAndRef div
 $('#article').css("top", $('#abstractTitle').position().top + $('#abstractTitle').outerHeight()); 
 $('#article').css("left", $('#articleTitle').position().left);
 $('#articleAndRef').css("top", $('#abstractTitle').position().top + $('#abstractTitle').outerHeight()); 
