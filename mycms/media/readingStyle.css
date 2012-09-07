@@ -145,7 +145,7 @@
 #articleTitle{
 	background-color: #EDEEE1;
 	position: absolute;
-	padding-left: 25px;
+        padding-left: 35px; //match article padding-left padding
 	padding-right: 75px;
 	padding-bottom: 15px;
 	text-align: left;
