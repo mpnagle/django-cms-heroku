@@ -80,7 +80,7 @@ $('.outlineBox').click(
         console.log(lastClicked);
         console.log('this');
         console.log($(this));
-        if (lastClicked == $(this)){
+        if ($(lastClicked).attr('id') == $(this).attr('id')){
             console.log("exiting click");
             return;
         }
