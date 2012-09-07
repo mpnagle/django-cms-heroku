@@ -124,11 +124,11 @@
 #wholeLeftCol{
 /*background-color: #D5D6C2;*/
 /*position: fixed;*/
-/*overflow: scroll;*/
+overflow: scroll;
 }
 
 #outline{
-    overflow: scroll;
+/*    overflow: scroll;*/
     width: 350px;
     position: absolute;
     padding-bottom: 10px;
@@ -160,6 +160,7 @@
 
 .outlineRest{
 	padding-bottom: 20px;
+        margin-bottom: 5px;
 }
 
 
