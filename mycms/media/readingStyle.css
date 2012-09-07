@@ -226,7 +226,8 @@
     padding-left: 50px;
     padding-right: 10px;
     display:inline;
-
+    width:307px;
+    left:35px;
 }
 
 
@@ -234,6 +235,7 @@
 #wholeRightCol{
     position: absolute;
     overflow: scroll;
+    width: 867px;
 }
 
 .artPar{

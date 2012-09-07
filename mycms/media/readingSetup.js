@@ -93,12 +93,12 @@ $('#wholeRightCol').height($('#whiteBorder').height()-($('#wholeRightCol').posit
 
 
 
-var refWidth = $('#whiteBorder').width() - ($('#reference').position().left-borderPos.left) - border_width - 60; //60 = padding for left and right
-$('#reference').width(refWidth);
+//var refWidth = $('#whiteBorder').width() - ($('#reference').position().left-borderPos.left) - border_width - 60; //60 = padding for left and right
+//$('#reference').width(refWidth);
 
 //set wholeRightCol height and width
 $('#wholeRightCol').height($('#reference').outerHeight());
-$('#wholeRightCol').width($('#article').outerWidth()+$('#reference').outerWidth());
+//$('#wholeRightCol').width($('#article').outerWidth()+$('#reference').outerWidth());
 
 
 //set outline height (with abstract open)
