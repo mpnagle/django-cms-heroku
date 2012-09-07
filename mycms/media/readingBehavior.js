@@ -76,6 +76,10 @@ $('.outlineBox').click(
     function() {
 		//expand outline if it's not expanded already.
 		//highlight and display pertaining section in article.
+        console.log('lastClicked');
+        console.log(lastClicked);
+        console.log('this');
+        console.log($(this));
         if (lastClicked == $(this)){
             console.log("exiting click");
             return;
