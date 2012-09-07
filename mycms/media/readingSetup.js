@@ -64,7 +64,7 @@ $('#outline').height($('#article').height()-($('#abstractRest').outerHeight()));
 
 //position issueLinks
 $('#allIssueLinks').css('top', borderPos.top);
-$('#allIssueLinks').css('left', $('article').position().left);
+$('#allIssueLinks').css('left', $('#article').position().left);
 $('#allIssueLinks').width($('#whiteBorder').width()-($('#article').position().left-borderPos.left));
 $('#allIssueLinks').height($('#abstractTitle').outerHeight() + border_width);
 
