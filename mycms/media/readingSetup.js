@@ -69,8 +69,6 @@ $('#allIssueLinks').width($('#whiteBorder').width()-($('#article').position().le
 $('#allIssueLinks').height($('#abstractTitle').outerHeight() + border_width);
 
 
-
-
 //setup outline, initialize w/ padding.
 var outlineHeight = 0;
 $('.outlineBox').each(function(i, el) {
