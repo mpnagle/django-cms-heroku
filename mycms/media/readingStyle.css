@@ -118,6 +118,7 @@ background-color: #D5D6C2;
     position: absolute;
     padding-bottom: 10px;
     overflow: scroll;
+    position: fixed;
 /*	background-color: #EDEEE1;*/
 
     
