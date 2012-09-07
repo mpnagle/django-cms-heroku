@@ -26,8 +26,8 @@
 
 #innovationsWholeDiv{      /*includes nav div for easier hovering.*/
     position: absolute;
-    width: 718;
-    height: 167;
+    width: 718px;
+    height: 167px;
     z-index: -1;
     top: 80px;
  }
@@ -122,16 +122,9 @@
 }
 
 #wholeLeftCol{
-<<<<<<< HEAD
 background-color: #D5D6C2;
 position: fixed;
 overflow: scroll;
-
-=======
-    background-color: #D5D6C2;
-    position: fixed;
-    overflow: scroll;
->>>>>>> 0c49b2598dff0e1a7141d538cf2a596143523a02
 }
 
 #outline{
@@ -189,7 +182,7 @@ overflow: scroll;
 #articleTitle{
 	background-color: #EDEEE1;
 	position: absolute;
-        padding-left: 35px; //match article padding-left padding
+        padding-left: 35px; /*match article padding-left padding*/
 	padding-right: 75px;
 	padding-bottom: 15px;
 	text-align: left;
