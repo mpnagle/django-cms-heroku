@@ -46,8 +46,8 @@ $('#abstractRest').css("left", $('#abstractTitle').position().left);
 
 
 //position whoelLeft
-$('#wholeLeftCol').css('left', $('$abstractRest').position().left);
-$('#wholeLeftCol').css('top', $('$abstractRest').position().top);
+$('#wholeLeftCol').css('left', $('#abstractRest').position().left);
+$('#wholeLeftCol').css('top', $('#abstractRest').position().top);
 
 
 //position outline  (at setup abstract is expanded)
