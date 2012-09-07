@@ -39,7 +39,7 @@
     background-color: #F5F9E7;
     position: absolute;
     z-index: 1000;
-    opacity: 0.8;
+    opacity: 0.95;
     padding-left: 35px; /*match article*/
 }
 
@@ -67,12 +67,12 @@
 }
 
 #abstractRest{
-    width: 350px;
+    width: 320px; /*350*/
     position: absolute;
 	font-size: 10pt;
 	font-family: helvetica;
 	position: absolute;
-	padding-left: 10px;
+	padding-left: 15px;
 	padding-right: 15px;
         padding-bottom: 20px;
         line-height: 1.2em;
@@ -209,6 +209,11 @@ background-color: #D5D6C2;
 .footNumber{
     color:#3d3d3d;
 }
+
+h2{
+    line-height:1.1em;
+}
+
 
 .references{
     font-size:8pt;
