@@ -35,6 +35,7 @@ function highlightPlease(outId, artId){ //if highlight = false, put it back
 	var outBox = $('#' + outId);
 	var outBoxTitle = $(outBox.children()[0]);
 	var outBoxRest = $(outBox.children()[1]);
+
 	//article, highlight + border bullshit
 	artChunk.css("background-color", '00CCCC');
 	outBox.css('background-color', '00CCCC');
@@ -78,6 +79,8 @@ $('.outlineBox').click(
 		//highlight and display pertaining section in article.
 		if (lastClicked != null){
 			var idLast = $(lastClicked).attr('id');
+		        console.log("last clicked id #");
+		        console.log(idLast);
 			var artIndexLast = 'art_' + idLast.substring(idLast.indexOf('_')+1, idLast.length);
 			highlightNot(idLast, artIndexLast);
 		}
@@ -102,11 +105,6 @@ $('.outlineBox').click(
 	
 	//scroll art text into view
         
-
-//	var artHeight = $('#'+artId).offset().top;
-//	$('#article').scrollTop(artHeight);
-
-
 
 //	document.getElementById(artId).scrollIntoView();
 	
@@ -148,7 +146,7 @@ function detectWhichArticleChunk(){
 }
 	
 	
-detectWhichArticleChunk();
+//detectWhichArticleChunk();
 $('#article').scroll(
 	function() {
 	detectWhichArticleChunk();	
