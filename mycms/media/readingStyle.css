@@ -47,10 +47,8 @@
 }
 
 .issueLinks{
-
 	font-size: 13pt;
         font-family: bitter;
-        font-weight: bold;
         line-height: 1.4;
         position: relative;
         opacity: 1.0;
@@ -78,6 +76,7 @@
 
 #currentArticle{
     background-color: #00CCCC;
+    font-weight: bold;
 }
 
 #abstractTitle{
