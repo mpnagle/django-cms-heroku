@@ -122,10 +122,16 @@
 }
 
 #wholeLeftCol{
+<<<<<<< HEAD
 background-color: #D5D6C2;
 position: fixed;
 overflow: scroll;
 
+=======
+    background-color: #D5D6C2;
+    position: fixed;
+    overflow: scroll;
+>>>>>>> 0c49b2598dff0e1a7141d538cf2a596143523a02
 }
 
 #outline{
@@ -227,6 +233,12 @@ overflow: scroll;
     padding-left: 50px;
     padding-right: 10px;
 /*    overflow: scroll;*/
+}
+
+#wholeRightCol{
+    display: inline;
+    z-index: -1;
+    overflow: scroll;
 }
 
 .artPar{

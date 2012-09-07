@@ -46,7 +46,7 @@ function highlightPlease(outId, artId){ //if highlight = false, put it back
 	if (outBoxPlus != null){		
 		outBoxPlus.css('border-top', '1px solid black');
 	}
-\
+
 	if (outBoxMinus != null){
 		outBoxMinus.css('border-bottom', '1px solid black');
 	}

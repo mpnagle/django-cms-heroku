@@ -16,15 +16,18 @@
 {% endaddtoblock "js" %}
 <!--bg and white border-->
 <div id="whiteBorder"></div>
-</div>
+
+
 <div id="amplifyHeading">
     amplify
 </div>
+
 <div id="innovationsWholeDiv">
   <span id="innovationsImageOnly"> 
     <img src="{{ MEDIA_URL }}innovations_logo_Shaved.png"/>
   </span>
 </div>
+
 <div id="allIssueLinks">
   <div id="issue2" class="issueLinks"> 
     vol 7 issue 1 winter 2012 unleashing ideas
@@ -33,17 +36,12 @@
       <div class="innovCategories" > Case Narratives</div>
       <div class="innovCategories" > Analysis</div>
       <div class="innovCategories" > Perspectives on Policy</div>
-      </div>
+      </div> <!-- closes allCategories -->
       
     <div class="innovArticleTitles" id="currentArticle"> Mexico's Growth Will Come From Entrepreneurship and Small and Medium-Sized Enterprises </div>
-    <div class="innovArticleTitles"> From Dirt and Scrap to Gold: A Vision for Entrepreneurship in Indonesia 
-  </div>
-</div>
-  <!-- 
-  <div id="issue1" class="issueLinks"> 
-    vol 7 issue 1 winter 2012  unleashing ideas
-    </div>
-   -->
+    <div class="innovArticleTitles"> From Dirt and Scrap to Gold: A Vision for Entrepreneurship in Indonesia </div>
+  </div> <!-- closes issue2 -->
+</div> <!-- closes allISsueLinks -->
     
   <!--  
   <ul>
@@ -51,11 +49,10 @@
     <li><a id="issue1" class="issueLinks" > vol 7 issue 1 winter 2012 unleashing ideas</a></li>
     </ul>
 -->
-</div>
+
     <!--abstract-->
-    <div id="abstractTitle">
-            in brief
-    </div>
+<div id="abstractTitle">in brief</div>
+
 <div id="wholeLeftCol">
     <div id="abstractRest">
     {% placeholder abstract %}
@@ -64,7 +61,7 @@
     <div id="outline">
     {% placeholder outline %}
     </div>
-<div>
+<div> <!-- closes wholeLeftCol -->
 <!-- article title -->
 <div id = "articleTitle">
   <div id = "articleMainTitle">
@@ -73,21 +70,24 @@
     <span id = "articleSubTitle"> 
       {% placeholder article_subtitle %}
     </span>
-</div>
-<div id="articleAndRef" style="display:inline; overflow:scroll;">
+</div> <!-- closes articleTitle -->
+
+
+<!-- <div id="wholeRightCol"> -->
     <!--article column -->
     <div id = "article">
       {% placeholder article_main %}
       <div id="artWhiteSpace">
         </div>
-    </div>
+    </div> <!-- closes article -->
     <!--reference column -->
     <div id="reference">
       {% placeholder reference %}
       <div id="refWhiteSpace">
       </div>
-</div>
-</div>
-</div>
+    </div> <!-- closes reference -->
+
+<!--</div> --> <!-- closes wholeRightCol -->
+
 {% endblock %}
 
