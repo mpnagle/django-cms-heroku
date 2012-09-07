@@ -31,6 +31,8 @@ $('#articleTitle').css('left', $('#abstractTitle').position().left + $('#abstrac
 $('#articleTitle').width($('#whiteBorder').width()-($('#articleTitle').position().left - borderPos.left) -100);//articleTitle padding = 25+75
 
 
+
+
 //position innovations left based on article title
 $('#innovations').css('left', $('#articleTitle').position().left + 35); //padding-left of article
 
@@ -41,6 +43,12 @@ $('#innovations').css('left', $('#articleTitle').position().left + 35); //paddin
 //position abstract and article
 $('#abstractRest').css("top", $('#abstractTitle').position().top + $('#abstractTitle').outerHeight());
 $('#abstractRest').css("left", $('#abstractTitle').position().left);
+
+
+//position whoelLeft
+$('#wholeLeftCol').css('left', $('$abstractRest').position().left);
+$('#wholeLeftCol').css('top', $('$abstractRest').position().top);
+
 
 //position outline  (at setup abstract is expanded)
 positionOutline(true);
@@ -155,6 +163,7 @@ function positionOutline(abstractOpen){
     }
     else{
         $('#outline').css("top", $('#abstractTitle').position().top + $('#abstractTitle').outerHeight());
+        
         $('#outline').css('left', $('#abstractTitle').position().left);
     }
 }
