@@ -12,7 +12,7 @@ var white_left = (window_width - whiteWidth) / 2;
 $("#whiteBorder").css("left", white_left);
 var borderPos = $('#whiteBorder').position();
 
-//position amplify
+//position amplify           
 $('#amplifyHeading').css("top", '60px');
 var ampInnovWidth = $('#amplifyHeading').outerWidth() + $('#innovations').width();
 $('#amplifyHeading').css("left", white_left);
@@ -31,6 +31,8 @@ $('#articleTitle').css('left', $('#abstractTitle').position().left + $('#abstrac
 $('#articleTitle').width($('#whiteBorder').width()-($('#articleTitle').position().left - borderPos.left) -100);//articleTitle padding = 25+75
 
 
+
+
 //position innovations left based on article title
 $('#innovations').css('left', $('#articleTitle').position().left + 35); //padding-left of article
 
@@ -41,6 +43,12 @@ $('#innovations').css('left', $('#articleTitle').position().left + 35); //paddin
 //position abstract and article
 $('#abstractRest').css("top", $('#abstractTitle').position().top + $('#abstractTitle').outerHeight());
 $('#abstractRest').css("left", $('#abstractTitle').position().left);
+
+
+//position whoelLeft
+$('#wholeLeftCol').css('left', $('#abstractRest').position().left);
+$('#wholeLeftCol').css('top', $('#abstractRest').position().top);
+
 
 //position outline  (at setup abstract is expanded)
 positionOutline(true);
@@ -65,7 +73,7 @@ $('#outline').height($('#article').height()-($('#abstractRest').outerHeight()));
 //position issueLinks
 $('#allIssueLinks').css('top', borderPos.top);
 $('#allIssueLinks').css('left', $('#article').position().left);
-$('#allIssueLinks').width($('#whiteBorder').width()-($('#article').position().left-borderPos.left)-(border_width));
+$('#allIssueLinks').width($('#whiteBorder').width()-($('#article').position().left-borderPos.left));
 $('#allIssueLinks').height($('#abstractTitle').outerHeight() + border_width);
 
 
@@ -117,9 +125,6 @@ $('[data-foot="article"]').each(
 */
 
 $('.references').each(function(i){
-    console.log(i);
-    console.log('current ref');
-    console.log($(this).text());
     var refLeft = $(this).offset().left;
     if (i==0){
         //line up with author heading
@@ -128,22 +133,9 @@ $('.references').each(function(i){
 
     else{
         var footMatch = $($('.footNumber')[i-1]);
-        console.log('footMatch');
-        console.log(footMatch);
-        console.log(footMatch.text());
         var footOffset = (footMatch).offset();
-        console.log('footOffset');
-        console.log(footOffset);
-        console.log('footOFfsetTop');
         var footTop = (footMatch).offset().top;
-        console.log(footTop);
-    //    var supMatch = $($('sup')[i]);
-      //  var supOffset = $(supMatch).offset();
-    //    console.log('supOffset');
-    //    console.log(supOffset);
-    //    var supTop = supOffset.top
     }
-    console.log('setting offset');
     $(this).offset({top:footTop, left:refLeft});
 });
 
@@ -171,6 +163,7 @@ function positionOutline(abstractOpen){
     }
     else{
         $('#outline').css("top", $('#abstractTitle').position().top + $('#abstractTitle').outerHeight());
+        
         $('#outline').css('left', $('#abstractTitle').position().left);
     }
 }

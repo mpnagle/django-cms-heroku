@@ -46,7 +46,7 @@ function highlightPlease(outId, artId){ //if highlight = false, put it back
 	if (outBoxPlus != null){		
 		outBoxPlus.css('border-top', '1px solid black');
 	}
-
+\
 	if (outBoxMinus != null){
 		outBoxMinus.css('border-bottom', '1px solid black');
 	}
@@ -77,7 +77,16 @@ $('.outlineBox').click(
     function() {
 		//expand outline if it's not expanded already.
 		//highlight and display pertaining section in article.
+        console.log('lastClicked');
+        console.log(lastClicked);
+        console.log('this');
+        console.log($(this));
+        if ($(lastClicked).attr('id') == $(this).attr('id')){
+            console.log("exiting click");
+            return;
+        }
 		if (lastClicked != null){
+                    console.log("cleaning up lastClicked");
 			var idLast = $(lastClicked).attr('id');
 		        console.log("last clicked id #");
 		        console.log(idLast);
@@ -106,7 +115,14 @@ $('.outlineBox').click(
 	//scroll art text into view
         
 
-//	document.getElementById(artId).scrollIntoView();
+        console.log("art_x is ");
+        console.log($('#'+artId));
+	var artHeight = $('#'+artId).offset().top;
+        console.log("art_x offset.top is ");
+        console.log(artHeight); 
+	$('#article').scrollTop(artHeight);
+
+
 	
 	lastClicked = $(this);
 	

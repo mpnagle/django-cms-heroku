@@ -28,9 +28,10 @@
     position: absolute;
     width: 718;
     height: 167;
-    top: 53;
     z-index: -1;
-    left: 400;
+    top: 80px;
+    border-bottom: 5px solid #00CCCC;
+
                     
 }
 
@@ -40,16 +41,42 @@
     position: absolute;
     z-index: 1000;
     opacity: 0.95;
+    color: #605C5B;
 
 }
 
 .issueLinks{
+
 	font-size: 13pt;
         font-family: bitter;
         font-weight: bold;
         line-height: 1.4;
         position: relative;
         opacity: 1.0;
+        padding-right: 35px;
+}
+
+#allCategories{
+    padding-left: 35px;
+}
+
+.innovCategories{
+        font-family: bitter;
+        font-size: 10pt;
+        display: inline;
+        margin-left: 0;
+
+}
+
+.innovArticleTitles{
+    font-family: helvetica;
+    font-size: 10pt;
+    padding-left: 60px;
+    font-weight: normal;
+}
+
+.currentArticle{
+    background-color: #00CCCC;
 }
 
 #abstractTitle{
@@ -82,12 +109,15 @@
 
 #abstractTitle{
     font-size: 32pt;
-    padding-top: 5px;
-	padding-bottom: 10px;
+    padding-top: 20px;
+	padding-bottom: 0px;
+        padding-left: 15px;
+        text-align: left;
+        border-bottom: 3px solid #009DAE;
 }
 
 #abstractRest{
-	padding-left: 10px;
+	padding-left: 15px;
 /*	border-left: 1px solid grey;*/
 }
 
@@ -98,9 +128,14 @@
 }
 
 #wholeLeftCol{
+<<<<<<< HEAD
 background-color: #D5D6C2;
 position: fixed;
 overflow: scroll;
+=======
+
+
+>>>>>>> a0f67fa5669f48ff5be28caadd15662db4d57cc9
 
 }
 
@@ -108,7 +143,6 @@ overflow: scroll;
     width: 350px;
     position: absolute;
     padding-bottom: 10px;
-    overflow: scroll;
 /*	background-color: #EDEEE1;*/
 
     
@@ -192,6 +226,10 @@ overflow: scroll;
 .author-heading{
 	font-weight: bold;
 	font-size: 14pt;
+}
+
+.author-ref{
+    font-weight: bold;
 }
 
 #reference{
