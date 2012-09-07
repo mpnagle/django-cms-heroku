@@ -128,20 +128,8 @@ $('.references').each(function(i){
 
     else{
         var footMatch = $($('.footNumber')[i-1]);
-        console.log('footMatch');
-        console.log(footMatch);
-        console.log(footMatch.text());
         var footOffset = (footMatch).offset();
-        console.log('footOffset');
-        console.log(footOffset);
-        console.log('footOFfsetTop');
         var footTop = (footMatch).offset().top;
-        console.log(footTop);
-    //    var supMatch = $($('sup')[i]);
-      //  var supOffset = $(supMatch).offset();
-    //    console.log('supOffset');
-    //    console.log(supOffset);
-    //    var supTop = supOffset.top
     }
     console.log('setting offset');
     $(this).offset({top:footTop, left:refLeft});

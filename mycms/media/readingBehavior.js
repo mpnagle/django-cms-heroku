@@ -100,6 +100,8 @@ $('.outlineBox').click(
         
 
 	var artHeight = $('#'+artId).offset().top;
+        console.log("art_x offset.top is ");
+        console.log(artHeight); 
 	$('#article').scrollTop(artHeight);
 
 
