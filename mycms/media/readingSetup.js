@@ -117,9 +117,6 @@ $('[data-foot="article"]').each(
 */
 
 $('.references').each(function(i){
-    console.log(i);
-    console.log('current ref');
-    console.log($(this).text());
     var refLeft = $(this).offset().left;
     if (i==0){
         //line up with author heading
@@ -131,7 +128,6 @@ $('.references').each(function(i){
         var footOffset = (footMatch).offset();
         var footTop = (footMatch).offset().top;
     }
-    console.log('setting offset');
     $(this).offset({top:footTop, left:refLeft});
 });
 
