@@ -98,7 +98,8 @@ $('.outlineBox').click(
 	
 	//scroll art text into view
         
-
+        console.log("art_x is ");
+        console.log($('#'+artId));
 	var artHeight = $('#'+artId).offset().top;
         console.log("art_x offset.top is ");
         console.log(artHeight); 
