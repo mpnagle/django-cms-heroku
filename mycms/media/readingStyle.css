@@ -195,6 +195,10 @@ background-color: #D5D6C2;
 	font-size: 14pt;
 }
 
+.author-ref{
+    font-weight: bold;
+}
+
 #reference{
     background-color: white;
     padding-bottom:60px;
