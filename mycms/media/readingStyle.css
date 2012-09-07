@@ -228,6 +228,12 @@
 /*    overflow: scroll;*/
 }
 
+#wholeRightCol{
+    display: inline;
+    z-index: -1;
+    overflow: scroll;
+}
+
 .artPar{
 }
 
