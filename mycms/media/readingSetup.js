@@ -73,8 +73,8 @@ $('#wholeRightCol').css("left", $('#articleTitle').position().left);
 //$('#reference').css("height", $('#article').height());
 
 
-$("#reference").css("top", $('#wholeRightCol').position().top);
-$('#reference').css("left", $('#wholeRightCol').position().left + $('#article').outerWidth());
+//$("#reference").css("top", $('#wholeRightCol').position().top);
+//$('#reference').css("left", $('#wholeRightCol').position().left + $('#article').outerWidth());
 
 
 $('#wholeRightCol').height($('#whiteBorder').height()-($('#wholeRightCol').position().top - borderPos.top) - border_width- 20); //20=padding top + bottom for article
