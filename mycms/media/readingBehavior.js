@@ -15,7 +15,7 @@ $('.outlineBox').hover(
   }
 );
 
-
+///outId = out_x (outline box that matches with artChunk) artId = art_x
 function highlightPlease(outId, artId){ //if highlight = false, put it back
 	//figure out outBox after current, to update borders
 	var outNum = parseInt(outId.substring(outId.indexOf('_')+1, outId.length));
@@ -36,20 +36,23 @@ function highlightPlease(outId, artId){ //if highlight = false, put it back
 	var outBoxTitle = $(outBox.children()[0]);
 	var outBoxRest = $(outBox.children()[1]);
 
-	//article, highlight + border bullshit
+	//article, highlight
 	artChunk.css("background-color", '00CCCC');
-	outBox.css('background-color', '00CCCC');
-	outBox.css('color', 'black');
-	outBoxTitle.css('border-bottom', 'none');
-	outBoxRest.css("padding-bottom", '5px');
 
+        //update outline: highlight + border bullshit
+	outBox.css('background-color', '00CCCC');
+	outBoxTitle.css('border-bottom', 'none');
+        console.log("border-bottom of selected outline box should be none.");
+        //TODO add top border to outbox below if it exists. 
+/*
 	if (outBoxPlus != null){		
-		outBoxPlus.css('border-top', '1px solid black');
+		outBoxPlus.css('border-top', '1px solid grey');
 	}
 
 	if (outBoxMinus != null){
-		outBoxMinus.css('border-bottom', '1px solid black');
+		outBoxMinus.css('border-bottom', '1px solid grey');
 	}
+*/
 
 
 }
@@ -65,9 +68,8 @@ function highlightNot(outId, artId){
 	//TODO was it white before, make sure it still is. ok?
 	artChunk.css("background-color", 'white');
 	outBox.css('background-color', 'EDEEE1');
-	outBoxTitle.css('border-bottom', 'none');
-	outBoxRest.css("padding-bottom", '5px');
-	outBoxRest.css('border-bottom', '1px solid grey');
+
+	outBoxTitle.css('border-bottom', '1px solid grey');
 
 	
 }
