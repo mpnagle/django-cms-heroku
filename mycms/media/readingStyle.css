@@ -109,7 +109,9 @@
 }
 
 #wholeLeftCol{
-background-color: #D5D6C2;
+    background-color: #D5D6C2;
+    position: fixed;
+    overflow: scroll;
 
 }
 
@@ -117,8 +119,6 @@ background-color: #D5D6C2;
     width: 350px;
     position: absolute;
     padding-bottom: 10px;
-    overflow: scroll;
-    position: fixed;
 /*	background-color: #EDEEE1;*/
 
     
