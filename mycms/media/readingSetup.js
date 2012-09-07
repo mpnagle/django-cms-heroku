@@ -1,8 +1,8 @@
-
+/*
 $('#reference').on('scroll', function () {
     $('#article').scrollTop($(this).scrollTop());
 });
-
+*/
 
 //position bg and border
 var border_width = 10;
