@@ -24,15 +24,16 @@
 
 }
 
-#innovations{
+#innovationsWholeDiv{      /*includes nav div for easier hovering.*/
     position: absolute;
     width: 718;
     height: 167;
     z-index: -1;
     top: 80px;
-    border-bottom: 5px solid #00CCCC;
+ }
 
-                    
+#innovationsImageOnly{
+   border-bottom: 5px solid #00CCCC;
 }
 
 
@@ -46,10 +47,8 @@
 }
 
 .issueLinks{
-
 	font-size: 13pt;
         font-family: bitter;
-        font-weight: bold;
         line-height: 1.4;
         position: relative;
         opacity: 1.0;
@@ -75,22 +74,26 @@
     font-weight: normal;
 }
 
-.currentArticle{
+#currentArticle{
     background-color: #00CCCC;
+    font-weight: bold;
 }
 
 #abstractTitle{
 /*	font-family: 'Patua One', cursive;*/
 /*	font-family: 'Headland One', serif;*/
 	font-family: 'Bitter', serif;
-	font-size: 48pt;
+/*	font-size: 48pt;*/
+    font-size: 32pt;
 	text-align: center;
 	color: #009DAE;
 	width: 350px;
 	position: absolute;
-        padding-bottom: 15px
-        padding-left: 10px;
+        padding-left: 15px;
         padding-right: 15px;
+        padding-top: 20px;
+        padding-bottom: 0px;	
+        text-align: left;
 }
 
 #abstractRest{
@@ -106,15 +109,6 @@
 }
 
 
-
-#abstractTitle{
-    font-size: 32pt;
-    padding-top: 20px;
-	padding-bottom: 0px;
-        padding-left: 15px;
-        text-align: left;
-        border-bottom: 3px solid #009DAE;
-}
 
 #abstractRest{
 	padding-left: 15px;
@@ -187,8 +181,7 @@ overflow: scroll;
 	padding-left: 35px;
 	padding-right: 35px;
 	
-	//overflow: hidden;
-        overflow: hidden;
+/*	overflow: hidden;  */
         position: absolute;
 }
 
@@ -238,8 +231,7 @@ overflow: scroll;
     position:absolute;
     padding-left: 50px;
     padding-right: 10px;
-    overflow: scroll;
-//    overflow: hidden;
+/*    overflow: scroll;*/
 }
 
 .artPar{
