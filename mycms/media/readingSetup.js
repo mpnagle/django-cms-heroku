@@ -38,7 +38,7 @@ $('#articleTitle').width($('#whiteBorder').width()-($('#articleTitle').position(
 
 //position innovations left based on article title
 
-$('#innovations').css('left', $('#articleTitle').position().left);
+$('#innovations').css('left', $('#articleTitle').position().left + 35); //padding-left of article
 
 
 //position abstract and article
