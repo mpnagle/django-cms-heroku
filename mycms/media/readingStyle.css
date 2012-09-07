@@ -31,6 +31,7 @@
     top: 53;
     z-index: -1;
     left: 400;
+    padding-left: 35px;
                     
 }
 
@@ -227,9 +228,6 @@ h2{
     line-height:1.1em;
 }
 
-#li{
-    bottom-margin: 0.5;
-}
 
 .references{
     font-size:8pt;
