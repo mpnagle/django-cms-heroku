@@ -131,6 +131,7 @@
     width: 350px;
     position: absolute;
     padding-bottom: 10px;
+    overflow: scroll;
 /*	background-color: #EDEEE1;*/
 
     
