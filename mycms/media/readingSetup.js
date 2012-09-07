@@ -66,12 +66,31 @@ $('#wholeRightCol').css("left", $('#articleTitle').position().left);
 
 
 
+
 //position reference col next to article
 //$("#reference").css("top", $('#article').position().top);
 //$('#reference').css("left", $('#article').position().left + $('#article').outerWidth());
 //$('#reference').css("height", $('#article').height());
 
+
+$("#reference").css("top", $('#wholeRightCol').position().top);
+$('#reference').css("left", $('#wholeRightCol').position().left + $('#article').outerWidth());
+
+
 $('#wholeRightCol').height($('#whiteBorder').height()-($('#wholeRightCol').position().top - borderPos.top) - border_width- 20); //20=padding top + bottom for article
+
+//console
+
+//console.log("outer width of article");
+//console.log($('article').outerWidth());
+
+//console.log("outer width of reference");
+//console.log($('reference').outerWidth());
+
+//console.log("outer width of wholeRightCol");
+//console.log($('wholeRightCol').outerWidth());
+
+
 
 
 var refWidth = $('#whiteBorder').width() - ($('#reference').position().left-borderPos.left) - border_width - 60; //60 = padding for left and right

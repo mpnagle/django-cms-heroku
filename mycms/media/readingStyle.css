@@ -228,9 +228,10 @@
 
 }
 
+
+
 #wholeRightCol{
     position: absolute;
-    display: inline;
     overflow: scroll;
 }
 
