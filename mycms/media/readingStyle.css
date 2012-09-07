@@ -117,7 +117,7 @@
 
 .clear{
     height:0px;
-    overflow:hidden;
+/*    overflow:hidden;*/
 	display: block;
 }
 
@@ -128,10 +128,10 @@
 }
 
 #outline{
+    overflow: scroll;
     width: 350px;
     position: absolute;
     padding-bottom: 10px;
-    overflow: scroll;
 /*	background-color: #EDEEE1;*/
 
     
@@ -175,8 +175,6 @@
         padding-top: 20px;
 	padding-left: 35px;
 	padding-right: 35px;
-	
-/*	overflow: hidden;  */
         position: absolute;
 }
 
@@ -226,13 +224,13 @@
     position:absolute;
     padding-left: 50px;
     padding-right: 10px;
-/*    overflow: scroll;*/
+
 }
 
 #wholeRightCol{
     display: inline;
     z-index: -1;
-    overflow: scroll;
+
 }
 
 .artPar{
