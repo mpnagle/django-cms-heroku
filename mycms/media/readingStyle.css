@@ -40,10 +40,12 @@
     position: absolute;
     z-index: 1000;
     opacity: 0.95;
+    color: #605C5B;
 
 }
 
 .issueLinks{
+
 	font-size: 13pt;
         font-family: bitter;
         font-weight: bold;
