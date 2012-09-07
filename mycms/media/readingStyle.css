@@ -122,9 +122,16 @@
 }
 
 #wholeLeftCol{
+<<<<<<< HEAD
+background-color: #D5D6C2;
+position: fixed;
+overflow: scroll;
+
+=======
     background-color: #D5D6C2;
     position: fixed;
     overflow: scroll;
+>>>>>>> 0c49b2598dff0e1a7141d538cf2a596143523a02
 }
 
 #outline{
@@ -260,3 +267,6 @@ h2{
     text-decoration: underline;
 }
 
+#articleAndRef {
+    z-index: -1;
+}
