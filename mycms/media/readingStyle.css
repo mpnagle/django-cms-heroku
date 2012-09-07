@@ -30,16 +30,26 @@
     height: 167;
     top: 53;
     z-index: -1;
+    left: 400;
                     
 }
 
+
 #allIssueLinks{
-	position: absolute;
+    background-color: #F5F9E7;
+    position: absolute;
+    z-index: 1000;
+    opacity: 0.8;
+    padding-left: 35px; /*match article*/
 }
 
 .issueLinks{
 	font-size: 13pt;
-	height: 20px;
+        font-family: bitter;
+        font-weight: bold;
+        line-height: 1.4;
+        position: relative;
+        opacity: 1.0;
 }
 
 #abstractTitle{
@@ -65,18 +75,7 @@
 	padding-left: 10px;
 	padding-right: 15px;
         padding-bottom: 5px;
-}
-
-#title{
-    background-color: blue;
-    font-size: 22pt;
-    left: 40px;
-    padding-left: 10px;
-    padding-bottom: 10px;
-    padding-top: 10px;
-    position: relative;
-    width: 1159px;
-    text-align: center;
+        line-height: 1.2em;
 }
 
 
@@ -98,11 +97,15 @@
 	display: block;
 }
 
+#wholeLeftCol{
+background-color: #D5D6C2;
+
+}
+
 #outline{
     width: 350px;
     position: absolute;
     padding-bottom: 10px;
-    border-left: 1px solid grey;
     overflow: scroll;
 /*	background-color: #EDEEE1;*/
 
@@ -115,8 +118,9 @@
     font-size: 10pt;
     font-family: helvetica;
     padding-top: 10px;
-    padding-left: 10px;
+    padding-left: 15px;
     padding-right: 10px;
+    line-height: 1.2em;
 
 }
 
@@ -124,6 +128,9 @@
 	padding-bottom: 5px;
 	font-weight: bold;
 	border-bottom: 1px solid grey;
+        margin-bottom: 5px;
+        font-family: 'Bitter';
+        color: #3d3d3d;
 }
 
 .outlineRest{
@@ -134,6 +141,7 @@
 #article{
     font-family: helvetica;
     font-size: 10pt;
+    line-height: 1.2em;
     background-color: white;
 	width: 500px;
 	position: absolute;
@@ -143,30 +151,43 @@
 	padding-left: 35px;
 	padding-right: 35px;
 	
-	overflow: hidden;
+	//overflow: hidden;
+        overflow: hidden;
         position: absolute;
 }
 
 #articleTitle{
 	background-color: #EDEEE1;
 	position: absolute;
-	padding-left: 10px;
-	padding-right: 35px;
+        padding-left: 35px; //match article padding-left padding
+	padding-right: 75px;
 	padding-bottom: 15px;
 	text-align: left;
-
+        padding-top: 15px;
 	font-size: 30pt;
 	font-family: helvetica;
+
+}
+
+#articleMainTitle{
+    display: inline;
+    float: left; 
+    font-weight: 800;
+    position: relative;
+    margin-right: 10px;
 }
 
 #articleSubtitle{
-	font-weight: normal;
-	display: inline;
-	text-align: left;
-	font-size: 22pt;
+    position: relative;
+    float: left;
+    font-weight: normal;
+    display: inline;
+    text-align: left;
+    font-size: 22pt;
+        
 }
 
-.authorHeading{
+.author-heading{
 	font-weight: bold;
 	font-size: 14pt;
 }
@@ -178,6 +199,7 @@
     padding-left: 50px;
     padding-right: 10px;
     overflow: scroll;
+//    overflow: hidden;
 }
 
 .artPar{
@@ -185,13 +207,19 @@
 
 
 .footNumber{
-    color:red;
+    color:#3d3d3d;
 }
 
 .references{
     font-size:8pt;
+    line-height: 1.2em;
 }
 
+.references a {
+    text-decoration: none;
+}
 
-
+.references a:hover {
+    text-decoration: underline;
+}
 

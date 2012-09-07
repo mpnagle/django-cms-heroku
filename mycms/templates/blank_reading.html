@@ -36,40 +36,41 @@
 	amplify
 </div>
 <div id="innovations">
-  <img src="{{ MEDIA_URL }}innovations_layout-13-LOGO.png"/>
+  <img src="{{ MEDIA_URL }}innovations_logo.png"/>
 </div>
 
 
 
 <div id="allIssueLinks">
-	<div id="issue2" class="clear">
+	<div id="issue2" class="issueLinks">
 		vol 7 issue 2 spring 2012 enabling entrepreneurial ecosystems
 		</div>
-	<div id="issue1" class="clear">
+	<div id="issue1" class="issueLinks">
 		vol 7 issue 1 winter 2012 unleashing ideas
 		</div>
 </div>
 
 
-<!--abstract-->
-<div id="abstractTitle">
-	/in brief/
-</div>
-<div id="abstractRest">
+<div id="wholeLeftCol">
+    <!--abstract-->
+    <div id="abstractTitle">
+            in brief
+    </div>
+    <div id="abstractRest">
 
-{% placeholder abstract %}
+    {% placeholder abstract %}
 
-</div>
-
-
-
+    </div>
 
 
-<!-- outline column -->
-<div id="outline">
-{% placeholder outline %}
-</div>
 
+
+
+    <!-- outline column -->
+    <div id="outline">
+    {% placeholder outline %}
+    </div>
+<div>
 
 
 <!-- article title -->
@@ -78,10 +79,10 @@
 
     {% placeholder article_title %}
     </div>
-    <div id = "articleSubTitle"> 
+    <span id = "articleSubTitle"> 
 
       {% placeholder article_subtitle %}
-    </div>
+    </span>
 </div>
 
 <!--article column -->
