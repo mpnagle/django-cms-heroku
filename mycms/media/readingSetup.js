@@ -34,14 +34,8 @@ $('#articleTitle').width($('#whiteBorder').width()-($('#articleTitle').position(
 //position innovations left based on article title
 $('#innovations').css('left', $('#articleTitle').position().left + 35); //padding-left of article
 
-//position issueLinks
-$('#allIssueLinks').css('top', $('#innovations').position().top + $('#innovations').height() - 100);
-$('#allIssueLinks').css('left', $('#innovations').position().left);
-$('#allIssueLinks').width($('#articleTitle').width());
-$('#allIssueLinks').height($('#articleTitle').height() + 100);
 
-//$('#issue1').css('top', $('#innovations').position().top + $('#innovations').height());
-//$('#issue1').css('left', $('#innovations').position().left);
+
 
 
 //position abstract and article
@@ -68,6 +62,11 @@ $('#reference').width(refWidth);
 //set outline height (with abstract open)
 $('#outline').height($('#article').height()-($('#abstractRest').outerHeight()));
 
+//position issueLinks
+$('#allIssueLinks').css('top', borderPos.top);
+$('#allIssueLinks').css('left', $('article').position()left);
+$('#allIssueLinks').width($('#whiteBorder').width()-($('#article').position().left-borderPos.left));
+$('#allIssueLinks').height($('#abstractTitle').outerHeight() + border_width);
 
 
 

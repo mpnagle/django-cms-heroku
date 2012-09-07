@@ -36,27 +36,22 @@
 
 
 #allIssueLinks{
-    background-color: #DEDEDE;
+    background-color: #F5F9E7;
     position: absolute;
     z-index: 1000;
     opacity: 0.8;
+    padding-left: 35px; /*match article*/
 }
 
 .issueLinks{
-	font-size: 18pt;
+	font-size: 13pt;
         font-family: bitter;
         font-weight: bold;
         line-height: 1.4;
         position: relative;
         opacity: 1.0;
-        text-align: center;
-        
 }
-/*
-#issue1{
-    position:absolute;
-}
-*/
+
 #abstractTitle{
 /*	font-family: 'Patua One', cursive;*/
 /*	font-family: 'Headland One', serif;*/
