@@ -55,11 +55,11 @@ positionOutline(true);
 
 //position article beneath abstracTitle (so that it doesn't matter
 //whether abstract is expanded or not
-//**also set yarticleAndRef div
+//**also set ywholeRightCol div
 $('#article').css("top", $('#abstractTitle').position().top + $('#abstractTitle').outerHeight()); 
 $('#article').css("left", $('#articleTitle').position().left);
-$('#articleAndRef').css("top", $('#abstractTitle').position().top + $('#abstractTitle').outerHeight()); 
-$('#articleAndRef').css("left", $('#articleTitle').position().left);
+$('#wholeRightCol').css("top", $('#abstractTitle').position().top + $('#abstractTitle').outerHeight()); 
+$('#wholeRightCol').css("left", $('#articleTitle').position().left);
 
 
 $('#article').height($('#whiteBorder').height()-($('#article').position().top - borderPos.top) - border_width- 20); //20=padding top + bottom for article
@@ -73,9 +73,9 @@ $('#reference').css("height", $('#article').height());
 var refWidth = $('#whiteBorder').width() - ($('#reference').position().left-borderPos.left) - border_width - 60; //60 = padding for left and right
 $('#reference').width(refWidth);
 
-//set articleAndRef height and width
-$('#articleAndRef').height($('#reference').outerHeight());
-$('#articleAndRef').width($('#article').outerWidth()+$('#reference').outerWidth());
+//set wholeRightCol height and width
+$('#wholeRightCol').height($('#reference').outerHeight());
+$('#wholeRightCol').width($('#article').outerWidth()+$('#reference').outerWidth());
 
 
 //set outline height (with abstract open)
@@ -95,7 +95,7 @@ $('.outlineBox').each(function(i, el) {
 	outlineHeight += size;
 });
 
-$('#outline').css("overflow", "hidden");
+
 if (outlineHeight + (2 * (border_width)) >= $('#whiteBorder').height()) {
 	//collapse all rest texts and only display title.
 	$('#outline').children().each(function(index){
