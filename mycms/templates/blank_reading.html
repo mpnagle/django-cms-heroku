@@ -49,11 +49,10 @@
     <li><a id="issue1" class="issueLinks" > vol 7 issue 1 winter 2012 unleashing ideas</a></li>
     </ul>
 -->
-</div>
+
     <!--abstract-->
-    <div id="abstractTitle">
-            in brief
-    </div>
+<div id="abstractTitle">in brief</div>
+
 <div id="wholeLeftCol">
     <div id="abstractRest">
     {% placeholder abstract %}
@@ -62,7 +61,7 @@
     <div id="outline">
     {% placeholder outline %}
     </div>
-<div>
+<div> <!-- closes wholeLeftCol -->
 <!-- article title -->
 <div id = "articleTitle">
   <div id = "articleMainTitle">
@@ -71,21 +70,22 @@
     <span id = "articleSubTitle"> 
       {% placeholder article_subtitle %}
     </span>
-</div>
+</div> <!-- closes articleTitle -->
 <div id="articleAndRef" style="display:inline; overflow:scroll;">
     <!--article column -->
     <div id = "article">
       {% placeholder article_main %}
       <div id="artWhiteSpace">
         </div>
-    </div>
+    </div> <!-- closes article -->
     <!--reference column -->
     <div id="reference">
       {% placeholder reference %}
       <div id="refWhiteSpace">
       </div>
-</div>
-</div>
-</div>
+    </div> <!-- closes reference -->
+
+</div> <!-- closes articleAndRef -->
+
 {% endblock %}
 

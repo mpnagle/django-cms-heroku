@@ -122,15 +122,9 @@
 }
 
 #wholeLeftCol{
-<<<<<<< HEAD
-background-color: #D5D6C2;
-position: fixed;
-overflow: scroll;
-=======
-
-
->>>>>>> a0f67fa5669f48ff5be28caadd15662db4d57cc9
-
+    background-color: #D5D6C2;
+    position: fixed;
+    overflow: scroll;
 }
 
 #outline{
