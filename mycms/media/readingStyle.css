@@ -40,7 +40,7 @@
     position: absolute;
     z-index: 1000;
     opacity: 0.95;
-    padding-left: 35px; /*match article*/
+
 }
 
 .issueLinks{
@@ -88,7 +88,7 @@
 
 #abstractRest{
 	padding-left: 10px;
-	border-left: 1px solid grey;
+/*	border-left: 1px solid grey;*/
 }
 
 .clear{

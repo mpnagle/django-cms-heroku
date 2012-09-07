@@ -65,7 +65,7 @@ $('#outline').height($('#article').height()-($('#abstractRest').outerHeight()));
 //position issueLinks
 $('#allIssueLinks').css('top', borderPos.top);
 $('#allIssueLinks').css('left', $('#article').position().left);
-$('#allIssueLinks').width($('#whiteBorder').width()-($('#article').position().left-borderPos.left)-2*(border_width));
+$('#allIssueLinks').width($('#whiteBorder').width()-($('#article').position().left-borderPos.left)-(border_width));
 $('#allIssueLinks').height($('#abstractTitle').outerHeight() + border_width);
 
 
