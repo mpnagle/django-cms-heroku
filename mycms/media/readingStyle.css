@@ -30,6 +30,7 @@
     height: 167;
     z-index: -1;
     top: 80px;
+    border-bottom: 5px solid #00CCCC;
 
                     
 }
@@ -55,6 +56,10 @@
         padding-right: 35px;
 }
 
+#allCategories{
+    padding-left: 35px;
+}
+
 .innovCategories{
         font-family: bitter;
         font-size: 10pt;
@@ -68,6 +73,10 @@
     font-size: 10pt;
     padding-left: 60px;
     font-weight: normal;
+}
+
+.currentArticle{
+    background-color: #00CCCC;
 }
 
 #abstractTitle{
