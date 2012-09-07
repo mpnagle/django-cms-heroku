@@ -112,6 +112,8 @@
     background-color: #D5D6C2;
     position: fixed;
     overflow: scroll;
+    width: 350px;
+    height: 500px;
 
 }
 
