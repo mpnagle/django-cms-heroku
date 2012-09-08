@@ -29,7 +29,7 @@ $('#abstract').css('top', borderPos.top + border_width);
 $('#abstractTitle').css("top", borderPos.top + border_width);
 $('#abstractTitle').css("left", borderPos.left+border_width);
 $('#abstractTitle').css("height", $('#articleTitle').outerHeight());
-$('#articleTitle').css('left', $('#abstractTitle').position().left + $('#abstractTitle').width());
+$('#articleTitle').css('left', $('#abstractTitle').position().left + $('#abstractTitle').outerWidth());
 
 
 
