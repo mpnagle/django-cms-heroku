@@ -142,6 +142,9 @@ else if (totalRefHeight < totalArtHeight){
 }
 
 
+//SET currentCategory and currentArticle id's for hover nav. 
+
+
 
 //align reference column footnotes with where they appear in article text
 //this shit is broken right now because django doesn't play nice w/
@@ -182,7 +185,7 @@ function collapseOutlineBox(outlineBox){
 }
 
 function expandOutlineBox(outlineBox){
-	var heading = $(outlineBox).children()[0];
+    var heading = $(outlineBox).children()[0];
 	var restText = $(outlineBox).children()[1];
 	restText.removeClass("clear");
 	restText.css("border-bottom", none);
@@ -201,3 +204,4 @@ function positionOutline(abstractOpen){
         $('#outline').css('left', $('#abstractTitle').position().left);
     }
 }
+
