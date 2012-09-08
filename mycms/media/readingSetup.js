@@ -186,12 +186,16 @@ $('.references').each(function(i){
         refText = $(this).text();
         console.log(refText);
         //splice until the period
-        refNum = refText.substring(0, refText.indexOf('.'));
+        refNum = refText.substring(0, refText.indexOf('.')+1);
+        refRest = refText.substring(refText.indexOf('.'), refText.length);
         console.log('ref number only');
         console.log(refNum);
+        console.log('ref res is');
+        console.log(refRest);
         var newRefNum = $("<div />", {"class": "refNum", text:refNum });
         console.log('newRefNum');
         console.log(newRefNum);
+        $(this).text(refRest);
         $(this).prepend(newRefNum);
         console.log($(this));
     }
