@@ -108,8 +108,8 @@ $('#wholeRightCol').height($('#reference').outerHeight());
 //$('#wholeRightCol').width($('#article').outerWidth()+$('#reference').outerWidth());
 
 
-//set outline height (with abstract open)
-$('#outline').height($('#article').height()-($('#abstractRest').outerHeight())-2*border_width);
+
+
 
 //position issueLinks
 $('#allIssueLinks').css('top', borderPos.top);
