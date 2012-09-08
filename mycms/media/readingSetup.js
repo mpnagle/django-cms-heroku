@@ -63,7 +63,7 @@ positionOutline(true);
 $('#wholeRightCol').css("top", $('#abstractTitle').position().top + $('#abstractTitle').outerHeight()); 
 $('#wholeRightCol').css("left", $('#articleTitle').position().left);
 
-$('#articleTitle').width($('#whiteBorder').width()-($('#wholeRightCol').position().left - borderPos.left));
+
 
 
 
@@ -104,7 +104,7 @@ $('wholeRightCol').height($('#whiteBorder').height()-$('#articleTitle').outerHei
 //$('#reference').width(refWidth);
 
 //set wholeRightCol height and width
-$('#wholeRightCol').height($('#reference').outerHeight());
+
 //$('#wholeRightCol').width($('#article').outerWidth()+$('#reference').outerWidth());
 
 
