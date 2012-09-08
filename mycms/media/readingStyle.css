@@ -137,6 +137,7 @@
 /*overflow: scroll;*/
 }
 
+/* height set in readingSetup based on abstractTitle */
 #outline{
     overflow: scroll;
     width: 350px;
@@ -245,7 +246,8 @@
 #wholeRightCol{
     background-color: white;
     position: absolute;
-    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
     width: 867px;
 }
 

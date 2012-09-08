@@ -30,8 +30,9 @@ $('#abstractTitle').css("top", borderPos.top + border_width);
 $('#abstractTitle').css("left", borderPos.left+border_width);
 $('#abstractTitle').css("height", $('#articleTitle').outerHeight());
 $('#articleTitle').css('left', $('#abstractTitle').position().left + $('#abstractTitle').outerWidth() + 35);//35=article padding-left);
-$('#articleTitle').width($('#whiteBorder').width()-($('#articleTitle').position().left - borderPos.left) -100);//articleTitle padding = 25+75
 
+//set outline height
+$('#outline').height($('#whiteBorder').height()-$('#abstractTitle').outerHeight());
 
 
 
@@ -63,6 +64,9 @@ positionOutline(true);
 $('#wholeRightCol').css("top", $('#abstractTitle').position().top + $('#abstractTitle').outerHeight()); 
 $('#wholeRightCol').css("left", $('#articleTitle').position().left);
 
+$('#articleTitle').width($('#whiteBorder').width()-($('#wholeRightCol').position().left - borderPos.left));
+
+
 
 //$('#article').height($('#whiteBorder').height()-($('#article').position().top - borderPos.top) - border_width- 20); //20=padding top + bottom for article
 
@@ -80,6 +84,8 @@ $('#wholeRightCol').css("left", $('#articleTitle').position().left);
 
 
 $('#wholeRightCol').height($('#whiteBorder').height()-($('#wholeRightCol').position().top - borderPos.top) - border_width- 20); //20=padding top + bottom for article
+
+$('wholeRightCol').height($('#whiteBorder').height()-$('#articleTitle').outerHeight()-2*(border_width));
 
 //console
 
@@ -104,7 +110,7 @@ $('#wholeRightCol').height($('#reference').outerHeight());
 
 
 //set outline height (with abstract open)
-$('#outline').height($('#article').height()-($('#abstractRest').outerHeight()));
+$('#outline').height($('#article').height()-($('#abstractRest').outerHeight())-2*border_width);
 
 //position issueLinks
 $('#allIssueLinks').css('top', borderPos.top);
