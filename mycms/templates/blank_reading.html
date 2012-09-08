@@ -15,8 +15,84 @@
 <script type="text/javascript" src="{{ MEDIA_URL }}navigation.js"></script>
 {% endaddtoblock "js" %}
 
+
+  <ul id="nav">
+    <li><a href="#">Volume 7</a>
+      <ul>
+	<li><a href="#">Issue 1: Unleashing Ideas</a>
+          <ul>
+            <li><a href="#">Lead Essays </a>
+	      <ul>
+		<li><a href="http://www.projectamplify.co/mexico-growth/">Mexico's Growth</a></li>
+		<li><a href="http://www.projectamplify.co/dirt-and-scrap/">From Dirt and Scrap to Gold</a></li>
+	      </ul>
+	    </li>
+            <li><a href="#">Case Narratives</a>
+	      <ul>
+		<li><a href="http://www.projectamplify.co/lighting-path/">Lighting a Path in Pakistan</a></li>
+		<li><a href="http://www.projectamplify.co/when-business-and-social-missions-align/">When Business and Missions Align</a></li>
+		<li><a href="http://www.projectamplify.co/mitigating-resource-curse-through-legal-empowerment/">Mitigating the Resource Curse</a></li>
+		<li><a href="http://www.projectamplify.co/collective-representation-and-last-mile/">Collective Representation</a></li>
+	      </ul>
+	    </li>
+            <li><a href="#">Analysis </a>
+	      <ul>
+		<li><a href="http://www.projectamplify.co/diaspora-networks/">Disapora Networks</a></li>
+		<li><a href="http://www.projectamplify.co/agility-imperative/">The Agility Imperiative</a></li>
+	      </ul>
+	    </li>
+	    <li><a href="#">Perspectives on Policy </a>
+	      <ul>
+		<li><a href="http://www.projectamplify.co/using-innovation-prizes/">Using Innovation Prizes</a></li>
+	      </ul>
+	    </li>
+          </ul>
+	</li>
+        <li><a href="#">Issue 2: Enabling Entrepreneurial Ecosystems</a>
+	  
+	  <!--  <li><a href="http://www.projectamplify.co">Issue 2 (Spring '12): Enabling Entrepreneurial Ecosystems </a> -->
+	  <ul>
+	    <li><a href="#">Lead Essays </a>
+	      <ul>
+		<li><a href="http://www.projectamplify.co/enabling-entrepreneurial-ecosystems/">Enabling Entrepreneurial Ecosystems</a></li>
+		<li><a href="http://www.projectamplify.co/entrepreneurship-middle-east-north-africa/">Entrepreneurship in the Middle East</a></li>
+	      </ul>
+	    </li>
+	    
+            <li><a href="#">Case Narratives</a>
+	      <ul>
+		<li><a href="http://www.projectamplify.co/prosperity-through-connectedness/">Prosperity through Connectedness</a></li>
+		<li><a href="http://www.projectamplify.co/magic-happens/">The Magic Happens When You Focus on the People</a></li>
+		<li><a href="http://www.projectamplify.co/early-start-up-chile/">Assessing Start-Up Chile</a></li>
+		<li><a href="http://www.projectamplify.co/market-making/">Market Making</a></li>
+		<li><a href="http://www.projectamplify.co/entrepreneurship-career/">Entrepreneurship as a Career</a></li>
+	      </ul>
+	    </li>
+            <li><a href="#">Analysis </a>
+	      <ul>
+		<li><a href="http://www.projectamplify.co/mobile-money-usage-patterns/">Mobile Money Usage Patterns</li></a>
+	      </ul>
+	    </li>
+            <li><a href="#">Perspectives on Policy </a>
+	      <ul>
+		<li><a href="http://www.projectamplify.co/enabling-entrepreneurship-egypt/">Enabling Entrepreneuship in Egypt</a></li>
+		<li><a href="http://www.projectamplify.co/creating-place-future/">Creating a Place for the Future</a></li>
+	      </ul>
+	    </li>
+	  </ul>
+	  
+	</li>
+	
+      </ul>
+    </li>
+  </ul>
+
+
+
 <!--bg and white border-->
 <div id="whiteBorder"></div>
+
+
 
 <div id="amplifyHeading">
     amplify
@@ -28,7 +104,7 @@
   </span>
 </div>
 
-<div id="currentCountry" class="clear"> 
+<!-- <div id="currentCountry" class="clear"> 
   {% placeholder current_country_match_img_name %}
 </div>
 
@@ -43,21 +119,36 @@
       <div id="allOtherCategories">
         {% placeholder all_other_categories %}
         </div>
+
       </div> <!-- closes allCategories -->
       
+
+      <div class="innovCategories" > Case Narratives</div>
+      <div class="innovCategories" > Analysis</div>
+      <div class="innovCategories" > Perspectives on Policy</div>
+    </div> <!-- closes all categories 
+
+
+
+    
+
     <div class="innovArticleTitles" id="currentArticle"> 
       {% placeholder current_article_name %}
-      </div>
-    <div id = "allOtherArticles"> <!-- div of divs -->
+    </div>
+    <div id = "allOtherArticles"> <!-- div of divs 
       {% placeholder all_other_article_names_in_this_category %}
-      </div>
+    </div>
+    
     <!-- 
     <div class="innovArticleTitles"> From Dirt and Scrap to Gold: A
     Vision for Entrepreneurship in Indonesia </div>
-    -->
+    
 
-  </div> <!-- closes issue2 -->
-</div> <!-- closes allISsueLinks -->
+  </div> <!-- closes issue2 --
+</div> <!-- closes allISsueLinks --
+
+
+
     
   <!--  
   <ul>

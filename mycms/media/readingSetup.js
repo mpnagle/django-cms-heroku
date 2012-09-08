@@ -1,3 +1,5 @@
+$('document').ready(function() {
+
 /*
 $('#reference').on('scroll', function () {
     $('#article').scrollTop($(this).scrollTop());
@@ -205,3 +207,4 @@ function positionOutline(abstractOpen){
     }
 }
 
+});
