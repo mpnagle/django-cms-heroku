@@ -139,10 +139,13 @@
 
 /* height set in readingSetup based on abstractTitle */
 #outline{
-    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 560px;
     width: 350px;
     position: absolute;
     padding-bottom: 10px;
+    border-left: 1px solid grey;
 /*	background-color: #EDEEE1;*/
 
     
@@ -238,7 +241,7 @@
     padding-right: 10px;
     display:inline;
     width: 250px;               /*was 307*/
-    left:35px;
+    left: 35px;
 }
 
 
@@ -248,7 +251,8 @@
     position: absolute;
     overflow-y: scroll;
     overflow-x: hidden;
-    width: 867px;
+    width: 800px;
+    height: 547px;
 }
 
 .artPar{
