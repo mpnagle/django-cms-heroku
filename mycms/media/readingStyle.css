@@ -72,6 +72,7 @@
 }
 
 #currentCategory{
+    display: inline;
     font-weight: 900;
     border-right: none;
 }
@@ -125,9 +126,9 @@
 }
 
 .clear{
-    height:0px;
-/*    overflow:hidden;*/
-	display: block;
+    /* display: none */
+    overflow:hidden;
+    display: none;
 }
 
 #wholeLeftCol{
