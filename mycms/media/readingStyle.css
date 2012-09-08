@@ -260,14 +260,15 @@
 
 
 .footNumber{
-    color: #99CC00;             /*lime green*/
+    color: #EE4624; /* tangerine */
+/*    color: #99CC00;             /*lime green*/
 }
 
 .refNum{
    display: inline;
    font-size:8pt;
    line-height: 1.2em;
-   color: #99CC00;             /*lime green*/
+   color: #EE4624;
 }
 
 h2{
@@ -282,9 +283,11 @@ h2{
 
 .references a {
     text-decoration: none;
+    color: #EE4624; /*tangerine */
 }
 
 .references a:hover {
+    color: #00CCCC;
     text-decoration: underline;
 }
 
