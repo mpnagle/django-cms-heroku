@@ -68,7 +68,8 @@ $(document).ready(function(){
 	//article, highlight + border bullshit
 	//TODO was it white before, make sure it still is. ok?
 	artChunk.css("background-color", 'white');
-	outBox.css('background-color', 'EDEEE1');
+	outBox.css('background-color', 'F5F9E7');
+
 	
 	outBoxTitle.css('border-bottom', '1px solid grey');
 	

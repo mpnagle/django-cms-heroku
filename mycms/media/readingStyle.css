@@ -114,17 +114,15 @@
 	position: absolute;
 	padding-left: 15px;
 	padding-right: 15px;
-        padding-bottom: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
         line-height: 1.2em;
 	background-color: #F5F9E7;
 }
 
 
 
-#abstractRest{
-	padding-left: 15px;
-/*	border-left: 1px solid grey;*/
-}
+
 
 .clear{
     /* display: none */
