@@ -213,4 +213,4 @@ function positionOutline(abstractOpen){
     }
 }
 
-});
+});                             // ends document.isready 
