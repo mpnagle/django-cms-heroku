@@ -31,8 +31,9 @@ $('#abstractTitle').css("left", borderPos.left+border_width);
 $('#abstractTitle').css("height", $('#articleTitle').outerHeight());
 $('#articleTitle').css('left', $('#abstractTitle').position().left + $('#abstractTitle').outerWidth() + 35);//35=article padding-left);
 
-//set outline height
-$('#outline').height($('#whiteBorder').height()-$('#abstractTitle').outerHeight());
+
+
+
 
 
 
@@ -56,15 +57,16 @@ $('#wholeLeftCol').css('top', $('#abstractRest').position().top);
 //position outline  (at setup abstract is expanded)
 positionOutline(true);
 
-//position article beneath abstracTitle (so that it doesn't matter
-//whether abstract is expanded or not
-//**also set ywholeRightCol div
-// $('#article').css("top", $('#abstractTitle').position().top + $('#abstractTitle').outerHeight()); 
-// $('#article').css("left", $('#articleTitle').position().left);
+
+
+
+
+/*
 $('#wholeRightCol').css("top", $('#abstractTitle').position().top + $('#abstractTitle').outerHeight()); 
 $('#wholeRightCol').css("left", $('#articleTitle').position().left);
+*/
 
-$('#articleTitle').width($('#whiteBorder').width()-($('#wholeRightCol').position().left - borderPos.left));
+
 
 
 
@@ -83,9 +85,7 @@ $('#articleTitle').width($('#whiteBorder').width()-($('#wholeRightCol').position
 //$('#reference').css("left", $('#wholeRightCol').position().left + $('#article').outerWidth());
 
 
-$('#wholeRightCol').height($('#whiteBorder').height()-($('#wholeRightCol').position().top - borderPos.top) - border_width- 20); //20=padding top + bottom for article
 
-$('wholeRightCol').height($('#whiteBorder').height()-$('#articleTitle').outerHeight()-2*(border_width));
 
 //console
 
@@ -101,16 +101,10 @@ $('wholeRightCol').height($('#whiteBorder').height()-$('#articleTitle').outerHei
 
 
 
-//var refWidth = $('#whiteBorder').width() - ($('#reference').position().left-borderPos.left) - border_width - 60; //60 = padding for left and right
-//$('#reference').width(refWidth);
-
-//set wholeRightCol height and width
-$('#wholeRightCol').height($('#reference').outerHeight());
-//$('#wholeRightCol').width($('#article').outerWidth()+$('#reference').outerWidth());
 
 
-//set outline height (with abstract open)
-$('#outline').height($('#article').height()-($('#abstractRest').outerHeight())-2*border_width);
+
+
 
 //position issueLinks
 $('#allIssueLinks').css('top', borderPos.top);
