@@ -9,7 +9,7 @@ PROJECT_DIR = os.path.abspath(os.path.dirname(__file__))
 
 HOME_CMS_PAGE_SLUG = 'test'
 
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
