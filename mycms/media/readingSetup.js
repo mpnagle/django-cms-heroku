@@ -179,18 +179,22 @@ $('.references').each(function(i){
         var footMatch = $($('.footNumber')[i-1]);
         var footOffset = (footMatch).offset();
         var footTop = (footMatch).offset().top;
+
+        // color ref number lime green
+        console.log('ref text');
+        refText = $(this).text();
+        console.log(refText);
+        //splice until the period
+        refNum = refText.substring(0, refText.indexOf('.'));
+        console.log('ref number only');
+        var newRefNum = $("<span />", {"class: refNum", text:refNum });
+        console.log('newRefNum');
+        console.log(newRefNum);
+        $(this).prepend(newRefNum);
+        console.log($(this));
     }
     $(this).offset({top:footTop, left:refLeft});
 
-    // color ref number lime green
-    console.log('ref text');
-    refText = $(this).text();
-    console.log(refText);
-    //splice until the period
-    refNum = refText.substring(0, refText.indexOf('.')-1);
-    console.log('ref number only');
-    console.log(refNum);
-    refNum.css('color','#99CC00');
 
 });
 
