@@ -141,7 +141,7 @@
 #outline{
     overflow-y: scroll;
     overflow-x: hidden;
-    height: 560px;
+    height: 520px;
     width: 350px;
     position: absolute;
     padding-bottom: 10px;
@@ -238,8 +238,8 @@
     /*background-color: white;*/
     padding-bottom:60px;
     position:relative;
-    padding-left: 50px;
-    padding-right: 10px;
+/*    padding-left: 50px;*/
+/*    padding-right: 10px;*/
     display:inline;
     width: 250px;               /*was 307*/
     left: 35px;
@@ -252,7 +252,7 @@
     position: absolute;
     overflow-y: scroll;
     overflow-x: hidden;
-    width: 800px;
+    width: 840px;
     height: 547px;
 }
 
