@@ -36,7 +36,7 @@ $('#articleTitle').css('left', $('#abstractTitle').position().left + $('#abstrac
 
 
 //position innovations left based on article title
-$('#innovationsWholeDiv').css('left', $('#articleTitle').position().left + 35); //padding-left of article
+$('#innovationsWholeDiv').css('left', $('#articleTitle').position().left + 50); //padding-left of article
 
 
 
