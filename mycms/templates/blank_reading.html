@@ -28,18 +28,34 @@
   </span>
 </div>
 
+<div id="currentCountry" class="clear"> 
+  {% placeholder current_country_match_img_name %}
+</div>
+
 <div id="allIssueLinks">
-  <div id="issue2" class="issueLinks"> 
+  <div id="currentIssue" class="issueLinks"> 
+    {% placeholder current_issue_title %}
     vol 7 issue 1 winter 2012 unleashing ideas
     <div id="allCategories">
-      <div class="innovCategories" > Lead Essays </div>
+      <div class="innovCategories" id="currentCategory"> 
+        {% placeholder issue_category_name %} 
+      </div>
       <div class="innovCategories" > Case Narratives</div>
       <div class="innovCategories" > Analysis</div>
       <div class="innovCategories" > Perspectives on Policy</div>
       </div> <!-- closes allCategories -->
       
-    <div class="innovArticleTitles" id="currentArticle"> Mexico's Growth Will Come From Entrepreneurship and Small and Medium-Sized Enterprises </div>
-    <div class="innovArticleTitles"> From Dirt and Scrap to Gold: A Vision for Entrepreneurship in Indonesia </div>
+    <div class="innovArticleTitles" id="currentArticle"> 
+      {% placeholder current_article_name %}
+      </div>
+    <div id = "allOtherArticles"> <!-- div of divs -->
+      {% placeholder all_other_article_names_in_this_category %}
+      </div>
+    <!-- 
+    <div class="innovArticleTitles"> From Dirt and Scrap to Gold: A
+    Vision for Entrepreneurship in Indonesia </div>
+    -->
+
   </div> <!-- closes issue2 -->
 </div> <!-- closes allISsueLinks -->
     
