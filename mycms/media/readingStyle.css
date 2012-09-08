@@ -263,7 +263,8 @@
     color: #99CC00;             /*lime green*/
 }
 
-refNum{
+.refNum{
+   display: inline;
    font-size:8pt;
    line-height: 1.2em;
    color: #99CC00;             /*lime green*/

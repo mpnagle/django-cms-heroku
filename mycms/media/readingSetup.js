@@ -182,12 +182,14 @@ $('.references').each(function(i){
 
         // color ref number lime green
         console.log('ref text');
+        console.log($(this));
         refText = $(this).text();
         console.log(refText);
         //splice until the period
         refNum = refText.substring(0, refText.indexOf('.'));
         console.log('ref number only');
-        var newRefNum = $("<span />", {"class": "refNum", text:refNum });
+        console.log(refNum);
+        var newRefNum = $("<div />", {"class": "refNum", text:refNum });
         console.log('newRefNum');
         console.log(newRefNum);
         $(this).prepend(newRefNum);
