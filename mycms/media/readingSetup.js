@@ -31,8 +31,7 @@ $('#abstractTitle').css("left", borderPos.left+border_width);
 $('#abstractTitle').css("height", $('#articleTitle').outerHeight());
 $('#articleTitle').css('left', $('#abstractTitle').position().left + $('#abstractTitle').outerWidth() + 35);//35=article padding-left);
 
-//set outline height
-$('#outline').height($('#whiteBorder').height()-$('#abstractTitle').outerHeight());
+
 
 
 
