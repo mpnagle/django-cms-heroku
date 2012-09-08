@@ -181,6 +181,17 @@ $('.references').each(function(i){
         var footTop = (footMatch).offset().top;
     }
     $(this).offset({top:footTop, left:refLeft});
+
+    // color ref number lime green
+    console.log('ref text');
+    refText = $(this).text();
+    console.log(refText);
+    //splice until the period
+    refNum = refText.substring(0, refText.indexOf('.')-1);
+    console.log('ref number only');
+    console.log(refNum);
+    refNum.css('color','#99CC00');
+
 });
 
 function collapseOutlineBox(outlineBox){
