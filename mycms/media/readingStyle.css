@@ -237,7 +237,7 @@
     padding-left: 50px;
     padding-right: 10px;
     display:inline;
-    width:307px;
+    width: 250px;               /*was 307*/
     left:35px;
 }
 
