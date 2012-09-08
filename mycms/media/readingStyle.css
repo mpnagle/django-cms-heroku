@@ -41,7 +41,7 @@
     background-color: #F5F9E7;
     position: absolute;
     z-index: 1000;
-    opacity: 0.95;
+    opacity: 0; /* 0.95; */
     color: #605C5B;
 
 }

@@ -108,7 +108,12 @@ $('.outlineBox').click(
 	
 
 	var artHeight = $('#'+artId).offset().top;
-	$('#article').scrollTop(artHeight);
+	console.log("artHeight: ");
+	console.log(artHeight);
+
+	console.log("scrolling to:");
+	console.log($('#wholeRightCol').scrollTop(artHeight));
+	$($('#wholeRightCol')).scrollTop(artHeight);
 
         
 	highlightPlease(id, artId);
