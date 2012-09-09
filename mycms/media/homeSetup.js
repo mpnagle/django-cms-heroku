@@ -6,7 +6,9 @@ console.log('screenWidth');
 console.log(screenWidth);
 
 //position globe image (width = 550px)
-var globeLeft = (screenWidth/3)-550;
+//var globeLeft = (screenWidth/3)-550;
+globeLeft = 300;
+
 console.log('setting Globe Position to ' +globeLeft);
 $('#globe').attr('transform', 'translate(globeLeft, 0)');
 
