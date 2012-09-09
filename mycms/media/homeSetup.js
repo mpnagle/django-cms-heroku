@@ -10,7 +10,8 @@ var mapLeft = (screenWidth/3)-550;
 
 
 console.log('setting Globe Position to ' +mapLeft);
-$('#map').attr('left', mapLeft);
+$('#map').css('top', '200');
+$('#map').css('left', mapLeft);
 
 console.log('map is');
 console.log($('#map'));
