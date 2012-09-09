@@ -187,7 +187,7 @@ $('.references').each(function(i){
         console.log(refText);
         //splice until the period
         refNum = refText.substring(0, refText.indexOf('.')+1);
-        refRest = refText.substring(refText.indexOf('.'), refText.length);
+        refRest = refText.substring(refText.indexOf('.')+1, refText.length);
         console.log('ref number only');
         console.log(refNum);
         console.log('ref res is');
