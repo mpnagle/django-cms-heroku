@@ -260,7 +260,8 @@
 
 
 .footNumber{
-    color: #EE4624; /* tangerine */
+    color: #009DAE;
+/*    color: #EE4624; /* tangerine */
 /*    color: #99CC00;             /*lime green*/
 }
 
@@ -268,7 +269,7 @@
    display: inline;
    font-size:8pt;
    line-height: 1.2em;
-   color: #EE4624;
+   color: #009DAE;
 }
 
 h2{
