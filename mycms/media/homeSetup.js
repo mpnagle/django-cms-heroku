@@ -6,12 +6,15 @@ console.log('screenWidth');
 console.log(screenWidth);
 
 //position globe image (width = 550px)
-//var globeLeft = (screenWidth/3)-550;
-globeLeft = 300;
+var mapLeft = (screenWidth/3)-550;
 
-console.log('setting Globe Position to ' +globeLeft);
-$('#globe').attr('transform', 'translate(globeLeft, 0)');
 
+console.log('setting Globe Position to ' +mapLeft);
+$('#map').attr('left', mapLeft);
+
+console.log('map is');
+console.log($('#map'));
+ 
 /*
 var totalWidth = $('#amplifyHeading').outerWidth() + $('#innovations').width();
 console.log('totalWidth amplify + innovations');
