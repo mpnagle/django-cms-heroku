@@ -9,8 +9,8 @@ PROJECT_DIR = os.path.abspath(os.path.dirname(__file__))
 
 HOME_CMS_PAGE_SLUG = 'test'
 
-DEBUG = False
-TEMPLATE_DEBUG = DEBUG
+DEBUG = True
+TEMPLATE_DEBUG = False # What does this variable do? --nagle, 9/8/12.
 
 ADMINS = (
     # ('Your Name', 'your_email@domain.com'),
