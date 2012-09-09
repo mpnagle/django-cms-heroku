@@ -1,11 +1,14 @@
 {% extends "base.html" %}
 {% load cms_tags sekizai_tags %}
 {% block base_content %}
+
 {% addtoblock "css" %}
 <link rel="stylesheet" type="text/css" href="{{ MEDIA_URL}}jquery-ui/css/custom-theme/jquery-ui.css"/>
+
 {% endaddtoblock "css" %}
 <link ref="stylesheet" type="text/css" href="{{ MEDIA_URL }}readingStyle.css" />
 <link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
+
 {% addtoblock "js" %}
 <script type="text/javascript" src="{{ MEDIA_URL }}jquery-ui/js/jquery.js"></script>
 <script type="text/javascript" src="{{ MEDIA_URL }}jquery-ui/js/jquery-ui.js"></script>
@@ -104,6 +107,7 @@
   </span>
 </div>
 
+
 <div id="currentCountry" class="clear"> 
   {% placeholder current_country_match_img_name %}
 </div>
@@ -158,6 +162,7 @@
     <li><a id="issue1" class="issueLinks" > vol 7 issue 1 winter 2012 unleashing ideas</a></li>
     </ul>
 -->
+
 
     <!--abstract-->
 <div id="abstractTitle">in brief</div>
