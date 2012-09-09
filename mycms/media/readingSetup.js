@@ -28,9 +28,10 @@ $('#articleTitle').css("top", borderPos.top + border_width);
 //$('#abstract').css('top', borderPos.top + border_width);
 $('#abstractTitle').css("top", borderPos.top + border_width);
 $('#abstractTitle').css("left", borderPos.left+border_width);
-//$('#abstractTitle').css("height", $('#articleTitle').outerHeight());
-
-//$('#articleTitle').css('left', $('#abstractTitle').position().left + $('#abstractTitle').outerWidth());
+$('#abstractTitle').css("height", $('#articleTitle').outerHeight());
+console.log('article title height');
+console.log($('#articleTitle').height());
+$('#articleTitle').css('left', $('#abstractTitle').position().left + $('#abstractTitle').outerWidth());
 
 
 
@@ -61,9 +62,6 @@ positionOutline(true);
 //**also set ywholeRightCol div
 // $('#article').css("top", $('#abstractTitle').position().top + $('#abstractTitle').outerHeight()); 
 // $('#article').css("left", $('#articleTitle').position().left);
-
-
-/*commented out keep in?*/
 $('#wholeRightCol').css("top", $('#abstractTitle').position().top + $('#abstractTitle').outerHeight()); 
 $('#wholeRightCol').css("left", $('#articleTitle').position().left);
 
