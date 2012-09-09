@@ -1,4 +1,4 @@
-$(document).ready(function(){
+//$(document).ready(function(){   // 
     var lastClicked = null; //outlineBox that was last clicked (currently on view)
 
     $('.outlineBox').hover(
@@ -177,4 +177,4 @@ $(document).ready(function(){
 	    detectWhichArticleChunk();	
 	    
 });
-    });
+//    });                         
