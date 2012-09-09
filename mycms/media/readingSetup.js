@@ -25,11 +25,12 @@ $('#amplifyHeading').css("left", white_left);
 
 //position article and abstract title
 $('#articleTitle').css("top", borderPos.top + border_width);
-$('#abstract').css('top', borderPos.top + border_width);
+//$('#abstract').css('top', borderPos.top + border_width);
 $('#abstractTitle').css("top", borderPos.top + border_width);
 $('#abstractTitle').css("left", borderPos.left+border_width);
-$('#abstractTitle').css("height", $('#articleTitle').outerHeight());
-$('#articleTitle').css('left', $('#abstractTitle').position().left + $('#abstractTitle').outerWidth());
+//$('#abstractTitle').css("height", $('#articleTitle').outerHeight());
+
+//$('#articleTitle').css('left', $('#abstractTitle').position().left + $('#abstractTitle').outerWidth());
 
 
 
@@ -60,52 +61,22 @@ positionOutline(true);
 //**also set ywholeRightCol div
 // $('#article').css("top", $('#abstractTitle').position().top + $('#abstractTitle').outerHeight()); 
 // $('#article').css("left", $('#articleTitle').position().left);
-$('#wholeRightCol').css("top", $('#abstractTitle').position().top + $('#abstractTitle').outerHeight()); 
-$('#wholeRightCol').css("left", $('#articleTitle').position().left);
+
+
+/*commented out keep in?*/
+//$('#wholeRightCol').css("top", $('#abstractTitle').position().top + $('#abstractTitle').outerHeight()); 
+//$('#wholeRightCol').css("left", $('#articleTitle').position().left);
 
 
 
 
 
-//$('#article').height($('#whiteBorder').height()-($('#article').position().top - borderPos.top) - border_width- 20); //20=padding top + bottom for article
-
-
-
-
-//position reference col next to article
-//$("#reference").css("top", $('#article').position().top);
-//$('#reference').css("left", $('#article').position().left + $('#article').outerWidth());
-//$('#reference').css("height", $('#article').height());
-
-
-//$("#reference").css("top", $('#wholeRightCol').position().top);
-//$('#reference').css("left", $('#wholeRightCol').position().left + $('#article').outerWidth());
 
 
 $('#wholeRightCol').height($('#whiteBorder').height()-($('#wholeRightCol').position().top - borderPos.top) - border_width- 20); //20=padding top + bottom for article
 
 $('wholeRightCol').height($('#whiteBorder').height()-$('#articleTitle').outerHeight()-2*(border_width));
 
-//console
-
-//console.log("outer width of article");
-//console.log($('article').outerWidth());
-
-//console.log("outer width of reference");
-//console.log($('reference').outerWidth());
-
-//console.log("outer width of wholeRightCol");
-//console.log($('wholeRightCol').outerWidth());
-
-
-
-
-//var refWidth = $('#whiteBorder').width() - ($('#reference').position().left-borderPos.left) - border_width - 60; //60 = padding for left and right
-//$('#reference').width(refWidth);
-
-//set wholeRightCol height and width
-
-//$('#wholeRightCol').width($('#article').outerWidth()+$('#reference').outerWidth());
 
 
 
