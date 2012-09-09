@@ -64,8 +64,8 @@ positionOutline(true);
 
 
 /*commented out keep in?*/
-//$('#wholeRightCol').css("top", $('#abstractTitle').position().top + $('#abstractTitle').outerHeight()); 
-//$('#wholeRightCol').css("left", $('#articleTitle').position().left);
+$('#wholeRightCol').css("top", $('#abstractTitle').position().top + $('#abstractTitle').outerHeight()); 
+$('#wholeRightCol').css("left", $('#articleTitle').position().left);
 
 
 
