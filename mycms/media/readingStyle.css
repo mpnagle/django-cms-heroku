@@ -339,12 +339,12 @@ h2{
 }
 
 #nav li ul a{
-    width:18em;
+/*    width:18em;                 */
     float:left;
 }
 
 #nav li ul li {
-    background-color: blue;
+    width: 300px;
 }
  
 #nav ul ul{
