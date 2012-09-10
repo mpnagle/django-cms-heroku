@@ -15,23 +15,34 @@ $(document).ready(function() {
     var borderPos = $('#whiteBorder').position();
 
     //position amplify           
-    $('#amplifyHeading').css("top", '60px');
-    var ampInnovWidth = $('#amplifyHeading').outerWidth() + $('#innovations').width();
-    $('#amplifyHeading').css("left", white_left);
+    console.log('white border poas is');
+    console.log($('#whiteBorder').position().top);
+    console.log('white border offset is');
+    console.log($('#whiteBorder').offset().top);
+    console.log('amplify height is');
+    console.log($('#amplifyHeading').height());
 
-
+    $('#amplifyHeading').css("top", $('#whiteBorder').css('top')-$('#amplifyHeading').height());
+    console.log('amplify heading top');
+    console.log($('#amplifyHeading').css('top'));
+    $('#amplifyHeading').css('top', '-200px');
+//    var ampInnovWidth = $('#amplifyHeading').outerWidth() + $('#innovations').width();
+  //  $('#amplifyHeading').css("left", white_left);
+    
+    $('articleTitle').css('left', $('abstractTitle').outerWidth());
 
 
 
     //position article and abstract title
-    $('#articleTitle').css("top", borderPos.top + border_width);
-    //$('#abstract').css('top', borderPos.top + border_width);
-    $('#abstractTitle').css("top", borderPos.top + border_width);
-    $('#abstractTitle').css("left", borderPos.left+border_width);
-    $('#abstractTitle').css("height", $('#articleTitle').outerHeight());
+//    $('#articleTitle').css("top", borderPos.top + border_width);
+    console.log('abstractTitle height');
+    console.log($('#abstractTitle').height());
+//    $('#abstractTitle').css("top", borderPos.top + border_width);
+//    $('#abstractTitle').css("left", borderPos.left+border_width);
+//    $('#abstractTitle').css("height", $('#articleTitle').outerHeight());
     console.log('article title height');
     console.log($('#articleTitle').height());
-    $('#articleTitle').css('left', $('#abstractTitle').position().left + $('#abstractTitle').outerWidth());
+//    $('#articleTitle').css('left', $('#abstractTitle').position().left + $('#abstractTitle').outerWidth());
 
 
 

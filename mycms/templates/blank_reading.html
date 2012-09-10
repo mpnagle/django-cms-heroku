@@ -19,6 +19,21 @@
 {% endaddtoblock "js" %}
 
 
+<!--bg and white border-->
+<div id="whiteBorder">
+
+    <!--abstract-->
+<div id="abstractTitle">in brief
+    <div id="abstractRest">
+    {% placeholder abstract %}
+    </div>
+    <!-- outline column -->
+    <div id="outline">
+    {% placeholder outline %}
+    </div>
+</div>
+
+
 
   <ul id="nav">
     <li><a href="#">Lead Essays</a>
@@ -94,10 +109,13 @@
 
 
 
-<!--bg and white border-->
-<div id="whiteBorder">
 
-
+  <div id = "articleTitle">
+      {% placeholder article_title %}
+      <div id = "articleSubTitle"> 
+        {% placeholder article_subtitle %}
+      </div>
+  </div> <!-- closes articleTitle -->
 
 <div id="amplifyHeading">
     amplify
@@ -114,27 +132,11 @@
   {% placeholder current_country_match_img_name %}
 </div>
 
-    <!--abstract-->
-<div id="abstractTitle">in brief</div>
-
-<div id="wholeLeftCol">
-    <div id="abstractRest">
-    {% placeholder abstract %}
-    </div>
-    <!-- outline column -->
-    <div id="outline">
-    {% placeholder outline %}
-    </div>
-</div> <!-- closes wholeLeftCol -->
 <!-- article title -->
-<div id = "articleTitle">
-  <div id = "articleMainTitle">
-    {% placeholder article_title %}
-    </div>
-    <span id = "articleSubTitle"> 
-      {% placeholder article_subtitle %}
-    </span>
-</div> <!-- closes articleTitle -->
+
+
+
+
 
 
 
