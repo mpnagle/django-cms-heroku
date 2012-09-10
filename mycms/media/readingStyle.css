@@ -355,3 +355,9 @@ h2{
 #nav li:hover ul, #nav li li:hover ul, #nav li li li:hover ul, #nav li li li li:hover ul{
     display:block;
     }
+
+
+/* style specific to homepage */
+#map{
+    position: absolute;
+}

@@ -1,20 +1,29 @@
 $('document').ready(function() {
 
-//position amplify and innovations
-var screenWidth = $(window).width();
-console.log('screenWidth');
-console.log(screenWidth);
+positionHome();
 
-//position globe image (width = 550px)
-var mapLeft = (screenWidth/3)-550;
+function positionHome(){
+    //position amplify and innovations
+    var screenWidth = $(window).width();
+    console.log('screenWidth');
+    console.log(screenWidth);
+
+    //position globe image (width = 550px)
+    var mapLeft = (screenWidth/3)-550;
 
 
-console.log('setting Globe Position to ' +mapLeft);
-$('#map').css('top', '200');
-$('#map').css('left', mapLeft);
+    console.log('setting Globe Position to ' +mapLeft);
+    $('#map').css('top', '200');
+    $('#map').css('left', mapLeft);
 
-console.log('map is');
-console.log($('#map'));
+    console.log('map is');
+    console.log($('#map'));
+}
+
+$(window).resize(function(){
+    positionHome();
+});
+
  
 /*
 var totalWidth = $('#amplifyHeading').outerWidth() + $('#innovations').width();
