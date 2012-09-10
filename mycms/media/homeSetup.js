@@ -1,4 +1,4 @@
-
+$('document').ready(function() {
 
 //position amplify and innovations
 var screenWidth = $(window).width();
@@ -26,3 +26,5 @@ $('#amplifyHeading').css('left', (screenWidth-totalWidth)/2);
 
 $('#innovations').css('left', $('#amplifyHeading').position().left+$('#amplifyHeading').outerWidth());
 */
+
+});

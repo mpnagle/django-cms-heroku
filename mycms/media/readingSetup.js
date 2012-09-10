@@ -1,4 +1,4 @@
-//$('document').ready(function() {
+$('document').ready(function() {
 
 /*
 $('#reference').on('scroll', function () {
@@ -202,4 +202,4 @@ function positionOutline(abstractOpen){
     }
 }
 
-//});                             // ends document.isready 
+});                             // ends document.isready 
