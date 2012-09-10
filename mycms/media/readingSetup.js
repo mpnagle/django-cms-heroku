@@ -15,21 +15,24 @@ $(document).ready(function() {
     var borderPos = $('#whiteBorder').position();
 
     //position amplify           
-    console.log('white border poas is');
-    console.log($('#whiteBorder').position().top);
-    console.log('white border offset is');
-    console.log($('#whiteBorder').offset().top);
-    console.log('amplify height is');
-    console.log($('#amplifyHeading').height());
+    $('#amplifyHeading').css('left', $('#whiteBorder').position().left);
+    $('#amplifyHeading').css('top', $('#whiteBorder').position().top);
 
-    $('#amplifyHeading').css("top", $('#whiteBorder').css('top')-$('#amplifyHeading').height());
-    console.log('amplify heading top');
-    console.log($('#amplifyHeading').css('top'));
-    $('#amplifyHeading').css('top', '-200px');
+    $('#innovationsWholeDiv').css('left', $('#amplifyHeading').position().left + $('#amplifyHeading').width());
+    $('#innovationsWholeDiv').css('top', $('#amplifyHeading').position().top);
+
+
+
+    console.log('whole right col left')
+    console.log($('#wholeRightCol').position().left);
+    console.log('article title left');
+    console.log($('#articleTitle').position().left);
+    $('#articleTitle').css('padding-right', ($('#articleTitle').position().left-$('#wholeRightCol').position().left));
+
 //    var ampInnovWidth = $('#amplifyHeading').outerWidth() + $('#innovations').width();
   //  $('#amplifyHeading').css("left", white_left);
     
-    $('articleTitle').css('left', $('abstractTitle').outerWidth());
+
 
 
 
@@ -49,16 +52,13 @@ $(document).ready(function() {
 
 
     //position innovations left based on article title
-    $('#innovationsWholeDiv').css('left', $('#articleTitle').position().left + 50); //padding-left of article
+
 
 
 
 
 
     //position abstract and article
-    $('#abstractRest').css("top", $('#abstractTitle').position().top + $('#abstractTitle').outerHeight());
-    $('#abstractRest').css("left", $('#abstractTitle').position().left);
-
 
     //position whoelLeft
     $('#wholeLeftCol').css('left', $('#abstractRest').position().left);
@@ -73,10 +73,13 @@ $(document).ready(function() {
     //**also set ywholeRightCol div
     // $('#article').css("top", $('#abstractTitle').position().top + $('#abstractTitle').outerHeight()); 
     // $('#article').css("left", $('#articleTitle').position().left);
+
+/*
+
     $('#wholeRightCol').css("top", $('#abstractTitle').position().top + $('#abstractTitle').outerHeight()); 
     $('#wholeRightCol').css("left", $('#articleTitle').position().left);
-
-
+*.
+    
 
 
 

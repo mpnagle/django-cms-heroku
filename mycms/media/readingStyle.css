@@ -10,7 +10,7 @@
     margin-right: auto;
     margin-top: 200px;
     padding-left: 30px;
-//    padding-right: 30px;
+    padding-right: 30px;
 	
 }
 
@@ -18,8 +18,7 @@
 	font-family: 'Bitter', serif;
 	font-size: 72pt;
 	color: #009DAE;
-        position: relative;
-	padding-top: 20px;
+        position: absolute;
         width: 365px;
         text-align: center;
         z-index: 999;
@@ -29,15 +28,13 @@
 
 #innovationsWholeDiv{      /*includes nav div for easier hovering.*/
     position: absolute;
-    width: 718px;
-    height: 167px;
+
+/*    width: 718px;*/
+/*    height: 167px;*/
     z-index: -1;
-    top: 80px;
+/*   border-bottom: 5px solid #00CCCC;*/
  }
 
-#innovationsImageOnly{
-   border-bottom: 5px solid #00CCCC;
-}
 
 
 #allIssueLinks{
@@ -104,7 +101,6 @@
 /*        padding-left: 15px;*/
         padding-right: 15px;
         padding-top: 20px;
-        padding-bottom: 0px;	
         text-align: left;
         position: relative;
 
@@ -142,7 +138,6 @@
 
 /* height set in readingSetup based on abstractTitle */
 #outline{
-    display: none;
     overflow-y: auto;
     height: 520px;
     width: 350px;
@@ -198,6 +193,7 @@
 }
 
 #articleTitle{
+    float: right;
 	background-color: #EDEEE1;
         width: 750px;
 /*        padding-left: 50px; /*match article padding-left padding*/
@@ -208,6 +204,9 @@
 	font-size: 30pt;
 	font-family: helvetica;
         position: relative;
+        padding-right: 15px;
+        padding-top: 20px;
+
         
 
 
@@ -253,14 +252,13 @@
 
 
 #wholeRightCol{
-    display: none;
     background-color: white;
-    position: absolute;
+    float: right;
     overflow-y: scroll;
     /*overflow-x: hidden;*/
     width: 840px;
     height: 547px;
-    padding-left: 50px;
+    padding-left: 50px;*/
 }
 
 .artPar{
@@ -337,7 +335,8 @@ h2{
 }
 
 #nav ul {
-    position:absolute;
+ /*   position:absolute;*/
+    position: relative;
     width:18em;
     top:1.5em;
     display:none;
