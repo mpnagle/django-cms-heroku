@@ -28,6 +28,7 @@
 
 #innovationsWholeDiv{      /*includes nav div for easier hovering.*/
     position: absolute;
+    padding-left: 25px;
 
 /*    width: 718px;*/
 /*    height: 167px;*/
