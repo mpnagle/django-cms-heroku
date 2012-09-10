@@ -6,6 +6,8 @@
     position: absolute;
     left: 0px;
     top: 200px;
+    margin-left: auto;
+    margin-right: auto;
 	
 }
 
@@ -344,7 +346,7 @@ h2{
 	top:auto;
 	}
 
-#nav li ul ul {
+#nav li ul ul {xb
     left:18em;
     margin:0px 0 0 10px;
     }
