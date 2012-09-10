@@ -3,6 +3,8 @@
 
 <html>
   <head>
+    <script type="text/javascript" src="{{ MEDIA_URL }}jquery-ui/js/jquery.js"></script>
+    <script type='text/javascript'>$('body').hide();</script>
       <title>{{ request.current_page.get_title }}</title>
  
 
@@ -28,7 +30,7 @@
 
     {% addtoblock "js" %}
 
-<script type="text/javascript" src="{{ MEDIA_URL }}jquery-ui/js/jquery.js"></script>
+
 <script type="text/javascript" src="{{ MEDIA_URL }}jquery-ui/js/jquery-ui.js"></script>
      {% endaddtoblock "js" %}
 
@@ -37,4 +39,5 @@
       {% block base_content%}{% endblock %}
       {% render_block "js" %}
   </body>
+<script type='text/javascript'>$('body').show();</script>
 </html>
