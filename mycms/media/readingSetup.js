@@ -15,19 +15,15 @@ $(document).ready(function() {
     var borderPos = $('#whiteBorder').position();
 
     //position amplify           
-    $('#amplifyHeading').css('left', $('#whiteBorder').position().left);
-    $('#amplifyHeading').css('top', $('#whiteBorder').position().top);
+//    $('#amplifyHeading').css('left', $('#whiteBorder').position().left);
+  //  $('#amplifyHeading').css('top', $('#whiteBorder').position().top);
 
-    $('#innovationsWholeDiv').css('left', $('#amplifyHeading').position().left + $('#amplifyHeading').width());
-    $('#innovationsWholeDiv').css('top', $('#amplifyHeading').position().top);
+//    $('#innovationsWholeDiv').css('left', $('#amplifyHeading').position().left + $('#amplifyHeading').width());
+//    $('#innovationsWholeDiv').css('top', $('#amplifyHeading').position().top);
 
 
 
-    console.log('whole right col left')
-    console.log($('#wholeRightCol').position().left);
-    console.log('article title left');
-    console.log($('#articleTitle').position().left);
-    $('#articleTitle').css('padding-right', ($('#articleTitle').position().left-$('#wholeRightCol').position().left));
+//    $('#articleTitle').css('padding-right', ($('#articleTitle').position().left-$('#wholeRightCol').position().left));
 
 //    var ampInnovWidth = $('#amplifyHeading').outerWidth() + $('#innovations').width();
   //  $('#amplifyHeading').css("left", white_left);
@@ -38,13 +34,9 @@ $(document).ready(function() {
 
     //position article and abstract title
 //    $('#articleTitle').css("top", borderPos.top + border_width);
-    console.log('abstractTitle height');
-    console.log($('#abstractTitle').height());
 //    $('#abstractTitle').css("top", borderPos.top + border_width);
 //    $('#abstractTitle').css("left", borderPos.left+border_width);
 //    $('#abstractTitle').css("height", $('#articleTitle').outerHeight());
-    console.log('article title height');
-    console.log($('#articleTitle').height());
 //    $('#articleTitle').css('left', $('#abstractTitle').position().left + $('#abstractTitle').outerWidth());
 
 
@@ -166,7 +158,6 @@ $(document).ready(function() {
 
             // color ref number lime green
             refText = $(this).text();
-            console.log(refText);
             //splice until the period
             refNum = refText.substring(0, refText.indexOf('.')+1);
             refRest = refText.substring(refText.indexOf('.')+1, refText.length);

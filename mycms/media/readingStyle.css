@@ -5,7 +5,7 @@
     width: 1292px;
     position: relative;
     left: 0px;
-    top: 200px;
+    top: 0px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 200px;
@@ -14,27 +14,43 @@
 	
 }
 
-#amplifyHeading{
-	font-family: 'Bitter', serif;
-	font-size: 72pt;
-	color: #009DAE;
-        position: absolute;
-        width: 365px;
-        text-align: center;
-        z-index: 999;
+
+
+#amplifyHeading {
+    background-color: white;
+    color: #009DAE;
+    font-family: 'Bitter',serif;
+    font-size: 72pt;
+    margin-left: -30px;
+    padding-left: 25px;
+    padding-right: 35px;        /*padding left and right sum to 60px*/
+    position: relative;
+    text-align: left;
+    width: 100%;
+    z-index: 999;
+
 
 
 }
 
-#innovationsWholeDiv{      /*includes nav div for easier hovering.*/
-    position: absolute;
-    padding-left: 25px;
+#innovationsHeading {
+    font-family: "Times New Roman", serif;
+    color: red;
+    font-size: 1.18em;
+}
 
-/*    width: 718px;*/
-/*    height: 167px;*/
-    z-index: -1;
-/*   border-bottom: 5px solid #00CCCC;*/
- }
+#tHeading {
+    font-style: italic;
+}
+
+#innovationsWholeDiv{  
+/*     padding-left: 25px; */
+padding-top: 3px;               /*to account for innovations logo imperfection*/
+padding-left:22px;
+     display: inline;
+/*     z-index: -1; */
+/* /\*   border-bottom: 5px solid #00CCCC;*\/ */
+  }
 
 
 
@@ -207,7 +223,7 @@
         position: relative;
         padding-right: 15px;
         padding-top: 20px;
-
+        width: 67.5%;
         
 
 
