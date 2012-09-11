@@ -105,13 +105,17 @@ $(document).ready(function(){   //
 	    
 	    
 	    //scroll art text into view
-            console.log("the position of the thing to scroll is  " + $('#' + artId).position().top);
-            console.log("scrollTop is " + $('#wholeRightCol').scrollTop());
-            var toScroll = $('#' + artId).position().top;
-            $('#wholeRightCol').scrollTop(toScroll);
-            console.log("and we scrolled " + toScroll);
-            console.log("and now scrollTop is " + $('#wholeRightCol').scrollTop());
-	    
+            var art = $('#' + artId); 
+            
+            if ((art.position().top + art.height() < $('#wholeRightCol').scrollTop() ) ||
+                ((art.position().top > ($('#wholeRightCol').scrollTop()+$('#wholeRightCol').height())))){
+                console.log("the position of the thing to scroll is  " + $('#' + artId).position().top);
+                console.log("scrollTop is " + $('#wholeRightCol').scrollTop());
+                var toScroll = $('#' + artId).position().top;
+                $('#wholeRightCol').scrollTop(toScroll);
+                console.log("and we scrolled " + toScroll);
+                console.log("and now scrollTop is " + $('#wholeRightCol').scrollTop());
+           }
 	    lastClicked = $(this);
 	    
 	});
