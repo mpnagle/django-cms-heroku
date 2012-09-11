@@ -1,5 +1,5 @@
 $(document).ready(function() {
-
+    $('body').css('margin', 0);
     /*
       $('#reference').on('scroll', function () {
       $('#article').scrollTop($(this).scrollTop());
