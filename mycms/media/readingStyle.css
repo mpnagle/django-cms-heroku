@@ -35,6 +35,7 @@
     font-family: "Times New Roman", serif;
     color: red;
     font-size: 1.18em;
+    padding-left: 15px;
 }
 
 #tHeading {
@@ -132,6 +133,7 @@ padding-left:22px;
         padding-bottom: 10px;
         line-height: 1.2em;
 	background-color: #F5F9E7;
+        margin-top: 18px;
 }
 
 
@@ -157,6 +159,7 @@ padding-left:22px;
     padding-bottom: 10px;
     border-left: 1px solid grey;
 	background-color: #F5F9E7;
+        margin-top: 10px;
 
     
 	
@@ -208,15 +211,11 @@ padding-left:22px;
     float: right;
 	background-color: #EDEEE1;
         width: 750px;
-/*        padding-left: 50px; /*match article padding-left padding*/
-/*	padding-right: 75px;*/
-/*	padding-bottom: 15px;*/
 	text-align: left;
-/*        padding-top: 15px;*/
 	font-size: 30pt;
 	font-family: helvetica;
         position: relative;
-        padding-right: 15px;
+/*        padding-right: 15px;*/
         padding-top: 20px;
         width: 67.5%;
         
