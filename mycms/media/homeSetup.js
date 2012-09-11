@@ -4,9 +4,6 @@ positionHome();
 
 function positionHome(){
     //position amplify and innovations
-    $('#amplifyHeading').css('padding-left', '50px');
-    $('#innovationsWholeDiv').css('left', $('#amplifyHeading').position().left + $('#amplifyHeading').outerWidth());
-    $('#innovationsWholeDiv').css('top', $('#amplifyHeading').position().top);
 
     
 
@@ -17,13 +14,6 @@ function positionHome(){
     //position globe image (width = 550px)
     var mapLeft = (screenWidth*(1/2));
 
-
-    console.log('setting Globe Position to ' +mapLeft);
-    $('#map').css('top', '200');
-    $('#map').css('left', mapLeft);
-
-    console.log('map is');
-    console.log($('#map'));
 }
 
 $(window).resize(function(){

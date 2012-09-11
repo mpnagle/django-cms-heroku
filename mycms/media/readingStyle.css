@@ -381,4 +381,30 @@ h2{
     padding-bottom: 50px;
     padding-left: 50px;
     padding-top: 50px;
+    width: 100%;
+}
+
+#amplifyHome {
+    background-color: white;
+    color: #009DAE;
+    font-family: 'Bitter',serif;
+    font-size: 72pt;
+    margin-left: -30px;
+    padding-left: 25px;
+    padding-right: 35px;        /*padding left and right sum to 60px*/
+    position: relative;
+    text-align: left;
+    width: 100%;
+    z-index: 999;
+    padding-top: 50px;
+    text-align: center;
+
+
+}
+
+#innovationsHome{
+    font-family: "Times New Roman", serif;
+    color: red;
+    font-size: 1.18em;
+    padding-left: 63px;               /*15px*/
 }
