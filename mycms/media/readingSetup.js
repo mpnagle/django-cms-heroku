@@ -17,11 +17,11 @@ $(document).ready(function() {
 
 
     //set height of white border
-    if (($('#outline').height()+$('#abstractRest').height()+$('#abstractTitle').height()) < 900){
-        $('#whiteBorder').height(900 +50+$('#amplifyHeading').outerHeight());
+    if (($('#outline').height()+$('#abstractRest').height()+$('#abstractTitle').height()) < 918){
+        $('#whiteBorder').height(900 +50+18+$('#amplifyHeading').outerHeight());
     }
     else{
-        $('#whiteBorder').height(($('#outline').height()+$('#abstractRest').height()+$('#abstractTitle').height()+80 + $('#amplifyHeading').outerHeight()));
+        $('#whiteBorder').height(($('#outline').height()+$('#abstractRest').height()+$('#abstractTitle').height()+80+18 + $('#amplifyHeading').outerHeight()));
     }
     //set height of whole right col
     $('#wholeRightCol').height($('#whiteBorder').height()-$('#articleTitle').height()-50 - $('#amplifyHeading').outerHeight());
