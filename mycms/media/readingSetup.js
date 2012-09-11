@@ -14,6 +14,22 @@ $(document).ready(function() {
 //    $("#whiteBorder").css("left", white_left);
     var borderPos = $('#whiteBorder').position();
 
+
+
+    //set height of white border
+    if (($('#outline').height()+$('#abstractRest').height()+$('#abstractTitle').height()) < 900){
+    console.log('readingsetup is running');
+        $('#whiteBorder').height(900 +50+$('#amplifyHeading').outerHeight());
+    }
+    else{
+        console.log('in else');
+        $('#whiteBorder').height(($('#outline').height()+$('#abstractRest').height()+$('#abstractTitle').height()+80 + $('#amplifyHeading').outerHeight()));
+    }
+    //set height of whole right col
+    $('#wholeRightCol').height($('#whiteBorder').height()-$('#articleTitle').height()-50 - $('#amplifyHeading').outerHeight());
+    
+
+
     //position amplify           
 //    $('#amplifyHeading').css('left', $('#whiteBorder').position().left);
   //  $('#amplifyHeading').css('top', $('#whiteBorder').position().top);

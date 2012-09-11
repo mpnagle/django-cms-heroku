@@ -1,7 +1,6 @@
 
 #whiteBorder{
     background-color: #EDEEE1;
-    height: 900px;  /*hardcoded */
     width: 1292px;
     position: relative;
     left: 0px;
@@ -155,8 +154,6 @@ padding-left:22px;
 
 /* height set in readingSetup based on abstractTitle */
 #outline{
-    overflow-y: auto;
-    height: 520px;
     width: 350px;
     position: absolute;
     padding-bottom: 10px;
@@ -274,7 +271,6 @@ padding-left:22px;
     overflow-y: scroll;
     /*overflow-x: hidden;*/
     width: 840px;
-    height: 547px;
     padding-left: 50px;*/
 }
 
