@@ -3,7 +3,7 @@
     background-color: #EDEEE1;
     height: 900px;  /*hardcoded */
     width: 1292px;
-    position: absolute;
+    position: relative;
     left: 0px;
     top: 200px;
     margin-left: auto;

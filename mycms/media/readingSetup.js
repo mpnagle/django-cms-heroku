@@ -10,8 +10,8 @@ $(document).ready(function() {
     var border_width = 10;
     var window_width = $(window).width();
     var whiteWidth = $("#whiteBorder").width();
-    var white_left = (window_width - whiteWidth) / 2;
-    $("#whiteBorder").css("left", white_left);
+//    var white_left = (window_width - whiteWidth) / 2;
+//    $("#whiteBorder").css("left", white_left);
     var borderPos = $('#whiteBorder').position();
 
     //position amplify           
