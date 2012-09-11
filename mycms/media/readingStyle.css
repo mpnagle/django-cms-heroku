@@ -382,6 +382,7 @@ h2{
     padding-left: 50px;
     padding-top: 50px;
     width: 100%;
+    margin-top: 30px;
 }
 
 #amplifyHome {
@@ -407,4 +408,15 @@ h2{
     color: red;
     font-size: 1.18em;
     padding-left: 63px;               /*15px*/
+}
+
+#homeArtTitle{
+}
+
+#homeArtSubTitle{
+    display: inline;
+}
+
+#homeAbstract{
+    display: inline;
 }

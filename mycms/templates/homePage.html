@@ -28,7 +28,16 @@
 
 
 <div id="map"> 
-  <img src="{{ MEDIA_URL }}/countryImages/Mexico.png"/>
+  <span id= "mapImg"><img src="{{ MEDIA_URL }}/countryImages/Mexico.png"/></span>
+  <div id="homeArtTitle">
+    {% placeholder article_title %}
+    <div id = "homeArtSubTitle"> 
+      {% placeholder article_subtitle %}
+    </div>
+  </div>
+  <div id="homeAbstract">
+    {% placeholder abstract %}
+    </div>
 </div>
 
 
