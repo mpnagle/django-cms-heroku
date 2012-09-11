@@ -18,11 +18,9 @@ $(document).ready(function() {
 
     //set height of white border
     if (($('#outline').height()+$('#abstractRest').height()+$('#abstractTitle').height()) < 900){
-    console.log('readingsetup is running');
         $('#whiteBorder').height(900 +50+$('#amplifyHeading').outerHeight());
     }
     else{
-        console.log('in else');
         $('#whiteBorder').height(($('#outline').height()+$('#abstractRest').height()+$('#abstractTitle').height()+80 + $('#amplifyHeading').outerHeight()));
     }
     //set height of whole right col

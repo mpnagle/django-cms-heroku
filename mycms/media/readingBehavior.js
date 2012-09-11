@@ -43,7 +43,6 @@ $(document).ready(function(){   //
         //update outline: highlight + border bullshit
 	outBox.css('background-color', '00CCCC');
 	outBoxTitle.css('border-bottom', 'none');
-        console.log("border-bottom of selected outline box should be none.");
         //TODO add top border to outbox below if it exists. 
 /*
   if (outBoxPlus != null){		
@@ -81,19 +80,11 @@ $(document).ready(function(){   //
 	function() {
 	    //expand outline if it's not expanded already.
 	    //highlight and display pertaining section in article.
-            console.log('lastClicked');
-            console.log(lastClicked);
-            console.log('this');
-            console.log($(this));
             if ($(lastClicked).attr('id') == $(this).attr('id')){
-		console.log("exiting click");
 		return;
             }
 	    if (lastClicked != null){
-                console.log("cleaning up lastClicked");
 		var idLast = $(lastClicked).attr('id');
-		console.log("last clicked id #");
-		console.log(idLast);
 		var artIndexLast = 'art_' + idLast.substring(idLast.indexOf('_')+1, idLast.length);
 		highlightNot(idLast, artIndexLast);
 	    }
@@ -109,29 +100,17 @@ $(document).ready(function(){   //
 	    var artId = 'art_' + artNum;
 	    
 
-	    var artHeight = $('#'+artId).offset().top;
-	    console.log("artHeight: ");
-	    console.log(artHeight);
-	    
-	    console.log("scrolling to:");
-	    console.log($('#wholeRightCol').scrollTop(artHeight));
-	    $($('#wholeRightCol')).scrollTop(artHeight);
-	    
             
 	    highlightPlease(id, artId);
 	    
 	    
 	    //scroll art text into view
-            
-	    
-            console.log("art_x is ");
-            console.log($('#'+artId));
-	    var artHeight = $('#'+artId).offset().top;
-            console.log("art_x offset.top is ");
-            console.log(artHeight); 
-	    $('#article').scrollTop(artHeight);
-	    
-	    
+            console.log("the position of the thing to scroll is  " + $('#' + artId).position().top);
+            console.log("scrollTop is " + $('#wholeRightCol').scrollTop());
+            var toScroll = $('#' + artId).position().top;
+            $('#wholeRightCol').scrollTop(toScroll);
+            console.log("and we scrolled " + toScroll);
+            console.log("and now scrollTop is " + $('#wholeRightCol').scrollTop());
 	    
 	    lastClicked = $(this);
 	    
@@ -162,7 +141,6 @@ $(document).ready(function(){   //
 	$('.artPar').each(function(i, el){
 	    var chunkHeight = document.getElementById($(el).attr('id')).scrollHeight;
 		if (Math.abs(chunkHeight-currScroll) <= 70) {
-		    console.log('detected an outline we should highlight');
 		    showCurrentlyReading($(el).attr('id'));
 		}
 	    if ($(this).scrollTop()==0){
