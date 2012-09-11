@@ -35,7 +35,7 @@
     font-family: "Times New Roman", serif;
     color: red;
     font-size: 1.18em;
-    padding-left: 15px;
+    padding-left: 63px;               /*15px*/
 }
 
 #tHeading {
@@ -216,12 +216,8 @@ padding-left:22px;
 	font-size: 30pt;
 	font-family: helvetica;
         position: relative;
-/*        padding-right: 15px;*/
         padding-top: 20px;
-        width: 67.5%;
-        
-
-
+        width: 65.1%;
 }
 
 #articleMainTitle{
@@ -381,5 +377,8 @@ h2{
 
 /* style specific to homepage */
 #map{
-    position: absolute;
+    background-color: #EDEEE1;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    padding-top: 50px;
 }
