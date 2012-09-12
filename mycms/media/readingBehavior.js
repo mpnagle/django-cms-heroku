@@ -11,7 +11,7 @@ $(document).ready(function(){   //
 		$(this).css('background-color', '00CCCC');
 	    }
 	    else{
-		$(this).css("background-color", '#EDEEE1');
+		$(this).css("background-color", '#F5F9E7');
 	    }
 	}
     );
