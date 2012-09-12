@@ -1,10 +1,22 @@
+#allOutsideLinks{
+    float: right;
+    margin-top: 15px;
+    color: grey;
+    font-family: helvetica;
+}
+
+.outsideLinks{
+    border-right: 2px grey solid;
+    padding-right: 10px;
+    padding-left: 10px;
+}
 
 #whiteBorder{
     background-color: #EDEEE1;
     width: 1292px;
     position: relative;
     left: 0px;
-    top: 0px;
+    top: 20px;
     margin-left: auto;
     margin-right: auto;
     padding-left: 30px;
@@ -26,7 +38,7 @@
     text-align: left;
     width: 100%;
     z-index: 999;
-    padding-top: 50px;
+    padding-top: 30px;
 
 
 }
