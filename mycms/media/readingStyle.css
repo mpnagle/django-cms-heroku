@@ -20,6 +20,11 @@ color:#99CC00;
 }
 
 
+#lastOutsideLink{
+    border-right: none;
+}
+
+
 #whiteBorder{
     background-color: #EDEEE1;
     width: 1292px;
