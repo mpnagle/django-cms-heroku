@@ -4,7 +4,7 @@
     color: grey;
     font-family: helvetica;
 }
-
+ 
 .outsideLinks a:link{
     border-right: 2px grey solid;
     padding-right: 10px;
@@ -14,16 +14,15 @@
     
 }
 
+.outsideLinks a:visited{
+    color: #009DAE;
+}
+
+
 .outsideLinks a:hover
 {
 color:#99CC00;
 }
-
-
-#lastOutsideLink{
-    border-right: none;
-}
-
 
 #whiteBorder{
     background-color: #EDEEE1;
