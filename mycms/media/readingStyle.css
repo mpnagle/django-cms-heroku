@@ -11,11 +11,19 @@
     padding-left: 10px;
     text-decoration:none;
     color: #009DAE;
+    
 }
+
+.outsideLinks a:hover
+{
+color:#99CC00;
+}
+
 
 #lastOutsideLink{
     border-right: none;
 }
+
 
 #whiteBorder{
     background-color: #EDEEE1;
