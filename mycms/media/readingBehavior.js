@@ -67,7 +67,7 @@ $(document).ready(function(){   //
 	//article, highlight + border bullshit
 	//TODO was it white before, make sure it still is. ok?
 	artChunk.css("background-color", 'white');
-	outBox.css('background-color', 'EDEEE1');
+	outBox.css('background-color', 'F5F9E7');
 
 	
 	outBoxTitle.css('border-bottom', '1px solid grey');
@@ -109,12 +109,11 @@ $(document).ready(function(){   //
             
             if ((art.position().top + art.height() < $('#wholeRightCol').scrollTop() ) ||
                 ((art.position().top > ($('#wholeRightCol').scrollTop()+$('#wholeRightCol').height())))){
-                console.log("the position of the thing to scroll is  " + $('#' + artId).position().top);
-                console.log("scrollTop is " + $('#wholeRightCol').scrollTop());
                 var toScroll = $('#' + artId).position().top;
-                $('#wholeRightCol').scrollTop(toScroll);
-                console.log("and we scrolled " + toScroll);
-                console.log("and now scrollTop is " + $('#wholeRightCol').scrollTop());
+                $('#wholeRightCol').animate({
+                    scrollTop: toScroll//$('#wholeRightCol').scrollTop(toScroll);
+                    }, 3000);
+
            }
 	    lastClicked = $(this);
 	    
