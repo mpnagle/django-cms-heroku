@@ -118,8 +118,8 @@ padding-left:22px;
 	position: relative;
 	padding-left: 15px;
 	padding-right: 15px;
-        padding-top: 10px;
         padding-bottom: 10px;
+        padding-top: 10px;
         line-height: 1.2em;
 	background-color: #F5F9E7;
 
@@ -127,13 +127,22 @@ padding-left:22px;
 
 
 
-
+#collapse{
+    font-family: helvetica;
+    color: #009DAE;
+    text-align: right;
+    background-color: #F5F9E7;
+    width: 340px;
+    padding-right: 10px;
+    padding-top: 5px;
+}
 
 .clear{
     /* display: none */
     overflow:hidden;
     display: none;
 }
+
 
 #wholeLeftCol{
 /*background-color: #D5D6C2;*/
