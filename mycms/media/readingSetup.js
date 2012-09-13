@@ -19,19 +19,37 @@ $(document).ready(function() {
     //set height of white border
     var minWBHeight=900;
     var bottomBorder = 30;
-    var collapseHeights = 0;
-    $('.collapse').each(function(index){
-        collapseHeights += $(this).outerHeight();
-    });
-    if (($('#outline').height()+$('#abstractRest').height()+$('#abstractTitle').height()) < 918){
-        $('#whiteBorder').height(minWBHeight +bottomBorder+18+$('#amplifyHeading').outerHeight() + $('#mapImg').outerHeight() + collapseHeights);
+
+    console.log('height of preoutline div div');
+    console.log($('#preOutline').outerHeight());
+    console.log('outline height' + $('#outline').outerHeight());
+    console.log('entire abstract blurb height' + $('#entireAbstractBlurb').outerHeight());
+    console.log('map img height' + $('#mapImg').outerHeight());
+
+    var wholeLeftHeight = $('#amplifyHeading').outerHeight() + $('#abstractTitle').outerHeight() + $('#entireAbstractBlurb').outerHeight()+$('#mapImg').outerHeight()+$('#preOutline').outerHeight()+$('#outline').outerHeight();
+    
+
+    // set white border height
+    if (wholeLeftHeight < 900){
+        
+        $('#whiteBorder').height(minWBHeight + bottomBorder);
     }
     else{
-        $('#whiteBorder').height(($('#outline').outerHeight()+$('#abstractRest').outerHeight()+$('#abstractTitle').outerHeight() + 18 +$('#amplifyHeading').outerHeight() + $('#mapImg').outerHeight() + collapseHeights));
+        $('#whiteBorder').height(wholeLeftHeight+bottomBorder);
+    }
+
+    //set height of whole right col
+    $('#wholeRightCol').height($('#whiteBorder').height()-$('#amplifyHeading').outerHeight()-$('#articleTitle').outerHeight()-bottomBorder);
+/*
+(($('#outline').height()+$('#abstractRest').height()+$('#abstractTitle').height()) < 918){
+        $('#whiteBorder').height(minWBHeight +bottomBorder+18+$('#amplifyHeading').outerHeight() + $('#mapImg').outerHeight() );
+    }
+    else{
+        $('#whiteBorder').height(($('#outline').outerHeight()+$('#abstractRest').outerHeight()+$('#abstractTitle').outerHeight() + 18 +$('#amplifyHeading').outerHeight() + $('#mapImg').outerHeight()));
     }
     //set height of whole right col
     $('#wholeRightCol').height($('#whiteBorder').height()+18-$('#articleTitle').outerHeight()-bottomBorder - $('#amplifyHeading').outerHeight());
-    
+    */
 
     //position outline  (at setup abstract is expanded)
 //    positionOutline(true);

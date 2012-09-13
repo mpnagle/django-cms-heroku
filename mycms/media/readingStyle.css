@@ -131,6 +131,7 @@ padding-left:22px;
 .collapse{
     display: block;
     font-family: helvetica;
+    font-size: 11pt;
     color: #009DAE;
     text-align: right;
     background-color: #F5F9E7;
@@ -142,6 +143,7 @@ padding-left:22px;
 .expand{
     display: none;
     font-family: helvetica;
+    font-size: 11pt;
     color: #009DAE;
     text-align: right;
     background-color: #F5F9E7;
@@ -162,6 +164,15 @@ padding-left:22px;
 /*position: fixed;*/
 /*overflow: scroll;*/
 }
+
+#preOutline{
+
+}
+
+#entireAbstractBlurb{
+
+}
+
 
 /* height set in readingSetup based on abstractTitle */
 #outline{
@@ -321,38 +332,70 @@ h2{
     margin-top: 30px;
 }
 
+
 #amplifyHome {
     background-color: white;
     color: #009DAE;
     font-family: 'Bitter',serif;
     font-size: 72pt;
-    margin-left: -30px;
-    padding-left: 25px;
-    padding-right: 35px;        /*padding left and right sum to 60px*/
+    margin-left: auto;
     position: relative;
     text-align: left;
-    width: 100%;
+
     z-index: 999;
     padding-top: 50px;
-    text-align: center;
+    text-align: right;
 
 
+}
+
+#homeSlate{
+    margin-left: auto;
+    left: 0px;
+     width: 1050px;
+     border-left: 5px #efefef solid;
+     height: 900px;
+ 
 }
 
 #innovationsHome{
     font-family: "Times New Roman", serif;
     color: red;
     font-size: 1.18em;
-    padding-left: 63px;               /*15px*/
+    width: 65%;
+    text-align: right;
 }
 
-#homeArtTitle{
-
-}
-
-#homeArtSubTitle{
+#amplifySpiel{
+    width: 46%
     display: inline;
+    height: 100px;
+    float: left;
+    font-family: 'bitter';
+    font-size: 24pt;
+    background-color:grey;
 }
+
+.homeAuthor{
+    display: block;
+    
+    font-family: helvetica;
+    font-weight: 800;
+
+    color: grey;
+
+    
+}
+
+.issueTitle{
+    display: block;
+    padding-bottom:5px;
+    font-size: 12pt;
+    padding-left: 8px;
+    font-weight:400;
+
+}
+
 
 #homeAbstract{
     display: inline;
@@ -377,3 +420,45 @@ h2{
 #spacer50 {
     padding: 50px 0px 0px 0px;
 }
+
+.volHeading{
+    font-weight: 800;
+    font-size: 12pt;
+    border-left: 1px solid grey;
+    padding-left: 8px;
+    padding-top:15px;
+    padding-bototm:10px;
+    opacity: 0.5;
+}
+
+#innovIndex{
+    float: right;
+    width: 50%;
+    font-size: 14pt;
+    font-family: helvetica;
+    list-style-type: none;
+    font-family: 'Karla', sans-serif;
+    margin-top: -5px;
+}
+
+.homeArtTitle{
+    opacity: 0.5;
+}
+
+ul#innovIndex > ul> li {
+    font-size: 10pt;
+    list-style-type: none;
+    padding-top: 12px;
+    padding-bottom: 3px;
+    opacity: 0.5;
+}
+
+ul#innovIndex > ul > ul > li{
+    list-style-type: none;
+}
+
+#innovIndex ul ul{
+    font-size: 10pt;
+    line-height: 1.2em;
+}
+

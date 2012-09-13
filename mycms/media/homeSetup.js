@@ -1,30 +1,22 @@
 $(document).ready(function() {
+    $('#homeSlate').height($('#innovIndex').outerHeight()+$('#amplifyHome').outerHeight()+$('.volHeading').height());
+    $('#amplifySpiel').height($('#homeSlate').height()-$('#amplifyHome').outerHeight());
 
-positionHome();
-
-function positionHome(){
-    //position amplify and innovations
-
-    
-
-    var screenWidth = $(window).width();
-    console.log('screenWidth');
-    console.log(screenWidth);
-
-    //position globe image (width = 550px)
-    var mapLeft = (screenWidth*(1/2));
-
-}
-
-$(window).resize(function(){
-    positionHome();
-});
+    $('.homeArtTitle').hover(
+        function(){            
+            console.log('about to fade in');
+            $(this).css({opacity:1.0});
+        },
+        function(){
+            console.log('about to fade out');
+            $(this).css({opacity:0.5});
+        }
+        );
 
  
 /*
 var totalWidth = $('#amplifyHeading').outerWidth() + $('#innovations').width();
-console.log('totalWidth amplify + innovations');
-console.log(totalWidth);
+
 
 $('#amplifyHeading').css('left', (screenWidth-totalWidth)/2);
 
