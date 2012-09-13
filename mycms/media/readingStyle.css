@@ -465,7 +465,7 @@ h2{
 .volHeading{
     font-weight: 800;
     font-size: 12pt;
-    border-left: 1px solid grey;
+    border-left: 2px solid #efefef;
     padding-left: 8px;
     padding-top:15px;
     padding-bototm:10px;
