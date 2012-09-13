@@ -156,6 +156,82 @@ $(document).ready(function(){   //
     $('#article').scroll(
 	function() {
 	    //detectWhichArticleChunk();	
+
+
+            
+
+
+
 	    
 });
+    //collapse and expand hoverrrrr
+    //TODO highligh triangle in green
+    $('.collapse').hover(
+        function() {
+            console.log('hovering over tocollapse');
+            $(this).css('color', '#99CC00');
+        },
+        function(){
+            console.log('no longer hovering over tocollapse.');
+            $(this).css('color', '#009DAE');
+        }
+    );
+    $('.expand').hover(
+        function() {
+            $(this).css('color', '#99CC00');
+        },
+        function(){
+            $(this).css('color', '#009DAE');
+        }
+    );
+
+    $('.collapse').click(
+        function(){
+            if($(this).parent().attr('id')=="entireOutline"){
+                $('.outlineRest').each(function(index){
+                    $(this).css('display', 'none');
+                });
+                //swap to expand all
+                $(this).css('display', 'none');
+                var expandThis = $('.expand')[1];
+                $(expandThis).css('display', 'block');
+            }
+            else if ($(this).parent().attr('id')=="entireAbstractBlurb"){
+                $('#abstractRest').css('display', 'none');
+                //swap to collapse
+                $(this).css('display', 'none');
+                var expandThis = $('.expand')[0];
+                $(expandThis).css('display', 'block');
+            }
+        }
+    );
+
+    $('.expand').click(
+        function(){
+            console.log('in collapse click');
+            console.log($(this).parent());
+            if($(this).parent().attr('id')=="entireOutline"){
+                $('.outlineRest').each(function(index){
+                    $(this).css('display', 'block');
+                });
+                //swap to collapse all
+                $(this).css('display', 'none');
+                var collapseThis = $('.collapse')[1];
+                $(collapseThis).css('display', 'block');
+            }
+            else if ($(this).parent().attr('id')=="entireAbstractBlurb"){
+                $('#abstractRest').css('display', 'block');
+                //swap to collapse
+                $(this).css('display', 'none');
+                var collapseThis = $('.collapse')[0];
+                $(collapseThis).css('display', 'block');
+            }
+
+        }
+    );
+
+    
+
+    
+
     });                         

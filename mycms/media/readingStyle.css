@@ -21,7 +21,7 @@
 
 .outsideLinks a:hover
 {
-color:#99CC00;
+    color:#99CC00;
 }
 
 #whiteBorder{
@@ -127,7 +127,19 @@ padding-left:22px;
 
 
 
-#collapse{
+.collapse{
+    display: block;
+    font-family: helvetica;
+    color: #009DAE;
+    text-align: right;
+    background-color: #F5F9E7;
+    width: 340px;
+    padding-right: 10px;
+    padding-top: 5px;
+}
+
+.expand{
+    display: none;
     font-family: helvetica;
     color: #009DAE;
     text-align: right;
