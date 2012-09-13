@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $('#homeSlate').height($('#innovIndex').outerHeight()+$('#amplifyHome').outerHeight());
+    $('#homeSlate').height($('#innovIndex').outerHeight()+$('#amplifyHome').outerHeight()+$('.volHeading').height());
     $('#amplifySpiel').height($('#homeSlate').height()-$('#amplifyHome').outerHeight());
 
     $('.homeArtTitle').each(function(i){
