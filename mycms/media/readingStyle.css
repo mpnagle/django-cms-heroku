@@ -1,3 +1,15 @@
+#innovationsAnchor{
+    text-decoration:none;
+}
+
+#innovationsAnchor:visited{
+    color:red;
+}
+
+#innovationsAnchor:hover{
+    color:#99CC00;
+}
+
 #amplifyAnchor{
     text-decoration:none;
 }
