@@ -78,7 +78,7 @@
 
   <!--abstract-->
   <div id="abstractTitle">in brief  </div>
-  <span id="entireAbstractBlurb">
+  <div id="entireAbstractBlurb">
     <div class="collapse"> <img src="{{ MEDIA_URL }}/triangleUp.png"></div>
     <div class="expand"> <img src="{{ MEDIA_URL }}/triangleDown.png"></div>
     <div id="abstractRest">
@@ -86,17 +86,18 @@
       {% placeholder abstract %}
 
     </div>
-    </span>
+    </div>
   <div id="mapImg"> <img src="{{ MEDIA_URL }}/countryImages/Mexico.png"/></div>
 
-  <div id="entireOutline">
+  <div id="preOutline">
     <div class="collapse"> collapse all <img src="{{ MEDIA_URL }}/triangleUp.png"></div>
     <div class="expand"> expand all <img src="{{ MEDIA_URL }}/triangleDown.png"></div>
     <!-- outline column -->
+  </div>
     <div id="outline">
       {% placeholder outline %}
     </div>
-  </div>
+
 
 
 
