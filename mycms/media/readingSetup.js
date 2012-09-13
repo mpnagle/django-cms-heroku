@@ -23,13 +23,10 @@ $(document).ready(function() {
     $('.collapse').each(function(index){
         collapseHeights += $(this).outerHeight();
     });
-    console.log('collapseHeights is' + collapseHeights);
     if (($('#outline').height()+$('#abstractRest').height()+$('#abstractTitle').height()) < 918){
         $('#whiteBorder').height(minWBHeight +bottomBorder+18+$('#amplifyHeading').outerHeight() + $('#mapImg').outerHeight() + collapseHeights);
     }
     else{
-        console.log('outline outer height is' + $('#outline').outerHeight());
-        console.log('entire outline span height is ' + $('#enterOutline').outerHeight());
         $('#whiteBorder').height(($('#outline').outerHeight()+$('#abstractRest').outerHeight()+$('#abstractTitle').outerHeight() + 18 +$('#amplifyHeading').outerHeight() + $('#mapImg').outerHeight() + collapseHeights));
     }
     //set height of whole right col

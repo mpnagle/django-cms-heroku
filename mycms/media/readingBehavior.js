@@ -88,8 +88,14 @@ $(document).ready(function(){   //
 		var artIndexLast = 'art_' + idLast.substring(idLast.indexOf('_')+1, idLast.length);
 		highlightNot(idLast, artIndexLast);
 	    }
-	    
+            var outRest = $($(this).children()[1]); //title then rest
+            if (outRest.css('display')=='none'){
+                console.log('curr outbox is collapsed');
+                //expand that shit
+                outRest.css('display', 'block');
+                }
 	    var restText = $($(this).children()[1]);
+            console.log('restText is ' + restText);
 	    //determine if outline rest is collapsed
 	    if (restText.height()==0){
 		restText.removeClass("clear");//shit is collapsed
@@ -168,11 +174,9 @@ $(document).ready(function(){   //
     //TODO highligh triangle in green
     $('.collapse').hover(
         function() {
-            console.log('hovering over tocollapse');
             $(this).css('color', '#99CC00');
         },
         function(){
-            console.log('no longer hovering over tocollapse.');
             $(this).css('color', '#009DAE');
         }
     );
@@ -208,8 +212,6 @@ $(document).ready(function(){   //
 
     $('.expand').click(
         function(){
-            console.log('in collapse click');
-            console.log($(this).parent());
             if($(this).parent().attr('id')=="entireOutline"){
                 $('.outlineRest').each(function(index){
                     $(this).css('display', 'block');
