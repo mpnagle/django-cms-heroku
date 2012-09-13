@@ -1,3 +1,17 @@
+#amplifyAnchor{
+    text-decoration:none;
+}
+
+
+#amplifyAnchor:visited{
+    color: #009DAE;
+}
+
+
+#amplifyAnchor:hover{
+    color: #99CC00;
+}    
+
 #allOutsideLinks{
     float: right;
     margin-top: 15px;
