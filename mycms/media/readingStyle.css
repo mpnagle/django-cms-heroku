@@ -165,6 +165,15 @@ padding-left:22px;
 /*overflow: scroll;*/
 }
 
+#entireOutline{
+    display: inline;
+}
+
+#entireAbstractBlurb{
+    display: inline;
+}
+
+
 /* height set in readingSetup based on abstractTitle */
 #outline{
     width: 350px;
