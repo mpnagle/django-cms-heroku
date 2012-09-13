@@ -3,6 +3,7 @@ $(document).ready(function(){   //
 
     $('.outlineBox').hover(
 	function () {
+            console.log('in hover');
 		$(this).css('background-color', 'C9EAE6');
 	    
 	}, 
@@ -159,10 +160,6 @@ $(document).ready(function(){   //
 	    //detectWhichArticleChunk();	
 
 
-            
-
-
-
 	    
 });
     //collapse and expand hoverrrrr
@@ -207,7 +204,7 @@ $(document).ready(function(){   //
 
     $('.expand').click(
         function(){
-            if($(this).parent().attr('id')=="entireOutline"){
+            if($(this).parent().attr('id')=="preOutline"){
                 $('.outlineRest').each(function(index){
                     $(this).css('display', 'block');
                 });
