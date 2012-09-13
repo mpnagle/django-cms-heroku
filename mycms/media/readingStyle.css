@@ -411,6 +411,8 @@ h2{
 }
 
 
+<<<<<<< HEAD
+=======
 #homeAbstract{
     display: inline;
 }
@@ -473,15 +475,33 @@ h2{
 
     
 
+
 .volHeading{
     font-weight: 800;
     font-size: 12pt;
-    border-left: 1px solid grey;
+    border-left: 2px solid #efefef;
     padding-left: 8px;
     padding-top:15px;
     padding-bototm:10px;
-    opacity: 0.5;
 }
+
+.homeArtTitle {
+    opacity: 0.35;
+}
+
+.homeArtTitle:hover {
+    opacity: 1.0;
+}
+
+
+
+.volHeading > span {
+    opacity: 0.35;
+}
+
+.innovCategory > span{
+    opacity: 0.35;
+}    
 
 #innovIndex{
     float: right;
@@ -494,22 +514,24 @@ h2{
 }
 
 .homeArtTitle{
-    opacity: 0.5;
 }
+
 
 ul#innovIndex > ul> li {
     font-size: 10pt;
     list-style-type: none;
     padding-top: 12px;
     padding-bottom: 3px;
-    opacity: 0.5;
+
 }
 
-ul#innovIndex > ul > ul > li{
+.innovCategory{
     list-style-type: none;
 }
 
+
 #innovIndex ul ul{
+    list-style-type: none;
     font-size: 10pt;
     line-height: 1.2em;
 }

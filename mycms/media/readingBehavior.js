@@ -186,7 +186,7 @@ $(document).ready(function(){   //
 
     $('.collapse').click(
         function(){
-            if($(this).parent().attr('id')=="entireOutline"){
+            if($(this).parent().attr('id')=="preOutline"){
                 $('.outlineRest').each(function(index){
                     $(this).css('display', 'none');
                 });
