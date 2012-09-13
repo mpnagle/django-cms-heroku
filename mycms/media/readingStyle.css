@@ -1,5 +1,6 @@
 #innovationsAnchor{
     text-decoration:none;
+    color: red;
 }
 
 #innovationsAnchor:visited{
@@ -12,6 +13,7 @@
 
 #amplifyAnchor{
     text-decoration:none;
+    color: #009DAE;
 }
 
 
@@ -192,14 +194,13 @@ padding-left:22px;
 }
 
 
-
 /* height set in readingSetup based on abstractTitle */
 #outline{
     width: 350px;
     position: absolute;
     padding-bottom: 10px;
     border-left: 1px solid grey;
-    background-color: #F5F9E7;
+	background-color: #F5F9E7;
 
 
     
