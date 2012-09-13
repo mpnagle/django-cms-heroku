@@ -403,6 +403,7 @@ h2{
     padding-left: 8px;
     padding-top:15px;
     padding-bototm:10px;
+    opacity: 0.5;
 }
 
 #innovIndex{
@@ -411,9 +412,12 @@ h2{
     font-size: 14pt;
     font-family: helvetica;
     list-style-type: none;
-    opacity: 0.5;
     font-family: 'Karla', sans-serif;
     margin-top: -5px;
+}
+
+.homeArtTitle{
+    opacity: 0.5;
 }
 
 ul#innovIndex > ul> li {
@@ -421,6 +425,7 @@ ul#innovIndex > ul> li {
     list-style-type: none;
     padding-top: 12px;
     padding-bottom: 3px;
+    opacity: 0.5;
 }
 
 ul#innovIndex > ul > ul > li{
