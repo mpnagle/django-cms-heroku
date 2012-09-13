@@ -3,9 +3,7 @@ $(document).ready(function(){   //
 
     $('.outlineBox').hover(
 	function () {
-            console.log('in hover');
-		$(this).css('background-color', 'C9EAE6');
-	    
+	    $(this).css('background-color', 'C9EAE6');
 	}, 
 	function () {
 	    if (lastClicked != null && ($(lastClicked).attr('id') == $(this).attr('id'))){
@@ -44,18 +42,6 @@ $(document).ready(function(){   //
         //update outline: highlight + border bullshit
 	outBox.css('background-color', '00CCCC');
 	outBoxTitle.css('border-bottom', 'none');
-        //TODO add top border to outbox below if it exists. 
-/*
-  if (outBoxPlus != null){		
-  outBoxPlus.css('border-top', '1px solid grey');
-  }
-  
-  if (outBoxMinus != null){
-  outBoxMinus.css('border-bottom', '1px solid grey');
-  }
-*/
-	
-	
     }
     
     function highlightNot(outId, artId){
@@ -72,9 +58,7 @@ $(document).ready(function(){   //
 
 	
 	outBoxTitle.css('border-bottom', '1px solid grey');
-	
-	
-    }
+    }                           
     
     
     $('.outlineBox').click(
@@ -94,18 +78,15 @@ $(document).ready(function(){   //
                 console.log('curr outbox is collapsed');
                 //expand that shit
                 outRest.css('display', 'block');
-                }
+            }
 
 	    //match with art_x id
 	    var id = $(this).attr('id');
 	    var artNum = id.substring(id.indexOf('_')+1, id.length); //number
 	    var artId = 'art_' + artNum;
-	    
-
             
 	    highlightPlease(id, artId);
-	    
-	    
+
 	    //scroll art text into view
             var art = $('#' + artId); 
             
@@ -121,47 +102,10 @@ $(document).ready(function(){   //
 	    
 	});
 
-    var currentlyReading = null; //outlineBox of what is being read
-    
-    function showCurrentlyReading(matchingArtId){
-	var outlineId = '#outline_' + matchingArtId.substring(matchingArtId.indexOf('_')+1, matchingArtId.length);
-	$(outlineId).css('background-color', 'FFFFFF');
-	//	($(outlineId)).css('background-color', 'white');
-	//	$(outlineId).css('border-bottom', 'none'); for outline title not box
-	
-	
-	if (currentlyReading != null){
-	    //update what we were reading, to outline bg color
-	    $(currentlyReading).css('background-color', 'EDEEE1');
-	    //		$(currentlyReading).css('border-bottom', '1px solid black'); //really of outlineTitle
-	    
-	}
-	currentlyReading = $(outlineId);
-	
-    }
-    
-    function detectWhichArticleChunk(){
-	var currScroll = document.getElementById('article').scrollTop;
-	
-	$('.artPar').each(function(i, el){
-	    var chunkHeight = document.getElementById($(el).attr('id')).scrollHeight;
-		if (Math.abs(chunkHeight-currScroll) <= 70) {
-		    showCurrentlyReading($(el).attr('id'));
-		}
-	    if ($(this).scrollTop()==0){
-	    }
-	});
-    }
-    
-    
-    //detectWhichArticleChunk();
-    $('#article').scroll(
-	function() {
-	    //detectWhichArticleChunk();	
-
+  
 
 	    
-});
+
     //collapse and expand hoverrrrr
     //TODO highligh triangle in green
     $('.collapse').hover(
@@ -228,4 +172,4 @@ $(document).ready(function(){   //
 
     
 
-    });                         
+    });                         // ends document.ready
