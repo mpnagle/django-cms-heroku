@@ -1,24 +1,56 @@
 {% load cms_tags sekizai_tags %}
 
 
-<html>
+<html xmlns:fb="http://ogp.me/ns/fb#">
   <head>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
       <title>{{ request.current_page.get_title }}</title>
-      {% render_block "css" %}
+ 
+
+
+     {% render_block "css" %}
       
-<link type="text/css" href="{{ MEDIA_URL }}jquery-ui/css/custom-theme/jquery-ui.css" />
+
 
 
   </head>
   <body>
 
-<script type="text/javascript" src="{{ MEDIA_URL }}jquery-ui/js/jquery.js"></script>
-<script type="text/javascript" src="{{ MEDIA_URL }}jquery-ui/js/jquery-ui.js"></script>
+    <!-- Begin Facebook's required JavaScript SDK code -->
 
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+      fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
+    
+    <script type='text/javascript'>$('body').hide();</script>
+    
+
+
+
+
+    {% addtoblock "css" %}
+    <link rel="stylesheet" type="text/css" href="/media/readingStyle.css">
+
+    {% endaddtoblock %}
+
+
+    {% addtoblock "js" %}
+
+
+
+     {% endaddtoblock "js" %}
 
       {% cms_toolbar %}
       {% placeholder base_content %}
       {% block base_content%}{% endblock %}
       {% render_block "js" %}
+    <script type='text/javascript'>$('body').show();</script>
   </body>
+
+
 </html>
