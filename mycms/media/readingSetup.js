@@ -17,14 +17,23 @@ $(document).ready(function() {
 
 
     //set height of white border
+    var minWBHeight=900;
+    var bottomBorder = 30;
+    var collapseHeights = 0;
+    $('.collapse').each(function(index){
+        collapseHeights += $(this).outerHeight();
+    });
+    console.log('collapseHeights is' + collapseHeights);
     if (($('#outline').height()+$('#abstractRest').height()+$('#abstractTitle').height()) < 918){
-        $('#whiteBorder').height(900 +50+18+$('#amplifyHeading').outerHeight());
+        $('#whiteBorder').height(minWBHeight +bottomBorder+18+$('#amplifyHeading').outerHeight() + $('#mapImg').outerHeight() + collapseHeights);
     }
     else{
-        $('#whiteBorder').height(($('#outline').height()+$('#abstractRest').height()+$('#abstractTitle').height()+80+18 + $('#amplifyHeading').outerHeight()));
+        console.log('outline outer height is' + $('#outline').outerHeight());
+        console.log('entire outline span height is ' + $('#enterOutline').outerHeight());
+        $('#whiteBorder').height(($('#outline').outerHeight()+$('#abstractRest').outerHeight()+$('#abstractTitle').outerHeight() + 18 +$('#amplifyHeading').outerHeight() + $('#mapImg').outerHeight() + collapseHeights));
     }
     //set height of whole right col
-    $('#wholeRightCol').height($('#whiteBorder').height()-$('#articleTitle').height()-50 - $('#amplifyHeading').outerHeight());
+    $('#wholeRightCol').height($('#whiteBorder').height()+18-$('#articleTitle').outerHeight()-bottomBorder - $('#amplifyHeading').outerHeight());
     
 
     //position outline  (at setup abstract is expanded)
@@ -57,33 +66,5 @@ $(document).ready(function() {
 
     });
 
-    function collapseOutlineBox(outlineBox){
-	var heading = $(outlineBox).children()[0];
-	var restText = $(outlineBox).children()[1];
-        //	restText.css.addClass("clear");
-        //	heading.css('border-bottom', none);
-        //	restText.css('border-bottom', '2px dotted grey');
-    }
-
-    function expandOutlineBox(outlineBox){
-        var heading = $(outlineBox).children()[0];
-	var restText = $(outlineBox).children()[1];
-	restText.removeClass("clear");
-	restText.css("border-bottom", none);
-	heading.css('border-bottom',  '1px solid grey');
-    }
-
-    function positionOutline(abstractOpen){
-        if (abstractOpen){
-            $('#outline').css("top", $('#abstractRest').position().top + $('#abstractRest').outerHeight());
-            $('#outline').css('left', $('#abstractRest').position().left);
-            return;
-        }
-        else{
-            $('#outline').css("top", $('#abstractTitle').position().top + $('#abstractTitle').outerHeight());
-            
-            $('#outline').css('left', $('#abstractTitle').position().left);
-        }
-    }
 
 });                             // ends document.isready 
