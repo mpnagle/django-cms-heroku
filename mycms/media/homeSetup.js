@@ -11,6 +11,8 @@ $(document).ready(function() {
            volLi = $(this).closest('li.volHeading');
            volSpan = volLi.children('span');
            volSpan.css({opacity: 1.0});
+           issueTitle = $(this).closest('.issueTitle');
+           issueTitle.css({opacity: 1.0});
        },
 
        function() { 
@@ -20,6 +22,9 @@ $(document).ready(function() {
            volLi = $(this).closest('li.volHeading');
            volSpan = volLi.children('span');
            volSpan.css({opacity: 0.35});
+           issueTitle = $(this).closest('issueTitle');
+           issueTitle.css({opacity: 0.35});
+
        }
        );
 
