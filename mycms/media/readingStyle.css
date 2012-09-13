@@ -378,10 +378,31 @@ h2{
 
 .homeAuthor{
     display: block;
+    
+    font-family: helvetica;
+    font-weight: 800;
+
+    color: grey;
+
+    
 }
 
 .issueTitle{
     display: block;
+    padding-bottom:5px;
+    font-size: 12pt;
+    padding-left: 8px;
+    font-weight:400;
+
+}
+
+.volHeading{
+    font-weight: 800;
+    font-size: 12pt;
+    border-left: 1px solid grey;
+    padding-left: 8px;
+    padding-top:15px;
+    padding-bototm:10px;
 }
 
 #innovIndex{
@@ -390,15 +411,25 @@ h2{
     font-size: 14pt;
     font-family: helvetica;
     list-style-type: none;
-    opacity: 0.25;
+    opacity: 0.5;
+    font-family: 'Karla', sans-serif;
+    margin-top: -5px;
 }
 
-#innovIndex ul{
+ul#innovIndex > ul> li {
     font-size: 10pt;
+    list-style-type: none;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+ul#innovIndex > ul > ul > li{
     list-style-type: none;
 }
 
 #innovIndex ul ul{
     font-size: 10pt;
+    line-height: 1.2em;
+
 
 }
