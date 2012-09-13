@@ -94,15 +94,10 @@ $(document).ready(function(){   //
                 //expand that shit
                 outRest.css('display', 'block');
                 }
-	    var restText = $($(this).children()[1]);
-            console.log('restText is ' + restText);
-	    //determine if outline rest is collapsed
-	    if (restText.height()==0){
-		restText.removeClass("clear");//shit is collapsed
-	    }
+
 	    //match with art_x id
 	    var id = $(this).attr('id');
-	var artNum = id.substring(id.indexOf('_')+1, id.length); //number
+	    var artNum = id.substring(id.indexOf('_')+1, id.length); //number
 	    var artId = 'art_' + artNum;
 	    
 
