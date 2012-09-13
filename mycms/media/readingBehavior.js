@@ -3,6 +3,7 @@ $(document).ready(function(){   //
 
     $('.outlineBox').hover(
 	function () {
+            console.log("in outlinebox, about to color teal.");
 	    $(this).css('background-color', 'C9EAE6');
 	}, 
 	function () {

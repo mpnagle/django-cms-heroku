@@ -191,13 +191,6 @@ padding-left:22px;
 /*overflow: scroll;*/
 }
 
-#preOutline{
-
-}
-
-#entireAbstractBlurb{
-
-}
 
 
 /* height set in readingSetup based on abstractTitle */
@@ -206,7 +199,7 @@ padding-left:22px;
     position: absolute;
     padding-bottom: 10px;
     border-left: 1px solid grey;
-	background-color: #F5F9E7;
+    background-color: #F5F9E7;
 
 
     
