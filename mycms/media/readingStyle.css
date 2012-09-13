@@ -131,6 +131,7 @@ padding-left:22px;
 .collapse{
     display: block;
     font-family: helvetica;
+    font-size: 11pt;
     color: #009DAE;
     text-align: right;
     background-color: #F5F9E7;
@@ -142,6 +143,7 @@ padding-left:22px;
 .expand{
     display: none;
     font-family: helvetica;
+    font-size: 11pt;
     color: #009DAE;
     text-align: right;
     background-color: #F5F9E7;
@@ -321,17 +323,18 @@ h2{
     margin-top: 30px;
 }
 
+
 #amplifyHome {
     background-color: white;
     color: #009DAE;
     font-family: 'Bitter',serif;
     font-size: 72pt;
-    margin-left: -30px;
-    padding-left: 25px;
-    padding-right: 35px;        /*padding left and right sum to 60px*/
+    margin-left: auto;
+/*    padding-left: 25px;*/
+  /*  padding-right: 35px;        /*padding left and right sum to 60px*/
     position: relative;
     text-align: left;
-    width: 100%;
+
     z-index: 999;
     padding-top: 50px;
     text-align: center;
@@ -343,7 +346,8 @@ h2{
     font-family: "Times New Roman", serif;
     color: red;
     font-size: 1.18em;
-    padding-left: 63px;               /*15px*/
+    width: 65%;
+    text-align: right;
 }
 
 #homeArtTitle{
