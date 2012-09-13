@@ -1,6 +1,6 @@
 $(document).ready(function() {
-    $('#homeSlate').height($('#innovIndex').outerHeight()+$('#amplifyHome').outerHeight())+500;
-    $('#amplifySpiel').height($('#homeSlate').height()-$('#amplifyHome').outerHeight());
+    $('#homeSlate').height($('#innovIndex').outerHeight()+$('#amplifyHome').outerHeight()+24);
+//    $('#amplifySpiel').height($('#homeSlate').height()-$('#amplifyHome').outerHeight());
 
    $('.homeArtTitle').hover(
 
