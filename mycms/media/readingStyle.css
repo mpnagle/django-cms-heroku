@@ -330,16 +330,23 @@ h2{
     font-family: 'Bitter',serif;
     font-size: 72pt;
     margin-left: auto;
-/*    padding-left: 25px;*/
-  /*  padding-right: 35px;        /*padding left and right sum to 60px*/
     position: relative;
     text-align: left;
 
     z-index: 999;
     padding-top: 50px;
-    text-align: center;
+    text-align: right;
 
 
+}
+
+#homeSlate{
+    margin-left: auto;
+    left: 0px;
+     width: 1050px;
+     border-left: 5px #efefef solid;
+     height: 900px;
+ 
 }
 
 #innovationsHome{
@@ -350,14 +357,39 @@ h2{
     text-align: right;
 }
 
-#homeArtTitle{
-
+#amplifySpiel{
+    width: 46%
+    display: inline;
+    height: 100px;
+    float: left;
+    font-family: 'bitter';
+    font-size: 24pt;
+    background-color:grey;
 }
 
-#homeArtSubTitle{
-    display: inline;
+.homeAuthor{
+    display: block;
 }
 
-#homeAbstract{
-    display: inline;
+.issueTitle{
+    display: block;
+}
+
+#innovIndex{
+    float: right;
+    width: 50%;
+    font-size: 14pt;
+    font-family: helvetica;
+    list-style-type: none;
+    opacity: 0.25;
+}
+
+#innovIndex ul{
+    font-size: 10pt;
+    list-style-type: none;
+}
+
+#innovIndex ul ul{
+    font-size: 10pt;
+
 }
