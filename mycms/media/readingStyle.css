@@ -397,6 +397,71 @@ h2{
 }
 
 
+<<<<<<< HEAD
+=======
+#homeAbstract{
+    display: inline;
+}
+
+#spacer10 {
+    padding: 10px 0px 0px 0px;
+}
+
+#spacer20 {
+    padding: 20px 0px 0px 0px;
+}
+
+#spacer30 {
+    padding: 30px 0px 0px 0px;
+}
+
+#spacer40 {
+    padding: 40px 0px 0px 0px;
+}
+
+#spacer50 {
+    padding: 50px 0px 0px 0px;
+}
+
+#spacer60 {
+    padding: 60px 0px 0px 0px;
+}
+
+#spacer70 {
+    padding: 70px 0px 0px 0px;
+}
+
+#spacer80 {
+    padding: 80px 0px 0px 0px;
+}
+
+#spacer90 {
+    padding: 90px 0px 0px 0px;
+}
+
+#spacer100 {
+    padding: 100px 0px 0px 0px;
+}
+
+#spacer110 {
+    padding: 110px 0px 0px 0px;
+}
+
+#spacer120 {
+    padding: 120px 0px 0px 0px;
+}
+
+#spacer130 {
+    padding: 130px 0px 0px 0px;
+}
+
+#spacer140 {
+    padding: 140px 0px 0px 0px;
+}
+
+    
+
+
 .volHeading{
     font-weight: 800;
     font-size: 12pt;
@@ -455,6 +520,5 @@ ul#innovIndex > ul> li {
     list-style-type: none;
     font-size: 10pt;
     line-height: 1.2em;
-
-
 }
+
