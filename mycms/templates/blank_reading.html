@@ -73,9 +73,6 @@
 
 
 
-<div id="currentCountry" class="clear"> 
-  {% placeholder current_country_match_img_name %}
-</div>
 
 <!-- article title -->
 
@@ -91,7 +88,8 @@
 
     </div>
     </div>
-  <div id="mapImg"><img src="{{ MEDIA_URL }}/countryImages/Mexico.png"/></div>
+  <span id="countryName" style={display:none}> {% placeholder current_country_match_img_name %}</span>
+  <div id="mapImg"></div>
 
   <div id="preOutline">
     <div class="collapse"> collapse all <img src="{{ MEDIA_URL }}/triangleUp.png"></div>

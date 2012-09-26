@@ -23,7 +23,6 @@ $(document).ready(function() {
 
     var wholeLeftHeight = $('#amplifyHeading').outerHeight() + $('#abstractTitle').outerHeight() + $('#entireAbstractBlurb').outerHeight()+$('#mapImg').outerHeight()+$('#preOutline').outerHeight()+$('#outline').outerHeight();
     
-    console.log('wholeLeftHeight is' + wholeLeftHeight);
 
     
 
@@ -64,6 +63,12 @@ $(document).ready(function() {
         $('#articleSubTitle').addClass("smallerTitle");
     }
     
+    //set country image name
+    var countryName = ($('#countryName').text()).trim(); //eliminate white space just in case
+    var source = "/media/countryImages/" + countryName + ".png";
+    console.log('source is ' + source);
+    $('#mapImg').append($('<img />', {'src': source}));
+    console.log($('#mapImg'));
 
 
 /*
