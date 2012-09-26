@@ -259,6 +259,7 @@ padding-left:22px;
         padding-bottom: 10px;
         width: 65.1%;
         line-height: 1.8em;
+        font-size: 25pt;
 }
 
 #articleMainTitle{
@@ -277,11 +278,11 @@ padding-left:22px;
 
 
 .biggerTitle{
-    font-size: 28pt;
+
 }
 
 .smallerTitle{
-    font-size: 20pt;
+
 }
 .author-heading{
     font-size: 14pt;
