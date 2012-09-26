@@ -330,16 +330,6 @@ h2{
     line-height: 1.2em;
 }
 
-.references a {
-    text-decoration: none;
-    color: #EE4624; /*tangerine */
-}
-
-.references a:hover {
-    color: #00CCCC;
-    text-decoration: underline;
-}
-
 
 
 /* style specific to homepage */
