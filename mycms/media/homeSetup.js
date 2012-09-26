@@ -28,30 +28,12 @@ $(document).ready(function() {
        }
        );
 
-    // function(){
-    //     $(this).css({opacity: 0.5});
-    //     var currCategory = $(this).closest('.innovCategory');
-    //     currCategory.css({opacity: 0.5});
-    //     var currIssue = $(this).closest('.volHeading');
-    //     $(currIssue).css({opacity: 0.5});
-    // },
-    // function(){
-    //     var currCategory = $(this).closest('.innovCategory');
-    //     $(currCategory).css({opacity: 0.5});
-    //     var currIssue = $(this).closest('.volHeading');
-    //     $(currIssue).css({opacity: 0.5});
-    // }
-//  );
-        
-
-/*
-var totalWidth = $('#amplifyHeading').outerWidth() + $('#innovations').width();
-
-
-$('#amplifyHeading').css('left', (screenWidth-totalWidth)/2);
-
-
-$('#innovations').css('left', $('#amplifyHeading').position().left+$('#amplifyHeading').outerWidth());
-*/
+    $('.homeArtTitle').click(
+        function(){
+            //go to the link
+            var currLink = $(this).children()[1];
+            window.location = currLink;
+        }
+    );
 
 });
