@@ -54,7 +54,8 @@ $(document).ready(function() {
     //set sizes of article main title and subtitle
     var mainText = $('#articleMainTitle').text();
     var subText = $('#articleSubTitle').text();
-    if (mainText.length > subText.length && subText.length != 0){
+                
+    if (mainText.length > subText.length && $('#articleSubTitle').length > 1){
         $('#articleMainTitle').addClass("smallerTitle");
         $('#articleSubTitle').addClass("biggerTitle");
     }
@@ -62,6 +63,7 @@ $(document).ready(function() {
         $('#articleMainTitle').addClass("biggerTitle");
         $('#articleSubTitle').addClass("smallerTitle");
     }
+    
 
 
 /*
