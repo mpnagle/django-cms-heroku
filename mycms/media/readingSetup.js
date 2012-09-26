@@ -20,11 +20,6 @@ $(document).ready(function() {
     var minWBHeight=900;
     var bottomBorder = 30;
 
-    console.log('height of preoutline div div');
-    console.log($('#preOutline').outerHeight());
-    console.log('outline height' + $('#outline').outerHeight());
-    console.log('entire abstract blurb height' + $('#entireAbstractBlurb').outerHeight());
-    console.log('map img height' + $('#mapImg').outerHeight());
 
     var wholeLeftHeight = $('#amplifyHeading').outerHeight() + $('#abstractTitle').outerHeight() + $('#entireAbstractBlurb').outerHeight()+$('#mapImg').outerHeight()+$('#preOutline').outerHeight()+$('#outline').outerHeight();
     
@@ -54,6 +49,8 @@ $(document).ready(function() {
     //position outline  (at setup abstract is expanded)
 //    positionOutline(true);
 
+
+
     // align footnotes in ref col w/ article.
     $('.references').each(function(i){
         var refLeft = $(this).offset().left;
@@ -67,13 +64,13 @@ $(document).ready(function() {
             var footOffset = (footMatch).offset();
             var footTop = (footMatch).offset().top;
 
-            // color ref number lime green
-            refText = $(this).text();
+            // color ref number teal
+            refHtml = $(this).html();
             //splice until the period
-            refNum = refText.substring(0, refText.indexOf('.')+1);
-            refRest = refText.substring(refText.indexOf('.')+1, refText.length);
+            refNum = refHtml.substring(0, refHtml.indexOf('.')+1);
+            refRest = refHtml.substring(refHtml.indexOf('.')+1, refHtml.length);
             var newRefNum = $("<div />", {"class": "refNum", text:refNum });
-            $(this).text(refRest);
+            $(this).html(refRest);
             $(this).prepend(newRefNum);
         }
         $(this).offset({top:footTop, left:refLeft});

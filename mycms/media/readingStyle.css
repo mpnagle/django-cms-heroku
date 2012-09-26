@@ -265,16 +265,15 @@ padding-left:22px;
 
 #articleSubtitle{
     position: relative;
-  //  float: left;
+  /*  float: left;*/
     font-weight: normal;
     display: inline;
     text-align: left;
     font-size: 22pt;
-        
 }
 
 .author-heading{
-	font-size: 14pt;
+    font-size: 14pt;
 }
 
 .author-ref{
@@ -330,6 +329,23 @@ h2{
     line-height: 1.2em;
 }
 
+.references a:link{
+    color: #009DAE;
+    font-size: 10pt;
+    text-decoration: none;
+}
+
+.references a:visited{
+    color: #009DAE;
+    font-size: 10pt;
+    text-decoration: none;
+}
+
+.references a:hover{
+    color: #99CC00;
+    font-size: 10pt;
+    text-decoration: none;
+}
 
 
 /* style specific to homepage */
@@ -377,7 +393,7 @@ h2{
 }
 
 #amplifySpiel{
-    width: 46%
+    width: 46%;
     display: inline;
     height: 100px;
     float: left;
