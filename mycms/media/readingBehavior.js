@@ -3,7 +3,6 @@ $(document).ready(function(){   //
 
     $('.outlineBox').hover(
 	function () {
-            console.log("in outlinebox, about to color teal.");
 	    $(this).css('background-color', 'C9EAE6');
 	}, 
 	function () {
@@ -76,7 +75,6 @@ $(document).ready(function(){   //
 	    }
             var outRest = $($(this).children()[1]); //title then rest
             if (outRest.css('display')=='none'){
-                console.log('curr outbox is collapsed');
                 //expand that shit
                 outRest.css('display', 'block');
             }
@@ -108,22 +106,37 @@ $(document).ready(function(){   //
 	    
 
     //collapse and expand hoverrrrr
-    //TODO highligh triangle in green
     $('.collapse').hover(
         function() {
             $(this).css('color', '#99CC00');
+            var triangleSrc = "/media/triangleUp_active.png";
+            var currTriangle = $(this).children()[0];
+            $(currTriangle).attr("src", triangleSrc);
         },
         function(){
             $(this).css('color', '#009DAE');
+            var triangleSrc = "/media/triangleUp_inactive.png";
+            var currTriangle = $(this).children()[0];
+            $(currTriangle).attr("src", triangleSrc);
         }
+
+
     );
     $('.expand').hover(
         function() {
             $(this).css('color', '#99CC00');
+            var triangleSrc = "/media/triangleDown_active.png";
+            var currTriangle = $(this).children()[0];
+            $(currTriangle).attr("src", triangleSrc);
+
         },
         function(){
             $(this).css('color', '#009DAE');
+            var triangleSrc = "/media/triangleDown_inactive.png";
+            var currTriangle = $(this).children()[0];
+            $(currTriangle).attr("src", triangleSrc);
         }
+
     );
 
     $('.collapse').click(
