@@ -7,7 +7,9 @@
 
 {% endaddtoblock "css" %}
 <link ref="stylesheet" type="text/css" href="{{ MEDIA_URL }}readingStyle.css" />
-<link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Bitter'
+      rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Karla' rel='stylesheet' type='text/css'>
 
 {% addtoblock "js" %}
  <!--<script type="text/javascript" src="{{ MEDIA_URL }}jquery-ui/js/jquery.js"></script>  -->
@@ -43,7 +45,9 @@
 
 
   <div id = "articleTitle">
+    <div id = "articleMainTitle">
       {% placeholder article_title %}
+      </div>
       <div id = "articleSubTitle"> 
         {% placeholder article_subtitle %}
       </div>

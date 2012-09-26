@@ -51,7 +51,18 @@ $(document).ready(function() {
     $(expandLink).css('display', 'block');
 
     
-    
+    //set sizes of article main title and subtitle
+    var mainText = $('#articleMainTitle').text();
+    var subText = $('#articleSubTitle').text();
+    if (mainText.length > subText.length){
+        $('#articleMainTitle').addClass("smallerTitle");
+        $('#articleSubTitle').addClass("biggerTitle");
+    }
+    else{
+        $('#articleMainTitle').addClass("biggerTitle");
+        $('#articleSubTitle').addClass("smallerTitle");
+    }
+
 
 /*
 (($('#outline').height()+$('#abstractRest').height()+$('#abstractTitle').height()) < 918){

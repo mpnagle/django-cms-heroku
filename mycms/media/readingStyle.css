@@ -253,15 +253,19 @@ padding-left:22px;
     float: right;
 	background-color: #EDEEE1;
         width: 750px;
-	text-align: left;
-	font-size: 30pt;
-	font-family: helvetica;
+	font-family: 'Karla';
         position: relative;
         padding-top: 20px;
         padding-bottom: 10px;
         width: 65.1%;
+        line-height: 1.8em;
 }
 
+#articleMainTitle{
+    display: inline;
+    font-weight: 600;
+    text-align: left;
+}
 
 #articleSubtitle{
     position: relative;
@@ -269,9 +273,16 @@ padding-left:22px;
     font-weight: normal;
     display: inline;
     text-align: left;
-    font-size: 22pt;
 }
 
+
+.biggerTitle{
+    font-size: 28pt;
+}
+
+.smallerTitle{
+    font-size: 20pt;
+}
 .author-heading{
     font-size: 14pt;
 }
@@ -300,6 +311,7 @@ padding-left:22px;
     /*overflow-x: hidden;*/
     width: 840px;
     padding-left: 30px;
+    padding-top: 30px;
 }
 
 .artPar{
