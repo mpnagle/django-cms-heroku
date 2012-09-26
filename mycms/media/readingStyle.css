@@ -254,9 +254,10 @@ padding-left:22px;
 	background-color: #EDEEE1;
         width: 750px;
         position: relative;
-        padding-top: 20px;
+        padding-top: 35px;
         padding-bottom: 10px;
         width: 65.1%;
+        line-height: 0;
 
 }
 
@@ -277,7 +278,7 @@ padding-left:22px;
 .biggerTitle{
     font-family: 'Karla';
     font-size: 25pt;
-    font-weight: 575;
+    font-weight: 600;
 }
 
 .smallerTitle{
