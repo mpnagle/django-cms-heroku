@@ -54,7 +54,7 @@ $(document).ready(function() {
     //set sizes of article main title and subtitle
     var mainText = $('#articleMainTitle').text();
     var subText = $('#articleSubTitle').text();
-    if (mainText.length > subText.length){
+    if (mainText.length > subText.length && subText.length != 0){
         $('#articleMainTitle').addClass("smallerTitle");
         $('#articleSubTitle').addClass("biggerTitle");
     }

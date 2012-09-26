@@ -253,18 +253,16 @@ padding-left:22px;
     float: right;
 	background-color: #EDEEE1;
         width: 750px;
-	font-family: 'Karla';
         position: relative;
         padding-top: 20px;
         padding-bottom: 10px;
         width: 65.1%;
         line-height: 1em;
-        font-size: 25pt;
+
 }
 
 #articleMainTitle{
     display: inline;
-    font-weight: 600;
     text-align: left;
 }
 
@@ -274,17 +272,18 @@ padding-left:22px;
     font-weight: normal;
     display: inline;
     text-align: left;
-    font-family: helvetica;
-    font-size: 20pt;
 }
 
 
 .biggerTitle{
-
+    font-family: 'Karla';
+    font-size: 25pt;
+    font-weight: 500;
 }
 
 .smallerTitle{
-
+    font-family: helvetica;
+    font-size: 20pt;
 }
 .author-heading{
     font-size: 14pt;
