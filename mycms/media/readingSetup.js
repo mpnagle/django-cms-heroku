@@ -64,11 +64,13 @@ $(document).ready(function() {
     }
     
     //set country image name
-    var countryName = ($('#countryName').text()).trim(); //eliminate white space just in case
-    var source = "/media/countryImages/" + countryName + ".png";
-    console.log('source is ' + source);
-    $('#mapImg').append($('<img />', {'src': source}));
-    console.log($('#mapImg'));
+    var countryName = ($('#countryName').text()).trim(); //eliminate    //white space just in case
+    if (countryName.length > 1){
+        var source = "/media/countryImages/" + countryName + ".png";
+        console.log('source is ' + source);
+        $('#mapImg').append($('<img />', {'src': source}));
+        console.log($('#mapImg'));
+    }
 
 
 /*
