@@ -269,7 +269,6 @@ padding-left:22px;
 #articleSubtitle{
     position: relative;
   /*  float: left;*/
-    font-weight: normal;
     display: inline;
     text-align: left;
 }
