@@ -23,6 +23,9 @@ $(document).ready(function() {
 
     var wholeLeftHeight = $('#amplifyHeading').outerHeight() + $('#abstractTitle').outerHeight() + $('#entireAbstractBlurb').outerHeight()+$('#mapImg').outerHeight()+$('#preOutline').outerHeight()+$('#outline').outerHeight();
     
+    console.log('wholeLeftHeight is' + wholeLeftHeight);
+
+    
 
     // set white border height
     if (wholeLeftHeight < 900){
@@ -35,6 +38,21 @@ $(document).ready(function() {
 
     //set height of whole right col
     $('#wholeRightCol').height($('#whiteBorder').height()-$('#amplifyHeading').outerHeight()-$('#articleTitle').outerHeight()-bottomBorder);
+
+    
+
+    //collapse outline & display expand all link
+    $('.outlineRest').each(function(index){
+        $(this).css('display', 'none');
+    });
+    var collapseLink = $('#preOutline').children()[0];
+    $(collapseLink).css('display', 'none');
+    var expandLink = $('#preOutline').children()[1];
+    $(expandLink).css('display', 'block');
+
+    
+    
+
 /*
 (($('#outline').height()+$('#abstractRest').height()+$('#abstractTitle').height()) < 918){
         $('#whiteBorder').height(minWBHeight +bottomBorder+18+$('#amplifyHeading').outerHeight() + $('#mapImg').outerHeight() );

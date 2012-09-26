@@ -128,6 +128,7 @@ $(document).ready(function(){   //
 
     $('.collapse').click(
         function(){
+            //if clicked collapse/expand link
             if($(this).parent().attr('id')=="preOutline"){
                 $('.outlineRest').each(function(index){
                     $(this).css('display', 'none');
