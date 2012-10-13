@@ -203,6 +203,8 @@ padding-left:22px;
 	background-color: #F5F9E7;
 
 
+
+
     
 	
 }
@@ -221,7 +223,7 @@ padding-left:22px;
 .outlineTitle{
 	padding-bottom: 5px;
 	font-weight: bold;
-	border-bottom: 1px solid grey;
+/*	border-bottom: 1px solid grey;*/
         margin-bottom: 5px;
         font-family: 'Bitter';
         color: #3d3d3d;
@@ -249,15 +251,18 @@ padding-left:22px;
 	float:left;
 }
 
+
+
 #articleTitle{
     float: right;
-	background-color: #EDEEE1;
+	background-color: white;
         width: 750px;
         position: relative;
         padding-top: 10px;
         padding-bottom: 10px;
         width: 65.1%;
         line-height: 2.4em;
+        padding-left: 28px;
 
 }
 
@@ -275,13 +280,14 @@ padding-left:22px;
 
 
 .biggerTitle{
-    font-family: 'Karla';
+    font-family: 'Times New Roman', serif;
     font-size: 25pt;
-    font-weight: 600;
+    font-weight: 800;
 }
 
 .smallerTitle{
-    font-family: helvetica;
+    font-family: 'Times New Roman', serif;
+
     font-size: 20pt;
 }
 .author-heading{
@@ -308,16 +314,21 @@ padding-left:22px;
 #wholeRightCol{
     background-color: white;
     float: right;
-    overflow-y: scroll;
     /*overflow-x: hidden;*/
     width: 840px;
     padding-left: 30px;
     padding-top: 30px;
 }
 
+/*
 .artPar{
+    padding-left: 10px;
 }
 
+#article p{
+    padding-left: 10px;
+}
+*/
 
 .footNumber{
     color: #009DAE;

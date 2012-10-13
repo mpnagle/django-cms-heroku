@@ -9,7 +9,9 @@
 <link ref="stylesheet" type="text/css" href="{{ MEDIA_URL }}readingStyle.css" />
 <link href='http://fonts.googleapis.com/css?family=Bitter'
       rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Karla' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Karla'
+      rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Average' rel='stylesheet' type='text/css'>
 
 {% addtoblock "js" %}
  <!--<script type="text/javascript" src="{{ MEDIA_URL }}jquery-ui/js/jquery.js"></script>  -->
@@ -43,7 +45,7 @@
   <div id="innovationsWholeDiv"> </div>
 </div>
 
-
+<div id="articleTitleTopBorder" style="height: 30px; width: 100%"> </div>
   <div id = "articleTitle">
     <div id = "articleMainTitle">
       {% placeholder article_title %}
@@ -57,14 +59,10 @@
     <!--article column -->
     <div id = "article">
       {% placeholder article_main %}
-      <div id="artWhiteSpace">
-        </div>
     </div> <!-- closes article -->
     <!--reference column -->
     <div id="reference">
       {% placeholder reference %}
-      <div id="refWhiteSpace">
-      </div>
     </div> <!-- closes reference -->
 
 </div> <!-- closes wholeRightCol -->
@@ -78,27 +76,28 @@
 
 
   <!--abstract-->
-  <div id="abstractTitle">in brief  </div>
-  <div id="entireAbstractBlurb">
-    <div class="collapse"> <img src="{{ MEDIA_URL }}/triangleUp_inactive.png"></div>
-    <div class="expand"> <img src="{{ MEDIA_URL }}/triangleDown_inactive.png"></div>
-    <div id="abstractRest">
+  <div id="wholeLeftCol" style=display:inline>
+    <div id="abstractTitle">in brief  </div>
+    <div id="entireAbstractBlurb">
+      <div class="collapse"> <img src="{{ MEDIA_URL }}/triangleUp_inactive.png"></div>
+      <div class="expand"> <img src="{{ MEDIA_URL }}/triangleDown_inactive.png"></div>
+      <div id="abstractRest">
 
-      {% placeholder abstract %}
+        {% placeholder abstract %}
 
+      </div>
     </div>
-    </div>
-  <span id="countryName" style=display:none> {% placeholder current_country_match_img_name %}</span>
-  <div id="mapImg"></div>
+    <span id="countryName" style=display:none> {% placeholder current_country_match_img_name %}</span>
+    <div id="mapImg"></div>
 
-  <div id="preOutline">
-    <div class="collapse"> collapse all <img src="{{ MEDIA_URL }}/triangleUp_inactive.png"></div>
-    <div class="expand"> expand all <img src="{{ MEDIA_URL }}/triangleDown_inactive.png"></div>
-  </div>
+    <div id="preOutline">
+      <div class="collapse"> collapse all <img src="{{ MEDIA_URL }}/triangleUp_inactive.png"></div>
+      <div class="expand"> expand all <img src="{{ MEDIA_URL }}/triangleDown_inactive.png"></div>
+    </div>
     <div id="outline">
       {% placeholder outline %}
     </div>
-
+  </div> <!-- closes wholeLeftCol -->
 
 
 

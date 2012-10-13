@@ -17,44 +17,50 @@ $(document).ready(function() {
 
 
     //set height of white border
-    var minWBHeight=900;
+    var minWBHeight = 900;
     var bottomBorder = 30;
 
-
+/*
     var wholeLeftHeight = $('#amplifyHeading').outerHeight() + $('#abstractTitle').outerHeight() + $('#entireAbstractBlurb').outerHeight()+$('#mapImg').outerHeight()+$('#preOutline').outerHeight()+$('#outline').outerHeight();
-    
+  */  
 
-    
+    var wholeRightHeight = $('#amplifyHeading').outerHeight() + $('#articleTitleTopBorder').height() + $('#articleTitle').outerHeight() + $('#article').outerHeight() + bottomBorder;
+
+    console.log('articleTitleHeight' + $('#articleTitle').outerHeight());
+    console.log('article height' + $('#article').outerHeight());
+    console.log('wholerightheight' + wholeRightHeight);
+    console.log('wholeRightCol height is ' + $('#wholeRightCol').height());
 
     // set white border height
-    if (wholeLeftHeight < 900){
-        
+//    if (wholeLeftHeight < 900){
+    if (wholeRightHeight < minWBHeight){
+    
         $('#whiteBorder').height(minWBHeight + bottomBorder);
     }
     else{
-        $('#whiteBorder').height(wholeLeftHeight+bottomBorder);
+//        $('#whiteBorder').height(wholeLeftHeight+bottomBorder);
+        console.log('seeting wb height to wholeRightHeight');
+        $('#whiteBorder').height(wholeRightHeight+bottomBorder);
+        console.log('wb height is now' + $('#whiteBorder').height());
     }
 
-    //set height of whole right col
-    $('#wholeRightCol').height($('#whiteBorder').height()-$('#amplifyHeading').outerHeight()-$('#articleTitle').outerHeight()-bottomBorder);
+    //set height of whole right col to whole article height
+//    $('#wholeRightCol').height($('#whiteBorder').height()-$('#amplifyHeading').outerHeight()-$('#articleTitle').outerHeight()-bottomBorder);
 
-    
+//    $('#wholeRightCol').height(wholeRightHeight);
+    //set left col to article height. 
+    $('#wholeLeftCol').height($(wholeRightHeight));
 
-    //collapse outline & display expand all link
-    $('.outlineRest').each(function(index){
-        $(this).css('display', 'none');
-    });
-    var collapseLink = $('#preOutline').children()[0];
-    $(collapseLink).css('display', 'none');
-    var expandLink = $('#preOutline').children()[1];
-    $(expandLink).css('display', 'block');
 
-    
+
+   
+
+ 
     //set sizes of article main title and subtitle
     var mainText = $('#articleMainTitle').text();
     var subText = $('#articleSubTitle').text();
                 
-    if (mainText.length > subText.length && $('#articleSubTitle').length > 1){
+    if (mainText.length > subText.length && $('#articleSubTitle').length > 0){
         $('#articleMainTitle').addClass("smallerTitle");
         $('#articleSubTitle').addClass("biggerTitle");
     }
@@ -67,25 +73,9 @@ $(document).ready(function() {
     var countryName = ($('#countryName').text()).trim(); //eliminate    //white space just in case
     if (countryName.length > 1){
         var source = "/media/countryImages/" + countryName + ".png";
-        console.log('source is ' + source);
         $('#mapImg').append($('<img />', {'src': source}));
-        console.log($('#mapImg'));
     }
 
-
-/*
-(($('#outline').height()+$('#abstractRest').height()+$('#abstractTitle').height()) < 918){
-        $('#whiteBorder').height(minWBHeight +bottomBorder+18+$('#amplifyHeading').outerHeight() + $('#mapImg').outerHeight() );
-    }
-    else{
-        $('#whiteBorder').height(($('#outline').outerHeight()+$('#abstractRest').outerHeight()+$('#abstractTitle').outerHeight() + 18 +$('#amplifyHeading').outerHeight() + $('#mapImg').outerHeight()));
-    }
-    //set height of whole right col
-    $('#wholeRightCol').height($('#whiteBorder').height()+18-$('#articleTitle').outerHeight()-bottomBorder - $('#amplifyHeading').outerHeight());
-    */
-
-    //position outline  (at setup abstract is expanded)
-//    positionOutline(true);
 
 
 
@@ -115,6 +105,39 @@ $(document).ready(function() {
 
 
     });
+
+
+/*
+    //set outline boxes to where they appear in the article. 
+    $('.outlineBox').each(function(i){
+        //get matching art
+        var artChunk = $('#art_' + (i+1));
+
+        if (artChunk.length==0){
+            return false;
+        }
+
+
+
+            $(this).offset({ top: artChunk.offset().top, left: $(this).offset().left});
+        console.log('top of art id is ' + artChunk.offset().top);
+        console.log('new top of outline box is ' + $(this).offset().top);
+
+
+
+        
+    });
+*/
+
+    //collapse outline & display expand all link
+    $('.outlineRest').each(function(index){
+        $(this).css('display', 'none');
+    });
+    var collapseLink = $('#preOutline').children()[0];
+    $(collapseLink).css('display', 'none');
+    var expandLink = $('#preOutline').children()[1];
+    $(expandLink).css('display', 'block');
+
 
 
 });                             // ends document.isready 
