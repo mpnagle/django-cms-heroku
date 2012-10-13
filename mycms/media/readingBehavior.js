@@ -39,6 +39,7 @@ $(document).ready(function(){   //
         artChunk.css('padding-left', '10px');
         artChunk.css('border-left', "solid 5px #00CCCC");
         $('#article').css('color', 'grey');
+        $('#reference').css('color', 'grey');
         artChunk.css('color', 'black');
 	
         //update outline: highlight + border bullshit
@@ -58,6 +59,7 @@ $(document).ready(function(){   //
         artChunk.css('padding-left', '0px');
         artChunk.css('border-left', "none");
         $('#article').css('color', 'black');
+        $('#reference').css('color', 'black');
         artChunk.css('color', 'grey');
 	
         //update outline: highlight + border bullshit

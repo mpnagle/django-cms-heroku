@@ -77,6 +77,24 @@ $(document).ready(function() {
     }
 
 
+    //setup collapse/expand triangles left of outline boxes
+    $('.outlineBox').each(function(i){
+        $($(this).children()[0]).prepend($('<img />', {
+            'src': "/media/triangleTeal_Closed.png",
+            'class': 'outBoxTriangle',
+        }));
+    });
+
+
+    //collapse outline & display expand all link
+    $('.outlineRest').each(function(index){
+        $(this).css('display', 'none');
+    });
+    var collapseLink = $('#preOutline').children()[0];
+    $(collapseLink).css('display', 'none');
+    var expandLink = $('#preOutline').children()[1];
+    $(expandLink).css('display', 'block');
+
 
 
     // align footnotes in ref col w/ article.
@@ -128,15 +146,6 @@ $(document).ready(function() {
         
     });
 */
-
-    //collapse outline & display expand all link
-    $('.outlineRest').each(function(index){
-        $(this).css('display', 'none');
-    });
-    var collapseLink = $('#preOutline').children()[0];
-    $(collapseLink).css('display', 'none');
-    var expandLink = $('#preOutline').children()[1];
-    $(expandLink).css('display', 'block');
 
 
 

@@ -139,37 +139,38 @@ padding-left:22px;
     
 }
 
+#entireAbstractBlurb{
+    width: 350px;
+    background-color: #F5F9E7;
+    padding-top: 10px;
+}
+
 #abstractRest{
-    width: 320px; /*350*/
-    position: relative;
 	font-size: 10pt;
 	font-family: helvetica;
-	position: relative;
-	padding-left: 15px;
-	padding-right: 15px;
-        padding-bottom: 10px;
-        padding-top: 10px;
-        line-height: 1.2em;
-	background-color: #F5F9E7;
-
+        line-height: 1.6em;
+        padding: 0 15px 10px 20px;
+        width: 87%;
 }
 
 
 
 .collapse{
-    display: block;
+    display: inline;
+    float: left;
     font-family: helvetica;
     font-size: 11pt;
     color: #009DAE;
     text-align: right;
-    background-color: #F5F9E7;
-    width: 340px;
-    padding-right: 10px;
-    padding-top: 5px;
+    background-color: blue;
+
+ /*   padding-right: 10px;
+    padding-top: 5px;*/
 }
 
 .expand{
     display: none;
+    float: left;
     font-family: helvetica;
     font-size: 11pt;
     color: #009DAE;
@@ -197,16 +198,9 @@ padding-left:22px;
 /* height set in readingSetup based on abstractTitle */
 #outline{
     width: 350px;
-    position: absolute;
     padding-bottom: 10px;
     border-left: 1px solid grey;
 	background-color: #F5F9E7;
-
-
-
-
-    
-	
 }
 
 
@@ -214,7 +208,6 @@ padding-left:22px;
     font-size: 10pt;
     font-family: helvetica;
     padding-top: 10px;
-    padding-left: 15px;
     padding-right: 10px;
     line-height: 1.2em;
 
@@ -233,6 +226,15 @@ padding-left:22px;
 	padding-bottom: 20px;
         margin-bottom: 5px;
 }
+
+.outBoxTriangle{
+    float: left;
+    display: inline;
+    padding-right: 3px;
+    padding-left: 3px;
+}
+
+
 
 
 #article{
@@ -263,6 +265,7 @@ padding-left:22px;
         width: 65.1%;
         line-height: 2.4em;
         padding-left: 28px;
+        padding-right: 31px;
 
 }
 
@@ -317,7 +320,9 @@ padding-left:22px;
     /*overflow-x: hidden;*/
     width: 840px;
     padding-left: 30px;
+    padding-right: 30px;
     padding-top: 30px;
+    
 }
 
 /*
