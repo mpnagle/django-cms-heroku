@@ -150,12 +150,16 @@ $(document).ready(function(){   //
     //collapse outlinboxes
     $('.triangleClosed').click(
         function(){
-            if ($(this).parent().attr('class')=="outlineTitle"){
+//            if ($(this).parent().attr('class')=="outlineTitle"){
                 //switch to triangleOpen
-                var triangleOpen = $($(this).parent()).children()[0];
+            console.log('parent');
+            console.log($(this).parent());
+            console.log('in triangleclosed');
+                var triangleOpen = $($(this).parent()).children()[1];
+            console.log($(triangleOpen));
                 $(triangleOpen).css("display", "inline");
                 $(this).css("display", "none");
-            }
+  //          }
 
         
         }
@@ -164,12 +168,16 @@ $(document).ready(function(){   //
     //collapse outlinboxes
     $('.triangleOpen').click(
         function(){
-            if ($(this).parent().attr('class')=="outlineTitle"){
+    //        if ($(this).parent().attr('class')=="outlineTitle"){
                 //switch to triangleClosed
-                var triangleClosed = $($(this).parent()).children()[1];
+            console.log('parent');
+            console.log($(this).parent());
+                var triangleClosed = $($(this).parent()).children()[0];
+            console.log('in triangleopen');
+            console.log($(triangleClosed));
                 $(triangleClosed).css("display", "inline");
                 $(this).css("display", "none");
-            }
+      //      }
 
         
         }

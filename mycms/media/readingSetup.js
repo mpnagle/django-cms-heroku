@@ -75,13 +75,13 @@ $(document).ready(function() {
     //setup collapse/expand triangles left of outline boxes
     $('.outlineBox').each(function(i){
         $($(this).children()[0]).prepend($('<img />', {
-            'src': "/media/triangleTeal_Closed.png",
-            'class': 'triangleClosed',
-        }));
-        $($(this).children()[0]).prepend($('<img />', {
             'src': "/media/triangleTeal_Open.png",
             'class': 'triangleOpen',
             'style': "display:none",
+        }));
+        $($(this).children()[0]).prepend($('<img />', {
+            'src': "/media/triangleTeal_Closed.png",
+            'class': 'triangleClosed',
         }));
 
     });
