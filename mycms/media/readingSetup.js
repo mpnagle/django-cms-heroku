@@ -104,7 +104,6 @@ $(document).ready(function() {
     $(expandLink).css('display', 'block');
 
 
-
     // align footnotes in ref col w/ article.
     $('.references').each(function(i){
         var refLeft = $(this).offset().left;

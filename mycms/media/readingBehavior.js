@@ -1,4 +1,7 @@
 $(document).ready(function(){   // 
+    var outlineMinTop = $('#outline').offset().top; //update if
+    //abstract collapsed
+
     var lastClicked = null; //outlineBox that was last clicked (currently on view)
 
     $('.outlineBox').hover(
@@ -74,7 +77,6 @@ $(document).ready(function(){   //
 
 	    //highlight and display pertaining section in article.
             if (lastClicked != null && $(lastClicked).attr('id') == $(outlineBox).attr('id')){
-                console.log('last clicked match');
 		return;
             }
 
@@ -106,6 +108,13 @@ $(document).ready(function(){   //
             $('body').animate({
                 scrollTop: art.position().top
             }, 3000);
+
+            //anchor outline exception
+            if ($('body').offset().top() <= outlineMinTop &&
+               $('#outline').offset().top > outlineMinTop){
+                $('#outline').offset({ top: outlineMinTop });
+            }
+
 	    
 	});
 
@@ -142,6 +151,10 @@ $(document).ready(function(){   //
             if ($(this).parent().attr("id")=="entireAbstractBlurb"){
                 //open the abstract
                 $('#abstractContent').css('display', 'inline');
+
+                //update outlineMinTop
+                outlineMinTop += $('#abstractRest').height();
+
             }
 
             if ($(this).parent().attr('id')=="triangles"){        
@@ -158,17 +171,17 @@ $(document).ready(function(){   //
         function(){
 
                 //switch to triangleClosed
-            console.log('parent');
-            console.log($(this).parent());
                 var triangleClosed = $($(this).parent()).children()[0];
-            console.log('in triangleopen');
-            console.log($(triangleClosed));
                 $(triangleClosed).css("display", "inline");
                 $(this).css("display", "none");
 
             if ($(this).parent().attr("id")=="entireAbstractBlurb"){
-                //open the abstract
+                //update outlineMinTop
+                outlineMinTop -= $('#abstractRest').height();
+
+                //close the abstract
                 $('#abstractContent').css('display', 'none');
+
             }
 
             if ($(this).parent().attr('id')=="triangles"){ 
@@ -232,8 +245,19 @@ $(document).ready(function(){   //
         }
     );
 
-    
+
+    //make outline persistant.
+    $(window).scroll(function() {
+        var offsetPreOutline = 20;
+        if ($('body').scrollTop() + offsetPreOutline  > $('#outline').offset().top){
+            $('#outline').offset({ top: $('body').scrollTop()-offsetPreOutline});
+        }
+        else{
+            if ($('#outline').offset().top != outlineMinTop){
+                $('#outline').offset({ top: outlineMinTop });
+            }
+        }
+    });
 
     
-
     });                         // ends document.ready
