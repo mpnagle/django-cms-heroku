@@ -140,14 +140,10 @@ $(document).ready(function(){   //
     $('.triangleClosed').click(
         function(){
 
-                //switch to triangleOpen
-            console.log('parent');
-            console.log($(this).parent());
-            console.log('in triangleclosed');
-                var triangleOpen = $($(this).parent()).children()[1];
-            console.log($(triangleOpen));
-                $(triangleOpen).css("display", "inline");
-                $(this).css("display", "none");
+            //switch to triangleOpen
+            var triangleOpen = $($(this).parent()).children()[1];
+            $(triangleOpen).css("display", "inline");
+            $(this).css("display", "none");
 
             if ($(this).parent().attr("id")=="entireAbstractBlurb"){
                 //open the abstract
@@ -199,63 +195,47 @@ $(document).ready(function(){   //
 
     $('.collapse').click(
         function(){
-            //if clicked collapse/expand link
-            if($(this).parent().attr('id')=="preOutline"){
-                $('.outlineRest').each(function(index){
+            //swap to expand all link
+            $(this).css("display", "none");
+            var expand = $($(this).parent()).children()[1];
+            $(expand).css("display", "block");
 
-                    //put empty whitespace div in its place
-/*
-                    var spaceHeight = $(this).outerHeight();
-                    var spaceFiller = $('<div style="background-color:red; height:' + spaceHeight + 'px; display:block"></div>');
-                    console.log('spaceFIller is ' + $(spaceFiller));
-                    console.log(spaceFiller);
-                    console.log('parent is' );
-                    console.log($(this).parent());
-  */                  
-                    $(this).css('display', 'none');
-                    var parent = $(this).parent();
-                    console.log('parent is ' + parent);
-                    console.log('first child is ' + parent.children()[0]);
-//                    spaceFiller.insertAfter((parent).children()[0]);
-                    parent.append(spaceFiller);
-                    console.log('all my children');
-                    console.log($($(this).parent()).children());
-                });
+            //collapse all rest of outline boxes
+            $('.outlineBox').each(function(i){
+                //get outRest
+                var outRest = $(this).children()[1];
+                $(outRest).css('display', 'none');
+
+                var triangleOpen = $($(this).children()[0]).children()[1];
+                $(triangleOpen).css("display", "none");
+                var triangleClosed = $($(this).children()[0]).children()[0];
+                $(triangleClosed).css("display", "inline");
+
+            });
 
 
-                //swap to expand all
-                $(this).css('display', 'none');
-                var expandThis = $('.expand')[1];
-                $(expandThis).css('display', 'block');
-            }
-            else if ($(this).parent().attr('id')=="entireAbstractBlurb"){
-                $('#abstractRest').css('display', 'none');
-                //swap to collapse
-                $(this).css('display', 'none');
-                var expandThis = $('.expand')[0];
-                $(expandThis).css('display', 'block');
-            }
         }
     );
 
     $('.expand').click(
         function(){
-            if($(this).parent().attr('id')=="preOutline"){
-                $('.outlineRest').each(function(index){
-                    $(this).css('display', 'block');
-                });
-                //swap to collapse all
-                $(this).css('display', 'none');
-                var collapseThis = $('.collapse')[1];
-                $(collapseThis).css('display', 'block');
-            }
-            else if ($(this).parent().attr('id')=="entireAbstractBlurb"){
-                $('#abstractRest').css('display', 'block');
-                //swap to collapse
-                $(this).css('display', 'none');
-                var collapseThis = $('.collapse')[0];
-                $(collapseThis).css('display', 'block');
-            }
+            //swap to collapse link
+            $(this).css("display", "none");
+            var collapse = $($(this).parent()).children()[0];
+            $(collapse).css("display", "block");
+
+            //expand all outline boxes + flip the triangles
+            $('.outlineBox').each(function(i){
+                //get outRest
+                var outRest = $(this).children()[1];
+                $(outRest).css('display', 'block');
+
+                var triangleOpen = $($(this).children()[0]).children()[1];
+                $(triangleOpen).css("display", "inline");
+                var triangleClosed = $($(this).children()[0]).children()[0];
+                $(triangleClosed).css("display", "none");
+                
+            });
 
         }
     );

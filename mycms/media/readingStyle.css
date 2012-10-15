@@ -162,14 +162,18 @@ padding-left:22px;
     font-size: 11pt;
     color: #009DAE;
     text-align: right;
-    background-color: blue;
+    background-color: #F5F9E7;
+    width: 340px;
+    padding-right: 10px;
+    padding-top: 5px;
 
- /*   padding-right: 10px;
-    padding-top: 5px;*/
+}
+
+.collapse:hover{
+    color:#99CC00;
 }
 
 .expand{
-    display: none;
     float: left;
     font-family: helvetica;
     font-size: 11pt;
@@ -180,6 +184,11 @@ padding-left:22px;
     padding-right: 10px;
     padding-top: 5px;
 }
+
+.expand:hover{
+    color:#99CC00;
+}
+
 
 .clear{
     /* display: none */
