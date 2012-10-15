@@ -68,12 +68,16 @@ $(document).ready(function(){   //
     }                           
     
     
-    $('.outlineBox').click(
+    $('.outlineTitle').click(
 	function() {
+            var outlineBox = $(this).parent();
+
 	    //highlight and display pertaining section in article.
-            if ($(lastClicked).attr('id') == $(this).attr('id')){
+            if (lastClicked != null && $(lastClicked).attr('id') == $(outlineBox).attr('id')){
+                console.log('last clicked match');
 		return;
             }
+
 	    if (lastClicked != null){
 		var idLast = $(lastClicked).attr('id');
 		var artIndexLast = 'art_' + idLast.substring(idLast.indexOf('_')+1, idLast.length);
@@ -81,11 +85,8 @@ $(document).ready(function(){   //
 	    }
             
 
-          console.log('top of outlineBox is ' + $(this).offset().top);
-            console.log('top of outlineTitle is ' + $($(this).children()[0]).offset().top);
-            
 	    //match with art_x id
-	    var id = $(this).attr('id');
+	    var id = $(outlineBox).attr('id');
 	    var artNum = id.substring(id.indexOf('_')+1, id.length); //number
 	    var artId = 'art_' + artNum;
 
@@ -112,7 +113,7 @@ $(document).ready(function(){   //
                     scrollTop: toScroll
                     }, 3000);
   }
-	    lastClicked = $(this);
+	    lastClicked = $(outlineBox);
 	    
 	});
 
