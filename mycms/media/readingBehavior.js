@@ -69,7 +69,6 @@ $(document).ready(function(){   //
     
     $('.outlineBox').click(
 	function() {
-	    //expand outline if it's not expanded already.
 	    //highlight and display pertaining section in article.
             if ($(lastClicked).attr('id') == $(this).attr('id')){
 		return;
@@ -80,16 +79,6 @@ $(document).ready(function(){   //
 		highlightNot(idLast, artIndexLast);
 	    }
             
-            console.log('top of outlineBox is ' + $(this).offset().top);
-            console.log('top of outlineTitle is ' + $($(this).children()[0]).offset().top);
-
-
-
-            //expand that shit
-            var outRest = $($(this).children()[1]); //title then rest
-            if (outRest.css('display')=='none'){
-                outRest.css('display', 'block');
-            }
 
           console.log('top of outlineBox is ' + $(this).offset().top);
             console.log('top of outlineTitle is ' + $($(this).children()[0]).offset().top);
@@ -150,7 +139,7 @@ $(document).ready(function(){   //
     //collapse outlinboxes
     $('.triangleClosed').click(
         function(){
-//            if ($(this).parent().attr('class')=="outlineTitle"){
+
                 //switch to triangleOpen
             console.log('parent');
             console.log($(this).parent());
@@ -159,19 +148,27 @@ $(document).ready(function(){   //
             console.log($(triangleOpen));
                 $(triangleOpen).css("display", "inline");
                 $(this).css("display", "none");
-  //          }
+
             if ($(this).parent().attr("id")=="entireAbstractBlurb"){
                 //open the abstract
                 $('#abstractContent').css('display', 'inline');
             }
-        
+
+            if ($(this).parent().attr('class')=="outlineTitle"){        
+                var outlineBox = $($(this).parent()).parent();
+                console.log('outlineBox');
+                console.log(outlineBox);
+                var outRest = $(outlineBox).children()[1]; 
+                $(outRest).css('display', 'block');
+            }
+
         }
     );
 
     //collapse outlinboxes
     $('.triangleOpen').click(
         function(){
-    //        if ($(this).parent().attr('class')=="outlineTitle"){
+
                 //switch to triangleClosed
             console.log('parent');
             console.log($(this).parent());
@@ -180,13 +177,20 @@ $(document).ready(function(){   //
             console.log($(triangleClosed));
                 $(triangleClosed).css("display", "inline");
                 $(this).css("display", "none");
-      //      }
+
             if ($(this).parent().attr("id")=="entireAbstractBlurb"){
                 //open the abstract
                 $('#abstractContent').css('display', 'none');
             }
 
-        
+            if ($(this).parent().attr('class')=="outlineTitle"){ 
+                var outlineBox = $($(this).parent()).parent();
+                console.log('outlineBox');
+                console.log(outlineBox);
+                var outRest = $(outlineBox).children()[1]; 
+                $(outRest).css('display', 'none');
+       
+            }
         }
     );
 
