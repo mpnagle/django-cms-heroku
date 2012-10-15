@@ -67,6 +67,7 @@ $(document).ready(function(){   //
 	outBox.css('background-color', 'F5F9E7');
     }                           
     
+    
     $('.outlineBox').click(
 	function() {
 	    //highlight and display pertaining section in article.
@@ -150,11 +151,9 @@ $(document).ready(function(){   //
                 $('#abstractContent').css('display', 'inline');
             }
 
-            if ($(this).parent().attr('class')=="outlineTitle"){        
+            if ($(this).parent().attr('id')=="triangles"){        
                 var outlineBox = $($(this).parent()).parent();
-                console.log('outlineBox');
-                console.log(outlineBox);
-                var outRest = $(outlineBox).children()[1]; 
+                var outRest = $(outlineBox).children()[2]; 
                 $(outRest).css('display', 'block');
             }
 
@@ -179,11 +178,9 @@ $(document).ready(function(){   //
                 $('#abstractContent').css('display', 'none');
             }
 
-            if ($(this).parent().attr('class')=="outlineTitle"){ 
+            if ($(this).parent().attr('id')=="triangles"){ 
                 var outlineBox = $($(this).parent()).parent();
-                console.log('outlineBox');
-                console.log(outlineBox);
-                var outRest = $(outlineBox).children()[1]; 
+                var outRest = $(outlineBox).children()[2]; 
                 $(outRest).css('display', 'none');
        
             }
@@ -203,12 +200,13 @@ $(document).ready(function(){   //
             //collapse all rest of outline boxes
             $('.outlineBox').each(function(i){
                 //get outRest
-                var outRest = $(this).children()[1];
+                var outRest = $(this).children()[2];
                 $(outRest).css('display', 'none');
 
-                var triangleOpen = $($(this).children()[0]).children()[1];
+                var triangles = $(this).children()[0];
+                var triangleOpen = $(triangles).children()[1];
                 $(triangleOpen).css("display", "none");
-                var triangleClosed = $($(this).children()[0]).children()[0];
+                var triangleClosed = $(triangles).children()[0];
                 $(triangleClosed).css("display", "inline");
 
             });
@@ -227,12 +225,13 @@ $(document).ready(function(){   //
             //expand all outline boxes + flip the triangles
             $('.outlineBox').each(function(i){
                 //get outRest
-                var outRest = $(this).children()[1];
+                var outRest = $(this).children()[2];
                 $(outRest).css('display', 'block');
 
-                var triangleOpen = $($(this).children()[0]).children()[1];
+                var triangles = $(this).children()[0];
+                var triangleOpen = $(triangles).children()[1];
                 $(triangleOpen).css("display", "inline");
-                var triangleClosed = $($(this).children()[0]).children()[0];
+                var triangleClosed = $(triangles).children()[0];
                 $(triangleClosed).css("display", "none");
                 
             });
