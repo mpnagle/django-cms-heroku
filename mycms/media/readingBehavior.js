@@ -110,7 +110,7 @@ $(document).ready(function(){   //
             }, 3000);
 
             //anchor outline exception
-            if ($('body').offset().top() <= outlineMinTop &&
+            if ($('body').scrollTop() <= outlineMinTop &&
                $('#outline').offset().top > outlineMinTop){
                 $('#outline').offset({ top: outlineMinTop });
             }
