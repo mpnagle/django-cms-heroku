@@ -78,12 +78,13 @@ $(document).ready(function(){   //
 		return;
             }
 
-	    if (lastClicked != null){
+	    else if (lastClicked != null){
 		var idLast = $(lastClicked).attr('id');
 		var artIndexLast = 'art_' + idLast.substring(idLast.indexOf('_')+1, idLast.length);
 		highlightNot(idLast, artIndexLast);
 	    }
             
+            lastClicked = outlineBox;
 
 	    //match with art_x id
 	    var id = $(outlineBox).attr('id');
@@ -102,18 +103,9 @@ $(document).ready(function(){   //
                 return false;
             }
 
-                
-
-            
-            if ((art.position().top + art.height() < $('#wholeRightCol').scrollTop() ) ||
-                ((art.position().top > ($('#wholeRightCol').scrollTop()+$('#wholeRightCol').height())))){
-                var toScroll = $('#' + artId).position().top;
-
-                $(window).animate({
-                    scrollTop: toScroll
-                    }, 3000);
-  }
-	    lastClicked = $(outlineBox);
+            $('body').animate({
+                scrollTop: art.position().top
+            }, 3000);
 	    
 	});
 

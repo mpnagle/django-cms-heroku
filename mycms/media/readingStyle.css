@@ -190,24 +190,15 @@ padding-left:22px;
 }
 
 
-.clear{
-    /* display: none */
-    overflow:hidden;
-    display: none;
+
+#preOutline{
+    height:20px;
 }
 
-
-#wholeLeftCol{
-/*background-color: #D5D6C2;*/
-/*position: fixed;*/
-/*overflow: scroll;*/
-}
-
-
-/* height set in readingSetup based on abstractTitle */
 #outline{
     width: 350px;
     padding-bottom: 10px;
+    padding-top: 10px;
     border-left: 1px solid grey;
 	background-color: #F5F9E7;
 }
@@ -225,7 +216,6 @@ padding-left:22px;
 .outlineTitle{
 	padding-bottom: 5px;
 	font-weight: bold;
-/*	border-bottom: 1px solid grey;*/
         margin-bottom: 5px;
         font-family: 'Bitter';
         color: #3d3d3d;
@@ -233,6 +223,7 @@ padding-left:22px;
 
 .outlineTitle:hover{
     text-decoration:underline;
+
 }
 
 .outlineRest{
