@@ -18,7 +18,7 @@ $(document).ready(function() {
 
     //set height of white border
     var minWBHeight = 900;
-    var bottomBorder = 30;
+    var bottomBorder = 80;
 
 /*
     var wholeLeftHeight = $('#amplifyHeading').outerHeight() + $('#abstractTitle').outerHeight() + $('#entireAbstractBlurb').outerHeight()+$('#mapImg').outerHeight()+$('#preOutline').outerHeight()+$('#outline').outerHeight();
@@ -26,10 +26,7 @@ $(document).ready(function() {
 
     var wholeRightHeight = $('#amplifyHeading').outerHeight() + $('#articleTitleTopBorder').height() + $('#articleTitle').outerHeight() + $('#article').outerHeight() + bottomBorder;
 
-    console.log('articleTitleHeight' + $('#articleTitle').outerHeight());
-    console.log('article height' + $('#article').outerHeight());
-    console.log('wholerightheight' + wholeRightHeight);
-    console.log('wholeRightCol height is ' + $('#wholeRightCol').height());
+
 
     // set white border height
 //    if (wholeLeftHeight < 900){
@@ -39,9 +36,7 @@ $(document).ready(function() {
     }
     else{
 //        $('#whiteBorder').height(wholeLeftHeight+bottomBorder);
-        console.log('seeting wb height to wholeRightHeight');
         $('#whiteBorder').height(wholeRightHeight+bottomBorder);
-        console.log('wb height is now' + $('#whiteBorder').height());
     }
 
     //set height of whole right col to whole article height
@@ -81,8 +76,14 @@ $(document).ready(function() {
     $('.outlineBox').each(function(i){
         $($(this).children()[0]).prepend($('<img />', {
             'src': "/media/triangleTeal_Closed.png",
-            'class': 'outBoxTriangle',
+            'class': 'triangleClosed',
         }));
+        $($(this).children()[0]).prepend($('<img />', {
+            'src': "/media/triangleTeal_Open.png",
+            'class': 'triangleOpen',
+            'style': "display:none",
+        }));
+
     });
 
 

@@ -227,7 +227,15 @@ padding-left:22px;
         margin-bottom: 5px;
 }
 
-.outBoxTriangle{
+.triangleOpen{
+    float: left;
+    display: inline;
+    padding-right: 3px;
+    padding-left: 3px;
+
+}
+
+.triangleClosed{
     float: left;
     display: inline;
     padding-right: 3px;
@@ -244,7 +252,7 @@ padding-left:22px;
     background-color: white;
 	width: 500px;
 	position: relative;
-/* 	padding-bottom: 20px;  */
+ 	padding-bottom: 45px;
   /*      padding-top: 20px;*/
 /*	padding-left: 35px;*/
 	padding-right: 50px;

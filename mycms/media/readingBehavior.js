@@ -127,39 +127,56 @@ $(document).ready(function(){   //
 	});
 
 
-    //collapse and expand hoverrrrr
-    $('.collapse').hover(
-        function() {
-            $(this).css('color', '#99CC00');
-            var triangleSrc = "/media/triangleUp_active.png";
-            var currTriangle = $(this).children()[0];
-            $(currTriangle).attr("src", triangleSrc);
-        },
+    //green triangle highlighting
+    $('.triangleOpen').hover(
         function(){
-            $(this).css('color', '#009DAE');
-            var triangleSrc = "/media/triangleUp_inactive.png";
-            var currTriangle = $(this).children()[0];
-            $(currTriangle).attr("src", triangleSrc);
-        }
-
-
-    );
-    $('.expand').hover(
-        function() {
-            $(this).css('color', '#99CC00');
-            var triangleSrc = "/media/triangleDown_active.png";
-            var currTriangle = $(this).children()[0];
-            $(currTriangle).attr("src", triangleSrc);
-
+            $(this).attr("src", "/media/triangleGreen_Open.png");
         },
-        function(){
-            $(this).css('color', '#009DAE');
-            var triangleSrc = "/media/triangleDown_inactive.png";
-            var currTriangle = $(this).children()[0];
-            $(currTriangle).attr("src", triangleSrc);
+        function() {
+            $(this).attr("src", "/media/triangleTeal_Open.png");
         }
-
     );
+
+    $('.triangleClosed').hover(
+        function(){
+            $(this).attr("src", "/media/triangleGreen_Closed.png");
+        },
+        function() {
+            $(this).attr("src", "/media/triangleTeal_Closed.png");
+        }
+    );
+
+    
+    //collapse outlinboxes
+    $('.triangleClosed').click(
+        function(){
+            if ($(this).parent().attr('class')=="outlineTitle"){
+                //switch to triangleOpen
+                var triangleOpen = $($(this).parent()).children()[0];
+                $(triangleOpen).css("display", "inline");
+                $(this).css("display", "none");
+            }
+
+        
+        }
+    );
+
+    //collapse outlinboxes
+    $('.triangleOpen').click(
+        function(){
+            if ($(this).parent().attr('class')=="outlineTitle"){
+                //switch to triangleClosed
+                var triangleClosed = $($(this).parent()).children()[1];
+                $(triangleClosed).css("display", "inline");
+                $(this).css("display", "none");
+            }
+
+        
+        }
+    );
+
+
+
 
     $('.collapse').click(
         function(){
