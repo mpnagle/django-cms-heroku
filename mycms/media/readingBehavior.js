@@ -160,7 +160,10 @@ $(document).ready(function(){   //
                 $(triangleOpen).css("display", "inline");
                 $(this).css("display", "none");
   //          }
-
+            if ($(this).parent().attr("id")=="entireAbstractBlurb"){
+                //open the abstract
+                $('#abstractContent').css('display', 'inline');
+            }
         
         }
     );
@@ -178,6 +181,10 @@ $(document).ready(function(){   //
                 $(triangleClosed).css("display", "inline");
                 $(this).css("display", "none");
       //      }
+            if ($(this).parent().attr("id")=="entireAbstractBlurb"){
+                //open the abstract
+                $('#abstractContent').css('display', 'none');
+            }
 
         
         }
