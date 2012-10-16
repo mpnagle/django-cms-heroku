@@ -107,7 +107,7 @@ $(document).ready(function(){   //
 
             $('body').animate({
                 scrollTop: art.position().top
-            }, 3000);
+            }, 10000);
 
             //anchor outline exception
             if ($('body').scrollTop() <= outlineMinTop &&
