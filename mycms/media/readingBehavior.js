@@ -110,11 +110,12 @@ $(document).ready(function(){   //
             }, 300);
 
             //anchor outline exception
+/*
             if ($('body').scrollTop() <= outlineMinTop &&
                $('#outline').offset().top > outlineMinTop){
                 $('#outline').offset({ top: outlineMinTop });
             }
-
+*/
 	    
 	});
 
@@ -177,7 +178,7 @@ $(document).ready(function(){   //
 
             if ($(this).parent().attr("id")=="entireAbstractBlurb"){
                 //update outlineMinTop
-                outlineMinTop -= $('#abstractRest').height();
+//                outlineMinTop -= $('#abstractRest').height();
 
                 //close the abstract
                 $('#abstractContent').css('display', 'none');
@@ -247,6 +248,7 @@ $(document).ready(function(){   //
 
 
     //make outline persistant.
+/*
     $(window).scroll(function() {
         var offsetPreOutline = 20;
         if ($('body').scrollTop() + offsetPreOutline  > $('#outline').offset().top){
@@ -258,6 +260,6 @@ $(document).ready(function(){   //
             }
         }
     });
-
+*/
     
     });                         // ends document.ready
