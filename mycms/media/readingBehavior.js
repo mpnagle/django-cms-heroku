@@ -1,6 +1,5 @@
 $(document).ready(function(){   // 
-    var outlineMinTop = $('#outline').offset().top; //update if
-    //abstract collapsed
+    var outlineMinTop = $('#outline').offset().top; //update if abstract collapsed
 
     var lastClicked = null; //outlineBox that was last clicked (currently on view)
 
@@ -109,7 +108,7 @@ $(document).ready(function(){   //
                 scrollTop: art.position().top
             }, 300);
 
-            //anchor outline exception
+            //anchor the outline if article scrolls past it.
 /*
             if ($('body').scrollTop() <= outlineMinTop &&
                $('#outline').offset().top > outlineMinTop){
