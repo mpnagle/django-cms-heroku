@@ -1,5 +1,4 @@
 $(document).ready(function(){   // 
-    var outlineMinTop = $('#outline').offset().top; //update if abstract collapsed
 
     var lastClicked = null; //outlineBox that was last clicked (currently on view)
 
@@ -104,19 +103,43 @@ $(document).ready(function(){   //
                 return false;
             }
 
+
             $('body').animate({
                 scrollTop: art.position().top
             }, 300);
 
             //anchor the outline if article scrolls past it.
-/*
-            if ($('body').scrollTop() <= outlineMinTop &&
-               $('#outline').offset().top > outlineMinTop){
-                $('#outline').offset({ top: outlineMinTop });
-            }
-*/
 	    
 	});
+
+    var anchorMinTop = $('#anchorForOutline').offset().top; //update if abstract collapsed
+    console.log('anchorMinTop is ' + anchorMinTop);
+    //anchor outline chunk when we scroll
+    $(window).scroll(function(){
+        //outline not anchored yet
+
+        if ($('#anchorForOutline').css('position')=='relative'){
+            if ($(window).scrollTop() > anchorMinTop){
+                $('#anchorForOutline').css({
+                position: 'fixed',
+                top: '0px'
+            });
+
+            }
+        }
+
+        //outline anchored
+        else if($('#anchorForOutline').css('position')=='fixed'){
+            if ($(window).scrollTop() < (anchorMinTop)){
+                $('#anchorForOutline').css({
+                    position: 'relative',
+                });
+                $('#anchorForOutline').offset({top:anchorMinTop});
+            }
+        }     
+
+    })
+
 
 
     //green triangle highlighting
@@ -139,6 +162,41 @@ $(document).ready(function(){   //
     );
 
     
+
+    //collapse outlinboxes
+    $('.triangleOpen').click(
+        function(){
+
+                //switch to triangleClosed
+                var triangleClosed = $($(this).parent()).children()[0];
+                $(triangleClosed).css("display", "inline");
+                $(this).css("display", "none");
+
+            if ($(this).parent().attr("id")=="entireAbstractBlurb"){
+                console.log($('#anchorForOutline').offset().top);
+                console.log('height of abstractRest');
+                console.log($('#abstractRest').height());
+
+                //close the abstract
+                $('#abstractContent').css('display', 'none');
+
+
+                //update anchorMinTop
+                console.log($('#anchorForOutline').offset().top);
+//                outlineMinTop -= $('#abstractRest').height();
+
+
+            }
+
+            if ($(this).parent().attr('id')=="triangles"){ 
+                var outlineBox = $($(this).parent()).parent();
+                var outRest = $(outlineBox).children()[2]; 
+                $(outRest).css('display', 'none');
+       
+            }
+        }
+    );
+
     //collapse outlinboxes
     $('.triangleClosed').click(
         function(){
@@ -152,8 +210,8 @@ $(document).ready(function(){   //
                 //open the abstract
                 $('#abstractContent').css('display', 'inline');
 
-                //update outlineMinTop
-                outlineMinTop += $('#abstractRest').height();
+                //update anchorMinTop
+                anchorMinTop += $('#abstractRest').height();
 
             }
 
@@ -165,34 +223,6 @@ $(document).ready(function(){   //
 
         }
     );
-
-    //collapse outlinboxes
-    $('.triangleOpen').click(
-        function(){
-
-                //switch to triangleClosed
-                var triangleClosed = $($(this).parent()).children()[0];
-                $(triangleClosed).css("display", "inline");
-                $(this).css("display", "none");
-
-            if ($(this).parent().attr("id")=="entireAbstractBlurb"){
-                //update outlineMinTop
-//                outlineMinTop -= $('#abstractRest').height();
-
-                //close the abstract
-                $('#abstractContent').css('display', 'none');
-
-            }
-
-            if ($(this).parent().attr('id')=="triangles"){ 
-                var outlineBox = $($(this).parent()).parent();
-                var outRest = $(outlineBox).children()[2]; 
-                $(outRest).css('display', 'none');
-       
-            }
-        }
-    );
-
 
 
 
@@ -246,19 +276,5 @@ $(document).ready(function(){   //
     );
 
 
-    //make outline persistant.
-/*
-    $(window).scroll(function() {
-        var offsetPreOutline = 20;
-        if ($('body').scrollTop() + offsetPreOutline  > $('#outline').offset().top){
-            $('#outline').offset({ top: $('body').scrollTop()-offsetPreOutline});
-        }
-        else{
-            if ($('#outline').offset().top != outlineMinTop){
-                $('#outline').offset({ top: outlineMinTop });
-            }
-        }
-    });
-*/
     
     });                         // ends document.ready

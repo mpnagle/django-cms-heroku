@@ -87,8 +87,9 @@
 #innovationsHeading {
     font-family: "Times New Roman", serif;
     color: red;
-    font-size: 1.18em;
+    font-size: 1.28em;
     padding-left: 106px;               /*15px*/
+    padding-top: 3px;
 }
 
 #tHeading {
@@ -191,6 +192,9 @@ padding-left:22px;
 }
 
 
+#anchorForOutline{
+    position: relative;
+}
 
 #preOutline{
     height:20px;
