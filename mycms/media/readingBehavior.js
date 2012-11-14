@@ -108,7 +108,7 @@ $(document).ready(function(){   //
                 scrollTop: art.position().top
             }, 300);
 
-            //anchor the outline if article scrolls past it.
+
 	    
 	});
 
@@ -173,19 +173,12 @@ $(document).ready(function(){   //
                 $(this).css("display", "none");
 
             if ($(this).parent().attr("id")=="entireAbstractBlurb"){
-                console.log($('#anchorForOutline').offset().top);
-                console.log('height of abstractRest');
-                console.log($('#abstractRest').height());
+                //update anchorMinTop
+                var abstractHeight = $('#abstractRest').height();
+                anchorMinTop -= abstractHeight;
 
                 //close the abstract
                 $('#abstractContent').css('display', 'none');
-
-
-                //update anchorMinTop
-                console.log($('#anchorForOutline').offset().top);
-//                outlineMinTop -= $('#abstractRest').height();
-
-
             }
 
             if ($(this).parent().attr('id')=="triangles"){ 
