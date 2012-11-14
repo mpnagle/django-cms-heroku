@@ -29,9 +29,6 @@ $(document).ready(function() {
 
     var wholeLeftHeight = $('#abstractTitle').height() + $('#mapImg').height() + $('#preOutline').height() + $('#outline').outerHeight();
 
-    console.log('whole right height is ' + wholeRightHeight);
-    console.log('whole left height is ' + wholeLeftHeight);
-
     minWBHeight = wholeLeftHeight;
 
     // set white border height
