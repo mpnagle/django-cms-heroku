@@ -112,7 +112,9 @@ $(document).ready(function(){   //
 	    
 	});
 
-    var anchorMinTop = $('#anchorForOutline').offset().top; //update if abstract collapsed
+    var anchorMinTop = $('#anchorForOutline').offset().top + 5; //updated when abstract collapsed/expanded
+    console.log('anchorMinTop initially set to ' + anchorMinTop);
+
     //anchor outline chunk when we scroll
     $(window).scroll(function(){
         //outline not anchored yet
@@ -172,6 +174,8 @@ $(document).ready(function(){   //
                 $(this).css("display", "none");
 
             if ($(this).parent().attr("id")=="entireAbstractBlurb"){
+                console.log('anchor min top should be ' + $('#anchorForOutline').offset().top);
+
                 //update anchorMinTop
                 var abstractHeight = $('#abstractRest').height();
                 anchorMinTop -= abstractHeight;
@@ -199,6 +203,8 @@ $(document).ready(function(){   //
             $(this).css("display", "none");
 
             if ($(this).parent().attr("id")=="entireAbstractBlurb"){
+                console.log('anchor min top should be ' + $('#anchorForOutline').offset().top);
+
                 //open the abstract
                 $('#abstractContent').css('display', 'inline');
 
