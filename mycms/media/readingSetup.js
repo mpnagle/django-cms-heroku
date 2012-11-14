@@ -17,7 +17,7 @@ $(document).ready(function() {
 
 
     //set height of white border
-    var minWBHeight = 900;
+//    var minWBHeight = 900;
     var bottomBorder = 80;
 
 /*
@@ -27,6 +27,12 @@ $(document).ready(function() {
     var wholeRightHeight = $('#amplifyHeading').outerHeight() + $('#articleTitleTopBorder').height() + $('#articleTitle').outerHeight() + $('#article').outerHeight() + bottomBorder;
 
 
+    var wholeLeftHeight = $('#abstractTitle').height() + $('#mapImg').height() + $('#preOutline').height() + $('#outline').outerHeight();
+
+    console.log('whole right height is ' + wholeRightHeight);
+    console.log('whole left height is ' + wholeLeftHeight);
+
+    minWBHeight = wholeLeftHeight;
 
     // set white border height
 //    if (wholeLeftHeight < 900){

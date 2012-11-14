@@ -113,7 +113,6 @@ $(document).ready(function(){   //
 	});
 
     var anchorMinTop = $('#anchorForOutline').offset().top; //update if abstract collapsed
-    console.log('anchorMinTop is ' + anchorMinTop);
     //anchor outline chunk when we scroll
     $(window).scroll(function(){
         //outline not anchored yet
@@ -122,7 +121,7 @@ $(document).ready(function(){   //
             if ($(window).scrollTop() > anchorMinTop){
                 $('#anchorForOutline').css({
                 position: 'fixed',
-                top: '0px'
+                top: '0px',
             });
 
             }
