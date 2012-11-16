@@ -112,6 +112,12 @@ padding-left:22px;
     font-weight: bold;
 }
 
+
+#wholeLeftCol{
+    width: 350px;
+    background-color: #F5F9E7;
+}
+
 #abstractTitle{
 /*	font-family: 'Patua One', cursive;*/
 /*	font-family: 'Headland One', serif;*/
@@ -198,7 +204,7 @@ padding-left:22px;
 }
 
 #preOutline{
-    height:22px;
+    height: 25px;
 }
 
 #outline{
