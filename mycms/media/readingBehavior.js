@@ -112,30 +112,35 @@ $(document).ready(function(){   //
 	    
 	});
 
-    var anchorMinTop = $('#anchorForOutline').offset().top + 5; //updated when abstract collapsed/expanded
-    console.log('anchorMinTop initially set to ' + anchorMinTop);
-
     //anchor outline chunk when we scroll
     $(window).scroll(function(){
         //outline not anchored yet
 
         if ($('#anchorForOutline').css('position')=='relative'){
-            if ($(window).scrollTop() > anchorMinTop){
+            if ($(window).scrollTop() > 
+                ($('#preOutline').offset().top + $('#preOutline').height())){
                 $('#anchorForOutline').css({
                 position: 'fixed',
                 top: '0px',
             });
+                $('#wholeRightCol').css({
+//                    overflow-y: 'none',
+                });
 
             }
         }
 
         //outline anchored
         else if($('#anchorForOutline').css('position')=='fixed'){
-            if ($(window).scrollTop() < (anchorMinTop)){
+            if ($(window).scrollTop() <                 
+                ($('#preOutline').offset().top + $('#preOutline').height())){
                 $('#anchorForOutline').css({
                     position: 'relative',
                 });
-                $('#anchorForOutline').offset({top:anchorMinTop});
+                $('#wholeRightCol').css({
+  //                  overflow-y: 'scroll',
+                });
+
             }
         }     
 
@@ -176,10 +181,6 @@ $(document).ready(function(){   //
             if ($(this).parent().attr("id")=="entireAbstractBlurb"){
                 console.log('anchor min top should be ' + $('#anchorForOutline').offset().top);
 
-                //update anchorMinTop
-                var abstractHeight = $('#abstractRest').height();
-                anchorMinTop -= abstractHeight;
-
                 //close the abstract
                 $('#abstractContent').css('display', 'none');
             }
@@ -207,9 +208,6 @@ $(document).ready(function(){   //
 
                 //open the abstract
                 $('#abstractContent').css('display', 'inline');
-
-                //update anchorMinTop
-                anchorMinTop += $('#abstractRest').height();
 
             }
 
