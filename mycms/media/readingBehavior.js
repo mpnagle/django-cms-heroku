@@ -1,13 +1,15 @@
 $(document).ready(function(){   // 
 
     var lastClicked = null; //outlineBox that was last clicked (currently on view)
+    var hLCleared = false; //flag for HL state exit via #wholeRightCol click
 
     $('.outlineBox').hover(
 	function () {
 	    $(this).css('background-color', '#C9EAE6');
 	}, 
 	function () {
-	    if (lastClicked != null && ($(lastClicked).attr('id') == $(this).attr('id'))){
+	    if (lastClicked != null && hLCleared == false &&
+                ($(lastClicked).attr('id') == $(this).attr('id'))){
 	    }
 	    else{
 		$(this).css("background-color", '#F5F9E7');
@@ -50,6 +52,7 @@ $(document).ready(function(){   //
     }
     
     function highlightNot(outId, artId){
+        console.log('lastoutbox thing is ' + $(lastClicked).attr('id'));
 	var artChunk = $('#' + artId);
 	var outBox = $('#' + outId);
 	var outBoxTitle = $(outBox.children()[0]);
@@ -61,7 +64,7 @@ $(document).ready(function(){   //
         artChunk.css('border-left', "none");
         $('#article').css('color', 'black');
         $('#reference').css('color', 'black');
-        artChunk.css('color', 'grey');
+        artChunk.css('color', 'red');
 	
         //update outline: highlight + border bullshit
         outBox.css('border-right', "none");
@@ -74,17 +77,31 @@ $(document).ready(function(){   //
             var outlineBox = $(this).parent();
 
 	    //highlight and display pertaining section in article.
-            if (lastClicked != null && $(lastClicked).attr('id') == $(outlineBox).attr('id')){
+            //we are already hl-ing this one. unless we are not.
+            if (lastClicked != null && hLCleared == false &&
+                $(lastClicked).attr('id') == $(outlineBox).attr('id')){
 		return;
             }
-
-	    else if (lastClicked != null){
+           
+           
+	    else if (lastClicked != null && hLCleared == false){
 		var idLast = $(lastClicked).attr('id');
 		var artIndexLast = 'art_' + idLast.substring(idLast.indexOf('_')+1, idLast.length);
 		highlightNot(idLast, artIndexLast);
 	    }
+
+            else if(lastClicked != null && hLCleared == true){
+                //set last black-ed text to grey, css will follow most
+                //specific rule.
+                hLCleared = false;
+		var idLast = $(lastClicked).attr('id');
+		var artIndexLast = 'art_' + idLast.substring(idLast.indexOf('_')+1, idLast.length);
+                var artChunk = $('#' + artIndexLast);
+                artChunk.css('color', 'grey');
+            }
             
             lastClicked = outlineBox;
+            hLCleared = false;
 
 	    //match with art_x id
 	    var id = $(outlineBox).attr('id');
@@ -110,7 +127,28 @@ $(document).ready(function(){   //
 
 
 	    
-	});
+	}); //ends outlineTitle.click
+
+    //get out of highlight mode
+    $('#wholeRightCol').click(
+        function(){
+            console.log('in article click');
+            if (lastClicked == null){
+                console.log('last clicked is null');
+            }
+            hLCleared = true;
+
+	    var idLast = $(lastClicked).attr('id');
+	    var artIndexLast = 'art_' + idLast.substring(idLast.indexOf('_')+1, idLast.length);
+            
+            highlightNot(idLast, artIndexLast);
+
+            //blacken article chunk
+            var artChunk = $('#' + artIndexLast);
+            artChunk.css('color', 'black');
+            
+        
+    });
 
     //anchor outline chunk when we scroll
     $(window).scroll(function(){
