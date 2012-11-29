@@ -38,12 +38,12 @@ $(document).ready(function(){   //
 	var outBoxTitle = $(outBox.children()[0]);
 	var outBoxRest = $(outBox.children()[1]);
 	
-	//article, highlight
-        artChunk.css('padding-left', '10px');
-        artChunk.css('border-left', "solid 5px #00CCCC");
+        //article, highlight
         $('#article').css('color', 'grey');
         $('#reference').css('color', 'grey');
-        artChunk.css('color', 'black');
+        artChunk.addClass("HLArticleChunk");
+
+
 	
         //update outline: highlight + border bullshit
         outBox.css('border-right', "solid 5px #00CCCC");
@@ -52,7 +52,6 @@ $(document).ready(function(){   //
     }
     
     function highlightNot(outId, artId){
-        console.log('lastoutbox thing is ' + $(lastClicked).attr('id'));
 	var artChunk = $('#' + artId);
 	var outBox = $('#' + outId);
 	var outBoxTitle = $(outBox.children()[0]);
@@ -60,11 +59,9 @@ $(document).ready(function(){   //
 	
 	
 	//article, highlight
-        artChunk.css('padding-left', '0px');
-        artChunk.css('border-left', "none");
+        artChunk.removeClass("HLArticleChunk");
         $('#article').css('color', 'black');
         $('#reference').css('color', 'black');
-        artChunk.css('color', 'red');
 	
         //update outline: highlight + border bullshit
         outBox.css('border-right', "none");
@@ -82,24 +79,16 @@ $(document).ready(function(){   //
                 $(lastClicked).attr('id') == $(outlineBox).attr('id')){
 		return;
             }
-           
-           
-	    else if (lastClicked != null && hLCleared == false){
-		var idLast = $(lastClicked).attr('id');
-		var artIndexLast = 'art_' + idLast.substring(idLast.indexOf('_')+1, idLast.length);
-		highlightNot(idLast, artIndexLast);
-	    }
 
-            else if(lastClicked != null && hLCleared == true){
-                //set last black-ed text to grey, css will follow most
-                //specific rule.
-                hLCleared = false;
-		var idLast = $(lastClicked).attr('id');
-		var artIndexLast = 'art_' + idLast.substring(idLast.indexOf('_')+1, idLast.length);
-                var artChunk = $('#' + artIndexLast);
-                artChunk.css('color', 'grey');
+            else if (lastClicked != null && hLCleared == false &&
+                     $(lastClicked).attr('id') != $(outlineBox).attr('id')){
+                lastId = $(lastClicked).attr('id');
+                lastArtNum = lastId.substring(lastId.indexOf('_')+1, lastId.length);
+                lastArtId = 'art_' + lastArtNum;
+                highlightNot(lastId, lastArtId);
+                hLCleared = true;
             }
-            
+
             lastClicked = outlineBox;
             hLCleared = false;
 
@@ -108,44 +97,31 @@ $(document).ready(function(){   //
 	    var artNum = id.substring(id.indexOf('_')+1, id.length); //number
 	    var artId = 'art_' + artNum;
 
-            
-	    highlightPlease(id, artId);
-
-	    //scroll art text into view
             var art = $('#' + artId); 
-
 
             //make sure art is not null
             if (art.length==0){
                 return false;
             }
 
+	    highlightPlease(id, artId);
 
+	    //scroll art text into view
             $('body').animate({
                 scrollTop: art.position().top
             }, 300);
-
-
 	    
 	}); //ends outlineTitle.click
 
     //get out of highlight mode
     $('#wholeRightCol').click(
         function(){
-            console.log('in article click');
             if (lastClicked == null){
-                console.log('last clicked is null');
             }
-            hLCleared = true;
-
 	    var idLast = $(lastClicked).attr('id');
 	    var artIndexLast = 'art_' + idLast.substring(idLast.indexOf('_')+1, idLast.length);
-            
             highlightNot(idLast, artIndexLast);
-
-            //blacken article chunk
-            var artChunk = $('#' + artIndexLast);
-            artChunk.css('color', 'black');
+            hLCleared = true;
             
         
     });
@@ -217,7 +193,6 @@ $(document).ready(function(){   //
                 $(this).css("display", "none");
 
             if ($(this).parent().attr("id")=="entireAbstractBlurb"){
-                console.log('anchor min top should be ' + $('#anchorForOutline').offset().top);
 
                 //close the abstract
                 $('#abstractContent').css('display', 'none');
@@ -242,8 +217,6 @@ $(document).ready(function(){   //
             $(this).css("display", "none");
 
             if ($(this).parent().attr("id")=="entireAbstractBlurb"){
-                console.log('anchor min top should be ' + $('#anchorForOutline').offset().top);
-
                 //open the abstract
                 $('#abstractContent').css('display', 'inline');
 

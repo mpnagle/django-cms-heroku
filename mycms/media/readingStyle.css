@@ -131,6 +131,7 @@ padding-left:22px;
         padding-right: 15px;
         padding-top: 20px;
         padding-bottom:30px;/*10px*/
+        padding-left: 3px;
         text-align: left;
         position: relative;
 /*        margin-bottom: 19px;*/
@@ -257,6 +258,11 @@ padding-left:22px;
     padding-left: 3px;
 }
 
+.hLArticleChunk{
+    padding-left: 10px;
+    border-left: 5px #00CCCC solid;
+    color: black;
+}
 
 
 
